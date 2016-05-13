@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C5A6EE11CE569AB00C1A85A /* delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delegate.h; sourceTree = "<group>"; };
 		7521274F1CE561DB00E8F44B /* Projectend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projectend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752127531CE561DB00E8F44B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		752127551CE561DB00E8F44B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 				752127561CE561DB00E8F44B /* AppDelegate.m */,
 				752127581CE561DB00E8F44B /* ViewController.h */,
 				752127591CE561DB00E8F44B /* ViewController.m */,
+				5C5A6EE11CE569AB00C1A85A /* delegate.h */,
 				7521275B1CE561DB00E8F44B /* Main.storyboard */,
 				7521275E1CE561DB00E8F44B /* Assets.xcassets */,
 				752127601CE561DB00E8F44B /* LaunchScreen.storyboard */,
@@ -496,6 +498,7 @@
 				7521277E1CE561DB00E8F44B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7521277F1CE561DB00E8F44B /* Build configuration list for PBXNativeTarget "ProjectendTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +507,7 @@
 				752127811CE561DB00E8F44B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		752127821CE561DB00E8F44B /* Build configuration list for PBXNativeTarget "ProjectendUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +516,7 @@
 				752127841CE561DB00E8F44B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
