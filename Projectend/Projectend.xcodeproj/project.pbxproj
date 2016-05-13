@@ -35,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C5A6EE11CE569AB00C1A85A /* delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delegate.h; sourceTree = "<group>"; };
 		7521274F1CE561DB00E8F44B /* Projectend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projectend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752127531CE561DB00E8F44B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		752127551CE561DB00E8F44B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		752127731CE561DB00E8F44B /* ProjectendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		752127771CE561DB00E8F44B /* ProjectendUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectendUITests.m; sourceTree = "<group>"; };
 		752127791CE561DB00E8F44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		752127851CE56CB600E8F44B /* delegate2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delegate2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +104,7 @@
 				752127551CE561DB00E8F44B /* AppDelegate.h */,
 				752127561CE561DB00E8F44B /* AppDelegate.m */,
 				752127581CE561DB00E8F44B /* ViewController.h */,
-				752127851CE56CB600E8F44B /* delegate2.h */,
 				752127591CE561DB00E8F44B /* ViewController.m */,
-				5C5A6EE11CE569AB00C1A85A /* delegate.h */,
 				7521275B1CE561DB00E8F44B /* Main.storyboard */,
 				7521275E1CE561DB00E8F44B /* Assets.xcassets */,
 				752127601CE561DB00E8F44B /* LaunchScreen.storyboard */,
