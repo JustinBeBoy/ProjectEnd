@@ -2,7 +2,7 @@
 //  Teacher.m
 //  Projectend
 //
-//  Created by Ominext Mobile on 5/13/16.
+//  Created by Ominext Mobile on 5/14/16.
 //  Copyright © 2016 Ominext Mobile. All rights reserved.
 //
 
@@ -51,23 +51,22 @@
 + (NSArray*) queryListTeacher {
     FMDatabase *db = [DB db];
     [db open];
-    NSArray *arrCompany = [self queryListTeacher:db];
+    NSArray *arrTeacher = [self queryListTeacher:db];
     [db close];
     
-    return arrCompany;
+    return arrTeacher;
 }
 
 + (NSArray*) queryListTeacher:(FMDatabase*)db {
     NSString *queryString = [NSString stringWithFormat:@"%@ = 0",k_deleted];
-    NSArray *companyDics = [Teacher selectWhere:queryString db:db];
+    NSArray *teacherDics = [Teacher selectWhere:queryString db:db];
     
-    NSMutableArray *listCompany = [NSMutableArray array];
+    NSMutableArray *listTeacher = [NSMutableArray array];
     
-    for (NSDictionary *dic in companyDics) {
+    for (NSDictionary *dic in teacherDics) {
         Teacher *teacher = [[Teacher alloc]initWithDic:dic];
-        [listCompany addObject:teacher];
+        [listTeacher addObject:teacher];
     }
-    return listCompany;
+    return listTeacher;
 }
-
 @end

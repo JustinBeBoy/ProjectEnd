@@ -13,6 +13,8 @@
  * MARK: field name
  */
 static NSString *k_id                  = @"id";
+static NSString *k_created             = @"created";
+static NSString *k_modified            = @"modified";
 static NSString *k_deleted             = @"deleted";
 
 /**
@@ -40,13 +42,14 @@ static NSString *const ksText          = @"TEXT";
 static NSString *const ksIntPrimaryInc = @"INTEGER PRIMARY KEY AUTOINCREMENT";
 
 /**
- *  MARK: tb_teacher
+ *  MARK: tb_Subject
  */
-
+static NSString *const k_subject       = @"subject";
+static NSString *const k_credits       = @"credits";
 /**
  *  MARK: tb_student
  */
-static NSString *const k_idclass          = @"idclass";
+static NSString *const k_idclass       = @"idclass";
 
 
 #endif /* DBFieldName_h */

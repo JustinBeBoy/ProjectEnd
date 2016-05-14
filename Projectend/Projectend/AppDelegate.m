@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [DB checkExistedDB];
     MainViewController *rootVC = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
     [navigationController setNavigationBarHidden:YES];

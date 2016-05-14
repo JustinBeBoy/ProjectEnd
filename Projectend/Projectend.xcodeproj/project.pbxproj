@@ -22,10 +22,14 @@
 		752127A21CE5B81A00E8F44B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521279A1CE5B81A00E8F44B /* FMDatabaseQueue.m */; };
 		752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521279D1CE5B81A00E8F44B /* FMResultSet.m */; };
 		752127A41CE5B81A00E8F44B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7521279E1CE5B81A00E8F44B /* Info.plist */; };
-		752127AA1CE5C0E900E8F44B /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127A91CE5C0E900E8F44B /* BaseModel.m */; };
-		752127AD1CE5C10C00E8F44B /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127AC1CE5C10C00E8F44B /* DB.m */; };
-		752127B61CE5C2C200E8F44B /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127B51CE5C2C200E8F44B /* Teacher.m */; };
-		752127B91CE5DDB900E8F44B /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127B81CE5DDB900E8F44B /* Student.m */; };
+		752127C41CE5FE4100E8F44B /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127C11CE5FE4100E8F44B /* Global.m */; };
+		752127C51CE5FE4100E8F44B /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127C31CE5FE4100E8F44B /* Lib.m */; };
+		759757361CE7207A006013B5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757301CE7207A006013B5 /* BaseModel.m */; };
+		759757371CE7207A006013B5 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757321CE7207A006013B5 /* DB.m */; };
+		759757381CE7207A006013B5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757351CE7207A006013B5 /* Teacher.m */; };
+		759757421CE7220B006013B5 /* Scoreboad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573D1CE7220B006013B5 /* Scoreboad.m */; };
+		759757431CE7220B006013B5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573F1CE7220B006013B5 /* Student.m */; };
+		759757441CE7220B006013B5 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757411CE7220B006013B5 /* Subject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,15 +79,23 @@
 		7521279C1CE5B81A00E8F44B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		7521279D1CE5B81A00E8F44B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		7521279E1CE5B81A00E8F44B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		752127A71CE5C0E900E8F44B /* DBFieldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBFieldName.h; sourceTree = "<group>"; };
-		752127A81CE5C0E900E8F44B /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
-		752127A91CE5C0E900E8F44B /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
-		752127AB1CE5C10C00E8F44B /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
-		752127AC1CE5C10C00E8F44B /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
-		752127B41CE5C2C200E8F44B /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
-		752127B51CE5C2C200E8F44B /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
-		752127B71CE5DDB900E8F44B /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		752127B81CE5DDB900E8F44B /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		752127C01CE5FE4100E8F44B /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		752127C11CE5FE4100E8F44B /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		752127C21CE5FE4100E8F44B /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		752127C31CE5FE4100E8F44B /* Lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lib.m; sourceTree = "<group>"; };
+		7597572F1CE7207A006013B5 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		759757301CE7207A006013B5 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		759757311CE7207A006013B5 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
+		759757321CE7207A006013B5 /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
+		759757331CE7207A006013B5 /* DBFieldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBFieldName.h; sourceTree = "<group>"; };
+		759757341CE7207A006013B5 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		759757351CE7207A006013B5 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		7597573C1CE7220B006013B5 /* Scoreboad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scoreboad.h; sourceTree = "<group>"; };
+		7597573D1CE7220B006013B5 /* Scoreboad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scoreboad.m; sourceTree = "<group>"; };
+		7597573E1CE7220B006013B5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		7597573F1CE7220B006013B5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		759757401CE7220B006013B5 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
+		759757411CE7220B006013B5 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				752127A51CE5B85D00E8F44B /* ViewControllers */,
-				752127A61CE5C05F00E8F44B /* Model */,
 				752127911CE5B81A00E8F44B /* Third Party */,
+				752127C61CE5FE4C00E8F44B /* Helper */,
+				7597572E1CE7207A006013B5 /* Model */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -228,20 +241,35 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		752127A61CE5C05F00E8F44B /* Model */ = {
+		752127C61CE5FE4C00E8F44B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				752127A71CE5C0E900E8F44B /* DBFieldName.h */,
-				752127A81CE5C0E900E8F44B /* BaseModel.h */,
-				752127A91CE5C0E900E8F44B /* BaseModel.m */,
-				752127AB1CE5C10C00E8F44B /* DB.h */,
-				752127AC1CE5C10C00E8F44B /* DB.m */,
-				752127B41CE5C2C200E8F44B /* Teacher.h */,
-				752127B51CE5C2C200E8F44B /* Teacher.m */,
-				752127B71CE5DDB900E8F44B /* Student.h */,
-				752127B81CE5DDB900E8F44B /* Student.m */,
+				752127C01CE5FE4100E8F44B /* Global.h */,
+				752127C11CE5FE4100E8F44B /* Global.m */,
+				752127C21CE5FE4100E8F44B /* Lib.h */,
+				752127C31CE5FE4100E8F44B /* Lib.m */,
 			);
-			name = Model;
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		7597572E1CE7207A006013B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				759757331CE7207A006013B5 /* DBFieldName.h */,
+				759757311CE7207A006013B5 /* DB.h */,
+				759757321CE7207A006013B5 /* DB.m */,
+				7597572F1CE7207A006013B5 /* BaseModel.h */,
+				759757301CE7207A006013B5 /* BaseModel.m */,
+				759757341CE7207A006013B5 /* Teacher.h */,
+				759757351CE7207A006013B5 /* Teacher.m */,
+				7597573E1CE7220B006013B5 /* Student.h */,
+				7597573F1CE7220B006013B5 /* Student.m */,
+				759757401CE7220B006013B5 /* Subject.h */,
+				759757411CE7220B006013B5 /* Subject.m */,
+				7597573C1CE7220B006013B5 /* Scoreboad.h */,
+				7597573D1CE7220B006013B5 /* Scoreboad.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,18 +403,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752127AA1CE5C0E900E8F44B /* BaseModel.m in Sources */,
 				752127571CE561DB00E8F44B /* AppDelegate.m in Sources */,
 				752127A11CE5B81A00E8F44B /* FMDatabasePool.m in Sources */,
-				752127AD1CE5C10C00E8F44B /* DB.m in Sources */,
-				752127B61CE5C2C200E8F44B /* Teacher.m in Sources */,
+				759757431CE7220B006013B5 /* Student.m in Sources */,
+				752127C51CE5FE4100E8F44B /* Lib.m in Sources */,
+				759757441CE7220B006013B5 /* Subject.m in Sources */,
+				759757361CE7207A006013B5 /* BaseModel.m in Sources */,
 				7521278F1CE5B31600E8F44B /* MainViewController.m in Sources */,
+				759757371CE7207A006013B5 /* DB.m in Sources */,
 				752127A21CE5B81A00E8F44B /* FMDatabaseQueue.m in Sources */,
 				752127541CE561DB00E8F44B /* main.m in Sources */,
+				759757421CE7220B006013B5 /* Scoreboad.m in Sources */,
+				759757381CE7207A006013B5 /* Teacher.m in Sources */,
 				7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */,
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
+				752127C41CE5FE4100E8F44B /* Global.m in Sources */,
 				752127A01CE5B81A00E8F44B /* FMDatabaseAdditions.m in Sources */,
-				752127B91CE5DDB900E8F44B /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

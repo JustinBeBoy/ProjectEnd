@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
+#import "DB.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -7,9 +7,10 @@
 //
 
 #import "DB.h"
-
-#import "Company.h"
-#import "Department.h"
+#import "Student.h"
+#import "Subject.h"
+#import "Scoreboad.h"
+#import "Teacher.h"
 
 @implementation DB
 
@@ -37,8 +38,10 @@
     [[NSFileManager defaultManager] createDirectoryAtPath:[dbPath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
     
     NSArray *modelList = @[
-                           [Company class],
-                           [Department class]
+                           [Teacher class]
+//                           [Student class],
+//                           [Subject class],
+//                           [Scoreboad class]
                            ];
     
     FMDatabase *db = [FMDatabase databaseWithPath:[self dbPath]];
