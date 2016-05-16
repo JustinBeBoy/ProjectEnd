@@ -43,7 +43,7 @@
                         <action selector="btnLogIn:" destination="-1" eventType="touchUpInside" id="xus-ey-Cci"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azp-bt-s2k" customClass="DLRadioButton">
+                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azp-bt-s2k" customClass="DLRadioButton">
                     <rect key="frame" x="40" y="249" width="110" height="22"/>
                     <state key="normal" title="Teacher">
                         <color key="titleColor" red="0.12941176470588237" green="0.59999999999999998" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,7 +66,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-AO-Qdj" customClass="DLRadioButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-AO-Qdj" customClass="DLRadioButton">
                     <rect key="frame" x="170" y="249" width="110" height="22"/>
                     <state key="normal" title="Student">
                         <color key="titleColor" red="0.12941176470588237" green="0.59999999999999998" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
