@@ -71,4 +71,26 @@
     }
     return listStudent;
 }
++ (NSArray*) queryStudentWithIDClass:(NSString*)idClass {
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrClass = [self queryStudentWithIDClass:idClass db:db];
+    [db close];
+    
+    return arrClass;
+}
+
++ (NSArray*) queryStudentWithIDClass:(NSString*)idClass db:(FMDatabase*)db {
+    NSString *queryString = [NSString stringWithFormat:@"%@=0 AND %@=%@",k_deleted,k_idclass,idClass];
+    
+    NSArray *arrDic = [Student selectWhere:queryString db:db];
+    NSMutableArray *arrStudent = [NSMutableArray array];
+    
+    for (NSDictionary *dic in arrDic) {
+        Student *student = [[Student alloc]initWithDic:dic];
+        [arrStudent addObject:student];
+    }
+    
+    return arrStudent;
+}
 @end

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuanLyLopHocVC">
+            <connections>
+                <outlet property="tableView" destination="OgH-em-VRp" id="DCn-T7-dd3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AX-nW-b7i">
+                    <rect key="frame" x="8" y="21" width="304" height="38"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gE-cL-ia2">
+                            <rect key="frame" x="0.0" y="8" width="32" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="&lt;">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="KFS-IG-i7b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-9X-ec0">
+                            <rect key="frame" x="264" y="0.0" width="32" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="addPressed:" destination="-1" eventType="touchUpInside" id="6mL-h4-pos"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUẢN LÝ LỚP HỌC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Eo-oR5">
+                            <rect key="frame" x="56" y="9" width="193" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="MuV-mE-wqW"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OgH-em-VRp">
+                    <rect key="frame" x="8" y="91" width="304" height="448"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="0Ft-DV-yy5"/>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="Ld9-T7-6HU"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8AX-nW-b7i" secondAttribute="trailing" constant="8" id="1KR-qU-MDg"/>
+                <constraint firstItem="OgH-em-VRp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="N2G-7X-U9r"/>
+                <constraint firstItem="8AX-nW-b7i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PJo-Qw-p0f"/>
+                <constraint firstAttribute="trailing" secondItem="OgH-em-VRp" secondAttribute="trailing" constant="8" id="WFE-kf-iie"/>
+                <constraint firstItem="8AX-nW-b7i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="gRh-Qs-5Nh"/>
+                <constraint firstAttribute="bottom" secondItem="OgH-em-VRp" secondAttribute="bottom" constant="29" id="ggs-p5-gRQ"/>
+                <constraint firstItem="OgH-em-VRp" firstAttribute="top" secondItem="8AX-nW-b7i" secondAttribute="bottom" constant="32" id="ttG-E1-4cq"/>
+            </constraints>
+            <point key="canvasLocation" x="400" y="345"/>
+        </view>
+    </objects>
+</document>
