@@ -67,6 +67,9 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-AO-Qdj" customClass="DLRadioButton">
                     <rect key="frame" x="170" y="249" width="110" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="bnZ-0C-CXk"/>
+                    </constraints>
                     <state key="normal" title="Student">
                         <color key="titleColor" red="0.12941176470588237" green="0.59999999999999998" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -90,6 +93,7 @@
                 <constraint firstItem="GLD-AO-Qdj" firstAttribute="width" secondItem="azp-bt-s2k" secondAttribute="width" id="5uD-8k-XB6"/>
                 <constraint firstItem="dp8-c8-Rkk" firstAttribute="top" secondItem="vfg-r8-3J8" secondAttribute="bottom" constant="10" id="73V-SO-gy5"/>
                 <constraint firstAttribute="trailing" secondItem="JR9-LE-jFX" secondAttribute="trailing" constant="30" id="Djx-09-3Ls"/>
+                <constraint firstItem="GLD-AO-Qdj" firstAttribute="height" secondItem="azp-bt-s2k" secondAttribute="height" id="Dz5-Iz-9xS"/>
                 <constraint firstItem="GLD-AO-Qdj" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="20" id="G0S-j7-Pyd"/>
                 <constraint firstAttribute="trailing" secondItem="b71-mL-HzT" secondAttribute="trailing" constant="48" id="Ko2-Di-uAw"/>
                 <constraint firstItem="azp-bt-s2k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="P6M-bG-HLo"/>
