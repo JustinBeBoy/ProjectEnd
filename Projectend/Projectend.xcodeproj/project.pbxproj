@@ -38,6 +38,13 @@
 		759757B61CE95224006013B5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B51CE95224006013B5 /* SWRevealViewController.m */; };
 		759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B91CE95394006013B5 /* SlideMenuViewController.m */; };
 		759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757BA1CE95394006013B5 /* SlideMenuViewController.xib */; };
+		759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757BD1CE966D0006013B5 /* MenuCell.xib */; };
+		759757C11CE96984006013B5 /* ManagerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757C01CE96984006013B5 /* ManagerList.m */; };
+		759757C71CE97BEB006013B5 /* class24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C21CE97BEB006013B5 /* class24.png */; };
+		759757C81CE97BEB006013B5 /* logout24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C31CE97BEB006013B5 /* logout24.png */; };
+		759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C41CE97BEB006013B5 /* scoreboard24.png */; };
+		759757CA1CE97BEB006013B5 /* student24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C51CE97BEB006013B5 /* student24.png */; };
+		759757CB1CE97BEB006013B5 /* subject24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C61CE97BEB006013B5 /* subject24.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +123,14 @@
 		759757B81CE95394006013B5 /* SlideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuViewController.h; sourceTree = "<group>"; };
 		759757B91CE95394006013B5 /* SlideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuViewController.m; sourceTree = "<group>"; };
 		759757BA1CE95394006013B5 /* SlideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideMenuViewController.xib; sourceTree = "<group>"; };
+		759757BD1CE966D0006013B5 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		759757BF1CE96984006013B5 /* ManagerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerList.h; sourceTree = "<group>"; };
+		759757C01CE96984006013B5 /* ManagerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerList.m; sourceTree = "<group>"; };
+		759757C21CE97BEB006013B5 /* class24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = class24.png; path = ImageIcon/class24.png; sourceTree = "<group>"; };
+		759757C31CE97BEB006013B5 /* logout24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout24.png; path = ImageIcon/logout24.png; sourceTree = "<group>"; };
+		759757C41CE97BEB006013B5 /* scoreboard24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreboard24.png; path = ImageIcon/scoreboard24.png; sourceTree = "<group>"; };
+		759757C51CE97BEB006013B5 /* student24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = student24.png; path = ImageIcon/student24.png; sourceTree = "<group>"; };
+		759757C61CE97BEB006013B5 /* subject24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subject24.png; path = ImageIcon/subject24.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +281,7 @@
 				759757B81CE95394006013B5 /* SlideMenuViewController.h */,
 				759757B91CE95394006013B5 /* SlideMenuViewController.m */,
 				759757BA1CE95394006013B5 /* SlideMenuViewController.xib */,
+				759757BD1CE966D0006013B5 /* MenuCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -297,6 +313,8 @@
 				759757411CE7220B006013B5 /* Subject.m */,
 				7597573C1CE7220B006013B5 /* Scoreboad.h */,
 				7597573D1CE7220B006013B5 /* Scoreboad.m */,
+				759757BF1CE96984006013B5 /* ManagerList.h */,
+				759757C01CE96984006013B5 /* ManagerList.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +332,11 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				759757C21CE97BEB006013B5 /* class24.png */,
+				759757C31CE97BEB006013B5 /* logout24.png */,
+				759757C41CE97BEB006013B5 /* scoreboard24.png */,
+				759757C51CE97BEB006013B5 /* student24.png */,
+				759757C61CE97BEB006013B5 /* subject24.png */,
 				759757AA1CE8880D006013B5 /* menu24.png */,
 				759757AB1CE8880D006013B5 /* menu16.png */,
 			);
@@ -432,10 +455,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759757C71CE97BEB006013B5 /* class24.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
+				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
+				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
+				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
+				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
 				752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */,
+				759757CA1CE97BEB006013B5 /* student24.png in Resources */,
 				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
@@ -471,6 +500,7 @@
 				752127C51CE5FE4100E8F44B /* Lib.m in Sources */,
 				759757441CE7220B006013B5 /* Subject.m in Sources */,
 				759757361CE7207A006013B5 /* BaseModel.m in Sources */,
+				759757C11CE96984006013B5 /* ManagerList.m in Sources */,
 				759757B11CE8E6B0006013B5 /* Teacher.m in Sources */,
 				7521278F1CE5B31600E8F44B /* LoginViewController.m in Sources */,
 				759757371CE7207A006013B5 /* DB.m in Sources */,

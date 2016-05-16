@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ManagerList.h"
 
 @interface SlideMenuViewController : UIViewController
 
