@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainViewController.h"
+#import "LoginViewController.h"
 #import "DB.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

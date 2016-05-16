@@ -38,9 +38,9 @@
     [[NSFileManager defaultManager] createDirectoryAtPath:[dbPath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
     
     NSArray *modelList = @[
-                           [Teacher class]
-//                           [Student class],
-//                           [Subject class],
+                           [Teacher class],
+                           [Student class],
+                           [Subject class],
 //                           [Scoreboad class]
                            ];
     

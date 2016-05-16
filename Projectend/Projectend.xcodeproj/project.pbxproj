@@ -14,8 +14,8 @@
 		7521276D1CE561DB00E8F44B /* ProjectendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521276C1CE561DB00E8F44B /* ProjectendTests.m */; };
 		752127781CE561DB00E8F44B /* ProjectendUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127771CE561DB00E8F44B /* ProjectendUITests.m */; };
 		752127891CE5B22800E8F44B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 752127881CE5B22800E8F44B /* libsqlite3.0.tbd */; };
-		7521278F1CE5B31600E8F44B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521278D1CE5B31600E8F44B /* MainViewController.m */; };
-		752127901CE5B31600E8F44B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7521278E1CE5B31600E8F44B /* MainViewController.xib */; };
+		7521278F1CE5B31600E8F44B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521278D1CE5B31600E8F44B /* LoginViewController.m */; };
+		752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7521278E1CE5B31600E8F44B /* LoginViewController.xib */; };
 		7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127941CE5B81A00E8F44B /* FMDatabase.m */; };
 		752127A01CE5B81A00E8F44B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127961CE5B81A00E8F44B /* FMDatabaseAdditions.m */; };
 		752127A11CE5B81A00E8F44B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127981CE5B81A00E8F44B /* FMDatabasePool.m */; };
@@ -26,10 +26,18 @@
 		752127C51CE5FE4100E8F44B /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127C31CE5FE4100E8F44B /* Lib.m */; };
 		759757361CE7207A006013B5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757301CE7207A006013B5 /* BaseModel.m */; };
 		759757371CE7207A006013B5 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757321CE7207A006013B5 /* DB.m */; };
-		759757381CE7207A006013B5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757351CE7207A006013B5 /* Teacher.m */; };
 		759757421CE7220B006013B5 /* Scoreboad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573D1CE7220B006013B5 /* Scoreboad.m */; };
 		759757431CE7220B006013B5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573F1CE7220B006013B5 /* Student.m */; };
 		759757441CE7220B006013B5 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757411CE7220B006013B5 /* Subject.m */; };
+		759757951CE867CE006013B5 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757941CE867CE006013B5 /* DLRadioButton.m */; };
+		7597579E1CE87DE9006013B5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597579C1CE87DE9006013B5 /* MainViewController.m */; };
+		7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7597579D1CE87DE9006013B5 /* MainViewController.xib */; };
+		759757AC1CE8880D006013B5 /* menu24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757AA1CE8880D006013B5 /* menu24.png */; };
+		759757AD1CE8880D006013B5 /* menu16.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757AB1CE8880D006013B5 /* menu16.png */; };
+		759757B11CE8E6B0006013B5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B01CE8E6B0006013B5 /* Teacher.m */; };
+		759757B61CE95224006013B5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B51CE95224006013B5 /* SWRevealViewController.m */; };
+		759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B91CE95394006013B5 /* SlideMenuViewController.m */; };
+		759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757BA1CE95394006013B5 /* SlideMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +72,9 @@
 		752127771CE561DB00E8F44B /* ProjectendUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectendUITests.m; sourceTree = "<group>"; };
 		752127791CE561DB00E8F44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752127881CE5B22800E8F44B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		7521278C1CE5B31600E8F44B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		7521278D1CE5B31600E8F44B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		7521278E1CE5B31600E8F44B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		7521278C1CE5B31600E8F44B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7521278D1CE5B31600E8F44B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		7521278E1CE5B31600E8F44B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		752127931CE5B81A00E8F44B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		752127941CE5B81A00E8F44B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		752127951CE5B81A00E8F44B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -88,14 +96,26 @@
 		759757311CE7207A006013B5 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
 		759757321CE7207A006013B5 /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
 		759757331CE7207A006013B5 /* DBFieldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBFieldName.h; sourceTree = "<group>"; };
-		759757341CE7207A006013B5 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
-		759757351CE7207A006013B5 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
 		7597573C1CE7220B006013B5 /* Scoreboad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scoreboad.h; sourceTree = "<group>"; };
 		7597573D1CE7220B006013B5 /* Scoreboad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scoreboad.m; sourceTree = "<group>"; };
 		7597573E1CE7220B006013B5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		7597573F1CE7220B006013B5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		759757401CE7220B006013B5 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
 		759757411CE7220B006013B5 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
+		759757931CE867CE006013B5 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		759757941CE867CE006013B5 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		7597579B1CE87DE9006013B5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7597579C1CE87DE9006013B5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7597579D1CE87DE9006013B5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		759757AA1CE8880D006013B5 /* menu24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu24.png; path = ImageIcon/menu24.png; sourceTree = "<group>"; };
+		759757AB1CE8880D006013B5 /* menu16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu16.png; path = ImageIcon/menu16.png; sourceTree = "<group>"; };
+		759757AF1CE8E6B0006013B5 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		759757B01CE8E6B0006013B5 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		759757B41CE95224006013B5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Projectend/SlideOutMenuFiles/SWRevealViewController.h; sourceTree = "<group>"; };
+		759757B51CE95224006013B5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Projectend/SlideOutMenuFiles/SWRevealViewController.m; sourceTree = "<group>"; };
+		759757B81CE95394006013B5 /* SlideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuViewController.h; sourceTree = "<group>"; };
+		759757B91CE95394006013B5 /* SlideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuViewController.m; sourceTree = "<group>"; };
+		759757BA1CE95394006013B5 /* SlideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideMenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +149,8 @@
 			children = (
 				752127881CE5B22800E8F44B /* libsqlite3.0.tbd */,
 				752127511CE561DB00E8F44B /* Projectend */,
+				759757B71CE95229006013B5 /* SlideOutMenuFiles */,
+				759757921CE867CE006013B5 /* DLRadioButton */,
 				7521276B1CE561DB00E8F44B /* ProjectendTests */,
 				752127761CE561DB00E8F44B /* ProjectendUITests */,
 				752127501CE561DB00E8F44B /* Products */,
@@ -159,6 +181,7 @@
 		752127521CE561DB00E8F44B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				759757AE1CE88812006013B5 /* ImageIcon */,
 				752127631CE561DB00E8F44B /* Info.plist */,
 				752127531CE561DB00E8F44B /* main.m */,
 				752127601CE561DB00E8F44B /* LaunchScreen.storyboard */,
@@ -234,9 +257,15 @@
 		752127A51CE5B85D00E8F44B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7521278C1CE5B31600E8F44B /* MainViewController.h */,
-				7521278D1CE5B31600E8F44B /* MainViewController.m */,
-				7521278E1CE5B31600E8F44B /* MainViewController.xib */,
+				7521278C1CE5B31600E8F44B /* LoginViewController.h */,
+				7521278D1CE5B31600E8F44B /* LoginViewController.m */,
+				7521278E1CE5B31600E8F44B /* LoginViewController.xib */,
+				7597579B1CE87DE9006013B5 /* MainViewController.h */,
+				7597579C1CE87DE9006013B5 /* MainViewController.m */,
+				7597579D1CE87DE9006013B5 /* MainViewController.xib */,
+				759757B81CE95394006013B5 /* SlideMenuViewController.h */,
+				759757B91CE95394006013B5 /* SlideMenuViewController.m */,
+				759757BA1CE95394006013B5 /* SlideMenuViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,8 +289,8 @@
 				759757321CE7207A006013B5 /* DB.m */,
 				7597572F1CE7207A006013B5 /* BaseModel.h */,
 				759757301CE7207A006013B5 /* BaseModel.m */,
-				759757341CE7207A006013B5 /* Teacher.h */,
-				759757351CE7207A006013B5 /* Teacher.m */,
+				759757AF1CE8E6B0006013B5 /* Teacher.h */,
+				759757B01CE8E6B0006013B5 /* Teacher.m */,
 				7597573E1CE7220B006013B5 /* Student.h */,
 				7597573F1CE7220B006013B5 /* Student.m */,
 				759757401CE7220B006013B5 /* Subject.h */,
@@ -270,6 +299,34 @@
 				7597573D1CE7220B006013B5 /* Scoreboad.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		759757921CE867CE006013B5 /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				759757931CE867CE006013B5 /* DLRadioButton.h */,
+				759757941CE867CE006013B5 /* DLRadioButton.m */,
+			);
+			name = DLRadioButton;
+			path = Projectend/DLRadioButton;
+			sourceTree = "<group>";
+		};
+		759757AE1CE88812006013B5 /* ImageIcon */ = {
+			isa = PBXGroup;
+			children = (
+				759757AA1CE8880D006013B5 /* menu24.png */,
+				759757AB1CE8880D006013B5 /* menu16.png */,
+			);
+			name = ImageIcon;
+			sourceTree = "<group>";
+		};
+		759757B71CE95229006013B5 /* SlideOutMenuFiles */ = {
+			isa = PBXGroup;
+			children = (
+				759757B41CE95224006013B5 /* SWRevealViewController.h */,
+				759757B51CE95224006013B5 /* SWRevealViewController.m */,
+			);
+			name = SlideOutMenuFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,8 +433,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
+				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
+				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
 				752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */,
-				752127901CE5B31600E8F44B /* MainViewController.xib in Resources */,
+				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
+				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
+				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,19 +465,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				752127571CE561DB00E8F44B /* AppDelegate.m in Sources */,
+				759757B61CE95224006013B5 /* SWRevealViewController.m in Sources */,
 				752127A11CE5B81A00E8F44B /* FMDatabasePool.m in Sources */,
 				759757431CE7220B006013B5 /* Student.m in Sources */,
 				752127C51CE5FE4100E8F44B /* Lib.m in Sources */,
 				759757441CE7220B006013B5 /* Subject.m in Sources */,
 				759757361CE7207A006013B5 /* BaseModel.m in Sources */,
-				7521278F1CE5B31600E8F44B /* MainViewController.m in Sources */,
+				759757B11CE8E6B0006013B5 /* Teacher.m in Sources */,
+				7521278F1CE5B31600E8F44B /* LoginViewController.m in Sources */,
 				759757371CE7207A006013B5 /* DB.m in Sources */,
 				752127A21CE5B81A00E8F44B /* FMDatabaseQueue.m in Sources */,
 				752127541CE561DB00E8F44B /* main.m in Sources */,
 				759757421CE7220B006013B5 /* Scoreboad.m in Sources */,
-				759757381CE7207A006013B5 /* Teacher.m in Sources */,
+				759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */,
 				7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */,
+				7597579E1CE87DE9006013B5 /* MainViewController.m in Sources */,
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
+				759757951CE867CE006013B5 /* DLRadioButton.m in Sources */,
 				752127C41CE5FE4100E8F44B /* Global.m in Sources */,
 				752127A01CE5B81A00E8F44B /* FMDatabaseAdditions.m in Sources */,
 			);
