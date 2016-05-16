@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "SWRevealViewController.h"
 
 @interface MainViewController ()
 
@@ -17,7 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setupUI];
+//    [self setupUI];
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu24.png"]
+                                                                         style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
+    
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
 }
 
 - (void)setupUI{
@@ -29,11 +40,10 @@
                                                             }];
     [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithRed:247/255 green:248/255 blue:246/255 alpha:1]];
     self.navigationItem.leftBarButtonItem = [self leftButtomBar];
-    
 }
 
 - (UIBarButtonItem *)leftButtomBar{
-    UIImage *image = [UIImage imageNamed:@"menu16.png"];
+    UIImage *image = [UIImage imageNamed:@"menu24.png"];
     CGRect buttonFrame = CGRectMake(0, 0, image.size.width, image.size.height);
     
     UIButton *button = [[UIButton alloc] initWithFrame:buttonFrame];
@@ -41,7 +51,6 @@
     [button setImage:image forState:UIControlStateNormal];
     
     UIBarButtonItem *item= [[UIBarButtonItem alloc] initWithCustomView:button];
-    
     return item;
 }
 

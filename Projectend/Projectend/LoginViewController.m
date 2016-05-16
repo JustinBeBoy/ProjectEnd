@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SlideMenuViewController.h"
 
 @interface LoginViewController (){
     BOOL flagcheckbox;
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     // Do any additional setup after loading the view from its nib.
     [self chekboxselected];
 }
@@ -68,11 +70,24 @@
         arrayTeachers = [NSArray array];
         arrayTeachers = [Teacher queryTeacherUsername:self.tfUserName.text andPassword:self.tfPassWord.text];
         if (arrayTeachers.count>0) {
-            MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-            [self.navigationController pushViewController:mainViewController animated:YES];
+            [self moveToHome];
+
         }else{
             NSLog(@"nhap lai username and password");
         }
     }
+}
+- (void) moveToHome{
+//    MainViewController *mainViewController;
+    MainViewController *frontViewController  = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    SlideMenuViewController *rearViewController = [[SlideMenuViewController alloc] initWithNibName:@"SlideMenuViewController" bundle:nil];
+    
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+    revealController.delegate = self;
+    
+    [self.navigationController pushViewController:revealController animated:YES];
 }
 @end

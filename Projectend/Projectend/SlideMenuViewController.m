@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
+    [self setupMenuArray];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -31,11 +33,11 @@
 #pragma mark Array Setup
 - (void) setupMenuArray{
     NSArray *arrayOfMenu = @[
-                         [ManagerList itemWithTitle:@"Quản Lý Lớp học" withImage:[UIImage imageNamed:@"class24.png"] ],
-                         [ManagerList itemWithTitle:@"Quản Lý Sinh Viên" withImage:[UIImage imageNamed:@"student24.png"] ],
-                         [ManagerList itemWithTitle:@"Quản Lý Môn Học" withImage:[UIImage imageNamed:@"subject24.png"] ],
-                         [ManagerList itemWithTitle:@"Quản Lý Bảng Điểm" withImage:[UIImage imageNamed:@"scoreboard24.png"] ],
-                         [ManagerList itemWithTitle:@"Log Out" withImage:[UIImage imageNamed:@"logout24.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Lớp học" withImage:[UIImage imageNamed:@"class256b.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Sinh Viên" withImage:[UIImage imageNamed:@"student256b.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Môn Học" withImage:[UIImage imageNamed:@"subject256b.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Bảng Điểm" withImage:[UIImage imageNamed:@"scoreboard256b.png"] ],
+                         [ManagerList itemWithTitle:@"Log Out" withImage:[UIImage imageNamed:@"logout256b.png"] ],
                          ];
     
     self.arrayOfMenus = [NSMutableArray arrayWithArray:arrayOfMenu];
@@ -65,11 +67,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellMainNibID = @"cellMain";
+    static NSString *cellMainNibID = @"cellMenu";
     
     _cellMenu = [tableView dequeueReusableCellWithIdentifier:cellMainNibID];
     if (_cellMenu == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"MainCellRight" owner:self options:nil];
+        [[NSBundle mainBundle] loadNibNamed:@"MenuCell" owner:self options:nil];
     }
     
     UIImageView *mainImage = (UIImageView *)[_cellMenu viewWithTag:1];
@@ -102,14 +104,14 @@
 #pragma mark -
 #pragma mark Default System Code
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-    }
-    return self;
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self)
+//    {
+//    }
+//    return self;
+//}
 
 /*
 #pragma mark - Navigation

@@ -52,6 +52,14 @@
 		759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C41CE97BEB006013B5 /* scoreboard24.png */; };
 		759757CA1CE97BEB006013B5 /* student24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C51CE97BEB006013B5 /* student24.png */; };
 		759757CB1CE97BEB006013B5 /* subject24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C61CE97BEB006013B5 /* subject24.png */; };
+		759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DA1CE9D815006013B5 /* scoreboard32.png */; };
+		759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DC1CE9D8BF006013B5 /* scoreboard128.png */; };
+		759757DF1CE9D8F3006013B5 /* scoreboard256.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DE1CE9D8F3006013B5 /* scoreboard256.png */; };
+		759757E51CE9DB6C006013B5 /* class256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E01CE9DB6C006013B5 /* class256b.png */; };
+		759757E61CE9DB6C006013B5 /* logout256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E11CE9DB6C006013B5 /* logout256b.png */; };
+		759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E21CE9DB6C006013B5 /* scoreboard256b.png */; };
+		759757E81CE9DB6C006013B5 /* student256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E31CE9DB6C006013B5 /* student256b.png */; };
+		759757E91CE9DB6C006013B5 /* subject256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E41CE9DB6C006013B5 /* subject256b.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +157,14 @@
 		759757C41CE97BEB006013B5 /* scoreboard24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreboard24.png; path = ImageIcon/scoreboard24.png; sourceTree = "<group>"; };
 		759757C51CE97BEB006013B5 /* student24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = student24.png; path = ImageIcon/student24.png; sourceTree = "<group>"; };
 		759757C61CE97BEB006013B5 /* subject24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subject24.png; path = ImageIcon/subject24.png; sourceTree = "<group>"; };
+		759757DA1CE9D815006013B5 /* scoreboard32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard32.png; sourceTree = "<group>"; };
+		759757DC1CE9D8BF006013B5 /* scoreboard128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard128.png; sourceTree = "<group>"; };
+		759757DE1CE9D8F3006013B5 /* scoreboard256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard256.png; sourceTree = "<group>"; };
+		759757E01CE9DB6C006013B5 /* class256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = class256b.png; sourceTree = "<group>"; };
+		759757E11CE9DB6C006013B5 /* logout256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout256b.png; sourceTree = "<group>"; };
+		759757E21CE9DB6C006013B5 /* scoreboard256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard256b.png; sourceTree = "<group>"; };
+		759757E31CE9DB6C006013B5 /* student256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student256b.png; sourceTree = "<group>"; };
+		759757E41CE9DB6C006013B5 /* subject256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subject256b.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +385,14 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				759757E01CE9DB6C006013B5 /* class256b.png */,
+				759757E11CE9DB6C006013B5 /* logout256b.png */,
+				759757E21CE9DB6C006013B5 /* scoreboard256b.png */,
+				759757E31CE9DB6C006013B5 /* student256b.png */,
+				759757E41CE9DB6C006013B5 /* subject256b.png */,
+				759757DE1CE9D8F3006013B5 /* scoreboard256.png */,
+				759757DC1CE9D8BF006013B5 /* scoreboard128.png */,
+				759757DA1CE9D815006013B5 /* scoreboard32.png */,
 				759757C21CE97BEB006013B5 /* class24.png */,
 				759757C31CE97BEB006013B5 /* logout24.png */,
 				759757C41CE97BEB006013B5 /* scoreboard24.png */,
@@ -495,10 +519,17 @@
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
+				759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */,
+				759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */,
+				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
+				759757E91CE9DB6C006013B5 /* subject256b.png in Resources */,
+				759757E51CE9DB6C006013B5 /* class256b.png in Resources */,
+				759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
+				759757DF1CE9D8F3006013B5 /* scoreboard256.png in Resources */,
 				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
 				752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */,
@@ -509,6 +540,7 @@
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
+				759757E81CE9DB6C006013B5 /* student256b.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

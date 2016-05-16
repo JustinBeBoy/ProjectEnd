@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SlideMenuViewController.h"
 
 @interface MainViewController : UIViewController
-@property (nonatomic, strong) SlideMenuViewController *slideMenuViewController;
 @property (nonatomic, assign) BOOL showingLeftPanel;
 @end

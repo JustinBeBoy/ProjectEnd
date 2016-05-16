@@ -10,8 +10,9 @@
 #import "DLRadioButton/DLRadioButton.h"
 #import "Teacher.h"
 #import "MainViewController.h"
+#import "SWRevealViewController.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<SWRevealViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *tfUserName;
 @property (strong, nonatomic) IBOutlet UITextField *tfPassWord;
 
