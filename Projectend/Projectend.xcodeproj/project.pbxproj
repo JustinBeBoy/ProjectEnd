@@ -178,7 +178,10 @@
 		759757E21CE9DB6C006013B5 /* scoreboard256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard256b.png; sourceTree = "<group>"; };
 		759757E31CE9DB6C006013B5 /* student256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student256b.png; sourceTree = "<group>"; };
 		759757E41CE9DB6C006013B5 /* subject256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subject256b.png; sourceTree = "<group>"; };
-
+		759757EA1CEAB2BD006013B5 /* StudentManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentManagerViewController.h; sourceTree = "<group>"; };
+		759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentManagerViewController.m; sourceTree = "<group>"; };
+		759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentManagerViewController.xib; sourceTree = "<group>"; };
+		759757EF1CEAB725006013B5 /* StudentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
