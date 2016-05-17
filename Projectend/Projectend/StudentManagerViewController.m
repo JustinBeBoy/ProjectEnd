@@ -25,6 +25,7 @@
 }
 
 - (void) setupUI{
+    self.navigationController.navigationBarHidden = NO;
     self.navigationItem.title = @"Quản Lý Sinh Viên";
     
     _lbNumber.layer.borderWidth = 1.0f;
