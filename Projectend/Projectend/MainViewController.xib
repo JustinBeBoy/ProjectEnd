@@ -25,6 +25,9 @@
                     <state key="normal" title="Quản Lý Lớp Học">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="classManager:" destination="-1" eventType="touchUpInside" id="NuZ-YQ-Q7K"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5C-Ai-c1R">
                     <rect key="frame" x="40" y="225" width="240" height="65"/>
@@ -33,6 +36,9 @@
                     <state key="normal" title="Quản Lý Sinh Viên">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="studentManager:" destination="-1" eventType="touchUpInside" id="7Uv-bq-kfu"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-Lo-zqw">
                     <rect key="frame" x="40" y="300" width="240" height="65"/>
@@ -41,6 +47,9 @@
                     <state key="normal" title="Quản Lý Môn Học">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="subjectManager:" destination="-1" eventType="touchUpInside" id="kZp-jo-eJL"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-i3-c7z">
                     <rect key="frame" x="40" y="375" width="240" height="65"/>
@@ -49,6 +58,9 @@
                     <state key="normal" title="Quản Lý Điểm">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="scoreManager:" destination="-1" eventType="touchUpInside" id="As1-7r-242"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ominext Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-ZB-Wwt">
                     <rect key="frame" x="85" y="507" width="150" height="21"/>

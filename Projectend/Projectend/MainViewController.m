@@ -18,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    [self setupUI];
+    [self setupUI];
+    
+}
+
+- (void)setupUI{
+    [self.navigationController setNavigationBarHidden:NO];
     SWRevealViewController *revealController = [self revealViewController];
     
     
@@ -26,33 +31,16 @@
     [revealController tapGestureRecognizer];
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu24.png"]
                                                                          style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
+    [revealController.navigationController.navigationBar setTitleTextAttributes: @{
+                                                                                   NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],
+                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:20 ]
+                                                                                   }];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
-    
-}
-
-- (void)setupUI{
-    [self.navigationController setNavigationBarHidden:NO];
     self.navigationItem.title = @"Trang Chủ";
-    [self.navigationController.navigationBar setTitleTextAttributes: @{
-                                                            NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],
-                                                            NSFontAttributeName: [UIFont systemFontOfSize:20 ]
-                                                            }];
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithRed:247/255 green:248/255 blue:246/255 alpha:1]];
-    self.navigationItem.leftBarButtonItem = [self leftButtomBar];
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
 }
 
-- (UIBarButtonItem *)leftButtomBar{
-    UIImage *image = [UIImage imageNamed:@"menu24.png"];
-    CGRect buttonFrame = CGRectMake(0, 0, image.size.width, image.size.height);
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:buttonFrame];
-    //[button addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [button setImage:image forState:UIControlStateNormal];
-    
-    UIBarButtonItem *item= [[UIBarButtonItem alloc] initWithCustomView:button];
-    return item;
-}
 
 
 - (void)didReceiveMemoryWarning {
@@ -70,4 +58,20 @@
 }
 */
 
+#pragma Button Manager
+- (IBAction)classManager:(id)sender {
+    QuanLyLopHocVC *classmanager = [[QuanLyLopHocVC alloc]initWithNibName:@"QuanLyLopHocVC" bundle:nil];
+    [self.navigationController pushViewController:classmanager animated:YES];
+}
+
+- (IBAction)studentManager:(id)sender {
+    StudentManagerViewController *studentmanager = [[StudentManagerViewController alloc]initWithNibName:@"StudentManagerViewController" bundle:nil];
+    [self.navigationController pushViewController:studentmanager animated:YES];
+}
+
+- (IBAction)subjectManager:(id)sender {
+}
+
+- (IBAction)scoreManager:(id)sender {
+}
 @end

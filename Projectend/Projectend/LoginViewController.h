@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DLRadioButton/DLRadioButton.h"
 #import "Teacher.h"
+#import "Student.h"
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
 

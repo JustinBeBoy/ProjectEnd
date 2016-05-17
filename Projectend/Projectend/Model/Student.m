@@ -95,4 +95,28 @@
     
     return arrStudent;
 }
+
++ (NSArray*) queryStudentUsername:(NSString*)username  andPassword:(NSString *)password {
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrUsernameandPassword = [self queryStudentUsername:username andPassword:password db:db];
+    [db close];
+    
+    return arrUsernameandPassword;
+}
+
++ (NSArray*) queryStudentUsername:(NSString*)username andPassword:(NSString *)password db:(FMDatabase*)db {
+    NSString *queryString = [NSString stringWithFormat:@"%@=0 AND %@=\"%@\" AND %@=\"%@\"",k_deleted,k_username,username,k_password,password];
+    
+    NSArray *arrDic = [Student selectWhere:queryString db:db];
+    NSMutableArray *arrUsenameandPassword = [NSMutableArray array];
+    
+    for (NSDictionary *dic in arrDic) {
+        Student *usernameandpassword = [[Student alloc]initWithDic:dic];
+        [arrUsenameandPassword addObject:usernameandpassword];
+    }
+    
+    return arrUsenameandPassword;
+}
+
 @end
