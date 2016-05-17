@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; settings = {ASSET_TAGS = (); }; };
+		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
 		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; };
 		5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */; };
@@ -64,6 +64,9 @@
 		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
 		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
 		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
+		759757F61CEAFC5F006013B5 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F31CEAFC5F006013B5 /* checked.png */; };
+		759757F71CEAFC5F006013B5 /* plus32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F41CEAFC5F006013B5 /* plus32.png */; };
+		759757F81CEAFC5F006013B5 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F51CEAFC5F006013B5 /* unchecked.png */; };
 		84290A431CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		84290A441CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
@@ -177,6 +180,9 @@
 		759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentManagerViewController.m; sourceTree = "<group>"; };
 		759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentManagerViewController.xib; sourceTree = "<group>"; };
 		759757EF1CEAB725006013B5 /* StudentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentViewCell.xib; sourceTree = "<group>"; };
+		759757F31CEAFC5F006013B5 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		759757F41CEAFC5F006013B5 /* plus32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus32.png; sourceTree = "<group>"; };
+		759757F51CEAFC5F006013B5 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +409,9 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				759757F31CEAFC5F006013B5 /* checked.png */,
+				759757F41CEAFC5F006013B5 /* plus32.png */,
+				759757F51CEAFC5F006013B5 /* unchecked.png */,
 				759757E01CE9DB6C006013B5 /* class256b.png */,
 				759757E11CE9DB6C006013B5 /* logout256b.png */,
 				759757E21CE9DB6C006013B5 /* scoreboard256b.png */,
@@ -534,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759757F71CEAFC5F006013B5 /* plus32.png in Resources */,
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
@@ -543,12 +553,14 @@
 				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
+				759757F81CEAFC5F006013B5 /* unchecked.png in Resources */,
 				759757E91CE9DB6C006013B5 /* subject256b.png in Resources */,
 				759757E51CE9DB6C006013B5 /* class256b.png in Resources */,
 				759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
+				759757F61CEAFC5F006013B5 /* checked.png in Resources */,
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
 				759757DF1CE9D8F3006013B5 /* scoreboard256.png in Resources */,
 				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
