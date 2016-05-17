@@ -7,6 +7,8 @@
 //
 
 #import "ThemSinhVien.h"
+#import "AddStudentCell.h"
+#import "Student.h"
 
 @interface ThemSinhVien ()
 
@@ -23,6 +25,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - UITableView Delegate
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _arrStudentNotAdd.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIButton *button;
+    AddStudentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudent"];
+    
+    if (!cell) {
+        cell = [[AddStudentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddStudent"];
+    }
+    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
+    cell.lblAddStudent.text = thisStudent.name;
+    button.tag = indexPath.row;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 @end

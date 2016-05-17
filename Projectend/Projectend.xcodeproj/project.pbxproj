@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; settings = {ASSET_TAGS = (); }; };
-		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; settings = {ASSET_TAGS = (); }; };
-		5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */; settings = {ASSET_TAGS = (); }; };
-		5CF244CB1CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C41CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib */; settings = {ASSET_TAGS = (); }; };
-		5CF244CC1CE9CFA8009EB0E2 /* ThemSinhVien.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */; settings = {ASSET_TAGS = (); }; };
-		5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */; settings = {ASSET_TAGS = (); }; };
-		5CF244D11CE9D00B009EB0E2 /* ClassList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244D01CE9D00B009EB0E2 /* ClassList.m */; settings = {ASSET_TAGS = (); }; };
+		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; settings = {ASSET_TAGS = (); }; };
+		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
+		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; };
+		5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */; };
+		5CF244CB1CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C41CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib */; };
+		5CF244CC1CE9CFA8009EB0E2 /* ThemSinhVien.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */; };
+		5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */; };
+		5CF244D11CE9D00B009EB0E2 /* ClassList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244D01CE9D00B009EB0E2 /* ClassList.m */; };
 		752127541CE561DB00E8F44B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127531CE561DB00E8F44B /* main.m */; };
 		752127571CE561DB00E8F44B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127561CE561DB00E8F44B /* AppDelegate.m */; };
 		7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7521275E1CE561DB00E8F44B /* Assets.xcassets */; };
@@ -60,6 +61,8 @@
 		759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E21CE9DB6C006013B5 /* scoreboard256b.png */; };
 		759757E81CE9DB6C006013B5 /* student256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E31CE9DB6C006013B5 /* student256b.png */; };
 		759757E91CE9DB6C006013B5 /* subject256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E41CE9DB6C006013B5 /* subject256b.png */; };
+		84290A431CEA0D8F00B07CD9 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 84290A411CEA0D8F00B07CD9 /* unchecked.png */; };
+		84290A441CEA0D8F00B07CD9 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 84290A421CEA0D8F00B07CD9 /* checked.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentCell.h; sourceTree = "<group>"; };
+		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentCell.m; sourceTree = "<group>"; };
 		5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChiTietLopHoc.h; path = ClassManager/ChiTietLopHoc.h; sourceTree = "<group>"; };
 		5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChiTietLopHoc.m; path = ClassManager/ChiTietLopHoc.m; sourceTree = "<group>"; };
 		5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChiTietLopHoc.xib; path = ClassManager/ChiTietLopHoc.xib; sourceTree = "<group>"; };
@@ -165,6 +170,8 @@
 		759757E21CE9DB6C006013B5 /* scoreboard256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreboard256b.png; sourceTree = "<group>"; };
 		759757E31CE9DB6C006013B5 /* student256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student256b.png; sourceTree = "<group>"; };
 		759757E41CE9DB6C006013B5 /* subject256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subject256b.png; sourceTree = "<group>"; };
+		84290A411CEA0D8F00B07CD9 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		84290A421CEA0D8F00B07CD9 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +212,8 @@
 				5CF244C51CE9CFA8009EB0E2 /* ThemSinhVien.h */,
 				5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */,
 				5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */,
+				5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */,
+				5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */,
 			);
 			name = ClassManager;
 			sourceTree = "<group>";
@@ -400,6 +409,8 @@
 				759757C61CE97BEB006013B5 /* subject24.png */,
 				759757AA1CE8880D006013B5 /* menu24.png */,
 				759757AB1CE8880D006013B5 /* menu16.png */,
+				84290A411CEA0D8F00B07CD9 /* unchecked.png */,
+				84290A421CEA0D8F00B07CD9 /* checked.png */,
 			);
 			name = ImageIcon;
 			sourceTree = "<group>";
@@ -520,6 +531,7 @@
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
 				759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */,
+				84290A431CEA0D8F00B07CD9 /* unchecked.png in Resources */,
 				759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */,
 				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
@@ -539,6 +551,7 @@
 				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
+				84290A441CEA0D8F00B07CD9 /* checked.png in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 				759757E81CE9DB6C006013B5 /* student256b.png in Resources */,
 			);
@@ -586,6 +599,7 @@
 				7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */,
 				7597579E1CE87DE9006013B5 /* MainViewController.m in Sources */,
 				5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */,
+				5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */,
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
 				759757951CE867CE006013B5 /* DLRadioButton.m in Sources */,
 				752127C41CE5FE4100E8F44B /* Global.m in Sources */,

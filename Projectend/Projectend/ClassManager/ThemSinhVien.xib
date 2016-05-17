@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThemSinhVien">
             <connections>
+                <outlet property="tblAddStudent" destination="99A-Ah-7vw" id="mzH-L1-PAy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
                                 <constraint firstAttribute="height" constant="25" id="TIx-74-VzQ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-be-ufZ">
@@ -34,26 +35,13 @@
                             <state key="normal" title="Thêm"/>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="99A-Ah-7vw">
-                            <rect key="frame" x="0.0" y="95" width="240" height="232"/>
+                            <rect key="frame" x="0.0" y="61" width="240" height="266"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="i5M-Pr-FkT" id="Zz6-Y1-vTE"/>
+                                <outlet property="delegate" destination="i5M-Pr-FkT" id="iez-B6-OJv"/>
+                            </connections>
                         </tableView>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="46" translatesAutoresizingMaskIntoConstraints="NO" id="f7M-1d-X4q">
-                            <rect key="frame" x="8" y="41" width="224" height="46"/>
-                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f7M-1d-X4q" id="Z34-fW-joh">
-                                <rect key="frame" x="0.0" y="0.0" width="224" height="45"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </tableViewCellContentView>
-                        </tableViewCell>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ln-1j-ooy">
-                            <rect key="frame" x="8" y="53" width="174" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Im-rr-chz">
-                            <rect key="frame" x="190" y="49" width="35" height="30"/>
-                            <state key="normal" title="v"/>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -65,7 +53,7 @@
                         <constraint firstAttribute="trailing" secondItem="ibI-be-ufZ" secondAttribute="trailing" constant="49" id="Dyg-K3-jx9"/>
                         <constraint firstItem="09g-fi-bWP" firstAttribute="top" secondItem="2k8-hL-fqb" secondAttribute="top" constant="8" id="HyS-Fm-y0c"/>
                         <constraint firstItem="ibI-be-ufZ" firstAttribute="top" secondItem="99A-Ah-7vw" secondAttribute="bottom" constant="15" id="P40-xd-OA6"/>
-                        <constraint firstItem="99A-Ah-7vw" firstAttribute="top" secondItem="09g-fi-bWP" secondAttribute="bottom" constant="62" id="TGx-In-VwD"/>
+                        <constraint firstItem="99A-Ah-7vw" firstAttribute="top" secondItem="09g-fi-bWP" secondAttribute="bottom" constant="28" id="TGx-In-VwD"/>
                         <constraint firstItem="09g-fi-bWP" firstAttribute="leading" secondItem="2k8-hL-fqb" secondAttribute="leading" constant="24" id="bKW-ZM-CRT"/>
                         <constraint firstAttribute="trailing" secondItem="09g-fi-bWP" secondAttribute="trailing" constant="24" id="gpp-eO-6SE"/>
                         <constraint firstAttribute="trailing" secondItem="99A-Ah-7vw" secondAttribute="trailing" id="hSk-Cq-yIk"/>
@@ -79,5 +67,38 @@
             </constraints>
             <point key="canvasLocation" x="400" y="298"/>
         </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStudent" rowHeight="52" id="0oz-cV-BDd" customClass="AddStudentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0oz-cV-BDd" id="ogg-1T-vlL">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lp-g5-yca">
+                        <rect key="frame" x="8" y="7" width="268" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-54-JBf">
+                        <rect key="frame" x="284" y="11" width="28" height="29"/>
+                        <state key="normal" backgroundImage="unchecked.png"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked.png" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-fy-WHv">
+                        <rect key="frame" x="284" y="11" width="28" height="29"/>
+                    </imageView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnCheck" destination="FJg-54-JBf" id="ySx-Pt-83C"/>
+                <outlet property="lblAddStudent" destination="2lp-g5-yca" id="EOU-BF-BFa"/>
+                <outlet property="lblStudent" destination="2lp-g5-yca" id="qHa-ol-7SX"/>
+            </connections>
+            <point key="canvasLocation" x="400" y="672"/>
+        </tableViewCell>
     </objects>
+    <resources>
+        <image name="checked.png" width="225" height="225"/>
+        <image name="unchecked.png" width="225" height="225"/>
+    </resources>
 </document>

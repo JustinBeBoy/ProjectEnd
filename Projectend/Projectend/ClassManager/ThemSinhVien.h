@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@interface ThemSinhVien : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@interface ThemSinhVien : UIViewController
+- (IBAction)checkPressed:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UITableView *tblAddStudent;
+@property (strong, nonatomic) NSArray *arrStudentNotAdd;
 
 @end
