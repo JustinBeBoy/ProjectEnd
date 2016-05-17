@@ -12,6 +12,7 @@
 @interface LoginViewController (){
     BOOL flagcheckbox;
     NSArray *arrayTeachers;
+    NSArray *arrayStudents;
 }
 
 @end
@@ -75,6 +76,14 @@
         }else{
             NSLog(@"nhap lai username and password");
         }
+    }
+    if (!flagcheckbox) {
+        arrayStudents = [NSArray array];
+        arrayStudents = [Student queryStudentUsername:self.tfUserName.text andPassword:self.tfPassWord.text];
+        if(arrayStudents.count>0)
+            NSLog(@"dang nhap student thanh cong");
+        else
+            NSLog(@"nhap lai username and password");
     }
 }
 - (void) moveToHome{

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StudentManagerViewController.h"
+#import "QuanLyLopHocVC.h"
 
 @interface MainViewController : UIViewController
+- (IBAction)classManager:(id)sender;
+- (IBAction)studentManager:(id)sender;
+- (IBAction)subjectManager:(id)sender;
+- (IBAction)scoreManager:(id)sender;
 @property (nonatomic, assign) BOOL showingLeftPanel;
 @end
