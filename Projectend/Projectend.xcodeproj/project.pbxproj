@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; settings = {ASSET_TAGS = (); }; };
-
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
 		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; };
 		5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */; };
@@ -63,14 +61,11 @@
 		759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E21CE9DB6C006013B5 /* scoreboard256b.png */; };
 		759757E81CE9DB6C006013B5 /* student256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E31CE9DB6C006013B5 /* student256b.png */; };
 		759757E91CE9DB6C006013B5 /* subject256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E41CE9DB6C006013B5 /* subject256b.png */; };
-
 		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
 		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
 		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
-
-		84290A431CEA0D8F00B07CD9 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 84290A411CEA0D8F00B07CD9 /* unchecked.png */; };
-		84290A441CEA0D8F00B07CD9 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 84290A421CEA0D8F00B07CD9 /* checked.png */; };
-
+		84290A431CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		84290A441CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,8 +418,6 @@
 				759757C61CE97BEB006013B5 /* subject24.png */,
 				759757AA1CE8880D006013B5 /* menu24.png */,
 				759757AB1CE8880D006013B5 /* menu16.png */,
-				84290A411CEA0D8F00B07CD9 /* unchecked.png */,
-				84290A421CEA0D8F00B07CD9 /* checked.png */,
 			);
 			name = ImageIcon;
 			sourceTree = "<group>";
@@ -545,7 +538,7 @@
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
 				759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */,
-				84290A431CEA0D8F00B07CD9 /* unchecked.png in Resources */,
+				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
 				759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */,
 				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
@@ -567,7 +560,7 @@
 				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
-				84290A441CEA0D8F00B07CD9 /* checked.png in Resources */,
+				84290A441CEA0D8F00B07CD9 /* (null) in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 				759757E81CE9DB6C006013B5 /* student256b.png in Resources */,
 			);
@@ -752,6 +745,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Projectend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OMI.Projectend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -763,6 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Projectend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OMI.Projectend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
