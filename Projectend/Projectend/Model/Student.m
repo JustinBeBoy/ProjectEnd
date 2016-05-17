@@ -67,6 +67,7 @@
     
     for (NSDictionary *dic in studentDics) {
         Student *student = [[Student alloc]initWithDic:dic];
+        student.isCheck = NO;
         [listStudent addObject:student];
     }
     return listStudent;
@@ -88,6 +89,7 @@
     
     for (NSDictionary *dic in arrDic) {
         Student *student = [[Student alloc]initWithDic:dic];
+        student.isCheck = NO;
         [arrStudent addObject:student];
     }
     

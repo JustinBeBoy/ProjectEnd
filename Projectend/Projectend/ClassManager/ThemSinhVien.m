@@ -45,10 +45,23 @@
     Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
     cell.lblAddStudent.text = thisStudent.name;
     button.tag = indexPath.row;
+    //if kiem tra bien student.isCheck == YES
+        // thi hien thi img check len
+    //else
+        // thi hien thi img uncheck
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
+//AddStudentCell Delegate
+//btnCheckTouchByIndex:index
+/*{
+ Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:index.row];
+ thisStudent.isCheck = ?;
+ 
+ [self.tblAddStudent reloadData];
+}*/
 @end

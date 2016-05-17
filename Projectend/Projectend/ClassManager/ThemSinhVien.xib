@@ -83,6 +83,9 @@
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-54-JBf">
                         <rect key="frame" x="284" y="11" width="28" height="29"/>
                         <state key="normal" backgroundImage="unchecked.png"/>
+                        <connections>
+                            <action selector="clickCheck:" destination="0oz-cV-BDd" eventType="touchUpInside" id="CiP-r0-A46"/>
+                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked.png" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-fy-WHv">
                         <rect key="frame" x="284" y="11" width="28" height="29"/>
@@ -94,7 +97,7 @@
                 <outlet property="lblAddStudent" destination="2lp-g5-yca" id="EOU-BF-BFa"/>
                 <outlet property="lblStudent" destination="2lp-g5-yca" id="qHa-ol-7SX"/>
             </connections>
-            <point key="canvasLocation" x="400" y="672"/>
+            <point key="canvasLocation" x="400" y="646"/>
         </tableViewCell>
     </objects>
     <resources>
