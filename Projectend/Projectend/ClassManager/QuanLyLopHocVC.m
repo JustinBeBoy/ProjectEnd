@@ -77,6 +77,21 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)addPressed:(id)sender {
+    [self showAlertWithTextField:@"Thêm lớp học" andMessage:@"Mời nhập tên lớp mới:"];
+}
+-(void)showAlertWithTextField: (NSString*)title andMessage:(NSString*)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * textField) {
+        [textField setPlaceholder:@"Tên lớp học"];
+    }];
+    UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        //do something
+    }];
+    UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+        //do something
+    }];
+    [alert addAction:okAct];
+    [alert addAction:cancelAct];
 }
 
 @end
