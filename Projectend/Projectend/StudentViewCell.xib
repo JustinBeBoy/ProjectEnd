@@ -82,6 +82,7 @@
                     <constraint firstItem="DY4-ou-tfL" firstAttribute="leading" secondItem="RIZ-yI-PxU" secondAttribute="trailing" id="od2-cX-Lqv"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="372.5" y="287"/>
         </tableViewCell>
     </objects>

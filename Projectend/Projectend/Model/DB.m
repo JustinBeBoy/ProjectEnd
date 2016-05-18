@@ -11,6 +11,7 @@
 #import "Subject.h"
 #import "Scoreboad.h"
 #import "Teacher.h"
+#import "ClassList.h"
 
 @implementation DB
 
@@ -41,7 +42,8 @@
                            [Teacher class],
                            [Student class],
                            [Subject class],
-//                           [Scoreboad class]
+                           [Scoreboad class],
+                           [ClassList class]
                            ];
     
     FMDatabase *db = [FMDatabase databaseWithPath:[self dbPath]];

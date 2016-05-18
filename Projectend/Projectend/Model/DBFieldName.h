@@ -46,6 +46,7 @@ static NSString *const ksIntPrimaryInc = @"INTEGER PRIMARY KEY AUTOINCREMENT";
  */
 static NSString *const k_subject       = @"subject";
 static NSString *const k_credits       = @"credits";
+static NSString *const k_mail          = @"mail";
 /**
  *  MARK: tb_student
  */

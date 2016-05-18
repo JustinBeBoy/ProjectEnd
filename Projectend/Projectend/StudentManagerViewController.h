@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Student.h"
+#import "AddAndEditViewController.h"
 
 @interface StudentManagerViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *lbNumber;

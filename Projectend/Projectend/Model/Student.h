@@ -15,6 +15,7 @@
 @property(strong, nonatomic) NSString *sex;
 @property(assign, nonatomic) NSInteger phone;
 @property(strong, nonatomic) NSString *address;
+@property(strong, nonatomic) NSString *mail;
 @property(assign, nonatomic) NSInteger idclass;
 @property(strong, nonatomic) NSString *username;
 @property(strong, nonatomic) NSString *password;

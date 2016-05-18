@@ -20,10 +20,11 @@
                 k_sex,          //4
                 k_phone,        //5
                 k_address,      //6
-                k_idclass,      //7
-                k_username,     //8
-                k_password,     //9
-                k_deleted       //10
+                k_mail,         //7
+                k_idclass,      //8
+                k_username,     //9
+                k_password,     //10
+                k_deleted       //11
                 ];
     });
     
@@ -41,10 +42,11 @@
                 ksText,             //4
                 ksInteger,          //5
                 ksText,             //6
-                ksInteger,          //7
-                ksText,             //8
+                ksText,             //7
+                ksInteger,          //8
                 ksText,             //9
-                ksInteger           //10
+                ksText,             //10
+                ksInteger           //11
                 ];
     });
     return arr;
