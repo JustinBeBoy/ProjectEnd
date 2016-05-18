@@ -31,10 +31,7 @@
     [revealController tapGestureRecognizer];
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu24.png"]
                                                                          style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
-    [revealController.navigationController.navigationBar setTitleTextAttributes: @{
-                                                                                   NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],
-                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:20 ]
-                                                                                   }];
+    [revealController.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     self.navigationItem.title = @"Trang Chủ";

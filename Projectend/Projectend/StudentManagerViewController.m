@@ -26,6 +26,8 @@
 
 - (void) setupUI{
     self.navigationController.navigationBarHidden = NO;
+    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus32.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusStudent)];
+    self.navigationItem.rightBarButtonItem = rightbt;
     self.navigationItem.title = @"Quản Lý Sinh Viên";
     
     _lbNumber.layer.borderWidth = 1.0f;
@@ -34,10 +36,15 @@
     _lbSex.layer.borderWidth = 1.0f;
     _lbYear.layer.borderWidth = 1.0f;
 }
--(void)reloadData{
+- (void)reloadData{
     arrayStudent = [Student queryListStudent];
     [self.tableStudent reloadData];
     
+}
+- (void)plusStudent{
+    AddAndEditViewController *addandedit = [[AddAndEditViewController alloc]initWithNibName:@"AddAndEditViewController" bundle:nil];
+    addandedit.isEditing = NO;
+    [self.navigationController pushViewController:addandedit animated:YES];
 }
 
 #pragma mark UITableView Datasource/Delegate
