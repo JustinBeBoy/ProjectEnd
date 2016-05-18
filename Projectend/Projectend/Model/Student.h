@@ -19,6 +19,7 @@
 @property(assign, nonatomic) NSInteger idclass;
 @property(strong, nonatomic) NSString *username;
 @property(strong, nonatomic) NSString *password;
+@property(assign, nonatomic) BOOL     isCheck;
 
 
 + (NSArray*) queryStudentWithIDClass:(NSString*)idClass;

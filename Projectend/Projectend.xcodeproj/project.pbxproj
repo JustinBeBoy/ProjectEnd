@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
@@ -53,6 +52,7 @@
 		759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C41CE97BEB006013B5 /* scoreboard24.png */; };
 		759757CA1CE97BEB006013B5 /* student24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C51CE97BEB006013B5 /* student24.png */; };
 		759757CB1CE97BEB006013B5 /* subject24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C61CE97BEB006013B5 /* subject24.png */; };
+
 		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
 		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
 		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
@@ -74,6 +74,21 @@
 		75F96D9B1CEC3AAB004EE32A /* TransparentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D941CEC3AAB004EE32A /* TransparentViewController.m */; };
 		75F96D9C1CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D961CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m */; };
 		75F96D9D1CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D981CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m */; };
+
+		759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DA1CE9D815006013B5 /* scoreboard32.png */; };
+		759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DC1CE9D8BF006013B5 /* scoreboard128.png */; };
+		759757DF1CE9D8F3006013B5 /* scoreboard256.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DE1CE9D8F3006013B5 /* scoreboard256.png */; };
+		759757E51CE9DB6C006013B5 /* class256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E01CE9DB6C006013B5 /* class256b.png */; };
+		759757E61CE9DB6C006013B5 /* logout256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E11CE9DB6C006013B5 /* logout256b.png */; };
+		759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E21CE9DB6C006013B5 /* scoreboard256b.png */; };
+		759757E81CE9DB6C006013B5 /* student256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E31CE9DB6C006013B5 /* student256b.png */; };
+		759757E91CE9DB6C006013B5 /* subject256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E41CE9DB6C006013B5 /* subject256b.png */; };
+		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
+		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
+		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
+		759757F61CEAFC5F006013B5 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F31CEAFC5F006013B5 /* checked.png */; };
+		759757F71CEAFC5F006013B5 /* plus32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F41CEAFC5F006013B5 /* plus32.png */; };
+		759757F81CEAFC5F006013B5 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F51CEAFC5F006013B5 /* unchecked.png */; };
 		84290A431CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		84290A441CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
@@ -179,6 +194,7 @@
 		759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentManagerViewController.m; sourceTree = "<group>"; };
 		759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentManagerViewController.xib; sourceTree = "<group>"; };
 		759757EF1CEAB725006013B5 /* StudentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentViewCell.xib; sourceTree = "<group>"; };
+
 		759757FB1CEB06B8006013B5 /* AddAndEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAndEditViewController.h; sourceTree = "<group>"; };
 		759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAndEditViewController.m; sourceTree = "<group>"; };
 		759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAndEditViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +218,11 @@
 		75F96D961CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+UIDatePickerLabels.m"; path = "Projectend/PickPicker/UILabel+UIDatePickerLabels.m"; sourceTree = "<group>"; };
 		75F96D971CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PresentViewControllerOverCurrentContext.h"; path = "Projectend/PickPicker/UIViewController+PresentViewControllerOverCurrentContext.h"; sourceTree = "<group>"; };
 		75F96D981CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PresentViewControllerOverCurrentContext.m"; path = "Projectend/PickPicker/UIViewController+PresentViewControllerOverCurrentContext.m"; sourceTree = "<group>"; };
+
+		759757F31CEAFC5F006013B5 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		759757F41CEAFC5F006013B5 /* plus32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus32.png; sourceTree = "<group>"; };
+		759757F51CEAFC5F006013B5 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,12 +254,12 @@
 		5CF244CE1CE9CFB0009EB0E2 /* ClassManager */ = {
 			isa = PBXGroup;
 			children = (
-				5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */,
-				5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */,
-				5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */,
 				5CF244C21CE9CFA8009EB0E2 /* QuanLyLopHocVC.h */,
 				5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */,
 				5CF244C41CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib */,
+				5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */,
+				5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */,
+				5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */,
 				5CF244C51CE9CFA8009EB0E2 /* ThemSinhVien.h */,
 				5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */,
 				5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */,
@@ -432,6 +453,7 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+
 				759758001CEB18EC006013B5 /* checked.png */,
 				759758011CEB18EC006013B5 /* class256b.png */,
 				759758021CEB18EC006013B5 /* logout256b.png */,
@@ -443,6 +465,7 @@
 				759758081CEB18EC006013B5 /* student256b.png */,
 				759758091CEB18EC006013B5 /* subject256b.png */,
 				7597580A1CEB18EC006013B5 /* unchecked.png */,
+
 				759757C21CE97BEB006013B5 /* class24.png */,
 				759757C31CE97BEB006013B5 /* logout24.png */,
 				759757C41CE97BEB006013B5 /* scoreboard24.png */,
@@ -582,22 +605,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				7597580D1CEB18EC006013B5 /* logout256b.png in Resources */,
 				759758151CEB18EC006013B5 /* unchecked.png in Resources */,
 				7597580B1CEB18EC006013B5 /* checked.png in Resources */,
 				759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */,
 				75F96D9A1CEC3AAB004EE32A /* PickerViewController.xib in Resources */,
+
+				759757F71CEAFC5F006013B5 /* plus32.png in Resources */,
+
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
 				759758121CEB18EC006013B5 /* scoreboard256b.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
+
 				7597580C1CEB18EC006013B5 /* class256b.png in Resources */,
 				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
+
+				759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */,
+				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
+				759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */,
+				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
+				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
+				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
+				759757F81CEAFC5F006013B5 /* unchecked.png in Resources */,
+				759757E91CE9DB6C006013B5 /* subject256b.png in Resources */,
+				759757E51CE9DB6C006013B5 /* class256b.png in Resources */,
+				759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */,
+
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
+				759757F61CEAFC5F006013B5 /* checked.png in Resources */,
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
 				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
@@ -613,7 +654,9 @@
 				759758131CEB18EC006013B5 /* student256b.png in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
 				84290A441CEA0D8F00B07CD9 /* (null) in Resources */,
+
 				7597580E1CEB18EC006013B5 /* plus32.png in Resources */,
+
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 				759758101CEB18EC006013B5 /* scoreboard128.png in Resources */,
 			);
@@ -803,6 +846,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Projectend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OMI.Projectend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -814,6 +858,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Projectend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OMI.Projectend;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CheckTouchDelegate <NSObject>
+
+-(void)btnCheckTouchByIndexPath: (NSIndexPath*)indexpath;
+
+@end
+
 @interface AddStudentCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *lblAddStudent;
 @property (strong, nonatomic) IBOutlet UIButton *btnCheck;
+@property (strong, nonatomic) NSIndexPath *indexPathCell;
+@property (strong, nonatomic) id<CheckTouchDelegate>delegate;
+- (IBAction)clickCheck:(id)sender;
 
 @end
