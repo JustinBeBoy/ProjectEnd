@@ -9,6 +9,7 @@
 #import "QuanLyLopHocVC.h"
 #import "ClassList.h"
 #import "Student.h"
+#import "ClassedTableViewCell.h"
 
 @interface QuanLyLopHocVC (){
     NSArray *arrDSLop;
@@ -21,10 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-}
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [self setupUI];
     [self loadData];
+
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void) setupUI{
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void) loadData {
@@ -44,10 +51,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassedTableViewCell"];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ClassedTableViewCell"];
     }
     
     ClassList *thatclass = (ClassList*)[arrDSLop objectAtIndex:indexPath.row];
@@ -85,13 +92,17 @@
         [textField setPlaceholder:@"Tên lớp học"];
     }];
     UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        //do something
+        NSString *string = alert.textFields[0].text;
+        //add Object to table ClassList with name "string".............................. and reload data
+        NSLog(@"insert object: %@", string);
     }];
     UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
-        //do something
+        //do nothing
     }];
     [alert addAction:okAct];
     [alert addAction:cancelAct];
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
 
 @end

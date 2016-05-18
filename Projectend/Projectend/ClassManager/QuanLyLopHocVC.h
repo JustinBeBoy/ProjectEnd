@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ChiTietLopHoc.h"
 
-@interface QuanLyLopHocVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface QuanLyLopHocVC : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

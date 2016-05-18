@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C455B2E1CEB190D0076F0DE /* ClassedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C455B2C1CEB190D0076F0DE /* ClassedTableViewCell.m */; };
+		5C455B2F1CEB190D0076F0DE /* ClassedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C455B2D1CEB190D0076F0DE /* ClassedTableViewCell.xib */; };
+		5C79D75E1CEC006F009CB8A4 /* PointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C79D75C1CEC006F009CB8A4 /* PointManager.m */; settings = {ASSET_TAGS = (); }; };
+		5C79D75F1CEC006F009CB8A4 /* PointManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C79D75D1CEC006F009CB8A4 /* PointManager.xib */; settings = {ASSET_TAGS = (); }; };
+		5C79D7631CEC2254009CB8A4 /* PointTableDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C79D7611CEC2254009CB8A4 /* PointTableDetail.m */; settings = {ASSET_TAGS = (); }; };
+		5C79D7641CEC2254009CB8A4 /* PointTableDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C79D7621CEC2254009CB8A4 /* PointTableDetail.xib */; settings = {ASSET_TAGS = (); }; };
+		5C79D7681CEC27CF009CB8A4 /* PointTableDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C79D7661CEC27CF009CB8A4 /* PointTableDetailCell.m */; settings = {ASSET_TAGS = (); }; };
+		5C79D7691CEC27CF009CB8A4 /* PointTableDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C79D7671CEC27CF009CB8A4 /* PointTableDetailCell.xib */; settings = {ASSET_TAGS = (); }; };
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
 		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; };
@@ -89,8 +97,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentCell.h; sourceTree = "<group>"; };
-		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentCell.m; sourceTree = "<group>"; };
+		5C455B2B1CEB190D0076F0DE /* ClassedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassedTableViewCell.h; sourceTree = "<group>"; };
+		5C455B2C1CEB190D0076F0DE /* ClassedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassedTableViewCell.m; sourceTree = "<group>"; };
+		5C455B2D1CEB190D0076F0DE /* ClassedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassedTableViewCell.xib; sourceTree = "<group>"; };
+		5C79D75B1CEC006F009CB8A4 /* PointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointManager.h; path = PointManager/PointManager.h; sourceTree = "<group>"; };
+		5C79D75C1CEC006F009CB8A4 /* PointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointManager.m; path = PointManager/PointManager.m; sourceTree = "<group>"; };
+		5C79D75D1CEC006F009CB8A4 /* PointManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointManager.xib; path = PointManager/PointManager.xib; sourceTree = "<group>"; };
+		5C79D7601CEC2254009CB8A4 /* PointTableDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointTableDetail.h; path = PointManager/PointTableDetail.h; sourceTree = "<group>"; };
+		5C79D7611CEC2254009CB8A4 /* PointTableDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointTableDetail.m; path = PointManager/PointTableDetail.m; sourceTree = "<group>"; };
+		5C79D7621CEC2254009CB8A4 /* PointTableDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointTableDetail.xib; path = PointManager/PointTableDetail.xib; sourceTree = "<group>"; };
+		5C79D7651CEC27CF009CB8A4 /* PointTableDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTableDetailCell.h; sourceTree = "<group>"; };
+		5C79D7661CEC27CF009CB8A4 /* PointTableDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointTableDetailCell.m; sourceTree = "<group>"; };
+		5C79D7671CEC27CF009CB8A4 /* PointTableDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PointTableDetailCell.xib; sourceTree = "<group>"; };
+		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStudentCell.h; path = ../AddStudentCell.h; sourceTree = "<group>"; };
+		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStudentCell.m; path = ../AddStudentCell.m; sourceTree = "<group>"; };
 		5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChiTietLopHoc.h; path = ClassManager/ChiTietLopHoc.h; sourceTree = "<group>"; };
 		5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChiTietLopHoc.m; path = ClassManager/ChiTietLopHoc.m; sourceTree = "<group>"; };
 		5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChiTietLopHoc.xib; path = ClassManager/ChiTietLopHoc.xib; sourceTree = "<group>"; };
@@ -211,22 +231,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5CF244CE1CE9CFB0009EB0E2 /* ClassManager */ = {
+		5C455B2A1CEB18EF0076F0DE /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5CF244C21CE9CFA8009EB0E2 /* QuanLyLopHocVC.h */,
-				5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */,
-				5CF244C41CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib */,
-				5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */,
-				5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */,
-				5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */,
-				5CF244C51CE9CFA8009EB0E2 /* ThemSinhVien.h */,
-				5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */,
-				5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */,
 				5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */,
 				5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */,
+				5C455B2B1CEB190D0076F0DE /* ClassedTableViewCell.h */,
+				5C455B2C1CEB190D0076F0DE /* ClassedTableViewCell.m */,
+				5C455B2D1CEB190D0076F0DE /* ClassedTableViewCell.xib */,
+				5C79D7651CEC27CF009CB8A4 /* PointTableDetailCell.h */,
+				5C79D7661CEC27CF009CB8A4 /* PointTableDetailCell.m */,
+				5C79D7671CEC27CF009CB8A4 /* PointTableDetailCell.xib */,
 			);
-			name = ClassManager;
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		5C79D7501CEBFEC7009CB8A4 /* PointManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C79D75B1CEC006F009CB8A4 /* PointManager.h */,
+				5C79D75C1CEC006F009CB8A4 /* PointManager.m */,
+				5C79D75D1CEC006F009CB8A4 /* PointManager.xib */,
+				5C79D7601CEC2254009CB8A4 /* PointTableDetail.h */,
+				5C79D7611CEC2254009CB8A4 /* PointTableDetail.m */,
+				5C79D7621CEC2254009CB8A4 /* PointTableDetail.xib */,
+			);
+			name = PointManager;
 			sourceTree = "<group>";
 		};
 		752127461CE561DA00E8F44B = {
@@ -234,7 +264,6 @@
 			children = (
 				752127881CE5B22800E8F44B /* libsqlite3.0.tbd */,
 				752127511CE561DB00E8F44B /* Projectend */,
-				759757B71CE95229006013B5 /* SlideOutMenuFiles */,
 				759757921CE867CE006013B5 /* DLRadioButton */,
 				7521276B1CE561DB00E8F44B /* ProjectendTests */,
 				752127761CE561DB00E8F44B /* ProjectendUITests */,
@@ -305,6 +334,9 @@
 			isa = PBXGroup;
 			children = (
 				752127A51CE5B85D00E8F44B /* ViewControllers */,
+				849D3D061CEB6D210065E4BB /* ClassManager */,
+				5C79D7501CEBFEC7009CB8A4 /* PointManager */,
+				5C455B2A1CEB18EF0076F0DE /* TableViewCell */,
 				752127911CE5B81A00E8F44B /* Third Party */,
 				752127C61CE5FE4C00E8F44B /* Helper */,
 				7597572E1CE7207A006013B5 /* Model */,
@@ -356,7 +388,6 @@
 				759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */,
 				759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */,
 				759757EF1CEAB725006013B5 /* StudentViewCell.xib */,
-				5CF244CE1CE9CFB0009EB0E2 /* ClassManager */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -400,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				759757931CE867CE006013B5 /* DLRadioButton.h */,
+				759757B71CE95229006013B5 /* SlideOutMenuFiles */,
 				759757941CE867CE006013B5 /* DLRadioButton.m */,
 			);
 			name = DLRadioButton;
@@ -438,6 +470,23 @@
 				759757B51CE95224006013B5 /* SWRevealViewController.m */,
 			);
 			name = SlideOutMenuFiles;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		849D3D061CEB6D210065E4BB /* ClassManager */ = {
+			isa = PBXGroup;
+			children = (
+				5CF244C21CE9CFA8009EB0E2 /* QuanLyLopHocVC.h */,
+				5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */,
+				5CF244C41CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib */,
+				5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */,
+				5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */,
+				5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */,
+				5CF244C51CE9CFA8009EB0E2 /* ThemSinhVien.h */,
+				5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */,
+				5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */,
+			);
+			name = ClassManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,9 +594,11 @@
 			files = (
 				759757F71CEAFC5F006013B5 /* plus32.png in Resources */,
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
+				5C79D7691CEC27CF009CB8A4 /* PointTableDetailCell.xib in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
 				759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */,
+				5C455B2F1CEB190D0076F0DE /* ClassedTableViewCell.xib in Resources */,
 				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
 				759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */,
 				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
@@ -565,6 +616,7 @@
 				759757DF1CE9D8F3006013B5 /* scoreboard256.png in Resources */,
 				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
+				5C79D7641CEC2254009CB8A4 /* PointTableDetail.xib in Resources */,
 				752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */,
 				759757CA1CE97BEB006013B5 /* student24.png in Resources */,
 				5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */,
@@ -574,6 +626,7 @@
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
 				84290A441CEA0D8F00B07CD9 /* (null) in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
+				5C79D75F1CEC006F009CB8A4 /* PointManager.xib in Resources */,
 				759757E81CE9DB6C006013B5 /* student256b.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +663,7 @@
 				759757C11CE96984006013B5 /* ManagerList.m in Sources */,
 				759757B11CE8E6B0006013B5 /* Teacher.m in Sources */,
 				7521278F1CE5B31600E8F44B /* LoginViewController.m in Sources */,
+				5C455B2E1CEB190D0076F0DE /* ClassedTableViewCell.m in Sources */,
 				759757371CE7207A006013B5 /* DB.m in Sources */,
 				5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */,
 				752127A21CE5B81A00E8F44B /* FMDatabaseQueue.m in Sources */,
@@ -618,12 +672,15 @@
 				759757421CE7220B006013B5 /* Scoreboad.m in Sources */,
 				759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */,
 				7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */,
+				5C79D7631CEC2254009CB8A4 /* PointTableDetail.m in Sources */,
 				7597579E1CE87DE9006013B5 /* MainViewController.m in Sources */,
 				759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */,
+				5C79D7681CEC27CF009CB8A4 /* PointTableDetailCell.m in Sources */,
 				5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */,
 				5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */,
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
 				759757951CE867CE006013B5 /* DLRadioButton.m in Sources */,
+				5C79D75E1CEC006F009CB8A4 /* PointManager.m in Sources */,
 				752127C41CE5FE4100E8F44B /* Global.m in Sources */,
 				752127A01CE5B81A00E8F44B /* FMDatabaseAdditions.m in Sources */,
 			);

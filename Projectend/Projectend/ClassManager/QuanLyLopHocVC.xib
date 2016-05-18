@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
@@ -18,8 +19,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AX-nW-b7i">
                     <rect key="frame" x="8" y="21" width="304" height="38"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gE-cL-ia2">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gE-cL-ia2">
                             <rect key="frame" x="0.0" y="8" width="32" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="U2t-8R-GXU"/>
+                                <constraint firstAttribute="width" constant="32" id="aJ8-YR-hzR"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="&lt;">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,8 +33,12 @@
                                 <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="KFS-IG-i7b"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-9X-ec0">
-                            <rect key="frame" x="264" y="0.0" width="32" height="36"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-9X-ec0">
+                            <rect key="frame" x="264" y="1" width="32" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="TC0-VO-Ryz"/>
+                                <constraint firstAttribute="width" constant="32" id="Vn0-0C-oEv"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="+">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,8 +47,12 @@
                                 <action selector="addPressed:" destination="-1" eventType="touchUpInside" id="6mL-h4-pos"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUẢN LÝ LỚP HỌC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Eo-oR5">
-                            <rect key="frame" x="56" y="9" width="193" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUẢN LÝ LỚP HỌC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Eo-oR5">
+                            <rect key="frame" x="47" y="9" width="210" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="210" id="Gi5-LN-5IC"/>
+                                <constraint firstAttribute="height" constant="21" id="t3L-U9-0Gp"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -47,15 +60,21 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="0qK-Eo-oR5" firstAttribute="centerY" secondItem="8AX-nW-b7i" secondAttribute="centerY" id="6g4-aN-t33"/>
+                        <constraint firstAttribute="trailing" secondItem="M78-9X-ec0" secondAttribute="trailing" constant="8" id="BaM-QP-xJQ"/>
                         <constraint firstAttribute="height" constant="38" id="MuV-mE-wqW"/>
+                        <constraint firstItem="M78-9X-ec0" firstAttribute="centerY" secondItem="8AX-nW-b7i" secondAttribute="centerY" id="Z6K-3K-bPe"/>
+                        <constraint firstItem="3gE-cL-ia2" firstAttribute="centerY" secondItem="8AX-nW-b7i" secondAttribute="centerY" id="bC2-pR-BvV"/>
+                        <constraint firstItem="0qK-Eo-oR5" firstAttribute="centerX" secondItem="8AX-nW-b7i" secondAttribute="centerX" id="c5F-BZ-FVC"/>
+                        <constraint firstItem="3gE-cL-ia2" firstAttribute="leading" secondItem="8AX-nW-b7i" secondAttribute="leading" id="r3J-aX-P2A"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OgH-em-VRp">
                     <rect key="frame" x="8" y="91" width="304" height="448"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="0Ft-DV-yy5"/>
-                        <outlet property="delegate" destination="i5M-Pr-FkT" id="Ld9-T7-6HU"/>
+                        <outlet property="dataSource" destination="-1" id="tEP-00-5Fu"/>
+                        <outlet property="delegate" destination="-1" id="rkC-Us-KLf"/>
                     </connections>
                 </tableView>
             </subviews>

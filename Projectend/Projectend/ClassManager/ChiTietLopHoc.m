@@ -7,9 +7,9 @@
 //
 
 #import "ChiTietLopHoc.h"
+#import "ThemSinhVien.h"
 
 @interface ChiTietLopHoc (){
-    BOOL isEditOrSave;
     IBOutlet UIButton *btnPlus;
 }
 
@@ -20,9 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _edited = NO;
+    [self setupUI];
+}
+-(void)setupUI{
+    [self.navigationController setNavigationBarHidden:YES];
+    [_btnSave setHidden:YES];
 }
 -(void)viewDidAppear:(BOOL)animated{
-    isEditOrSave = NO;
     [super viewDidAppear:animated];
     [self reloadData];
 }
@@ -57,25 +62,49 @@
     
     return cell;
 }
-
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    if (_edited == YES) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-- (IBAction)backPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];}
-- (IBAction)saveOrEditPressed:(id)sender {
-    if (isEditOrSave) {
-        isEditOrSave = NO;
-    } else isEditOrSave = YES;
-    if (isEditOrSave) {
+
+- (IBAction)editPressed:(id)sender {
+    if (_edited == NO) {
+        _edited = YES;
         [btnPlus setEnabled:YES];
-    } else [btnPlus setEnabled:NO];
+    }else{
+        _edited = NO;
+    }
 }
+
+- (IBAction)savePressed:(id)sender {
+    //save data in the database
+}
+
+- (IBAction)backPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)addPressed:(id)sender {
+    ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
+    [self.navigationController pushViewController:themSv animated:YES];
 }
 
 

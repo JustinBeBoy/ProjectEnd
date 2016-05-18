@@ -10,7 +10,7 @@
 #import "AddStudentCell.h"
 #import "Student.h"
 
-@interface ThemSinhVien ()
+@interface ThemSinhVien () <CheckTouchDelegate>
 
 @end
 
@@ -19,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+-(void)setupUI{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    AddStudentCell *cell = [[AddStudentCell alloc] init];
+    cell.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +44,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIButton *button;
     AddStudentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudent"];
     
     if (!cell) {
@@ -44,11 +51,13 @@
     }
     Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
     cell.lblAddStudent.text = thisStudent.name;
-    button.tag = indexPath.row;
-    //if kiem tra bien student.isCheck == YES
-        // thi hien thi img check len
-    //else
-        // thi hien thi img uncheck
+    cell.indexPathCell = indexPath;
+    
+    if (thisStudent.isCheck == YES) {
+        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+    }else{
+        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
+    }
     return cell;
 }
 
@@ -56,12 +65,16 @@
     
 }
 
-//AddStudentCell Delegate
-//btnCheckTouchByIndex:index
-/*{
- Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:index.row];
- thisStudent.isCheck = ?;
+-(void) btnCheckTouchByIndexPath:(NSIndexPath *)indexpath{
+    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexpath.row];
+    if (thisStudent.isCheck == NO) {
+        thisStudent.isCheck = YES;
+    }else{
+        thisStudent.isCheck = NO;
+    }
  
  [self.tblAddStudent reloadData];
-}*/
+}
+- (IBAction)clickedAdd:(id)sender {
+}
 @end
