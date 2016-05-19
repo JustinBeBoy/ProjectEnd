@@ -13,4 +13,6 @@
 @property (nonatomic,strong) NSString *idclass;
 @property (nonatomic,strong) NSString *idstudent;
 @property (nonatomic,strong) NSString *score;
+
++(NSArray*)queryIDClassWithSubjectFromScoreTable:(NSString*)IDsubject;
 @end

@@ -58,6 +58,10 @@
     
     return listClass;
 }
++(NSString*)getNameClassFromIDClass:(NSString*)IDClass{
+//    NSString *queryString = [NSString stringWithFormat:@"%@ = %@", ];
+    return @"";
+}
 +(void) insertClass:(NSString*)classname {
     FMDatabase *db = [DB db];
     [db open];

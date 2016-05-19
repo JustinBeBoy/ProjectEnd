@@ -8,6 +8,7 @@
 
 #import "PointManager.h"
 #import "Subject.h"
+#import "Scoreboad.h"
 
 @interface PointManager ()
 
@@ -24,7 +25,7 @@
 }
 -(void)loadData{
     _arrSubjectList = [Subject queryListSubject];
-    for (NSObject *obj in _arrSubjectList) {
+    for (NSString *obj in _arrSubjectList) {
         NSArray *arrClassWithSub;
         //creat arrClassWithSub from Database .......................
         [_arrClassAtEachSub addObject:arrClassWithSub];

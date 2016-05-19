@@ -45,5 +45,12 @@
     });
     return arr;
 }
-
++(NSArray*)queryIDClassWithSubjectFromScoreTable:(NSString*)IDsubject{
+    NSString *queryString = [NSString stringWithFormat:@"%@ = %@ GROUP BY %@", k_idsubject, IDsubject, k_idclass];
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrIDClass = [self selectWhere:queryString db:db];
+    [db close];
+    return arrIDClass;
+}
 @end
