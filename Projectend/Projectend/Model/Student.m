@@ -84,7 +84,7 @@
 }
 
 + (NSArray*) queryStudentWithIDClass:(NSString*)idClass db:(FMDatabase*)db {
-    NSString *queryString = [NSString stringWithFormat:@"%@=0 AND %@=%@",k_deleted,k_idclass,idClass];
+    NSString *queryString = [NSString stringWithFormat:@"%@=%@",k_idclass,idClass];
     
     NSArray *arrDic = [Student selectWhere:queryString db:db];
     NSMutableArray *arrStudent = [NSMutableArray array];

@@ -15,8 +15,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         arr = @[
+                
                 k_id,       //1
                 k_name,     //2
+                
                 ];
     });
     
@@ -45,8 +47,7 @@
 }
 
 + (NSArray*) queryListClass:(FMDatabase*)db {
-    NSString *queryString = @"";
-    NSArray *classDics = [ClassList selectWhere:queryString db:db];
+    NSArray *classDics = [ClassList selectWhere:nil db:db];
     
     NSMutableArray *listClass = [NSMutableArray array];
     
@@ -56,6 +57,16 @@
     }
     
     return listClass;
+}
++(void) insertClass:(NSString*)classname {
+    FMDatabase *db = [DB db];
+    [db open];
+    [self insertClass:classname db:db];
+    [db close];
+}
++(void) insertClass:(NSString*)classname db:(FMDatabase*)db{
+    NSDictionary *dic = [NSDictionary dictionaryWithObject:classname forKey:k_name];
+    [self insert:dic where:nil];
 }
 
 @end

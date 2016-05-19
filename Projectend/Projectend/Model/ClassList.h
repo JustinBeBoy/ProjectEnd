@@ -11,8 +11,8 @@
 
 @interface ClassList : BaseModel
 
-@property(strong, nonatomic) NSString *idStr;
 @property(strong,nonatomic) NSString *name;
 
 + (NSArray*) queryListClass;
++(void) insertClass:(NSString*)classname;
 @end

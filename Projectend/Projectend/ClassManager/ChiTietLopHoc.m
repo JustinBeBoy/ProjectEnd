@@ -26,13 +26,14 @@
 -(void)setupUI{
     [self.navigationController setNavigationBarHidden:YES];
     [_btnSave setHidden:YES];
+    [btnPlus setHidden:YES];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self reloadData];
 }
 -(void)reloadData{
-    _arrStudent = [Student queryStudentWithIDClass:_thisClass.idStr];
+    _arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", _thisClass.iId]];
     
     _lblLop.text = [NSString stringWithFormat:@"%@", _thisClass.name];
     _lblSoSv.text = [NSString stringWithFormat:@"Số sv: %ld", [_arrStudent count]];
@@ -63,7 +64,6 @@
     return cell;
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
     if (_edited == YES) {
         return YES;
     }else{
@@ -86,16 +86,18 @@
 }
 
 - (IBAction)editPressed:(id)sender {
-    if (_edited == NO) {
-        _edited = YES;
-        [btnPlus setEnabled:YES];
-    }else{
-        _edited = NO;
-    }
+    _edited = YES;
+    [btnPlus setHidden:NO];
+    [_btnExit setHidden:YES];
+    [_btnSave setHidden:NO];
 }
 
 - (IBAction)savePressed:(id)sender {
-    //save data in the database
+    //save data in the database ................
+    _edited = NO;
+    [_btnExit setHidden:NO];
+    [_btnSave setHidden:YES];
+    [btnPlus setHidden:YES];
 }
 
 - (IBAction)backPressed:(id)sender {

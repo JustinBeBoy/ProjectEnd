@@ -8,11 +8,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThemSinhVien">
             <connections>
                 <outlet property="tblAddStudent" destination="99A-Ah-7vw" id="mzH-L1-PAy"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="f7I-jS-hh4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" alpha="0.29999999999999999" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -71,41 +71,5 @@
             </constraints>
             <point key="canvasLocation" x="400" y="298"/>
         </view>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStudent" rowHeight="52" id="0oz-cV-BDd" customClass="AddStudentCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0oz-cV-BDd" id="ogg-1T-vlL">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lp-g5-yca">
-                        <rect key="frame" x="8" y="7" width="268" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-54-JBf">
-                        <rect key="frame" x="284" y="11" width="28" height="29"/>
-                        <state key="normal" backgroundImage="unchecked.png"/>
-                        <connections>
-                            <action selector="clickCheck:" destination="0oz-cV-BDd" eventType="touchUpInside" id="CiP-r0-A46"/>
-                        </connections>
-                    </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked.png" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-fy-WHv">
-                        <rect key="frame" x="284" y="11" width="28" height="29"/>
-                    </imageView>
-                </subviews>
-            </tableViewCellContentView>
-            <connections>
-                <outlet property="btnCheck" destination="FJg-54-JBf" id="ySx-Pt-83C"/>
-                <outlet property="lblAddStudent" destination="2lp-g5-yca" id="EOU-BF-BFa"/>
-                <outlet property="lblStudent" destination="2lp-g5-yca" id="qHa-ol-7SX"/>
-            </connections>
-            <point key="canvasLocation" x="400" y="646"/>
-        </tableViewCell>
     </objects>
-    <resources>
-        <image name="checked.png" width="225" height="225"/>
-        <image name="unchecked.png" width="225" height="225"/>
-    </resources>
 </document>

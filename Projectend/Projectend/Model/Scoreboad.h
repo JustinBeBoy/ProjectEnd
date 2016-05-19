@@ -9,5 +9,8 @@
 #import "BaseModel.h"
 
 @interface Scoreboad : BaseModel
-
+@property (nonatomic,strong) NSString *idsubject;
+@property (nonatomic,strong) NSString *idclass;
+@property (nonatomic,strong) NSString *idstudent;
+@property (nonatomic,strong) NSString *score;
 @end

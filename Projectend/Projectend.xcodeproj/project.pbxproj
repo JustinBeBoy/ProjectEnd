@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
+		5C8A5FEB1CED580C0007D7A5 /* PointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE61CED580C0007D7A5 /* PointManager.m */; settings = {ASSET_TAGS = (); }; };
+		5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE71CED580C0007D7A5 /* PointManager.xib */; settings = {ASSET_TAGS = (); }; };
+		5C8A5FED1CED580C0007D7A5 /* PointTableDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */; settings = {ASSET_TAGS = (); }; };
+		5C8A5FEE1CED580C0007D7A5 /* PointTableDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */; settings = {ASSET_TAGS = (); }; };
+		5C8A5FF01CED8FDC0007D7A5 /* AddStudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FEF1CED8FDC0007D7A5 /* AddStudentCell.xib */; settings = {ASSET_TAGS = (); }; };
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
 		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; };
 		5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */; };
@@ -107,8 +112,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentCell.h; sourceTree = "<group>"; };
-		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentCell.m; sourceTree = "<group>"; };
+		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStudentCell.h; path = ../AddStudentCell.h; sourceTree = "<group>"; };
+		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStudentCell.m; path = ../AddStudentCell.m; sourceTree = "<group>"; };
+		5C8A5FE51CED580C0007D7A5 /* PointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointManager.h; path = PointManager/PointManager.h; sourceTree = "<group>"; };
+		5C8A5FE61CED580C0007D7A5 /* PointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointManager.m; path = PointManager/PointManager.m; sourceTree = "<group>"; };
+		5C8A5FE71CED580C0007D7A5 /* PointManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointManager.xib; path = PointManager/PointManager.xib; sourceTree = "<group>"; };
+		5C8A5FE81CED580C0007D7A5 /* PointTableDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointTableDetail.h; path = PointManager/PointTableDetail.h; sourceTree = "<group>"; };
+		5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointTableDetail.m; path = PointManager/PointTableDetail.m; sourceTree = "<group>"; };
+		5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointTableDetail.xib; path = PointManager/PointTableDetail.xib; sourceTree = "<group>"; };
+		5C8A5FEF1CED8FDC0007D7A5 /* AddStudentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddStudentCell.xib; sourceTree = "<group>"; };
 		5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChiTietLopHoc.h; path = ClassManager/ChiTietLopHoc.h; sourceTree = "<group>"; };
 		5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChiTietLopHoc.m; path = ClassManager/ChiTietLopHoc.m; sourceTree = "<group>"; };
 		5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChiTietLopHoc.xib; path = ClassManager/ChiTietLopHoc.xib; sourceTree = "<group>"; };
@@ -250,6 +262,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C8A5FE41CED57F10007D7A5 /* PointManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C8A5FE51CED580C0007D7A5 /* PointManager.h */,
+				5C8A5FE61CED580C0007D7A5 /* PointManager.m */,
+				5C8A5FE71CED580C0007D7A5 /* PointManager.xib */,
+				5C8A5FE81CED580C0007D7A5 /* PointTableDetail.h */,
+				5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */,
+				5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */,
+			);
+			name = PointManager;
+			sourceTree = "<group>";
+		};
 		5CF244CE1CE9CFB0009EB0E2 /* ClassManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,8 +287,6 @@
 				5CF244C51CE9CFA8009EB0E2 /* ThemSinhVien.h */,
 				5CF244C61CE9CFA8009EB0E2 /* ThemSinhVien.m */,
 				5CF244C71CE9CFA8009EB0E2 /* ThemSinhVien.xib */,
-				5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */,
-				5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */,
 			);
 			name = ClassManager;
 			sourceTree = "<group>";
@@ -295,7 +318,6 @@
 		752127511CE561DB00E8F44B /* Projectend */ = {
 			isa = PBXGroup;
 			children = (
-				75F96DB71CED5391004EE32A /* TableViewCell */,
 				752127861CE5B16E00E8F44B /* AppDelegate */,
 				752127871CE5B20400E8F44B /* Source */,
 				752127521CE561DB00E8F44B /* Supporting Files */,
@@ -346,6 +368,9 @@
 			isa = PBXGroup;
 			children = (
 				752127A51CE5B85D00E8F44B /* ViewControllers */,
+				5CF244CE1CE9CFB0009EB0E2 /* ClassManager */,
+				5C8A5FE41CED57F10007D7A5 /* PointManager */,
+				75F96DB71CED5391004EE32A /* TableViewCell */,
 				752127911CE5B81A00E8F44B /* Third Party */,
 				752127C61CE5FE4C00E8F44B /* Helper */,
 				7597572E1CE7207A006013B5 /* Model */,
@@ -403,7 +428,6 @@
 				75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */,
 				75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */,
 				75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */,
-				5CF244CE1CE9CFB0009EB0E2 /* ClassManager */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -506,6 +530,9 @@
 		75F96DB71CED5391004EE32A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */,
+				5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */,
+				5C8A5FEF1CED8FDC0007D7A5 /* AddStudentCell.xib */,
 				75F96DB81CED5391004EE32A /* ClassedTableViewCell.h */,
 				75F96DB91CED5391004EE32A /* ClassedTableViewCell.m */,
 				75F96DBA1CED5391004EE32A /* ClassedTableViewCell.xib */,
@@ -622,6 +649,7 @@
 				7597580E1CEB18EC006013B5 /* plus32.png in Resources */,
 				759758151CEB18EC006013B5 /* unchecked.png in Resources */,
 				7597580D1CEB18EC006013B5 /* logout256b.png in Resources */,
+				5C8A5FF01CED8FDC0007D7A5 /* AddStudentCell.xib in Resources */,
 				759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */,
 				75F96D9A1CEC3AAB004EE32A /* PickerViewController.xib in Resources */,
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
@@ -648,7 +676,9 @@
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
 				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
 				75F96DBF1CED5391004EE32A /* ClassedTableViewCell.xib in Resources */,
+				5C8A5FEE1CED580C0007D7A5 /* PointTableDetail.xib in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
+				5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */,
 				759758141CEB18EC006013B5 /* subject256b.png in Resources */,
 				752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */,
 				7597580F1CEB18EC006013B5 /* scoreboard32.png in Resources */,
@@ -690,6 +720,7 @@
 			files = (
 				752127571CE561DB00E8F44B /* AppDelegate.m in Sources */,
 				75F96D9D1CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
+				5C8A5FED1CED580C0007D7A5 /* PointTableDetail.m in Sources */,
 				759757B61CE95224006013B5 /* SWRevealViewController.m in Sources */,
 				752127A11CE5B81A00E8F44B /* FMDatabasePool.m in Sources */,
 				5CF244CC1CE9CFA8009EB0E2 /* ThemSinhVien.m in Sources */,
@@ -706,6 +737,7 @@
 				5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */,
 				752127A21CE5B81A00E8F44B /* FMDatabaseQueue.m in Sources */,
 				752127541CE561DB00E8F44B /* main.m in Sources */,
+				5C8A5FEB1CED580C0007D7A5 /* PointManager.m in Sources */,
 				5CF244D11CE9D00B009EB0E2 /* ClassList.m in Sources */,
 				759757421CE7220B006013B5 /* Scoreboad.m in Sources */,
 				759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */,

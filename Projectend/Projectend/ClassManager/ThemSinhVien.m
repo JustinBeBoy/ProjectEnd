@@ -27,8 +27,12 @@
     [super viewDidAppear:animated];
     AddStudentCell *cell = [[AddStudentCell alloc] init];
     cell.delegate = self;
+    [self loadData];
 }
-
+-(void)loadData{
+    _arrStudentNotAdd = [Student queryListStudent];
+    [_tblAddStudent reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -40,24 +44,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _arrStudentNotAdd.count;
+//    return _arrStudentNotAdd.count;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AddStudentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudent"];
+    AddStudentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudentCell"];
     
-    if (!cell) {
-        cell = [[AddStudentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddStudent"];
+    if (cell==nil) {
+        cell = [[AddStudentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddStudentCell"];
     }
-    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
-    cell.lblAddStudent.text = thisStudent.name;
+//    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
+//    cell.lblAddStudent.text = thisStudent.name;
+    cell.lblAddStudent.text = @"tang";
+    [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
     cell.indexPathCell = indexPath;
     
-    if (thisStudent.isCheck == YES) {
-        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
-    }else{
-        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
-    }
+//    if (thisStudent.isCheck == YES) {
+//        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+//    }else{
+//        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
+//    }
     return cell;
 }
 

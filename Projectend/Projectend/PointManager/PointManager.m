@@ -23,6 +23,7 @@
     [self loadData];
 }
 -(void)loadData{
+    _arrSubjectList = [Subject queryListSubject];
     for (NSObject *obj in _arrSubjectList) {
         NSArray *arrClassWithSub;
         //creat arrClassWithSub from Database .......................

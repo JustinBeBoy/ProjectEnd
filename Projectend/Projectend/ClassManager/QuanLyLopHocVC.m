@@ -59,7 +59,7 @@
     
     ClassList *thatclass = (ClassList*)[arrDSLop objectAtIndex:indexPath.row];
     
-    NSArray *arrStudent = [Student queryStudentWithIDClass:thatclass.idStr];
+    NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@",thatclass.iId]];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ - Số sv:%ld", thatclass.name, [arrStudent count]];
     
@@ -78,7 +78,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 - (IBAction)backPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -93,7 +92,8 @@
     }];
     UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         NSString *string = alert.textFields[0].text;
-        //add Object to table ClassList with name "string".............................. and reload data
+        [ClassList insertClass:string];
+        [self loadData];
         NSLog(@"insert object: %@", string);
     }];
     UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {

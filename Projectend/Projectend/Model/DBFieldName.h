@@ -18,7 +18,7 @@ static NSString *k_modified            = @"modified";
 static NSString *k_deleted             = @"deleted";
 
 /**
- * MARK: field name of techer and student
+ * MARK: field name of techer and student and ClassLish
  */
 static NSString *const k_name          = @"name";
 static NSString *const k_dateofbirth   = @"dateofbirth";
@@ -27,6 +27,12 @@ static NSString *const k_phone         = @"phone";
 static NSString *const k_address       = @"address";
 static NSString *const k_username      = @"username";
 static NSString *const k_password      = @"password";
+/*
+ MARK: field name of score
+ */
+static NSString *const k_score          = @"score";
+static NSString *const k_idsubject      = @"idsubject";
+static NSString *const k_idstudent      = @"idstudent";
 
 /** MARK: db constant
  */
