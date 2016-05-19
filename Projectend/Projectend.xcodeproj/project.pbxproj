@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
@@ -20,7 +21,6 @@
 		752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752127601CE561DB00E8F44B /* LaunchScreen.storyboard */; };
 		7521276D1CE561DB00E8F44B /* ProjectendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521276C1CE561DB00E8F44B /* ProjectendTests.m */; };
 		752127781CE561DB00E8F44B /* ProjectendUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127771CE561DB00E8F44B /* ProjectendUITests.m */; };
-		752127891CE5B22800E8F44B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 752127881CE5B22800E8F44B /* libsqlite3.0.tbd */; };
 		7521278F1CE5B31600E8F44B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521278D1CE5B31600E8F44B /* LoginViewController.m */; };
 		752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7521278E1CE5B31600E8F44B /* LoginViewController.xib */; };
 		7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127941CE5B81A00E8F44B /* FMDatabase.m */; };
@@ -52,13 +52,17 @@
 		759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C41CE97BEB006013B5 /* scoreboard24.png */; };
 		759757CA1CE97BEB006013B5 /* student24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C51CE97BEB006013B5 /* student24.png */; };
 		759757CB1CE97BEB006013B5 /* subject24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C61CE97BEB006013B5 /* subject24.png */; };
-
+		759757DB1CE9D815006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		759757DD1CE9D8BF006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		759757E51CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		759757E61CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		759757E71CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		759757E91CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
 		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
 		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
 		759757FE1CEB06B8006013B5 /* AddAndEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */; };
 		759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */; };
-		7597580B1CEB18EC006013B5 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758001CEB18EC006013B5 /* checked.png */; };
 		7597580C1CEB18EC006013B5 /* class256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758011CEB18EC006013B5 /* class256b.png */; };
 		7597580D1CEB18EC006013B5 /* logout256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758021CEB18EC006013B5 /* logout256b.png */; };
 		7597580E1CEB18EC006013B5 /* plus32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758031CEB18EC006013B5 /* plus32.png */; };
@@ -74,21 +78,9 @@
 		75F96D9B1CEC3AAB004EE32A /* TransparentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D941CEC3AAB004EE32A /* TransparentViewController.m */; };
 		75F96D9C1CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D961CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m */; };
 		75F96D9D1CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D981CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m */; };
-
-		759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DA1CE9D815006013B5 /* scoreboard32.png */; };
-		759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DC1CE9D8BF006013B5 /* scoreboard128.png */; };
-		759757DF1CE9D8F3006013B5 /* scoreboard256.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757DE1CE9D8F3006013B5 /* scoreboard256.png */; };
-		759757E51CE9DB6C006013B5 /* class256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E01CE9DB6C006013B5 /* class256b.png */; };
-		759757E61CE9DB6C006013B5 /* logout256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E11CE9DB6C006013B5 /* logout256b.png */; };
-		759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E21CE9DB6C006013B5 /* scoreboard256b.png */; };
-		759757E81CE9DB6C006013B5 /* student256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E31CE9DB6C006013B5 /* student256b.png */; };
-		759757E91CE9DB6C006013B5 /* subject256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757E41CE9DB6C006013B5 /* subject256b.png */; };
-		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
-		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
-		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
-		759757F61CEAFC5F006013B5 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F31CEAFC5F006013B5 /* checked.png */; };
-		759757F71CEAFC5F006013B5 /* plus32.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F41CEAFC5F006013B5 /* plus32.png */; };
-		759757F81CEAFC5F006013B5 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757F51CEAFC5F006013B5 /* unchecked.png */; };
+		75F96DAF1CEC898B004EE32A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F96DAE1CEC898B004EE32A /* libsqlite3.0.tbd */; };
+		75F96DB31CED3E49004EE32A /* SubjectManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */; };
+		75F96DB41CED3E49004EE32A /* SubjectManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */; };
 		84290A431CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		84290A441CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
@@ -137,7 +129,6 @@
 		752127731CE561DB00E8F44B /* ProjectendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		752127771CE561DB00E8F44B /* ProjectendUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectendUITests.m; sourceTree = "<group>"; };
 		752127791CE561DB00E8F44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		752127881CE5B22800E8F44B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7521278C1CE5B31600E8F44B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7521278D1CE5B31600E8F44B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		7521278E1CE5B31600E8F44B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -194,7 +185,6 @@
 		759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentManagerViewController.m; sourceTree = "<group>"; };
 		759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentManagerViewController.xib; sourceTree = "<group>"; };
 		759757EF1CEAB725006013B5 /* StudentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentViewCell.xib; sourceTree = "<group>"; };
-
 		759757FB1CEB06B8006013B5 /* AddAndEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAndEditViewController.h; sourceTree = "<group>"; };
 		759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAndEditViewController.m; sourceTree = "<group>"; };
 		759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAndEditViewController.xib; sourceTree = "<group>"; };
@@ -218,11 +208,10 @@
 		75F96D961CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+UIDatePickerLabels.m"; path = "Projectend/PickPicker/UILabel+UIDatePickerLabels.m"; sourceTree = "<group>"; };
 		75F96D971CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PresentViewControllerOverCurrentContext.h"; path = "Projectend/PickPicker/UIViewController+PresentViewControllerOverCurrentContext.h"; sourceTree = "<group>"; };
 		75F96D981CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PresentViewControllerOverCurrentContext.m"; path = "Projectend/PickPicker/UIViewController+PresentViewControllerOverCurrentContext.m"; sourceTree = "<group>"; };
-
-		759757F31CEAFC5F006013B5 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
-		759757F41CEAFC5F006013B5 /* plus32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus32.png; sourceTree = "<group>"; };
-		759757F51CEAFC5F006013B5 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
-
+		75F96DAE1CEC898B004EE32A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectManagerViewController.h; sourceTree = "<group>"; };
+		75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectManagerViewController.m; sourceTree = "<group>"; };
+		75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectManagerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752127891CE5B22800E8F44B /* libsqlite3.0.tbd in Frameworks */,
+				75F96DAF1CEC898B004EE32A /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +261,7 @@
 		752127461CE561DA00E8F44B = {
 			isa = PBXGroup;
 			children = (
-				752127881CE5B22800E8F44B /* libsqlite3.0.tbd */,
+				75F96DAE1CEC898B004EE32A /* libsqlite3.0.tbd */,
 				752127511CE561DB00E8F44B /* Projectend */,
 				759758181CEB197D006013B5 /* Picker */,
 				759757B71CE95229006013B5 /* SlideOutMenuFiles */,
@@ -400,6 +389,9 @@
 				759757FB1CEB06B8006013B5 /* AddAndEditViewController.h */,
 				759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */,
 				759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */,
+				75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */,
+				75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */,
+				75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */,
 				5CF244CE1CE9CFB0009EB0E2 /* ClassManager */,
 			);
 			name = ViewControllers;
@@ -453,7 +445,6 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
-
 				759758001CEB18EC006013B5 /* checked.png */,
 				759758011CEB18EC006013B5 /* class256b.png */,
 				759758021CEB18EC006013B5 /* logout256b.png */,
@@ -465,7 +456,6 @@
 				759758081CEB18EC006013B5 /* student256b.png */,
 				759758091CEB18EC006013B5 /* subject256b.png */,
 				7597580A1CEB18EC006013B5 /* unchecked.png */,
-
 				759757C21CE97BEB006013B5 /* class24.png */,
 				759757C31CE97BEB006013B5 /* logout24.png */,
 				759757C41CE97BEB006013B5 /* scoreboard24.png */,
@@ -605,40 +595,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				7597580D1CEB18EC006013B5 /* logout256b.png in Resources */,
+				7597580E1CEB18EC006013B5 /* plus32.png in Resources */,
 				759758151CEB18EC006013B5 /* unchecked.png in Resources */,
-				7597580B1CEB18EC006013B5 /* checked.png in Resources */,
+				7597580D1CEB18EC006013B5 /* logout256b.png in Resources */,
 				759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */,
 				75F96D9A1CEC3AAB004EE32A /* PickerViewController.xib in Resources */,
-
-				759757F71CEAFC5F006013B5 /* plus32.png in Resources */,
-
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
 				759758121CEB18EC006013B5 /* scoreboard256b.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
-
 				7597580C1CEB18EC006013B5 /* class256b.png in Resources */,
 				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
-
-				759757DD1CE9D8BF006013B5 /* scoreboard128.png in Resources */,
+				759757DD1CE9D8BF006013B5 /* (null) in Resources */,
 				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
-				759757E71CE9DB6C006013B5 /* scoreboard256b.png in Resources */,
-				759757E61CE9DB6C006013B5 /* logout256b.png in Resources */,
+				759757E71CE9DB6C006013B5 /* (null) in Resources */,
+				759757E61CE9DB6C006013B5 /* (null) in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
-				759757F81CEAFC5F006013B5 /* unchecked.png in Resources */,
-				759757E91CE9DB6C006013B5 /* subject256b.png in Resources */,
-				759757E51CE9DB6C006013B5 /* class256b.png in Resources */,
-				759757DB1CE9D815006013B5 /* scoreboard32.png in Resources */,
-
+				759757E91CE9DB6C006013B5 /* (null) in Resources */,
+				759757E51CE9DB6C006013B5 /* (null) in Resources */,
+				759757DB1CE9D815006013B5 /* (null) in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
-				759757F61CEAFC5F006013B5 /* checked.png in Resources */,
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
 				759757CB1CE97BEB006013B5 /* subject24.png in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
@@ -648,15 +629,13 @@
 				759757CA1CE97BEB006013B5 /* student24.png in Resources */,
 				5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */,
 				5CF244CB1CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib in Resources */,
+				75F96DB41CED3E49004EE32A /* SubjectManagerViewController.xib in Resources */,
 				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				759758111CEB18EC006013B5 /* scoreboard256.png in Resources */,
 				759758131CEB18EC006013B5 /* student256b.png in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
 				84290A441CEA0D8F00B07CD9 /* (null) in Resources */,
-
-				7597580E1CEB18EC006013B5 /* plus32.png in Resources */,
-
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 				759758101CEB18EC006013B5 /* scoreboard128.png in Resources */,
 			);
@@ -710,6 +689,7 @@
 				5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */,
 				5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */,
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
+				75F96DB31CED3E49004EE32A /* SubjectManagerViewController.m in Sources */,
 				759757951CE867CE006013B5 /* DLRadioButton.m in Sources */,
 				75F96D9C1CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m in Sources */,
 				752127C41CE5FE4100E8F44B /* Global.m in Sources */,
