@@ -34,6 +34,9 @@
                     <state key="normal" title="Menu">
                         <color key="titleColor" red="0.44705882349999998" green="0.80392156859999997" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="btMenu:" destination="-1" eventType="touchUpInside" id="oU5-S4-8vR"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>

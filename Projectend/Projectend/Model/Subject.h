@@ -9,5 +9,8 @@
 #import "BaseModel.h"
 
 @interface Subject : BaseModel
+@property(nonatomic,strong)NSString *subject;
+@property(nonatomic,assign)NSInteger credits;
+@property(nonatomic,strong)NSString *descriptions;
 + (NSArray*) queryListSubject;
 @end

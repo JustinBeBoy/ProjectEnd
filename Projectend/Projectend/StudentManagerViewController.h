@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Student.h"
 #import "AddAndEditViewController.h"
+#import "SWRevealViewController.h"
 
 @interface StudentManagerViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *lbNumber;
@@ -18,5 +19,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbYear;
 @property (strong, nonatomic) IBOutlet UITableView *tableStudent;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellStudent;
+@property (assign, nonatomic) BOOL isSlide;
 
 @end

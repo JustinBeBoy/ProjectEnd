@@ -45,9 +45,6 @@
     [self.tbvMenu reloadData];
 }
 
-#pragma mark -
-
-#pragma mark -
 #pragma mark UITableView Datasource/Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -90,37 +87,39 @@
 }
 
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    ManagerList *currentRecord = [self.arrayOfMenus objectAtIndex:indexPath.row];
-//    
-//    // Return Data to delegate: either way is fine, although passing back the object may be more efficient
-//    // [_delegate imageSelected:currentRecord.image withTitle:currentRecord.title withCreator:currentRecord.creator];
-//    // [_delegate animalSelected:currentRecord];
-//    
-//    [_delegate animalSelected:currentRecord];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SWRevealViewController *revealController = self.revealViewController;
+    NSInteger row = indexPath.row;
+    UINavigationController *navigationController;
+    
+    if (row == 1){
+        StudentManagerViewController *studentmanager = [[StudentManagerViewController alloc] initWithNibName:@"StudentManagerViewController" bundle:nil];
+        studentmanager.isSlide = YES;
+        navigationController = [[UINavigationController alloc] initWithRootViewController:studentmanager];
+        [revealController pushFrontViewController:navigationController animated:YES];
+    }
+    
+    else if (row == 2){
+        SubjectManagerViewController *subjectmanager = [[SubjectManagerViewController alloc] initWithNibName:@"SubjectManagerViewController" bundle:nil];
+        subjectmanager.isSlide = YES;
+        navigationController = [[UINavigationController alloc] initWithRootViewController:subjectmanager];
+        [revealController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (row == 4){
+        LoginViewController *loginvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        navigationController = [[UINavigationController alloc] initWithRootViewController:loginvc];
+        [revealController pushFrontViewController:navigationController animated:YES];
+    }
+}
 
 #pragma mark -
-#pragma mark Default System Code
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self)
-//    {
-//    }
-//    return self;
-//}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)btMenu:(id)sender {
+    SWRevealViewController *revealController = self.revealViewController;
+    MainViewController *mainviewcontroller = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainviewcontroller];
+    [revealController pushFrontViewController:navigationController animated:YES];
 }
-*/
-
 @end

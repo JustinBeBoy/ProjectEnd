@@ -32,6 +32,8 @@
     btsave = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveStudent)];
     btedit = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editStudent)];
     self.navigationController.navigationBarHidden = NO;
+    UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btBack)];
+    self.navigationItem.leftBarButtonItem = backbt;
     if (self.isEditing) {
         [self tfAnableOrDissable:YES];
         self.navigationItem.rightBarButtonItem = btedit;
@@ -57,29 +59,8 @@
     }
 }
 
--(void)tfAnableOrDissable:(BOOL)values{
-    if (values) {
-        self.tfUsername.enabled = NO;
-        self.tfPhoneNumber.enabled = NO;
-        self.tfAddress.enabled = NO;
-        self.tfMail.enabled = NO;
-        self.tfName.enabled = NO;
-        self.tfPassword.enabled = NO;
-        self.olSex.enabled = NO;
-        self.olDateOfBirth.enabled = NO;
-    }else{
-        self.tfUsername.enabled = YES;
-        self.tfPhoneNumber.enabled = YES;
-        self.tfAddress.enabled = YES;
-        self.tfMail.enabled = YES;
-        self.tfName.enabled = YES;
-        self.tfPassword.enabled = YES;
-        self.olSex.enabled = YES;
-        self.olDateOfBirth.enabled = YES;
-    }
-}
 
-#pragma Check Input
+#pragma mark Check Input
 - (BOOL)checkAllComponent{
     NSMutableString *warringcpn = [[NSMutableString alloc]initWithString:@"Warring: "];
     if (self.tfName.text.length>0&&self.tfAddress.text.length>0&&self.tfPhoneNumber.text.length>0&&self.tfMail.text.length>0&&self.tfUsername.text.length>0&&self.tfPassword.text.length>0) {
@@ -87,13 +68,13 @@
             return YES;
         }else{
             if (self.tfPassword.text.length<6) {
-                [warringcpn appendString:@"You must to endter password least 6 characters"];
+                [warringcpn appendString:@"You must to endter password least 6 characters "];
             }
             if(![self NSStringIsValidEmail:self.tfMail.text]){
-                [warringcpn appendString:@"Email not Validate"];
+                [warringcpn appendString:@"Email not Validate "];
             }
             if ([self checkUsernameExist]) {
-                [warringcpn appendString:@"Username existed"];
+                [warringcpn appendString:@"Username existed "];
             }
             _lbWarring.text = warringcpn;
             return NO;
@@ -133,6 +114,9 @@
 }
 
 -(BOOL) checkUsernameExist{
+    if (self.isEditing) {
+        return NO;
+    }
     arrusename = [NSArray array];
     arrusename = [Student queryStudentUsername:self.tfUsername.text andPassword:self.tfPassword.text];
     if (arrusename.count>0) {
@@ -143,6 +127,8 @@
 }
 
 #pragma ------
+
+#pragma mark UITableView Datasource/Delegate
 - (void)didSelectItemAtIndex:(NSUInteger)index{
     
 }
@@ -158,6 +144,9 @@
     NSLog(@"%@",dateofbirth);
     [self.olDateOfBirth setTitle:dateofbirth forState:UIControlStateNormal];
 }
+#pragma -------
+
+#pragma mark Action
 
 - (IBAction)btSex:(id)sender {
     PickerViewController *pickerViewController = [[PickerViewController alloc] initFromNib];
@@ -175,14 +164,37 @@
     [self presentViewControllerOverCurrentContext:pickerViewController animated:YES completion:nil];
 }
 
+- (void)btBack{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)editStudent{
     [self tfAnableOrDissable:NO];
     [btedit setTitle:@"Save"];
     self.navigationItem.rightBarButtonItem = btsave;
     NSLog(@"editstudemt");
 }
-- (void)editStudentsss{
-    NSLog(@"editstudemt");
+
+-(void)tfAnableOrDissable:(BOOL)values{
+    if (values) {
+        self.tfUsername.enabled = NO;
+        self.tfPhoneNumber.enabled = NO;
+        self.tfAddress.enabled = NO;
+        self.tfMail.enabled = NO;
+        self.tfName.enabled = NO;
+        self.tfPassword.enabled = NO;
+        self.olSex.enabled = NO;
+        self.olDateOfBirth.enabled = NO;
+    }else{
+        //        self.tfUsername.enabled = YES;
+        self.tfPhoneNumber.enabled = YES;
+        self.tfAddress.enabled = YES;
+        self.tfMail.enabled = YES;
+        self.tfName.enabled = YES;
+        self.tfPassword.enabled = YES;
+        self.olSex.enabled = YES;
+        self.olDateOfBirth.enabled = YES;
+    }
 }
 
 - (void)saveStudent{

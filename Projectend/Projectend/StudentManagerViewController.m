@@ -31,7 +31,7 @@
 
 - (void) setupUI{
     self.navigationController.navigationBarHidden = NO;
-    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus32.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusStudent)];
+    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus16.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusStudent)];
     self.navigationItem.rightBarButtonItem = rightbt;
     self.navigationItem.title = @"Quản Lý Sinh Viên";
     
@@ -40,11 +40,28 @@
     _lbClass.layer.borderWidth = 1.0f;
     _lbSex.layer.borderWidth = 1.0f;
     _lbYear.layer.borderWidth = 1.0f;
+    SWRevealViewController *revealController = [self revealViewController];
+    if (self.isSlide) {
+        SWRevealViewController *revealControllers = [self revealViewController];
+        [revealControllers panGestureRecognizer];
+        [revealControllers tapGestureRecognizer];
+        UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu24.png"]
+                                                                             style:UIBarButtonItemStylePlain target:revealControllers action:@selector(revealToggle:)];
+        [revealController.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
+        self.navigationItem.leftBarButtonItem = revealButtonItem;
+    }else{
+        UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btback)];
+        self.navigationItem.leftBarButtonItem = backbt;
+    }
 }
 - (void)reloadData{
     arrayStudent = [Student queryListStudent];
     [self.tableStudent reloadData];
     
+}
+
+- (void)btback{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)plusStudent{
@@ -116,15 +133,5 @@
     addeditviewcontroller.student = student;
     [self.navigationController pushViewController:addeditviewcontroller animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

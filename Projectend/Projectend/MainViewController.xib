@@ -93,7 +93,7 @@
                 <constraint firstItem="Gzy-i3-c7z" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="vAC-Or-30Q"/>
                 <constraint firstItem="E5C-Ai-c1R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="vD5-hF-xGc"/>
             </constraints>
-            <point key="canvasLocation" x="603" y="349"/>
+            <point key="canvasLocation" x="383" y="317"/>
         </view>
     </objects>
 </document>

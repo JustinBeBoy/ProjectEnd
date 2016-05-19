@@ -40,7 +40,6 @@
 		7597579E1CE87DE9006013B5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597579C1CE87DE9006013B5 /* MainViewController.m */; };
 		7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7597579D1CE87DE9006013B5 /* MainViewController.xib */; };
 		759757AC1CE8880D006013B5 /* menu24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757AA1CE8880D006013B5 /* menu24.png */; };
-		759757AD1CE8880D006013B5 /* menu16.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757AB1CE8880D006013B5 /* menu16.png */; };
 		759757B11CE8E6B0006013B5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B01CE8E6B0006013B5 /* Teacher.m */; };
 		759757B61CE95224006013B5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B51CE95224006013B5 /* SWRevealViewController.m */; };
 		759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757B91CE95394006013B5 /* SlideMenuViewController.m */; };
@@ -52,12 +51,6 @@
 		759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C41CE97BEB006013B5 /* scoreboard24.png */; };
 		759757CA1CE97BEB006013B5 /* student24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C51CE97BEB006013B5 /* student24.png */; };
 		759757CB1CE97BEB006013B5 /* subject24.png in Resources */ = {isa = PBXBuildFile; fileRef = 759757C61CE97BEB006013B5 /* subject24.png */; };
-		759757DB1CE9D815006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		759757DD1CE9D8BF006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		759757E51CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		759757E61CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		759757E71CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		759757E91CE9DB6C006013B5 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */; };
 		759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */; };
 		759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759757EF1CEAB725006013B5 /* StudentViewCell.xib */; };
@@ -85,8 +78,12 @@
 		75F96DBF1CED5391004EE32A /* ClassedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DBA1CED5391004EE32A /* ClassedTableViewCell.xib */; };
 		75F96DC01CED5391004EE32A /* PointTableDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96DBC1CED5391004EE32A /* PointTableDetailCell.m */; };
 		75F96DC11CED5391004EE32A /* PointTableDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DBD1CED5391004EE32A /* PointTableDetailCell.xib */; };
-		84290A431CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		84290A441CEA0D8F00B07CD9 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		75F96DC31CED57C0004EE32A /* plus24.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DC21CED57C0004EE32A /* plus24.png */; };
+		75F96DC51CED57F5004EE32A /* plus16.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DC41CED57F5004EE32A /* plus16.png */; };
+		75F96DC91CED5F47004EE32A /* AddAndEditSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96DC71CED5F47004EE32A /* AddAndEditSubjectViewController.m */; };
+		75F96DCA1CED5F47004EE32A /* AddAndEditSubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */; };
+		75F96DCC1CED6FF1004EE32A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */; };
+		75F96DD01CED9935004EE32A /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DCF1CED9935004EE32A /* icon1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +219,13 @@
 		75F96DBB1CED5391004EE32A /* PointTableDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTableDetailCell.h; sourceTree = "<group>"; };
 		75F96DBC1CED5391004EE32A /* PointTableDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointTableDetailCell.m; sourceTree = "<group>"; };
 		75F96DBD1CED5391004EE32A /* PointTableDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PointTableDetailCell.xib; sourceTree = "<group>"; };
+		75F96DC21CED57C0004EE32A /* plus24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus24.png; path = ImageIcon/plus24.png; sourceTree = "<group>"; };
+		75F96DC41CED57F5004EE32A /* plus16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus16.png; path = ImageIcon/plus16.png; sourceTree = "<group>"; };
+		75F96DC61CED5F47004EE32A /* AddAndEditSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAndEditSubjectViewController.h; sourceTree = "<group>"; };
+		75F96DC71CED5F47004EE32A /* AddAndEditSubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAndEditSubjectViewController.m; sourceTree = "<group>"; };
+		75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAndEditSubjectViewController.xib; sourceTree = "<group>"; };
+		75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		75F96DCF1CED9935004EE32A /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1.png; path = ImageIcon/icon1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F96DCC1CED6FF1004EE32A /* CoreFoundation.framework in Frameworks */,
 				75F96DAF1CEC898B004EE32A /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +276,7 @@
 		752127461CE561DA00E8F44B = {
 			isa = PBXGroup;
 			children = (
+				75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */,
 				75F96DAE1CEC898B004EE32A /* libsqlite3.0.tbd */,
 				752127511CE561DB00E8F44B /* Projectend */,
 				759758181CEB197D006013B5 /* Picker */,
@@ -403,6 +409,9 @@
 				75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */,
 				75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */,
 				75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */,
+				75F96DC61CED5F47004EE32A /* AddAndEditSubjectViewController.h */,
+				75F96DC71CED5F47004EE32A /* AddAndEditSubjectViewController.m */,
+				75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */,
 				5CF244CE1CE9CFB0009EB0E2 /* ClassManager */,
 			);
 			name = ViewControllers;
@@ -456,6 +465,9 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				75F96DCF1CED9935004EE32A /* icon1.png */,
+				75F96DC41CED57F5004EE32A /* plus16.png */,
+				75F96DC21CED57C0004EE32A /* plus24.png */,
 				759758001CEB18EC006013B5 /* checked.png */,
 				759758011CEB18EC006013B5 /* class256b.png */,
 				759758021CEB18EC006013B5 /* logout256b.png */,
@@ -629,19 +641,11 @@
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
 				7597580C1CEB18EC006013B5 /* class256b.png in Resources */,
-				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
-				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
-				759757DD1CE9D8BF006013B5 /* (null) in Resources */,
-				84290A431CEA0D8F00B07CD9 /* (null) in Resources */,
-				759757E71CE9DB6C006013B5 /* (null) in Resources */,
-				759757E61CE9DB6C006013B5 /* (null) in Resources */,
+				75F96DC51CED57F5004EE32A /* plus16.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
-				759757AD1CE8880D006013B5 /* menu16.png in Resources */,
-				759757E91CE9DB6C006013B5 /* (null) in Resources */,
 				75F96DC11CED5391004EE32A /* PointTableDetailCell.xib in Resources */,
-				759757E51CE9DB6C006013B5 /* (null) in Resources */,
-				759757DB1CE9D815006013B5 /* (null) in Resources */,
+				75F96DC31CED57C0004EE32A /* plus24.png in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
@@ -659,9 +663,10 @@
 				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				759758111CEB18EC006013B5 /* scoreboard256.png in Resources */,
+				75F96DD01CED9935004EE32A /* icon1.png in Resources */,
 				759758131CEB18EC006013B5 /* student256b.png in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
-				84290A441CEA0D8F00B07CD9 /* (null) in Resources */,
+				75F96DCA1CED5F47004EE32A /* AddAndEditSubjectViewController.xib in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 				759758101CEB18EC006013B5 /* scoreboard128.png in Resources */,
 			);
@@ -695,6 +700,7 @@
 				5CF244CC1CE9CFA8009EB0E2 /* ThemSinhVien.m in Sources */,
 				759757431CE7220B006013B5 /* Student.m in Sources */,
 				752127C51CE5FE4100E8F44B /* Lib.m in Sources */,
+				75F96DC91CED5F47004EE32A /* AddAndEditSubjectViewController.m in Sources */,
 				759757441CE7220B006013B5 /* Subject.m in Sources */,
 				759757361CE7207A006013B5 /* BaseModel.m in Sources */,
 				759757C11CE96984006013B5 /* ManagerList.m in Sources */,
@@ -853,6 +859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Projectend/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -865,6 +872,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Projectend/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
