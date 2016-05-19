@@ -13,6 +13,8 @@
     NSString *dateofbirthvalue;
     NSString *dateofbirth;
     NSArray *arrusename;
+    UIBarButtonItem *btsave;
+    UIBarButtonItem *btedit;
 }
 
 @end
@@ -27,15 +29,16 @@
 }
 
 - (void)setupUI{
+    btsave = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveStudent)];
+    btedit = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editStudent)];
     self.navigationController.navigationBarHidden = NO;
-    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]init];
-    rightbt.title = @"Save";
-    [rightbt setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1]} forState: UIControlStateNormal];
-    [rightbt setAction:@selector(saveStudent)];
-    UIBarButtonItem *leftbt = [[UIBarButtonItem alloc]init];
-    leftbt.title = @"Save";
-    self.navigationItem.rightBarButtonItem = rightbt;
-//    self.navigationItem.leftBarButtonItem = leftbt;
+    if (self.isEditing) {
+        [self tfAnableOrDissable:YES];
+        self.navigationItem.rightBarButtonItem = btedit;
+    }else{
+        self.navigationItem.rightBarButtonItem = btsave;
+    }
+    [self loadDataInView];
 }
 
 - (void) loadDataInView {
@@ -43,14 +46,38 @@
         self.student = [Student new];
     }
     else {
-        self.tfName.text    = self.student.name;
-        self.tfAddress.text     = self.student.address;
+        self.tfName.text = self.student.name;
+        self.tfAddress.text = self.student.address;
         self.tfMail.text = self.student.mail;
         self.tfPhoneNumber.text  = [NSString stringWithFormat:@"%li",self.student.phone];
+        self.tfPassword.text = self.student.password;
+        self.tfUsername.text = self.student.username;
+        [self.olSex setTitle:self.student.sex forState:UIControlStateNormal];
+        [self.olDateOfBirth setTitle:self.student.dateofbirth forState:UIControlStateNormal];
     }
 }
 
-
+-(void)tfAnableOrDissable:(BOOL)values{
+    if (values) {
+        self.tfUsername.enabled = NO;
+        self.tfPhoneNumber.enabled = NO;
+        self.tfAddress.enabled = NO;
+        self.tfMail.enabled = NO;
+        self.tfName.enabled = NO;
+        self.tfPassword.enabled = NO;
+        self.olSex.enabled = NO;
+        self.olDateOfBirth.enabled = NO;
+    }else{
+        self.tfUsername.enabled = YES;
+        self.tfPhoneNumber.enabled = YES;
+        self.tfAddress.enabled = YES;
+        self.tfMail.enabled = YES;
+        self.tfName.enabled = YES;
+        self.tfPassword.enabled = YES;
+        self.olSex.enabled = YES;
+        self.olDateOfBirth.enabled = YES;
+    }
+}
 
 #pragma Check Input
 - (BOOL)checkAllComponent{
@@ -147,6 +174,17 @@
     pickerViewController.delegate = self;
     [self presentViewControllerOverCurrentContext:pickerViewController animated:YES completion:nil];
 }
+
+- (void)editStudent{
+    [self tfAnableOrDissable:NO];
+    [btedit setTitle:@"Save"];
+    self.navigationItem.rightBarButtonItem = btsave;
+    NSLog(@"editstudemt");
+}
+- (void)editStudentsss{
+    NSLog(@"editstudemt");
+}
+
 - (void)saveStudent{
     if ([self checkAllComponent]) {
         self.student.name = self.tfName.text;

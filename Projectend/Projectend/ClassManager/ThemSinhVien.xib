@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
@@ -33,13 +34,16 @@
                                 <constraint firstAttribute="height" constant="30" id="OoP-g7-wPv"/>
                             </constraints>
                             <state key="normal" title="Thêm"/>
+                            <connections>
+                                <action selector="clickedAdd:" destination="-1" eventType="touchUpInside" id="KKq-Dj-KKa"/>
+                            </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="99A-Ah-7vw">
                             <rect key="frame" x="0.0" y="61" width="240" height="266"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <outlet property="dataSource" destination="i5M-Pr-FkT" id="Zz6-Y1-vTE"/>
-                                <outlet property="delegate" destination="i5M-Pr-FkT" id="iez-B6-OJv"/>
+                                <outlet property="dataSource" destination="-1" id="L6B-RG-ZwO"/>
+                                <outlet property="delegate" destination="-1" id="9J3-Gb-IkC"/>
                             </connections>
                         </tableView>
                     </subviews>
@@ -50,12 +54,12 @@
                         <constraint firstAttribute="bottom" secondItem="ibI-be-ufZ" secondAttribute="bottom" constant="8" id="8Ku-WM-oIb"/>
                         <constraint firstItem="99A-Ah-7vw" firstAttribute="leading" secondItem="2k8-hL-fqb" secondAttribute="leading" id="CNb-4B-dpH"/>
                         <constraint firstItem="ibI-be-ufZ" firstAttribute="leading" secondItem="2k8-hL-fqb" secondAttribute="leading" constant="49" id="DaN-kk-271"/>
-                        <constraint firstAttribute="trailing" secondItem="ibI-be-ufZ" secondAttribute="trailing" constant="49" id="Dyg-K3-jx9"/>
                         <constraint firstItem="09g-fi-bWP" firstAttribute="top" secondItem="2k8-hL-fqb" secondAttribute="top" constant="8" id="HyS-Fm-y0c"/>
                         <constraint firstItem="ibI-be-ufZ" firstAttribute="top" secondItem="99A-Ah-7vw" secondAttribute="bottom" constant="15" id="P40-xd-OA6"/>
                         <constraint firstItem="99A-Ah-7vw" firstAttribute="top" secondItem="09g-fi-bWP" secondAttribute="bottom" constant="28" id="TGx-In-VwD"/>
                         <constraint firstItem="09g-fi-bWP" firstAttribute="leading" secondItem="2k8-hL-fqb" secondAttribute="leading" constant="24" id="bKW-ZM-CRT"/>
-                        <constraint firstAttribute="trailing" secondItem="09g-fi-bWP" secondAttribute="trailing" constant="24" id="gpp-eO-6SE"/>
+                        <constraint firstItem="09g-fi-bWP" firstAttribute="centerX" secondItem="2k8-hL-fqb" secondAttribute="centerX" id="dxj-vF-hiB"/>
+                        <constraint firstItem="ibI-be-ufZ" firstAttribute="centerX" secondItem="2k8-hL-fqb" secondAttribute="centerX" id="dxz-e7-nse"/>
                         <constraint firstAttribute="trailing" secondItem="99A-Ah-7vw" secondAttribute="trailing" id="hSk-Cq-yIk"/>
                     </constraints>
                 </view>

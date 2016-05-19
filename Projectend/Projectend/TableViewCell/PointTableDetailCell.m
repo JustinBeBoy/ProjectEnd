@@ -1,14 +1,14 @@
 //
-//  AddStudentCell.m
+//  PointTableDetailCell.m
 //  Projectend
 //
-//  Created by ThucTapiOS on 5/17/16.
+//  Created by ThucTapiOS on 5/18/16.
 //  Copyright © 2016 Ominext Mobile. All rights reserved.
 //
 
-#import "AddStudentCell.h"
+#import "PointTableDetailCell.h"
 
-@implementation AddStudentCell
+@implementation PointTableDetailCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,7 +20,4 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)clickCheck:(id)sender {
-    [self.delegate btnCheckTouchByIndexPath:_indexPathCell];
-}
 @end

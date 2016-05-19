@@ -67,6 +67,8 @@
 }
 
 - (IBAction)subjectManager:(id)sender {
+    SubjectManagerViewController *subjectmanager = [[SubjectManagerViewController alloc]initWithNibName:@"SubjectManagerViewController" bundle:nil];
+    [self.navigationController pushViewController:subjectmanager animated:YES];
 }
 
 - (IBAction)scoreManager:(id)sender {

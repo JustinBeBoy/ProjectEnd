@@ -1,14 +1,14 @@
 //
-//  AddStudentCell.m
+//  ClassedTableViewCell.m
 //  Projectend
 //
 //  Created by ThucTapiOS on 5/17/16.
 //  Copyright © 2016 Ominext Mobile. All rights reserved.
 //
 
-#import "AddStudentCell.h"
+#import "ClassedTableViewCell.h"
 
-@implementation AddStudentCell
+@implementation ClassedTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,7 +20,4 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)clickCheck:(id)sender {
-    [self.delegate btnCheckTouchByIndexPath:_indexPathCell];
-}
 @end

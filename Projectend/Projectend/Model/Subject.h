@@ -9,5 +9,5 @@
 #import "BaseModel.h"
 
 @interface Subject : BaseModel
-
++ (NSArray*) queryListSubject;
 @end

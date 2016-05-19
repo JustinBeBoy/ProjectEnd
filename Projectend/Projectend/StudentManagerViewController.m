@@ -24,6 +24,11 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self reloadData];
+}
+
 - (void) setupUI{
     self.navigationController.navigationBarHidden = NO;
     UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus32.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusStudent)];
@@ -41,6 +46,7 @@
     [self.tableStudent reloadData];
     
 }
+
 - (void)plusStudent{
     AddAndEditViewController *addandedit = [[AddAndEditViewController alloc]initWithNibName:@"AddAndEditViewController" bundle:nil];
     addandedit.isEditing = NO;
@@ -103,6 +109,13 @@
     return _cellStudent;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Student *student = (Student*)[arrayStudent objectAtIndex:indexPath.row];
+    AddAndEditViewController *addeditviewcontroller = [[AddAndEditViewController alloc]initWithNibName:@"AddAndEditViewController" bundle:nil];
+    addeditviewcontroller.isEditing = YES;
+    addeditviewcontroller.student = student;
+    [self.navigationController pushViewController:addeditviewcontroller animated:YES];
+}
 
 /*
 #pragma mark - Navigation

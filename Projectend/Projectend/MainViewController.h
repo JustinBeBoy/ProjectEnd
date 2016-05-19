@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StudentManagerViewController.h"
+#import "SubjectManagerViewController.h"
 #import "QuanLyLopHocVC.h"
 
 @interface MainViewController : UIViewController

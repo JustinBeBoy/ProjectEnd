@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Subject.h"
 
-@interface SubjectManagerViewController : UIViewController
+@interface SubjectManagerViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end
