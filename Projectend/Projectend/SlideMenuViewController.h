@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ManagerList.h"
+#import "StudentManagerViewController.h"
+#import "SubjectManagerViewController.h"
+#import "MainViewController.h"
+#import "LoginViewController.h"
 
 @interface SlideMenuViewController : UIViewController
+- (IBAction)btMenu:(id)sender;
 
 @end

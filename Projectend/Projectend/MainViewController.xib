@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
@@ -17,6 +17,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-HT-Rgw">
                     <rect key="frame" x="40" y="150" width="240" height="65"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="pZu-NX-LXX"/>
@@ -31,6 +32,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5C-Ai-c1R">
                     <rect key="frame" x="40" y="225" width="240" height="65"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                     <state key="normal" title="Quản Lý Sinh Viên">
@@ -42,6 +44,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-Lo-zqw">
                     <rect key="frame" x="40" y="300" width="240" height="65"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                     <state key="normal" title="Quản Lý Môn Học">
@@ -53,6 +56,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-i3-c7z">
                     <rect key="frame" x="40" y="375" width="240" height="65"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                     <state key="normal" title="Quản Lý Điểm">
@@ -64,11 +68,13 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ominext Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-ZB-Wwt">
                     <rect key="frame" x="85" y="507" width="150" height="21"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.33725490200000002" green="0.68627450980000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <animations/>
             <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="TRl-ZB-Wwt" secondAttribute="bottom" constant="40" id="68v-Zb-7Nz"/>
@@ -93,7 +99,7 @@
                 <constraint firstItem="Gzy-i3-c7z" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="vAC-Or-30Q"/>
                 <constraint firstItem="E5C-Ai-c1R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="vD5-hF-xGc"/>
             </constraints>
-            <point key="canvasLocation" x="603" y="349"/>
+            <point key="canvasLocation" x="383" y="317"/>
         </view>
     </objects>
 </document>

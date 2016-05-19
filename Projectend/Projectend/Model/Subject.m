@@ -17,7 +17,8 @@
                 k_id,           //1
                 k_subject,      //2
                 k_credits,      //3
-                k_deleted,      //4
+                k_descriptions, //4
+                k_deleted,      //5
                 ];
     });
     
@@ -32,7 +33,8 @@
                 ksIntPrimaryInc,    //1
                 ksText,             //2
                 ksInteger,          //3
-                ksInteger           //4
+                ksText,             //4
+                ksInteger           //5
                 ];
     });
     return arr;

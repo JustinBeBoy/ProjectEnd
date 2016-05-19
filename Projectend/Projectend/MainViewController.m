@@ -55,7 +55,7 @@
 }
 */
 
-#pragma Button Manager
+#pragma mark Button Manager
 - (IBAction)classManager:(id)sender {
     QuanLyLopHocVC *classmanager = [[QuanLyLopHocVC alloc]initWithNibName:@"QuanLyLopHocVC" bundle:nil];
     [self.navigationController pushViewController:classmanager animated:YES];
@@ -63,11 +63,13 @@
 
 - (IBAction)studentManager:(id)sender {
     StudentManagerViewController *studentmanager = [[StudentManagerViewController alloc]initWithNibName:@"StudentManagerViewController" bundle:nil];
+    studentmanager.isSlide = NO;
     [self.navigationController pushViewController:studentmanager animated:YES];
 }
 
 - (IBAction)subjectManager:(id)sender {
     SubjectManagerViewController *subjectmanager = [[SubjectManagerViewController alloc]initWithNibName:@"SubjectManagerViewController" bundle:nil];
+    subjectmanager.isSlide = NO;
     [self.navigationController pushViewController:subjectmanager animated:YES];
 }
 

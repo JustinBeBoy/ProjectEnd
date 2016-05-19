@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Subject.h"
+#import "AddAndEditSubjectViewController.h"
+#import "SWRevealViewController.h"
 
 @interface SubjectManagerViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (assign, nonatomic) BOOL isSlide;
 @end
