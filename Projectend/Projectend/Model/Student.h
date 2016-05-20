@@ -24,6 +24,7 @@
 
 + (NSArray*) queryStudentWithIDClass:(NSString*)idClass;
 + (NSArray*) queryListStudent;
++ (NSArray *)queryStudentUsername:(NSString *)username;
 + (NSArray*) queryStudentUsername:(NSString*)username  andPassword:(NSString *)password;
 
 @end

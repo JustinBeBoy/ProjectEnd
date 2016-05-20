@@ -60,6 +60,7 @@
     
 }
 
+#pragma mark Button Action
 - (void)btback{
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -129,8 +130,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Student *student = (Student*)[arrayStudent objectAtIndex:indexPath.row];
     AddAndEditViewController *addeditviewcontroller = [[AddAndEditViewController alloc]initWithNibName:@"AddAndEditViewController" bundle:nil];
-    addeditviewcontroller.isEditing = YES;
     addeditviewcontroller.student = student;
+    addeditviewcontroller.isEditing = YES;
     [self.navigationController pushViewController:addeditviewcontroller animated:YES];
 }
 

@@ -64,7 +64,7 @@
 - (BOOL)checkAllComponent{
     NSMutableString *warringcpn = [[NSMutableString alloc]initWithString:@"Warring: "];
     if (self.tfName.text.length>0&&self.tfAddress.text.length>0&&self.tfPhoneNumber.text.length>0&&self.tfMail.text.length>0&&self.tfUsername.text.length>0&&self.tfPassword.text.length>0) {
-        if ([self NSStringIsValidEmail:self.tfMail.text]&&self.tfPassword.text.length>=6&&![self checkUsernameExist]) {
+        if ([self NSStringIsValidEmail:self.tfMail.text]&&self.tfPassword.text.length>=6&&![self checkUsernameExist]&&[self validatePhone:self.tfPhoneNumber.text]) {
             return YES;
         }else{
             if (self.tfPassword.text.length<6) {
@@ -75,6 +75,9 @@
             }
             if ([self checkUsernameExist]) {
                 [warringcpn appendString:@"Username existed "];
+            }
+            if (![self validatePhone:self.tfPhoneNumber.text]) {
+                [warringcpn appendString:@"Phone not Validate "];
             }
             _lbWarring.text = warringcpn;
             return NO;
@@ -118,12 +121,20 @@
         return NO;
     }
     arrusename = [NSArray array];
-    arrusename = [Student queryStudentUsername:self.tfUsername.text andPassword:self.tfPassword.text];
+    arrusename = [Student queryStudentUsername:self.tfUsername.text];
     if (arrusename.count>0) {
         return YES;
     } else {
        return NO;
     }
+}
+
+- (BOOL)validatePhone:(NSString *)phoneNumber
+{
+    NSString *phoneRegex = @"^((\\+)|(00))[0-9]{6,14}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
+    
+    return [phoneTest evaluateWithObject:phoneNumber];
 }
 
 #pragma ------
@@ -186,7 +197,6 @@
         self.olSex.enabled = NO;
         self.olDateOfBirth.enabled = NO;
     }else{
-        //        self.tfUsername.enabled = YES;
         self.tfPhoneNumber.enabled = YES;
         self.tfAddress.enabled = YES;
         self.tfMail.enabled = YES;
