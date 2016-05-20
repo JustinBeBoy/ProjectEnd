@@ -136,4 +136,26 @@
 }
 
 
++ (NSArray *)queryStudentUsername:(NSString *)username{
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrUsername = [self queryStudentUsername:username db:db];
+    [db close];
+    
+    return arrUsername;
+}
++ (NSArray *)queryStudentUsername:(NSString *)username db:(FMDatabase *)db{
+    NSString *queryString = [NSString stringWithFormat:@"%@=0 AND %@=\"%@\"",k_deleted,k_username,username];
+    
+    NSArray *arrDic = [Student selectWhere:queryString db:db];
+    NSMutableArray *arrUsename = [NSMutableArray array];
+    
+    for (NSDictionary *dic in arrDic) {
+        Student *username = [[Student alloc]initWithDic:dic];
+        [arrUsename addObject:username];
+    }
+    
+    return arrUsename;
+}
+
 @end
