@@ -62,5 +62,19 @@
     
     return listSubject;
 }
++(Subject*) querySubWithidSubject:(NSInteger)idSubject{
+    FMDatabase *db = [DB db];
+    [db open];
+    Subject *thisSubject = [self querySubWithidSubject:idSubject db:db];
+    [db close];
+    
+    return thisSubject;
+}
++(Subject*) querySubWithidSubject:(NSInteger)idSubject db:(FMDatabase*)db {
+    NSString *queryString = [NSString stringWithFormat:@"%@ = %ld",k_id, idSubject];
+    Subject *thisSubject = [Subject selectOneWhere:queryString db:db];
+    
+    return thisSubject;
+}
 
 @end

@@ -13,4 +13,5 @@
 @property(nonatomic,assign)NSInteger credits;
 @property(nonatomic,strong)NSString *descriptions;
 + (NSArray*) queryListSubject;
++(Subject*) querySubWithidSubject:(NSInteger)idSubject;
 @end

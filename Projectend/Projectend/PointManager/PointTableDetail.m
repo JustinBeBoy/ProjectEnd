@@ -35,7 +35,8 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _arrStudent.count;
+//    return _arrStudent.count;
+    return 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PointTableDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PointTableDetailCell"];
@@ -43,8 +44,9 @@
         cell = [[PointTableDetailCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PointTableDetailCell"];
     }
     Student *thisStudent = [_arrStudent objectAtIndex:indexPath.row];
-    cell.lblHoTen.text = thisStudent.name;
-    NSString *score;
+//    cell.lblHoTen.text = thisStudent.name;
+    cell.lblHoTen.text = @"Tang";
+    NSString *score = @"8";
     //find score with (idstudent, idclass, idsubject)..........................
     cell.lblDiem.text = score;
     return cell;

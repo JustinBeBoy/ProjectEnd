@@ -120,5 +120,20 @@
     
     return arrUsenameandPassword;
 }
++(Student*) queryStudentWithidStudent:(NSInteger)idStudent{
+    FMDatabase *db = [DB db];
+    [db open];
+    Student *thisStudent = [self queryStudentWithidStudent:idStudent db:db];
+    [db close];
+    
+    return thisStudent;
+}
++(Student*) queryStudentWithidStudent:(NSInteger)idStudent db:(FMDatabase*)db {
+    NSString *queryString = [NSString stringWithFormat:@"%@ = %ld",k_id, idStudent];
+    Student *thisStudent = [Student selectOneWhere:queryString db:db];
+    
+    return thisStudent;
+}
+
 
 @end

@@ -53,4 +53,35 @@
     [db close];
     return arrIDClass;
 }
++(NSArray*) queryScoreInfFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent{
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrCompany = [self queryScoreInfFromiDClass:idClass andiDStudent:idStudent db:db];
+    [db close];
+    
+    return arrCompany;
+}
++(NSArray*) queryScoreInfFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent db:(FMDatabase*)db{
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld AND %@ = %ld", k_idclass, idClass, k_idstudent, idStudent];
+    NSArray *arrDic = [Scoreboad selectWhere:queryStr db:db];
+    NSMutableArray *arrScore = [NSMutableArray array];
+    for (NSDictionary *dic in arrDic) {
+        Scoreboad *score = [[Scoreboad alloc]initWithDic:dic];
+        [arrScore addObject:score];
+    }
+    
+    return arrScore;
+}
++(NSArray*)queryiDSubject{
+    FMDatabase *db = [DB db];
+    [db open];
+//    NSArray *arrSubject = [self queryiDSubjecAndScoreFromiDClass:idClass andiDStudent:idStudent db:db];
+    NSArray *arrSubject;
+    [db close];
+    
+    return arrSubject;
+}
+//+(NSArray*)queryiDSubject:(FMDatabase*)db{
+//    NSString *queryStr = [NSString stringWithFormat:@""];
+//}
 @end

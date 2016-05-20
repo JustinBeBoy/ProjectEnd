@@ -24,13 +24,6 @@
     [self loadData];
 }
 -(void)loadData{
-    _arrSubjectList = [Subject queryListSubject];
-    for (NSString *obj in _arrSubjectList) {
-        NSArray *arrClassWithSub;
-        //creat arrClassWithSub from Database .......................
-        [_arrClassAtEachSub addObject:arrClassWithSub];
-        [_tblPointWithClass reloadData];
-    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

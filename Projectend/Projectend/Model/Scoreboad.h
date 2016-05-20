@@ -9,10 +9,11 @@
 #import "BaseModel.h"
 
 @interface Scoreboad : BaseModel
-@property (nonatomic,strong) NSString *idsubject;
-@property (nonatomic,strong) NSString *idclass;
-@property (nonatomic,strong) NSString *idstudent;
+@property (nonatomic,assign) NSInteger idsubject;
+@property (nonatomic,assign) NSInteger idclass;
+@property (nonatomic,assign) NSInteger idstudent;
 @property (nonatomic,strong) NSString *score;
 
 +(NSArray*)queryIDClassWithSubjectFromScoreTable:(NSString*)IDsubject;
++(NSArray*) queryScoreInfFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent;
 @end

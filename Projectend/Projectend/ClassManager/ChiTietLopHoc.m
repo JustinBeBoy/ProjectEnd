@@ -106,7 +106,7 @@
 
 - (IBAction)addPressed:(id)sender {
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
-    [self.navigationController pushViewController:themSv animated:YES];
+    [self presentViewController:themSv animated:YES completion:nil];
 }
 
 

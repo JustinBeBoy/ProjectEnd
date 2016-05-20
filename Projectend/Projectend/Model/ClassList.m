@@ -58,9 +58,18 @@
     
     return listClass;
 }
-+(NSString*)getNameClassFromIDClass:(NSString*)IDClass{
-//    NSString *queryString = [NSString stringWithFormat:@"%@ = %@", ];
-    return @"";
++(ClassList*) queryClassWithIDClass:(NSString*)iDClass{
+    FMDatabase *db = [DB db];
+    [db open];
+    ClassList *arrClass = [self queryClassWithIDClass:iDClass db:db];
+    [db close];
+    
+    return arrClass;
+}
++(ClassList*)queryClassWithIDClass:(NSString*)iDClass db:(FMDatabase*)db {
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %@", k_id, iDClass];
+    ClassList *thisClass = [ClassList selectOneWhere:queryStr db:db];
+    return thisClass;
 }
 +(void) insertClass:(NSString*)classname {
     FMDatabase *db = [DB db];
