@@ -11,6 +11,7 @@
 @interface StudentManagerViewController ()<UITableViewDelegate>
 {
     NSArray *arrayStudent;
+    NSArray *arrayClassStudent;
 }
 
 @end
@@ -56,6 +57,7 @@
 }
 - (void)reloadData{
     arrayStudent = [Student queryListStudent];
+    arrayClassStudent = [ClassList queryListClass];
     [self.tableStudent reloadData];
     
 }
@@ -115,10 +117,16 @@
 
     if ([arrayStudent count] > 0)
     {
+        ClassList *currentClass;
         Student *currentRecord = [arrayStudent objectAtIndex:indexPath.row];
         number.text = [NSString stringWithFormat:@"%li",(long)indexPath.row+1];
         fullname.text = [NSString stringWithFormat:@"%@",currentRecord.name];
-        class.text = [NSString stringWithFormat:@"%ld", (long)currentRecord.idclass];
+        for (int i = 0; i < [arrayClassStudent count]; i++) {
+            currentClass = [arrayClassStudent objectAtIndex:i];
+            if (currentRecord.idclass == [currentClass.iId integerValue]) {
+                class.text = [NSString stringWithFormat:@"%@",currentClass.name];
+            }
+        }
         sex.text = currentRecord.sex;
         year.text = currentRecord.dateofbirth;
         

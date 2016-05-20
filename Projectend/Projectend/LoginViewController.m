@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "SlideMenuViewController.h"
+#import "ScoreManagerVC.h"
 
 @interface LoginViewController (){
     BOOL flagcheckbox;
@@ -82,9 +83,11 @@
     if (!flagcheckbox) {
         arrayStudents = [NSArray array];
         arrayStudents = [Student queryStudentUsername:self.tfUserName.text andPassword:self.tfPassWord.text];
-        if(arrayStudents.count>0)
+        if(arrayStudents.count>0){
+            ScoreManagerVC *scorevc = [[ScoreManagerVC alloc]initWithNibName:@"ScoreManagerVC" bundle:nil];
+            [self.navigationController pushViewController:scorevc animated:YES];
             NSLog(@"dang nhap student thanh cong");
-        else
+        }else
             NSLog(@"nhap lai username and password");
     }
 }

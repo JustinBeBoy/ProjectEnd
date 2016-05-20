@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
+#import "PointManager.h"
 
 @interface MainViewController ()
 
@@ -74,5 +75,7 @@
 }
 
 - (IBAction)scoreManager:(id)sender {
+    PointManager *pointmvc = [[PointManager alloc]initWithNibName:@"PointManager" bundle:nil];
+    [self.navigationController pushViewController:pointmvc animated:YES];
 }
 @end

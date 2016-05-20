@@ -50,7 +50,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="hL6-JO-ivu"/>
                     </constraints>
-                    <state key="normal" title="Male"/>
+                    <state key="normal" title="Nam"/>
                     <connections>
                         <action selector="btSex:" destination="-1" eventType="touchUpInside" id="Vga-74-q6V"/>
                     </connections>
@@ -116,7 +116,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <point key="canvasLocation" x="506" y="359"/>
+            <point key="canvasLocation" x="422" y="235"/>
         </view>
     </objects>
 </document>

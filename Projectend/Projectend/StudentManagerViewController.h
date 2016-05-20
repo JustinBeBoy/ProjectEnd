@@ -10,6 +10,7 @@
 #import "Student.h"
 #import "AddAndEditViewController.h"
 #import "SWRevealViewController.h"
+#import "ClassList.h"
 
 @interface StudentManagerViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *lbNumber;
