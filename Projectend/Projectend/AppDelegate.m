@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Student.h"
+#import "Teacher.h"
+#define KEY_CHECK_ACOUNT @"DefaultAcount"
 
 @interface AppDelegate ()
 
@@ -19,6 +22,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [DB checkExistedDB];
+    [self CheckUserDefault];
     LoginViewController *rootVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
     [navigationController setNavigationBarHidden:YES];
@@ -50,6 +54,21 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)CheckUserDefault{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults boolForKey:KEY_CHECK_ACOUNT]) {
+        Teacher *teacher = [[Teacher alloc]init];
+        Student *student = [[Student alloc]init];
+        teacher.username = @"teacheradmin";
+        teacher.password = @"admin";
+        student.username = @"studentadmin";
+        student.password = @"admin";
+        [teacher update];
+        [student update];
+        [userDefaults setBool:YES forKey:KEY_CHECK_ACOUNT];
+    }
 }
 
 @end

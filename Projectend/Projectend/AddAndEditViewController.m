@@ -64,7 +64,7 @@
 - (BOOL)checkAllComponent{
     NSMutableString *warringcpn = [[NSMutableString alloc]initWithString:@"Warring: "];
     if (self.tfName.text.length>0&&self.tfAddress.text.length>0&&self.tfPhoneNumber.text.length>0&&self.tfMail.text.length>0&&self.tfUsername.text.length>0&&self.tfPassword.text.length>0) {
-        if ([self NSStringIsValidEmail:self.tfMail.text]&&self.tfPassword.text.length>=6&&![self checkUsernameExist]&&[self validatePhone:self.tfPhoneNumber.text]) {
+        if ([self NSStringIsValidEmail:self.tfMail.text]&&self.tfPassword.text.length>=6&&![self checkUsernameExist]) {
             return YES;
         }else{
             if (self.tfPassword.text.length<6) {
@@ -76,9 +76,9 @@
             if ([self checkUsernameExist]) {
                 [warringcpn appendString:@"Username existed "];
             }
-            if (![self validatePhone:self.tfPhoneNumber.text]) {
-                [warringcpn appendString:@"Phone not Validate "];
-            }
+//            if (![self validatePhone:self.tfPhoneNumber.text]) {
+//                [warringcpn appendString:@"Phone not Validate "];
+//            }
             _lbWarring.text = warringcpn;
             return NO;
         }
@@ -129,13 +129,17 @@
     }
 }
 
-- (BOOL)validatePhone:(NSString *)phoneNumber
-{
-    NSString *phoneRegex = @"^((\\+)|(00))[0-9]{6,14}$";
-    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
-    
-    return [phoneTest evaluateWithObject:phoneNumber];
-}
+//- (BOOL)validatePhone:(NSString *)phoneNumber
+//{
+////    NSString *phoneRegex = @"^((\\+)|(00))[0-9]{6,14}$";
+////    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
+////    
+////    return [phoneTest evaluateWithObject:phoneNumber];
+//    
+//    NSString *phoneRegex = @"[235689][0-9]{6}([0-9]{3})?";
+//    NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
+//    return [test evaluateWithObject:phoneNumber];
+//}
 
 #pragma ------
 
@@ -163,7 +167,7 @@
     PickerViewController *pickerViewController = [[PickerViewController alloc] initFromNib];
     pickerViewController.pickerType = CustomPickerType;
     pickerViewController.delegate = self;
-    pickerViewController.dataSourceForCustomPickerType = @[@"Male",@"Female"];
+    pickerViewController.dataSourceForCustomPickerType = @[@"Nam",@"Nữ"];
     [self presentViewControllerOverCurrentContext:pickerViewController animated:YES completion:nil];
 }
 
