@@ -3,27 +3,35 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStudentCell" id="0rz-c4-uHK" customClass="AddStudentCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="326" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rz-c4-uHK" id="Rgf-Cp-Ejj">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="326" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piW-zU-DSV">
-                        <rect key="frame" x="0.0" y="11" width="277" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piW-zU-DSV">
+                        <rect key="frame" x="8" y="11" width="269" height="21"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="uPC-59-RGo"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-pK-3Wr">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-pK-3Wr">
                         <rect key="frame" x="285" y="7" width="30" height="30"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="3OV-s9-Y7r"/>
+                            <constraint firstAttribute="width" constant="30" id="kT0-eR-lhc"/>
+                        </constraints>
                         <state key="normal" backgroundImage="unchecked.png"/>
                         <connections>
                             <action selector="clickCheck:" destination="0rz-c4-uHK" eventType="touchUpInside" id="9b8-un-dU5"/>
@@ -31,13 +39,20 @@
                     </button>
                 </subviews>
                 <animations/>
+                <constraints>
+                    <constraint firstItem="piW-zU-DSV" firstAttribute="leading" secondItem="Rgf-Cp-Ejj" secondAttribute="leadingMargin" id="5d4-3F-XdT"/>
+                    <constraint firstItem="ZXd-pK-3Wr" firstAttribute="centerY" secondItem="Rgf-Cp-Ejj" secondAttribute="centerY" id="KNv-Zs-13G"/>
+                    <constraint firstItem="piW-zU-DSV" firstAttribute="centerY" secondItem="Rgf-Cp-Ejj" secondAttribute="centerY" id="XIP-NG-4KY"/>
+                    <constraint firstItem="ZXd-pK-3Wr" firstAttribute="leading" secondItem="piW-zU-DSV" secondAttribute="trailing" constant="8" id="fxw-VK-xVP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZXd-pK-3Wr" secondAttribute="trailing" constant="3" id="hXK-UN-tWR"/>
+                </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
                 <outlet property="btnCheck" destination="ZXd-pK-3Wr" id="V9T-8B-FZc"/>
                 <outlet property="lblAddStudent" destination="piW-zU-DSV" id="lbe-zf-d6i"/>
             </connections>
-            <point key="canvasLocation" x="133" y="94"/>
+            <point key="canvasLocation" x="286" y="87"/>
         </tableViewCell>
     </objects>
     <resources>

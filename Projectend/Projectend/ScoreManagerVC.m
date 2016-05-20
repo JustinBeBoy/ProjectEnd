@@ -24,7 +24,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self loadData];
+//    [self loadData];
 }
 -(void) setupUI{
     [self.navigationController setNavigationBarHidden:YES];
@@ -32,6 +32,8 @@
     _lblHoTen.text = thisStudent.name;
     thisClass = [ClassList queryClassWithIDClass:[NSString stringWithFormat:@"%ld", thisStudent.idclass]];
     _lblLop.text = thisClass.name;
+    
+    [_tblScore registerNib:[UINib nibWithNibName:@"ScoreTableCell" bundle:nil] forCellReuseIdentifier:@"ScoreTableCell"];
     
 }
 -(void)loadData{
@@ -47,7 +49,8 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _arrScore.count;
+//    return _arrScore.count;
+    return 4;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ScoreTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreTableCell"];
@@ -57,19 +60,17 @@
     }
     Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
     Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
-    cell.lblSubject.text = thisSubject.subject;
-    cell.lblScore.text = thisScore.score;
+//    cell.lblSubject.text = thisSubject.subject;
+    cell.lblSubject.text = @"Tang";
+    cell.lblScore.text = @"123";
+//    cell.lblScore.text = thisScore.score;
     
     return cell;
 }
 
 - (IBAction)pressedLogOut:(id)sender {
-    SWRevealViewController *revealController = self.revealViewController;
-    UINavigationController *navigationController;
-    LoginViewController *loginvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    navigationController = [[UINavigationController alloc] initWithRootViewController:loginvc];
-    [revealController pushFrontViewController:navigationController animated:YES];
-
+    LoginViewController *loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    [self.navigationController pushViewController:loginViewController animated:YES];
 }
 
 @end

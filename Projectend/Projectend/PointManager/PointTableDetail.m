@@ -22,13 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    lblName.layer.borderWidth = 1.0f;
-    lblPoint.layer.borderWidth = 1.0f;
+    [self setupUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)setupUI{
+    lblName.layer.borderWidth = 1.0f;
+    lblPoint.layer.borderWidth = 1.0f;
+    [_tblPointDetail registerNib:[UINib nibWithNibName:@"PointTableDetailCell" bundle:nil] forCellReuseIdentifier:@"PointTableDetailCell"];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

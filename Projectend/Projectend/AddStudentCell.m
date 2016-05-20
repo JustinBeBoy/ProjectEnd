@@ -22,5 +22,6 @@
 
 - (IBAction)clickCheck:(id)sender {
     [self.delegate btnCheckTouchByIndexPath:_indexPathCell];
+    NSLog(@"bam button %ld", _indexPathCell.row);
 }
 @end

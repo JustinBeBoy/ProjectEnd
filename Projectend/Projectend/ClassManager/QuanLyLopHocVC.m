@@ -23,11 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setupUI];
-    [self loadData];
 
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self loadData];
 }
 
 - (void) setupUI{

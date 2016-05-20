@@ -19,9 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setupUI];
 }
 -(void)setupUI{
     [self.navigationController setNavigationBarHidden:YES];
+    [_tblAddStudent registerNib:[UINib nibWithNibName:@"AddStudentCell" bundle:nil] forCellReuseIdentifier:@"AddStudentCell"];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -58,6 +60,8 @@
 //    cell.lblAddStudent.text = thisStudent.name;
     cell.lblAddStudent.text = @"tang";
     [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+    
+    [cell.btnCheck setBackgroundColor:[UIColor redColor]];
     cell.indexPathCell = indexPath;
     
 //    if (thisStudent.isCheck == YES) {

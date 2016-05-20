@@ -20,10 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _edited = NO;
     [self setupUI];
 }
 -(void)setupUI{
+    _edited = NO;
     [self.navigationController setNavigationBarHidden:YES];
     [_btnSave setHidden:YES];
     [btnPlus setHidden:YES];
