@@ -65,6 +65,9 @@
         teacher.password = @"admin";
         student.username = @"studentadmin";
         student.password = @"admin";
+        student.name = @"Student Admin";
+        student.dateofbirth = @"0";
+        student.sex = @"none";
         [teacher update];
         [student update];
         [userDefaults setBool:YES forKey:KEY_CHECK_ACOUNT];

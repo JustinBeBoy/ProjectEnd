@@ -24,6 +24,8 @@
     [super viewDidLoad];
 //    mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     // Do any additional setup after loading the view from its nib.
+    SWRevealViewController *reveal = self.revealViewController;
+    reveal.panGestureRecognizer.enabled = NO;
     [self chekboxselected];
 }
 
