@@ -8,6 +8,7 @@
 
 #import "ChiTietLopHoc.h"
 #import "ThemSinhVien.h"
+#import "UIViewController+PresentViewControllerOverCurrentContext.h"
 
 @interface ChiTietLopHoc (){
     IBOutlet UIButton *btnPlus;
@@ -106,7 +107,7 @@
 
 - (IBAction)addPressed:(id)sender {
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
-    [self presentViewController:themSv animated:YES completion:nil];
+    [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
 
 

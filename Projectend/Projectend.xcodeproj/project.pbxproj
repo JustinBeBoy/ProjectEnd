@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C07E8CE1CEE9ED2000E6CE5 /* ScoreManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8CC1CEE9ED2000E6CE5 /* ScoreManagerVC.m */; settings = {ASSET_TAGS = (); }; };
-		5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8CD1CEE9ED2000E6CE5 /* ScoreManagerVC.xib */; settings = {ASSET_TAGS = (); }; };
-		5C07E8D31CEEAB84000E6CE5 /* ScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */; settings = {ASSET_TAGS = (); }; };
-		5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5C07E8CE1CEE9ED2000E6CE5 /* ScoreManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8CC1CEE9ED2000E6CE5 /* ScoreManagerVC.m */; };
+		5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8CD1CEE9ED2000E6CE5 /* ScoreManagerVC.xib */; };
+		5C07E8D31CEEAB84000E6CE5 /* ScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */; };
+		5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */; };
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5C8A5FEB1CED580C0007D7A5 /* PointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE61CED580C0007D7A5 /* PointManager.m */; };
 		5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE71CED580C0007D7A5 /* PointManager.xib */; };
@@ -435,29 +435,11 @@
 		752127A51CE5B85D00E8F44B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7521278C1CE5B31600E8F44B /* LoginViewController.h */,
-				7521278D1CE5B31600E8F44B /* LoginViewController.m */,
-				7521278E1CE5B31600E8F44B /* LoginViewController.xib */,
-				7597579B1CE87DE9006013B5 /* MainViewController.h */,
-				7597579C1CE87DE9006013B5 /* MainViewController.m */,
-				7597579D1CE87DE9006013B5 /* MainViewController.xib */,
-				759757B81CE95394006013B5 /* SlideMenuViewController.h */,
-				759757B91CE95394006013B5 /* SlideMenuViewController.m */,
-				759757BA1CE95394006013B5 /* SlideMenuViewController.xib */,
-				759757BD1CE966D0006013B5 /* MenuCell.xib */,
-				759757EA1CEAB2BD006013B5 /* StudentManagerViewController.h */,
-				759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */,
-				759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */,
-				759757EF1CEAB725006013B5 /* StudentViewCell.xib */,
-				759757FB1CEB06B8006013B5 /* AddAndEditViewController.h */,
-				759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */,
-				759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */,
-				75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */,
-				75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */,
-				75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */,
-				75F96DC61CED5F47004EE32A /* AddAndEditSubjectViewController.h */,
-				75F96DC71CED5F47004EE32A /* AddAndEditSubjectViewController.m */,
-				75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */,
+				75EFE2791CF04448000737E2 /* Login Screen */,
+				75EFE27A1CF04456000737E2 /* Main Screen */,
+				75EFE27B1CF04464000737E2 /* Slide Screen */,
+				75EFE27C1CF04470000737E2 /* Student Manager Screen */,
+				75EFE27D1CF0448D000737E2 /* Subject Screen */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -558,6 +540,64 @@
 				75F96D981CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m */,
 			);
 			name = Picker;
+			sourceTree = "<group>";
+		};
+		75EFE2791CF04448000737E2 /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				7521278C1CE5B31600E8F44B /* LoginViewController.h */,
+				7521278D1CE5B31600E8F44B /* LoginViewController.m */,
+				7521278E1CE5B31600E8F44B /* LoginViewController.xib */,
+			);
+			name = "Login Screen";
+			sourceTree = "<group>";
+		};
+		75EFE27A1CF04456000737E2 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				7597579B1CE87DE9006013B5 /* MainViewController.h */,
+				7597579C1CE87DE9006013B5 /* MainViewController.m */,
+				7597579D1CE87DE9006013B5 /* MainViewController.xib */,
+			);
+			name = "Main Screen";
+			sourceTree = "<group>";
+		};
+		75EFE27B1CF04464000737E2 /* Slide Screen */ = {
+			isa = PBXGroup;
+			children = (
+				759757B81CE95394006013B5 /* SlideMenuViewController.h */,
+				759757B91CE95394006013B5 /* SlideMenuViewController.m */,
+				759757BA1CE95394006013B5 /* SlideMenuViewController.xib */,
+				759757BD1CE966D0006013B5 /* MenuCell.xib */,
+			);
+			name = "Slide Screen";
+			sourceTree = "<group>";
+		};
+		75EFE27C1CF04470000737E2 /* Student Manager Screen */ = {
+			isa = PBXGroup;
+			children = (
+				759757FB1CEB06B8006013B5 /* AddAndEditViewController.h */,
+				759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */,
+				759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */,
+				759757EA1CEAB2BD006013B5 /* StudentManagerViewController.h */,
+				759757EB1CEAB2BD006013B5 /* StudentManagerViewController.m */,
+				759757EC1CEAB2BD006013B5 /* StudentManagerViewController.xib */,
+				759757EF1CEAB725006013B5 /* StudentViewCell.xib */,
+			);
+			name = "Student Manager Screen";
+			sourceTree = "<group>";
+		};
+		75EFE27D1CF0448D000737E2 /* Subject Screen */ = {
+			isa = PBXGroup;
+			children = (
+				75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */,
+				75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */,
+				75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */,
+				75F96DC61CED5F47004EE32A /* AddAndEditSubjectViewController.h */,
+				75F96DC71CED5F47004EE32A /* AddAndEditSubjectViewController.m */,
+				75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */,
+			);
+			name = "Subject Screen";
 			sourceTree = "<group>";
 		};
 		75F96DB71CED5391004EE32A /* TableViewCell */ = {
