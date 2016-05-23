@@ -30,14 +30,14 @@
     [self.navigationController setNavigationBarHidden:YES];
     thisStudent = [Student queryStudentWithidStudent:_iDStudent];
     _lblHoTen.text = thisStudent.name;
-    thisClass = [ClassList queryClassWithIDClass:[NSString stringWithFormat:@"%ld", thisStudent.idclass]];
+    thisClass = [ClassList queryClassWithIDClass:thisStudent.idclass];
     _lblLop.text = thisClass.name;
     
     [_tblScore registerNib:[UINib nibWithNibName:@"ScoreTableCell" bundle:nil] forCellReuseIdentifier:@"ScoreTableCell"];
     
 }
 -(void)loadData{
-    _arrScore = [Scoreboad queryScoreInfFromiDClass:(int)thisClass.iId andiDStudent:(int)thisStudent.iId];
+    _arrScore = [Scoreboad queryScoreFromiDClass:(int)thisClass.iId andiDStudent:(int)thisStudent.iId];
     [_tblScore reloadData];
 }
 

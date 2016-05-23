@@ -15,5 +15,5 @@
 
 + (NSArray*) queryListClass;
 +(void) insertClass:(NSString*)classname;
-+(ClassList*) queryClassWithIDClass:(NSString*)iDClass;
++(ClassList*) queryClassWithIDClass:(NSInteger)iDClass;
 @end

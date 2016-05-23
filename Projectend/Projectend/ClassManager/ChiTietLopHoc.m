@@ -30,9 +30,9 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self reloadData];
+    [self loadData];
 }
--(void)reloadData{
+-(void)loadData{
     _arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", _thisClass.iId]];
     
     _lblLop.text = [NSString stringWithFormat:@"%@", _thisClass.name];
@@ -72,10 +72,10 @@
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        Student *thisStudent = [_arrStudent objectAtIndex:indexPath.row];
+        thisStudent.idclass = 0;//xem lai
+        [thisStudent update];
+        [self loadData];
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -105,7 +105,11 @@
 }
 
 - (IBAction)addPressed:(id)sender {
+//    NSArray *subViewArray = [[NSBundle mainBundle] loadNibNamed:@"ThemSinhVien" owner:self options:nil];
+//    UIView *subView = [subViewArray objectAtIndex:0];
+//    [self.view addSubview:subView];
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
+    themSv.thisClass = _thisClass;
     [self presentViewController:themSv animated:YES completion:nil];
 }
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuanLyLopHocVC">
@@ -21,7 +21,6 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gE-cL-ia2">
                             <rect key="frame" x="0.0" y="8" width="32" height="21"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="U2t-8R-GXU"/>
                                 <constraint firstAttribute="width" constant="32" id="aJ8-YR-hzR"/>
@@ -36,7 +35,6 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-9X-ec0">
                             <rect key="frame" x="264" y="1" width="32" height="36"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="TC0-VO-Ryz"/>
                                 <constraint firstAttribute="width" constant="32" id="Vn0-0C-oEv"/>
@@ -51,7 +49,6 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUẢN LÝ LỚP HỌC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Eo-oR5">
                             <rect key="frame" x="47" y="9" width="210" height="21"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="210" id="Gi5-LN-5IC"/>
                                 <constraint firstAttribute="height" constant="21" id="t3L-U9-0Gp"/>
@@ -61,7 +58,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="0qK-Eo-oR5" firstAttribute="centerY" secondItem="8AX-nW-b7i" secondAttribute="centerY" id="6g4-aN-t33"/>
@@ -75,7 +71,6 @@
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OgH-em-VRp">
                     <rect key="frame" x="8" y="91" width="304" height="448"/>
-                    <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="tEP-00-5Fu"/>
@@ -83,7 +78,6 @@
                     </connections>
                 </tableView>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="8AX-nW-b7i" secondAttribute="trailing" constant="8" id="1KR-qU-MDg"/>

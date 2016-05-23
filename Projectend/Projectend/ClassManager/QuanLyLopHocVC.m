@@ -13,6 +13,7 @@
 
 @interface QuanLyLopHocVC (){
     NSArray *arrDSLop;
+    ClassList *thatClass111;
 }
 
 @end
@@ -92,7 +93,10 @@
     }];
     UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         NSString *string = alert.textFields[0].text;
-        [ClassList insertClass:string];
+        ClassList *thisClass = [[ClassList alloc] init];
+        thisClass.name = string;
+        [thisClass update]; // insert erorr
+//        [ClassList insertClass:string];
         [self loadData];
         NSLog(@"insert object: %@", string);
     }];

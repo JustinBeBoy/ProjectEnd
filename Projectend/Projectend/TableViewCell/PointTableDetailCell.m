@@ -19,5 +19,7 @@
 
     // Configure the view for the selected state
 }
-
+- (IBAction)editingEnded:(id)sender {
+    [self.delegate sentTextField:_tfDiem andIndexPath:_indexPathCell];
+}
 @end

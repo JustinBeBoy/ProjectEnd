@@ -12,9 +12,10 @@
 @property (nonatomic,assign) NSInteger idsubject;
 @property (nonatomic,assign) NSInteger idclass;
 @property (nonatomic,assign) NSInteger idstudent;
-@property (nonatomic,strong) NSString *score;
+@property (nonatomic,assign) NSInteger score;
 
 +(NSArray*) queryScoreFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent;
 +(NSArray*) queryListScore;
 +(NSArray*) queryScoreFromIDSubject:(NSInteger)iDSubject;
++(NSArray*) queryListScoreFromIDSubject:(NSInteger)iDSubject andIDClass:(NSInteger)iDClass;
 @end

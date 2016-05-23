@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PointManager">
@@ -21,7 +21,6 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV6-g4-Mos">
                             <rect key="frame" x="0.0" y="8" width="32" height="21"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="32" id="8L4-fw-yMi"/>
                                 <constraint firstAttribute="height" constant="21" id="WQs-yr-9B6"/>
@@ -36,7 +35,6 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-Ib-Mup">
                             <rect key="frame" x="264" y="1" width="32" height="36"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="32" id="C7T-YM-sSq"/>
                                 <constraint firstAttribute="height" constant="36" id="dm1-1W-p9l"/>
@@ -51,7 +49,6 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUẢN LÝ ĐIỂM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RU-ne-30y">
                             <rect key="frame" x="56" y="9" width="193" height="21"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="193" id="VSZ-mi-uj5"/>
                                 <constraint firstAttribute="height" constant="21" id="uPI-eN-egs"/>
@@ -61,7 +58,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="RV6-g4-Mos" firstAttribute="leading" secondItem="aFL-dS-rBP" secondAttribute="leading" id="2Jw-dM-lVB"/>
@@ -75,7 +71,6 @@
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJ7-Qp-cgg">
                     <rect key="frame" x="8" y="78" width="304" height="425"/>
-                    <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="13m-Mo-aHo"/>
@@ -83,7 +78,6 @@
                     </connections>
                 </tableView>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="aFL-dS-rBP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="Lhh-fc-HwV"/>

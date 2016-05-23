@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewScore">
+            <connections>
+                <outlet property="pickAddNewScore" destination="JdJ-Ym-DU2" id="vez-sm-DFR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdJ-Ym-DU2">
+                    <rect key="frame" x="0.0" y="209" width="320" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="TLP-6o-2eG"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Be2-fj-qoW"/>
+                        <outlet property="delegate" destination="-1" id="o79-5f-IUO"/>
+                    </connections>
+                </pickerView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaX-sP-amO">
+                    <rect key="frame" x="8" y="155" width="304" height="37"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn môn:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-Z2-K9h">
+                            <rect key="frame" x="8" y="8" width="144" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="atQ-LU-OUd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn lớp:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v33-BT-bIT">
+                            <rect key="frame" x="152" y="8" width="144" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="mhz-hJ-RqD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="BVo-nT-6IQ"/>
+                        <constraint firstItem="cFO-Z2-K9h" firstAttribute="leading" secondItem="FaX-sP-amO" secondAttribute="leading" constant="8" id="E7H-SX-H9z"/>
+                        <constraint firstItem="cFO-Z2-K9h" firstAttribute="centerY" secondItem="FaX-sP-amO" secondAttribute="centerY" id="Hwh-cX-SHb"/>
+                        <constraint firstItem="v33-BT-bIT" firstAttribute="leading" secondItem="cFO-Z2-K9h" secondAttribute="trailing" id="MTK-A1-cdf"/>
+                        <constraint firstItem="v33-BT-bIT" firstAttribute="width" secondItem="cFO-Z2-K9h" secondAttribute="width" id="hGl-Nk-ekX"/>
+                        <constraint firstAttribute="trailing" secondItem="v33-BT-bIT" secondAttribute="trailing" constant="8" id="ujj-cr-vFT"/>
+                        <constraint firstItem="v33-BT-bIT" firstAttribute="centerY" secondItem="FaX-sP-amO" secondAttribute="centerY" id="vRZ-bu-P2X"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-px-rdA">
+                    <rect key="frame" x="133" y="408" width="55" height="30"/>
+                    <color key="backgroundColor" red="0.29282021590000001" green="0.80223331149999999" blue="0.69706509029999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="FGP-ZN-yhg"/>
+                        <constraint firstAttribute="width" constant="55" id="Q7i-AY-3mg"/>
+                    </constraints>
+                    <state key="normal" title="Add"/>
+                    <connections>
+                        <action selector="pressedAdd:" destination="-1" eventType="touchUpInside" id="gzm-38-Che"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JdJ-Ym-DU2" firstAttribute="top" secondItem="FaX-sP-amO" secondAttribute="bottom" constant="17" id="04s-Ke-3mq"/>
+                <constraint firstItem="2DQ-px-rdA" firstAttribute="top" secondItem="JdJ-Ym-DU2" secondAttribute="bottom" constant="49" id="6re-Ve-djf"/>
+                <constraint firstItem="JdJ-Ym-DU2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BG0-DF-OlC"/>
+                <constraint firstItem="2DQ-px-rdA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YPB-VH-p04"/>
+                <constraint firstItem="JdJ-Ym-DU2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gGY-HM-0cA"/>
+                <constraint firstItem="FaX-sP-amO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qfg-N4-SKO"/>
+                <constraint firstItem="FaX-sP-amO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vAB-7Z-D59"/>
+                <constraint firstItem="JdJ-Ym-DU2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w1X-yN-ydf"/>
+            </constraints>
+            <point key="canvasLocation" x="259" y="276"/>
+        </view>
+    </objects>
+</document>

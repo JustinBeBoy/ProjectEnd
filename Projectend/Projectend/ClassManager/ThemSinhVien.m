@@ -11,6 +11,10 @@
 #import "Student.h"
 
 @interface ThemSinhVien () <CheckTouchDelegate>
+{
+    AddStudentCell *cell;
+    NSMutableArray *arrAddingStudent;
+}
 
 @end
 
@@ -24,15 +28,14 @@
 -(void)setupUI{
     [self.navigationController setNavigationBarHidden:YES];
     [_tblAddStudent registerNib:[UINib nibWithNibName:@"AddStudentCell" bundle:nil] forCellReuseIdentifier:@"AddStudentCell"];
+    
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    AddStudentCell *cell = [[AddStudentCell alloc] init];
-    cell.delegate = self;
     [self loadData];
 }
 -(void)loadData{
-    _arrStudentNotAdd = [Student queryListStudent];
+    _arrStudentNotAdd = [Student queryStudentWithIDClass:@""];//0 hay nil?????????
     [_tblAddStudent reloadData];
 }
 - (void)didReceiveMemoryWarning {
@@ -46,29 +49,31 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return _arrStudentNotAdd.count;
-    return 4;
+    return _arrStudentNotAdd.count;
+//    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AddStudentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudentCell"];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudentCell"];
     
     if (cell==nil) {
         cell = [[AddStudentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddStudentCell"];
     }
-//    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
-//    cell.lblAddStudent.text = thisStudent.name;
-    cell.lblAddStudent.text = @"tang";
-    [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
+    cell.lblAddStudent.text = thisStudent.name;
     
-    [cell.btnCheck setBackgroundColor:[UIColor redColor]];
+//    cell.lblAddStudent.text = @"tang";
+//    [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+//    [cell.btnCheck setBackgroundColor:[UIColor redColor]];
+    
     cell.indexPathCell = indexPath;
+    cell.delegate = self;
     
-//    if (thisStudent.isCheck == YES) {
-//        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
-//    }else{
-//        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
-//    }
+    if (thisStudent.isCheck == YES) {
+        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+    }else{
+        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
+    }
     return cell;
 }
 
@@ -80,12 +85,22 @@
     Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexpath.row];
     if (thisStudent.isCheck == NO) {
         thisStudent.isCheck = YES;
+        thisStudent.idclass = (int)_thisClass.iId;
+        [arrAddingStudent addObject:thisStudent];
     }else{
         thisStudent.isCheck = NO;
+        thisStudent.idclass = 0;
+        [arrAddingStudent removeObject:thisStudent];
     }
+//    NSLog(@"bam button section: %ld, row: %ld",indexpath.section, indexpath.row);//demo
  
- [self.tblAddStudent reloadData];
+ [self loadData];
 }
 - (IBAction)clickedAdd:(id)sender {
+    for (Student *thisStudent in arrAddingStudent) {
+        [thisStudent update];
+    }
+    // co the van table chi tiet lop hoc chua cap nhat, neu chua can tao delegate de chuyen addAddingStudent sang roi updatedata
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -18,7 +18,9 @@
                 
                 k_id,       //1
                 k_name,     //2
-                
+                k_created,  //3
+                k_modified, //4
+                k_deleted   //5
                 ];
     });
     
@@ -31,7 +33,10 @@
     dispatch_once(&onceToken, ^{
         arr = @[
                 ksIntPrimaryInc,    //1
-                ksText   ,          //2
+                ksText,             //2
+                ksText,             //2
+                ksText,             //3
+                ksInteger
                 ];
     });
     return arr;
@@ -58,7 +63,7 @@
     
     return listClass;
 }
-+(ClassList*) queryClassWithIDClass:(NSString*)iDClass{
++(ClassList*) queryClassWithIDClass:(NSInteger)iDClass{
     FMDatabase *db = [DB db];
     [db open];
     ClassList *arrClass = [self queryClassWithIDClass:iDClass db:db];
@@ -66,8 +71,8 @@
     
     return arrClass;
 }
-+(ClassList*)queryClassWithIDClass:(NSString*)iDClass db:(FMDatabase*)db {
-    NSString *queryStr = [NSString stringWithFormat:@"%@ = %@", k_id, iDClass];
++(ClassList*)queryClassWithIDClass:(NSInteger)iDClass db:(FMDatabase*)db {
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld", k_id, iDClass];
     ClassList *thisClass = [ClassList selectOneWhere:queryStr db:db];
     return thisClass;
 }

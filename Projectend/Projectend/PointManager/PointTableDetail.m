@@ -8,11 +8,20 @@
 
 #import "PointTableDetail.h"
 #import "Student.h"
+#import "Scoreboad.h"
 
-@interface PointTableDetail (){
+@interface PointTableDetail () <PointTableDetailCellProtocol>
+{
+    PointTableDetailCell *cell;
     
+    IBOutlet UIButton *btnSave;
+    IBOutlet UIButton *btnEdit;
     IBOutlet UILabel *lblPoint;
     IBOutlet UILabel *lblName;
+    
+    UITextField *thatTextField;
+    
+    BOOL alowEdit;
 }
 
 @end
@@ -21,44 +30,91 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self setupUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 -(void)setupUI{
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
     lblName.layer.borderWidth = 1.0f;
     lblPoint.layer.borderWidth = 1.0f;
+    
     [_tblPointDetail registerNib:[UINib nibWithNibName:@"PointTableDetailCell" bundle:nil] forCellReuseIdentifier:@"PointTableDetailCell"];
+    [self.navigationController setNavigationBarHidden:YES];
+    alowEdit = NO;
+}
+-(void)loadData{
+    [_tblPointDetail reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return _arrStudent.count;
-    return 3;
+    return 4;
+    return _arrScore.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 28;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PointTableDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PointTableDetailCell"];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"PointTableDetailCell"];
     if (cell==nil) {
         cell = [[PointTableDetailCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PointTableDetailCell"];
     }
-    Student *thisStudent = [_arrStudent objectAtIndex:indexPath.row];
-//    cell.lblHoTen.text = thisStudent.name;
-    cell.lblHoTen.text = @"Tang";
-    NSString *score = @"8";
-    //find score with (idstudent, idclass, idsubject)..........................
-    cell.lblDiem.text = score;
+    Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
+    Student *thisStudent = [Student queryStudentWithidStudent:thisScore.idstudent];
+    cell.lblHoTen.layer.borderWidth = 1.0f;
+    cell.lblHoTen.text = thisStudent.name;
+    cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
+    cell.indexPathCell = indexPath;
+//    cell.lblHoTen.text = @"Tang";//Demo
+//    cell.tfDiem.text = @"5";//Demo
+    cell.delegate = self;
+    if (alowEdit==YES) {
+        cell.tfDiem.enabled = YES;
+    } else{
+        cell.tfDiem.enabled = NO;
+    }
     return cell;
 }
 
 - (IBAction)pressedBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
-- (IBAction)pressedPlus:(id)sender {
+- (IBAction)pressedEdit:(id)sender {
+    alowEdit = YES;
+    [_tblPointDetail reloadData];
 }
+- (IBAction)pressedSave:(id)sender {
+    alowEdit = NO;
+    [btnSave setHidden:YES];
+    [btnEdit setHidden:NO];
+    for (Scoreboad *thisScore in _arrScore) {
+        if (![thisScore.modified  isEqual: @""]) {
+            thisScore.score = (int)thisScore.modified;
+            thisScore.modified = @"";
+            [thisScore update];
+        }
+    }
+    [_tblPointDetail reloadData];
+}
+-(void)dismissKeyboard{
+    [thatTextField resignFirstResponder];
+}
+-(void)sentTextField:(UITextField *)textField andIndexPath:(NSIndexPath *)indexPath{
+    thatTextField = textField;
+    Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
+    thisScore.modified = thatTextField.text;
+    [btnEdit setHidden:YES];
+    [btnSave setHidden:NO];
+    [thisScore update];
+}
+
 
 @end

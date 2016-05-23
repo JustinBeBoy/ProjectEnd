@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C07E8CE1CEE9ED2000E6CE5 /* ScoreManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8CC1CEE9ED2000E6CE5 /* ScoreManagerVC.m */; settings = {ASSET_TAGS = (); }; };
-		5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8CD1CEE9ED2000E6CE5 /* ScoreManagerVC.xib */; settings = {ASSET_TAGS = (); }; };
-		5C07E8D31CEEAB84000E6CE5 /* ScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */; settings = {ASSET_TAGS = (); }; };
-		5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5C07E8CE1CEE9ED2000E6CE5 /* ScoreManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8CC1CEE9ED2000E6CE5 /* ScoreManagerVC.m */; };
+		5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8CD1CEE9ED2000E6CE5 /* ScoreManagerVC.xib */; };
+		5C07E8D31CEEAB84000E6CE5 /* ScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */; };
+		5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */; };
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5C8A5FEB1CED580C0007D7A5 /* PointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE61CED580C0007D7A5 /* PointManager.m */; };
 		5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE71CED580C0007D7A5 /* PointManager.xib */; };
@@ -93,6 +93,8 @@
 		75F96DCA1CED5F47004EE32A /* AddAndEditSubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */; };
 		75F96DCC1CED6FF1004EE32A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */; };
 		75F96DD01CED9935004EE32A /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DCF1CED9935004EE32A /* icon1.png */; };
+		84CF07F81CF195700048AA47 /* AddNewScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF07F61CF195700048AA47 /* AddNewScore.m */; };
+		84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CF07F71CF195700048AA47 /* AddNewScore.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +250,9 @@
 		75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAndEditSubjectViewController.xib; sourceTree = "<group>"; };
 		75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		75F96DCF1CED9935004EE32A /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1.png; path = ImageIcon/icon1.png; sourceTree = "<group>"; };
+		84CF07F51CF195700048AA47 /* AddNewScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewScore.h; path = PointManager/AddNewScore.h; sourceTree = "<group>"; };
+		84CF07F61CF195700048AA47 /* AddNewScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewScore.m; path = PointManager/AddNewScore.m; sourceTree = "<group>"; };
+		84CF07F71CF195700048AA47 /* AddNewScore.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewScore.xib; path = PointManager/AddNewScore.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +301,9 @@
 				5C8A5FE81CED580C0007D7A5 /* PointTableDetail.h */,
 				5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */,
 				5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */,
+				84CF07F51CF195700048AA47 /* AddNewScore.h */,
+				84CF07F61CF195700048AA47 /* AddNewScore.m */,
+				84CF07F71CF195700048AA47 /* AddNewScore.xib */,
 			);
 			name = PointManager;
 			sourceTree = "<group>";
@@ -566,15 +574,15 @@
 				5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */,
 				5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */,
 				5C8A5FEF1CED8FDC0007D7A5 /* AddStudentCell.xib */,
-				75F96DB81CED5391004EE32A /* ClassedTableViewCell.h */,
-				75F96DB91CED5391004EE32A /* ClassedTableViewCell.m */,
-				75F96DBA1CED5391004EE32A /* ClassedTableViewCell.xib */,
 				75F96DBB1CED5391004EE32A /* PointTableDetailCell.h */,
 				75F96DBC1CED5391004EE32A /* PointTableDetailCell.m */,
 				75F96DBD1CED5391004EE32A /* PointTableDetailCell.xib */,
 				5C07E8D01CEEAB84000E6CE5 /* ScoreTableCell.h */,
 				5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */,
 				5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */,
+				75F96DB81CED5391004EE32A /* ClassedTableViewCell.h */,
+				75F96DB91CED5391004EE32A /* ClassedTableViewCell.m */,
+				75F96DBA1CED5391004EE32A /* ClassedTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -697,6 +705,7 @@
 				75F96DC51CED57F5004EE32A /* plus16.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				75F96DC11CED5391004EE32A /* PointTableDetailCell.xib in Resources */,
+				84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */,
 				75F96DC31CED57C0004EE32A /* plus24.png in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
@@ -784,6 +793,7 @@
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
 				75F96DB31CED3E49004EE32A /* SubjectManagerViewController.m in Sources */,
 				759757951CE867CE006013B5 /* DLRadioButton.m in Sources */,
+				84CF07F81CF195700048AA47 /* AddNewScore.m in Sources */,
 				75F96D9C1CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m in Sources */,
 				752127C41CE5FE4100E8F44B /* Global.m in Sources */,
 				759757FE1CEB06B8006013B5 /* AddAndEditViewController.m in Sources */,

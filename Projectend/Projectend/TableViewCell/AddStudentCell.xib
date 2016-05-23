@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -17,7 +17,6 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piW-zU-DSV">
                         <rect key="frame" x="8" y="11" width="269" height="21"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="uPC-59-RGo"/>
                         </constraints>
@@ -27,7 +26,6 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-pK-3Wr">
                         <rect key="frame" x="285" y="7" width="30" height="30"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="3OV-s9-Y7r"/>
                             <constraint firstAttribute="width" constant="30" id="kT0-eR-lhc"/>
@@ -38,7 +36,6 @@
                         </connections>
                     </button>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="piW-zU-DSV" firstAttribute="leading" secondItem="Rgf-Cp-Ejj" secondAttribute="leadingMargin" id="5d4-3F-XdT"/>
                     <constraint firstItem="ZXd-pK-3Wr" firstAttribute="centerY" secondItem="Rgf-Cp-Ejj" secondAttribute="centerY" id="KNv-Zs-13G"/>
@@ -47,7 +44,6 @@
                     <constraint firstAttribute="trailingMargin" secondItem="ZXd-pK-3Wr" secondAttribute="trailing" constant="3" id="hXK-UN-tWR"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="btnCheck" destination="ZXd-pK-3Wr" id="V9T-8B-FZc"/>
                 <outlet property="lblAddStudent" destination="piW-zU-DSV" id="lbe-zf-d6i"/>

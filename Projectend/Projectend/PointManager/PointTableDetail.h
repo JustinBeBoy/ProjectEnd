@@ -10,8 +10,9 @@
 #import "PointTableDetailCell.h"
 
 @interface PointTableDetail : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UILabel *lblPointDetailTitle;
 @property (strong, nonatomic) IBOutlet UITableView *tblPointDetail;
-@property (strong, nonatomic) NSArray *arrStudent;
+@property (strong, nonatomic) NSArray *arrScore;
 
 @end
