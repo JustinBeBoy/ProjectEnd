@@ -11,6 +11,8 @@
 		5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8CD1CEE9ED2000E6CE5 /* ScoreManagerVC.xib */; };
 		5C07E8D31CEEAB84000E6CE5 /* ScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */; };
 		5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */; };
+		5C36A23B1CF2FB4500D250D5 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C36A2391CF2FB4500D250D5 /* checked.png */; };
+		5C36A23C1CF2FB4500D250D5 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C36A23A1CF2FB4500D250D5 /* unchecked.png */; };
 		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
 		5C8A5FEB1CED580C0007D7A5 /* PointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE61CED580C0007D7A5 /* PointManager.m */; };
 		5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE71CED580C0007D7A5 /* PointManager.xib */; };
@@ -74,7 +76,6 @@
 		759758121CEB18EC006013B5 /* scoreboard256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758071CEB18EC006013B5 /* scoreboard256b.png */; };
 		759758131CEB18EC006013B5 /* student256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758081CEB18EC006013B5 /* student256b.png */; };
 		759758141CEB18EC006013B5 /* subject256b.png in Resources */ = {isa = PBXBuildFile; fileRef = 759758091CEB18EC006013B5 /* subject256b.png */; };
-		759758151CEB18EC006013B5 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7597580A1CEB18EC006013B5 /* unchecked.png */; };
 		75F96D991CEC3AAB004EE32A /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D911CEC3AAB004EE32A /* PickerViewController.m */; };
 		75F96D9A1CEC3AAB004EE32A /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96D921CEC3AAB004EE32A /* PickerViewController.xib */; };
 		75F96D9B1CEC3AAB004EE32A /* TransparentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F96D941CEC3AAB004EE32A /* TransparentViewController.m */; };
@@ -121,6 +122,8 @@
 		5C07E8D01CEEAB84000E6CE5 /* ScoreTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreTableCell.h; sourceTree = "<group>"; };
 		5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreTableCell.m; sourceTree = "<group>"; };
 		5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreTableCell.xib; sourceTree = "<group>"; };
+		5C36A2391CF2FB4500D250D5 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		5C36A23A1CF2FB4500D250D5 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStudentCell.h; path = ../AddStudentCell.h; sourceTree = "<group>"; };
 		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStudentCell.m; path = ../AddStudentCell.m; sourceTree = "<group>"; };
 		5C8A5FE51CED580C0007D7A5 /* PointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointManager.h; path = PointManager/PointManager.h; sourceTree = "<group>"; };
@@ -213,7 +216,6 @@
 		759757FB1CEB06B8006013B5 /* AddAndEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAndEditViewController.h; sourceTree = "<group>"; };
 		759757FC1CEB06B8006013B5 /* AddAndEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAndEditViewController.m; sourceTree = "<group>"; };
 		759757FD1CEB06B8006013B5 /* AddAndEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAndEditViewController.xib; sourceTree = "<group>"; };
-		759758001CEB18EC006013B5 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = ImageIcon/checked.png; sourceTree = "<group>"; };
 		759758011CEB18EC006013B5 /* class256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = class256b.png; path = ImageIcon/class256b.png; sourceTree = "<group>"; };
 		759758021CEB18EC006013B5 /* logout256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout256b.png; path = ImageIcon/logout256b.png; sourceTree = "<group>"; };
 		759758031CEB18EC006013B5 /* plus32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus32.png; path = ImageIcon/plus32.png; sourceTree = "<group>"; };
@@ -223,7 +225,6 @@
 		759758071CEB18EC006013B5 /* scoreboard256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreboard256b.png; path = ImageIcon/scoreboard256b.png; sourceTree = "<group>"; };
 		759758081CEB18EC006013B5 /* student256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = student256b.png; path = ImageIcon/student256b.png; sourceTree = "<group>"; };
 		759758091CEB18EC006013B5 /* subject256b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subject256b.png; path = ImageIcon/subject256b.png; sourceTree = "<group>"; };
-		7597580A1CEB18EC006013B5 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = ImageIcon/unchecked.png; sourceTree = "<group>"; };
 		75F96D901CEC3AAB004EE32A /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickerViewController.h; path = Projectend/PickPicker/PickerViewController.h; sourceTree = "<group>"; };
 		75F96D911CEC3AAB004EE32A /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickerViewController.m; path = Projectend/PickPicker/PickerViewController.m; sourceTree = "<group>"; };
 		75F96D921CEC3AAB004EE32A /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PickerViewController.xib; path = Projectend/PickPicker/PickerViewController.xib; sourceTree = "<group>"; };
@@ -298,12 +299,12 @@
 				5C8A5FE51CED580C0007D7A5 /* PointManager.h */,
 				5C8A5FE61CED580C0007D7A5 /* PointManager.m */,
 				5C8A5FE71CED580C0007D7A5 /* PointManager.xib */,
-				5C8A5FE81CED580C0007D7A5 /* PointTableDetail.h */,
-				5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */,
-				5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */,
 				84CF07F51CF195700048AA47 /* AddNewScore.h */,
 				84CF07F61CF195700048AA47 /* AddNewScore.m */,
 				84CF07F71CF195700048AA47 /* AddNewScore.xib */,
+				5C8A5FE81CED580C0007D7A5 /* PointTableDetail.h */,
+				5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */,
+				5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */,
 			);
 			name = PointManager;
 			sourceTree = "<group>";
@@ -501,9 +502,10 @@
 			isa = PBXGroup;
 			children = (
 				75F96DCF1CED9935004EE32A /* icon1.png */,
+				5C36A2391CF2FB4500D250D5 /* checked.png */,
+				5C36A23A1CF2FB4500D250D5 /* unchecked.png */,
 				75F96DC41CED57F5004EE32A /* plus16.png */,
 				75F96DC21CED57C0004EE32A /* plus24.png */,
-				759758001CEB18EC006013B5 /* checked.png */,
 				759758011CEB18EC006013B5 /* class256b.png */,
 				759758021CEB18EC006013B5 /* logout256b.png */,
 				759758031CEB18EC006013B5 /* plus32.png */,
@@ -513,7 +515,6 @@
 				759758071CEB18EC006013B5 /* scoreboard256b.png */,
 				759758081CEB18EC006013B5 /* student256b.png */,
 				759758091CEB18EC006013B5 /* subject256b.png */,
-				7597580A1CEB18EC006013B5 /* unchecked.png */,
 				759757C21CE97BEB006013B5 /* class24.png */,
 				759757C31CE97BEB006013B5 /* logout24.png */,
 				759757C41CE97BEB006013B5 /* scoreboard24.png */,
@@ -731,7 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7597580E1CEB18EC006013B5 /* plus32.png in Resources */,
-				759758151CEB18EC006013B5 /* unchecked.png in Resources */,
+				5C36A23B1CF2FB4500D250D5 /* checked.png in Resources */,
 				7597580D1CEB18EC006013B5 /* logout256b.png in Resources */,
 				5C8A5FF01CED8FDC0007D7A5 /* AddStudentCell.xib in Resources */,
 				759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */,
@@ -764,6 +765,7 @@
 				5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */,
 				5CF244CB1CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib in Resources */,
 				75F96DB41CED3E49004EE32A /* SubjectManagerViewController.xib in Resources */,
+				5C36A23C1CF2FB4500D250D5 /* unchecked.png in Resources */,
 				759757AC1CE8880D006013B5 /* menu24.png in Resources */,
 				7597579F1CE87DE9006013B5 /* MainViewController.xib in Resources */,
 				759758111CEB18EC006013B5 /* scoreboard256.png in Resources */,

@@ -62,7 +62,7 @@
     
     NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@",thatclass.iId]];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Số sv:%ld", thatclass.name, [arrStudent count]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ - Số sv:%ld", thatclass.name, [arrStudent count]];
     
     return cell;
 }
@@ -93,10 +93,10 @@
     }];
     UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         NSString *string = alert.textFields[0].text;
-        ClassList *thisClass = [[ClassList alloc] init];
-        thisClass.name = string;
-        [thisClass update]; // insert erorr
-//        [ClassList insertClass:string];
+//        ClassList *thisClass = [[ClassList alloc] init];
+//        thisClass.name = string;
+//        [thisClass update];
+        [ClassList insertClass:string];
         [self loadData];
         NSLog(@"insert object: %@", string);
     }];

@@ -56,7 +56,7 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+//    return 4;
     return _arrScore.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -89,6 +89,8 @@
 }
 - (IBAction)pressedEdit:(id)sender {
     alowEdit = YES;
+    [btnEdit setHidden:YES];
+    [btnSave setHidden:NO];
     [_tblPointDetail reloadData];
 }
 - (IBAction)pressedSave:(id)sender {
@@ -96,9 +98,9 @@
     [btnSave setHidden:YES];
     [btnEdit setHidden:NO];
     for (Scoreboad *thisScore in _arrScore) {
-        if (![thisScore.modified  isEqual: @""]) {
-            thisScore.score = (int)thisScore.modified;
-            thisScore.modified = @"";
+        if (thisScore.mask.length>0) {
+            thisScore.score = [thisScore.mask integerValue];
+            thisScore.mask = nil;
             [thisScore update];
         }
     }
@@ -110,7 +112,7 @@
 -(void)sentTextField:(UITextField *)textField andIndexPath:(NSIndexPath *)indexPath{
     thatTextField = textField;
     Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
-    thisScore.modified = thatTextField.text;
+    thisScore.mask = thatTextField.text;
     [btnEdit setHidden:YES];
     [btnSave setHidden:NO];
     [thisScore update];

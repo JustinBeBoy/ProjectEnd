@@ -89,7 +89,7 @@
 +(NSArray*) queryScoreFromIDSubject:(NSInteger)iDSubject{
     FMDatabase *db = [DB db];
     [db open];
-    NSArray *arrScore = [self queryScoreFromIDSubject:iDSubject];
+    NSArray *arrScore = [self queryScoreFromIDSubject:iDSubject db:db];
     [db close];
     
     return arrScore;

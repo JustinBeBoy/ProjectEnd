@@ -18,8 +18,8 @@
     Subject *thatSub;
     ClassList *thatClass;
     
-    NSMutableArray *arrIDAllClass;
-    NSMutableArray *arrIDAllSubject;
+    NSArray *arrAllClass;
+    NSArray *arrAllSubject;
     
     BOOL isFirst;
 }
@@ -39,81 +39,94 @@
 }
 -(void)setupUI{
     isFirst = YES;
-    //set arrIDAllClass
-    NSArray *arrAllClass = [ClassList queryListClass];
-    for (ClassList *thisClass in arrAllClass) {
-        [arrIDAllClass addObject:thisClass.iId];
-    }
-    
-    //set arrIDAllSubject
-    NSArray *arrAllSubject = [Subject queryListSubject];
-    for (Subject *thisSubject in arrAllSubject) {
-        [arrIDAllSubject addObject:thisSubject.iId];
-    }
+    arrAllClass = [ClassList queryListClass];
+    arrAllSubject = [Subject queryListSubject];
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 2;
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == 0) {
-        return arrIDAllSubject.count;
+        return arrAllSubject.count;
     } else{
-        return arrIDAllClass.count;
+        return arrAllClass.count;
     }
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if (component == 0) {
-        Subject *thisSubject = [Subject querySubWithidSubject:(int)[arrIDAllSubject objectAtIndex:row]];
+        Subject *thisSubject = [arrAllSubject objectAtIndex:row];
         return [NSString stringWithFormat:@"Môn %@", thisSubject.subject];
     } else{
-        ClassList *thisClass = [ClassList queryClassWithIDClass:(int)[arrIDAllClass objectAtIndex:row]];
+        ClassList *thisClass = [arrAllClass objectAtIndex:row];
         return [NSString stringWithFormat:@"Lớp %@", thisClass.name];
     }
+    
 }
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    if (isFirst == YES) {
-        thatSub = [Subject querySubWithidSubject:(int)[arrIDAllSubject objectAtIndex:0]];
-        thatClass = [ClassList queryClassWithIDClass:(int)[arrIDAllClass objectAtIndex:0]];
+    if (arrAllSubject.count >0 && arrAllClass.count >0) {
+        if (isFirst == YES) {
+            thatSub = [arrAllSubject objectAtIndex:0];
+            thatClass = [arrAllClass objectAtIndex:0];
+        }
+        if (component == 0) {
+            thatSub = [arrAllSubject objectAtIndex:row];
+        } else {
+            thatClass = [arrAllClass objectAtIndex:row];
+        }
+        isFirst = NO;
     }
-    if (component == 0) {
-        thatSub = [Subject querySubWithidSubject:(int)[arrIDAllSubject objectAtIndex:row]];
-    } else {
-        thatClass = [ClassList queryClassWithIDClass:(int)[arrIDAllClass objectAtIndex:row]];
-    }
-    isFirst = NO;
+    
 }
 
 - (IBAction)pressedAdd:(id)sender {
-    if ([_arrIDSubject indexOfObject:thatSub.iId] != NSNotFound) {
-        // get arrClass in this Subject
-        NSArray *arrScoreE = [Scoreboad queryScoreFromIDSubject:(int)thatSub.iId];
-        NSMutableArray *m_arrIDClass = nil;
-        for (Scoreboad *thisScore in arrScoreE) {
-            [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]];
+    if (arrAllClass.count > 0 && arrAllSubject.count > 0) {
+        if (isFirst == YES) {
+            thatSub = [arrAllSubject objectAtIndex:0];
+            thatClass = [arrAllClass objectAtIndex:0];
         }
-        NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:m_arrIDClass];
-        NSArray *arrIDClassWithSub = [orderedSet array];
-        
-        if ([arrIDClassWithSub indexOfObject:thatClass.iId] != NSNotFound) {
-            [self showAlertWithTitle:@"Lỗi" andMessage:@"Đã tồn tại bảng điểm môn học của lớp học này"];
+        if ([_arrIDSubject indexOfObject:thatSub.iId] != NSNotFound) {
+            // get arrClass in this Subject
+            NSArray *arrScoreE = [Scoreboad queryScoreFromIDSubject:[thatSub.iId integerValue]];
+            NSMutableArray *m_arrIDClass = [NSMutableArray array];
+            for (Scoreboad *thisScore in arrScoreE) {
+                [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]];
+            }
+            NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:m_arrIDClass];
+            NSArray *arrIDClassWithSub = [orderedSet array];
+            
+            if ([arrIDClassWithSub indexOfObject:thatClass.iId] != NSNotFound) {
+                [self showAlertWithTitle:@"Lỗi" andMessage:@"Đã tồn tại bảng điểm môn học của lớp học này"];
+            }else{
+                NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
+                for (Student *thisStudent in arrStudent) {
+                    Scoreboad *thisScore = [Scoreboad new];
+                    thisScore.idsubject = [thatSub.iId integerValue];
+                    thisScore.idclass = [thatClass.iId integerValue];
+                    thisScore.idstudent = [thisStudent.iId integerValue];
+                    [thisScore update];
+                }
+            }
+        } else{
+            NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
+            for (Student *thisStudent in arrStudent) {
+                Scoreboad *thisScore = [Scoreboad new];
+                thisScore.idsubject = [thatSub.iId integerValue];
+                thisScore.idclass = [thatClass.iId integerValue];
+                thisScore.idstudent = [thisStudent.iId integerValue];
+                [thisScore update];
+                
+            }
         }
     }
-    NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", thatClass.iId]];
-    for (Student *thisStudent in arrStudent) {
-        Scoreboad *thisScore = [Scoreboad new];
-        thisScore.idsubject = (int)thatSub.iId;
-        thisScore.idclass = (int)thatClass.iId;
-        thisScore.idstudent = (int)thisStudent.iId;
-        [thisScore update];
-    }
-    [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Đã thêm thành công. Bạn có thể chọn lớp để sửa điểm"];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 -(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *alertActOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:alertActOK];
     [self presentViewController:alert animated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

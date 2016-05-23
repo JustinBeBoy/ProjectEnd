@@ -87,6 +87,8 @@
         arrayStudents = [Student queryStudentUsername:self.tfUserName.text andPassword:self.tfPassWord.text];
         if(arrayStudents.count>0){
             ScoreManagerVC *scorevc = [[ScoreManagerVC alloc]initWithNibName:@"ScoreManagerVC" bundle:nil];
+            Student *thisStudent = [arrayStudents objectAtIndex:0];
+            scorevc.iDStudent = [thisStudent.iId integerValue];
             [self.navigationController pushViewController:scorevc animated:YES];
             NSLog(@"dang nhap student thanh cong");
         }else

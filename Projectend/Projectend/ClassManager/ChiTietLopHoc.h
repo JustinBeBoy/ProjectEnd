@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnExit;
 @property (strong, nonatomic) IBOutlet UIButton *btnSave;
 
+@property (strong, nonatomic) NSMutableArray *arrMaskStudent;
+
 @property (nonatomic, strong) ClassList *thisClass;
 @property (nonatomic, strong) NSArray *arrStudent;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewStudent;

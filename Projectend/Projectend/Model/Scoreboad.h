@@ -13,6 +13,7 @@
 @property (nonatomic,assign) NSInteger idclass;
 @property (nonatomic,assign) NSInteger idstudent;
 @property (nonatomic,assign) NSInteger score;
+@property (nonatomic,strong) NSString *mask;
 
 +(NSArray*) queryScoreFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent;
 +(NSArray*) queryListScore;

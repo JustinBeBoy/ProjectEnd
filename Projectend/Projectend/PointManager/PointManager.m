@@ -33,8 +33,9 @@
     [self.navigationController setNavigationBarHidden:YES];
 }
 -(void)loadData{
+    _arrIDClassAtEachSub = [NSMutableArray array];
     NSArray *arrScore = [Scoreboad queryListScore];
-    NSMutableArray *m_arrIDSubject = nil;
+    NSMutableArray *m_arrIDSubject = [NSMutableArray array];
     for (Scoreboad *thisScore in arrScore) {
         [m_arrIDSubject addObject:[NSNumber numberWithInteger:thisScore.idsubject]]; // ghi các idSubject vào mảng m_arrIDSubject
     }
@@ -64,7 +65,7 @@
     if (_arrIDSubject.count > 0) {
         for (int i=0; i<_arrIDSubject.count; i++) {
             if (section==i) {
-                Subject *thisSub = [Subject querySubWithidSubject:(int)_arrIDSubject[i]];
+                Subject *thisSub = [Subject querySubWithidSubject:[_arrIDSubject[i] integerValue]];
                 return [NSString stringWithFormat:@"Điểm môn: %@", thisSub.subject];
             }
         }
@@ -80,8 +81,8 @@
     if (_arrIDSubject.count > 0) {
         for (int i=0; i<_arrIDSubject.count; i++) {
             if (section==i) {
-                NSArray *arrScoreE = [Scoreboad queryScoreFromIDSubject:(int)_arrIDSubject[i]];
-                NSMutableArray *m_arrIDClass = nil;
+                NSArray *arrScoreE = [Scoreboad queryScoreFromIDSubject:[[_arrIDSubject objectAtIndex:i] integerValue]];
+                NSMutableArray *m_arrIDClass = [NSMutableArray array];
                 for (Scoreboad *thisScore in arrScoreE) {
                     [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]]; // ghi các idClass vào mảng m_arrIDClass
                 }
@@ -106,11 +107,11 @@
     }
     for (int i=0; i<_arrIDSubject.count; i++) {
         if (indexPath.section == i) {
-            Subject *thisSub = [Subject querySubWithidSubject:(int)_arrIDSubject[i]];
+            Subject *thisSub = [Subject querySubWithidSubject:[_arrIDSubject[i] integerValue]];
             NSArray *arrIDClass = [_arrIDClassAtEachSub objectAtIndex:i];
             NSMutableArray *arrClass = [NSMutableArray array];
             for (NSNumber *idClass in arrIDClass) {
-                ClassList *thisclass = [ClassList queryClassWithIDClass:(int)idClass];
+                ClassList *thisclass = [ClassList queryClassWithIDClass:[idClass integerValue]];
                 [arrClass addObject:thisclass];
             }
             ClassList *thisClass =(ClassList*)[arrClass objectAtIndex:indexPath.row];
@@ -126,7 +127,7 @@
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:(int)_arrIDSubject[indexPath.section] andIDClass:(int)[[_arrIDClassAtEachSub objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+        NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:[_arrIDSubject[indexPath.section] integerValue] andIDClass:[[[_arrIDClassAtEachSub objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] integerValue]];
         for (Scoreboad *thisScore in arrScore) {
             thisScore.deleted = @(1);
             //sửa lại câu lệnh query thêm điều kiện k_delete = 0 rồi mới update
@@ -136,7 +137,7 @@
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:(int)_arrIDSubject[indexPath.section] andIDClass:(int)[[_arrIDClassAtEachSub objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+    NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:[_arrIDSubject[indexPath.section] integerValue] andIDClass:[[[_arrIDClassAtEachSub objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] integerValue]];
     thisPointTableDetail = [[PointTableDetail alloc] initWithNibName:@"PointTableDetail" bundle:nil];
     thisPointTableDetail.arrScore = arrScore;
     

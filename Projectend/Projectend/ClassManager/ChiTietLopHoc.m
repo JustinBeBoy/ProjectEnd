@@ -12,6 +12,7 @@
 
 @interface ChiTietLopHoc (){
     IBOutlet UIButton *btnPlus;
+    
 }
 
 @end
@@ -34,9 +35,11 @@
     [self loadData];
 }
 -(void)loadData{
+    _arrMaskStudent = [NSMutableArray array];
+    
     _arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", _thisClass.iId]];
     
-    _lblLop.text = [NSString stringWithFormat:@"%@", _thisClass.name];
+    _lblLop.text = [NSString stringWithFormat:@"Lớp %@", _thisClass.name];
     _lblSoSv.text = [NSString stringWithFormat:@"Số sv: %ld", [_arrStudent count]];
     
     [_tableViewStudent reloadData];
@@ -73,8 +76,9 @@
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_arrMaskStudent addObjectsFromArray:_arrStudent];
         Student *thisStudent = [_arrStudent objectAtIndex:indexPath.row];
-        thisStudent.idclass = 0;//xem lai
+        thisStudent.deleted = @(1);
         [thisStudent update];
         [self loadData];
     }
