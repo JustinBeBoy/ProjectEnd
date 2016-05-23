@@ -16,4 +16,8 @@
 @property (strong, nonatomic) NSArray *arrStudentNotAdd;
 @property (strong, nonatomic) ClassList *thisClass;
 
+- (IBAction)btCancel:(id)sender;
+- (IBAction)btAdd:(id)sender;
+
+
 @end

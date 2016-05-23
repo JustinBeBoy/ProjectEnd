@@ -7,35 +7,38 @@
 //
 
 #import "ThemSinhVien.h"
-#import "AddStudentCell.h"
 #import "Student.h"
+#import "DLRadioButton.h"
+#import "UIViewController+PresentViewControllerOverCurrentContext.h"
 
-@interface ThemSinhVien () <CheckTouchDelegate>
-{
-    AddStudentCell *cell;
-    NSMutableArray *arrAddingStudent;
+@interface ThemSinhVien (){
+    NSMutableArray *arrStudentChecked;
 }
 
+@property (strong, nonatomic) IBOutlet UITableViewCell *tblStudentCell;
+- (IBAction)btCheckStudent:(id)sender;
+@property (strong, nonatomic) IBOutlet DLRadioButton *olbtCheckStudent;
 @end
 
 @implementation ThemSinhVien
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self setupUI];
+    // Do any additional setup after loading the view from its nib.
 }
 -(void)setupUI{
     [self.navigationController setNavigationBarHidden:YES];
-    [_tblAddStudent registerNib:[UINib nibWithNibName:@"AddStudentCell" bundle:nil] forCellReuseIdentifier:@"AddStudentCell"];
-    
+    arrStudentChecked = [[NSMutableArray alloc]init];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+//    AddStudentCell *cell = [[AddStudentCell alloc] init];
+//    cell.delegate = self;
     [self loadData];
 }
 -(void)loadData{
-    _arrStudentNotAdd = [Student queryStudentWithIDClass:@""];//0 hay nil?????????
+    _arrStudentNotAdd = [Student queryStudentWithIDClass:@"0"];
     [_tblAddStudent reloadData];
 }
 - (void)didReceiveMemoryWarning {
@@ -50,57 +53,48 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _arrStudentNotAdd.count;
-//    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell = [tableView dequeueReusableCellWithIdentifier:@"AddStudentCell"];
-    
-    if (cell==nil) {
-        cell = [[AddStudentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddStudentCell"];
+    self.olbtCheckStudent.multipleSelectionEnabled = YES;
+    static NSString *cellMainNibID = @"addStudentToClassCell";
+    _tblStudentCell = [_tblAddStudent dequeueReusableCellWithIdentifier:cellMainNibID];
+    if (_tblStudentCell == nil) {
+        [[NSBundle mainBundle] loadNibNamed:@"AddStudentCell" owner:self options:nil];
     }
-    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexPath.row];
-    cell.lblAddStudent.text = thisStudent.name;
+    UILabel *students = (UILabel *)[_tblStudentCell viewWithTag:100];
     
-//    cell.lblAddStudent.text = @"tang";
-//    [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
-//    [cell.btnCheck setBackgroundColor:[UIColor redColor]];
-    
-    cell.indexPathCell = indexPath;
-    cell.delegate = self;
-    
-    if (thisStudent.isCheck == YES) {
-        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
-    }else{
-        [cell.btnCheck setBackgroundImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
+    if ([_arrStudentNotAdd count] > 0)
+    {
+        Student *currentStudent = [_arrStudentNotAdd objectAtIndex:indexPath.row];
+        students.text = currentStudent.name;
     }
-    return cell;
+
+    
+    return _tblStudentCell;
+}
+- (IBAction)btCheckStudent:(DLRadioButton *)radioButton {
+    self.olbtCheckStudent.multipleSelectionEnabled = YES;
+    UITableViewCell *cell = (UITableViewCell *)radioButton.superview.superview;
+    NSIndexPath *indexPath = [_tblAddStudent indexPathForCell:cell];
+    Student *thisStudent = [_arrStudentNotAdd objectAtIndex:indexPath.row];
+    if (radioButton.isSelected) {
+        [arrStudentChecked addObject:thisStudent];
+        NSLog(@"%ld",indexPath.row);
+    }else if(!radioButton.isSelected){
+        [arrStudentChecked removeObject:thisStudent];
+        NSLog(@" remove object %ld",indexPath.row);
+    }
+}
+- (IBAction)btCancel:(id)sender {
+    [self dismissViewControllerOverCurrentContextAnimated:YES completion:nil];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
--(void) btnCheckTouchByIndexPath:(NSIndexPath *)indexpath{
-    Student *thisStudent = (Student*)[_arrStudentNotAdd objectAtIndex:indexpath.row];
-    if (thisStudent.isCheck == NO) {
-        thisStudent.isCheck = YES;
-        thisStudent.idclass = (int)_thisClass.iId;
-        [arrAddingStudent addObject:thisStudent];
-    }else{
-        thisStudent.isCheck = NO;
-        thisStudent.idclass = 0;
-        [arrAddingStudent removeObject:thisStudent];
-    }
-//    NSLog(@"bam button section: %ld, row: %ld",indexpath.section, indexpath.row);//demo
- 
- [self loadData];
-}
-- (IBAction)clickedAdd:(id)sender {
-    for (Student *thisStudent in arrAddingStudent) {
+- (IBAction)btAdd:(id)sender {
+    for (Student *thisStudent in arrStudentChecked) {
+        thisStudent.idclass = [_thisClass.iId integerValue];
         [thisStudent update];
     }
-    // co the van table chi tiet lop hoc chua cap nhat, neu chua can tao delegate de chuyen addAddingStudent sang roi updatedata
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerOverCurrentContextAnimated:YES completion:nil];
 }
 @end

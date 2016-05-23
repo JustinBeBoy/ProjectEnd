@@ -114,6 +114,7 @@
 //    UIView *subView = [subViewArray objectAtIndex:0];
 //    [self.view addSubview:subView];
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
+    themSv.thisClass = _thisClass;
     [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
 
