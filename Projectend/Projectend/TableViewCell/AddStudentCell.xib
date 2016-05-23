@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThemSinhVien">
+            <connections>
+                <outlet property="olbtCheckStudent" destination="Vad-fq-Kl4" id="l0r-qX-fvK"/>
+                <outlet property="tblStudentCell" destination="0rz-c4-uHK" id="5lA-nm-ba1"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStudentCell" id="0rz-c4-uHK" customClass="AddStudentCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addStudentToClassCell" id="0rz-c4-uHK" customClass="AddStudentCell">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rz-c4-uHK" id="Rgf-Cp-Ejj">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piW-zU-DSV">
-                        <rect key="frame" x="0.0" y="11" width="277" height="21"/>
-                        <animations/>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piW-zU-DSV">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="43"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-pK-3Wr">
-                        <rect key="frame" x="285" y="7" width="30" height="30"/>
-                        <animations/>
-                        <state key="normal" backgroundImage="unchecked.png"/>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-fq-Kl4" customClass="DLRadioButton">
+                        <rect key="frame" x="200" y="0.0" width="40" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="0ct-7Z-maN"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="clickCheck:" destination="0rz-c4-uHK" eventType="touchUpInside" id="9b8-un-dU5"/>
+                            <action selector="btCheckStudent:" destination="-1" eventType="touchUpInside" id="uA5-5p-WR6"/>
                         </connections>
                     </button>
                 </subviews>
-                <animations/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="piW-zU-DSV" secondAttribute="bottom" id="KDh-hh-vZn"/>
+                    <constraint firstItem="Vad-fq-Kl4" firstAttribute="leading" secondItem="piW-zU-DSV" secondAttribute="trailing" constant="10" id="PMo-e6-4Px"/>
+                    <constraint firstAttribute="bottom" secondItem="Vad-fq-Kl4" secondAttribute="bottom" id="TaL-3l-woD"/>
+                    <constraint firstItem="piW-zU-DSV" firstAttribute="top" secondItem="Rgf-Cp-Ejj" secondAttribute="top" id="bCa-vv-rcC"/>
+                    <constraint firstItem="Vad-fq-Kl4" firstAttribute="top" secondItem="Rgf-Cp-Ejj" secondAttribute="top" id="m6A-jE-aAH"/>
+                    <constraint firstItem="piW-zU-DSV" firstAttribute="leading" secondItem="Rgf-Cp-Ejj" secondAttribute="leading" id="ue0-hm-HVx"/>
+                    <constraint firstAttribute="trailing" secondItem="Vad-fq-Kl4" secondAttribute="trailing" id="wr1-5Q-h0h"/>
+                </constraints>
             </tableViewCellContentView>
-            <animations/>
-            <connections>
-                <outlet property="btnCheck" destination="ZXd-pK-3Wr" id="V9T-8B-FZc"/>
-                <outlet property="lblAddStudent" destination="piW-zU-DSV" id="lbe-zf-d6i"/>
-            </connections>
-            <point key="canvasLocation" x="133" y="94"/>
+            <point key="canvasLocation" x="698" y="445"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="unchecked.png" width="225" height="225"/>
-    </resources>
 </document>

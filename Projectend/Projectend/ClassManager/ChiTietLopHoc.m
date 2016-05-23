@@ -107,6 +107,7 @@
 
 - (IBAction)addPressed:(id)sender {
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
+    themSv.thisClass = _thisClass;
     [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
 
