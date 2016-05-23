@@ -8,6 +8,7 @@
 
 #import "ChiTietLopHoc.h"
 #import "ThemSinhVien.h"
+#import "UIViewController+PresentViewControllerOverCurrentContext.h"
 
 @interface ChiTietLopHoc (){
     IBOutlet UIButton *btnPlus;
@@ -109,8 +110,7 @@
 //    UIView *subView = [subViewArray objectAtIndex:0];
 //    [self.view addSubview:subView];
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
-    themSv.thisClass = _thisClass;
-    [self presentViewController:themSv animated:YES completion:nil];
+    [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
 
 

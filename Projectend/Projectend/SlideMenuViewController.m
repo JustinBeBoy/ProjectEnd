@@ -93,7 +93,12 @@
     NSInteger row = indexPath.row;
     UINavigationController *navigationController;
     
-    if (row == 1){
+    if (row == 0) {
+        QuanLyLopHocVC *classmanager = [[QuanLyLopHocVC alloc] initWithNibName:@"QuanLyLopHocVC" bundle:nil];
+        navigationController = [[UINavigationController alloc] initWithRootViewController:classmanager];
+        [revealController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (row == 1){
         StudentManagerViewController *studentmanager = [[StudentManagerViewController alloc] initWithNibName:@"StudentManagerViewController" bundle:nil];
         studentmanager.isSlide = YES;
         navigationController = [[UINavigationController alloc] initWithRootViewController:studentmanager];
@@ -111,6 +116,12 @@
         navigationController = [[UINavigationController alloc] initWithRootViewController:loginvc];
         [revealController pushFrontViewController:navigationController animated:YES];
     }
+    else if (row == 3){
+        PointManager *pointM = [[PointManager alloc] initWithNibName:@"PointManager" bundle:nil];
+        navigationController = [[UINavigationController alloc] initWithRootViewController:pointM];
+        [revealController pushFrontViewController:navigationController animated:YES];
+    }
+
 }
 
 #pragma mark -

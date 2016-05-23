@@ -42,6 +42,8 @@
         [revealController.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
         self.navigationItem.leftBarButtonItem = revealButtonItem;
     }else{
+        SWRevealViewController *reveal = self.revealViewController;
+        reveal.panGestureRecognizer.enabled = NO;
         UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btback)];
         self.navigationItem.leftBarButtonItem = backbt;
     }

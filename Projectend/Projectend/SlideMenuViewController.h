@@ -12,7 +12,8 @@
 #import "SubjectManagerViewController.h"
 #import "MainViewController.h"
 #import "LoginViewController.h"
-
+#import "PointManager.h"
+#import "QuanLyLopHocVC.h"
 @interface SlideMenuViewController : UIViewController
 - (IBAction)btMenu:(id)sender;
 
