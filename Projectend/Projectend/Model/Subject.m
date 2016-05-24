@@ -71,7 +71,7 @@
     return thisSubject;
 }
 +(Subject*) querySubWithidSubject:(NSInteger)idSubject db:(FMDatabase*)db {
-    NSString *queryString = [NSString stringWithFormat:@"%@ = %ld",k_id, idSubject];
+    NSString *queryString = [NSString stringWithFormat:@"%@ = %ld AND %@ = 0",k_id, idSubject, k_deleted];
     Subject *thisSubject = [Subject selectOneWhere:queryString db:db];
     
     return thisSubject;

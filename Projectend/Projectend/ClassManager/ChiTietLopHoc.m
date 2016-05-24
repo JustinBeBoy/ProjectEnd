@@ -7,12 +7,12 @@
 //
 
 #import "ChiTietLopHoc.h"
-#import "ThemSinhVien.h"
 #import "UIViewController+PresentViewControllerOverCurrentContext.h"
 
 @interface ChiTietLopHoc (){
     IBOutlet UIButton *btnPlus;
     
+    IBOutlet UIView *vTitle;
 }
 
 @end
@@ -25,7 +25,6 @@
     [self setupUI];
 }
 -(void)setupUI{
-    _edited = NO;
     [self.navigationController setNavigationBarHidden:YES];
     [_btnSave setHidden:YES];
     [btnPlus setHidden:YES];
@@ -35,12 +34,14 @@
     [self loadData];
 }
 -(void)loadData{
-    _arrMaskStudent = [NSMutableArray array];
+    _edited = NO;
+    vTitle.layer.borderWidth = 1.0f;
     
     _arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", _thisClass.iId]];
-    
+    _arrMaskStudent = [NSMutableArray array];
+    [_arrMaskStudent addObjectsFromArray:_arrStudent];
     _lblLop.text = [NSString stringWithFormat:@"Lớp %@", _thisClass.name];
-    _lblSoSv.text = [NSString stringWithFormat:@"Số sv: %ld", [_arrStudent count]];
+    _lblSoSv.text = [NSString stringWithFormat:@"Số sinh viên: %ld", [_arrMaskStudent count]];
     
     [_tableViewStudent reloadData];
     
@@ -52,7 +53,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _arrStudent.count;
+    return _arrMaskStudent.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,8 +63,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
-    Student *thisStudent = (Student*)[_arrStudent objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - NS:%@", thisStudent.name, thisStudent.dateofbirth];
+    Student *thisStudent = (Student*)[_arrMaskStudent objectAtIndex:indexPath.row];
+    cell.layer.borderWidth = 1.0f;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Ngày sinh:%@", thisStudent.name, thisStudent.dateofbirth];
     
     return cell;
 }
@@ -76,11 +78,10 @@
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_arrMaskStudent addObjectsFromArray:_arrStudent];
-        Student *thisStudent = [_arrStudent objectAtIndex:indexPath.row];
-        thisStudent.deleted = @(1);
-        [thisStudent update];
-        [self loadData];
+        Student *thisStudent = [_arrMaskStudent objectAtIndex:indexPath.row];
+        [_arrMaskStudent removeObject:thisStudent];
+        _lblSoSv.text = [NSString stringWithFormat:@"Số sinh viên: %ld", [_arrMaskStudent count]];
+        [_tableViewStudent reloadData];
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -98,11 +99,33 @@
 }
 
 - (IBAction)savePressed:(id)sender {
-    //save data in the database ................
     _edited = NO;
+    for (Student *thisStudent in _arrStudent) {
+        if ([_arrMaskStudent indexOfObject:thisStudent] == NSNotFound) {
+            NSArray *arrScore = [Scoreboad queryScoreFromIDStudent:[thisStudent.iId integerValue]];
+            for (Scoreboad *thisScore in arrScore) {
+                thisScore.idclass = 0;
+                [thisScore update];
+            }
+            thisStudent.idclass = 0;
+            [thisStudent update];
+        }
+    }
+    for (Student *thisStudent in _arrMaskStudent) {
+        if ([_arrStudent indexOfObject:thisStudent] == NSNotFound) {
+            NSArray *arrScore = [Scoreboad queryScoreFromIDStudent:[thisStudent.iId integerValue]];
+            for (Scoreboad *thisScore in arrScore) {
+                thisScore.idclass = [_thisClass.iId integerValue];
+                [thisScore update];
+            }
+            thisStudent.idclass = [_thisClass.iId integerValue];
+            [thisStudent update];
+        }
+    }
     [_btnExit setHidden:NO];
     [_btnSave setHidden:YES];
     [btnPlus setHidden:YES];
+    [self showAlertWithTitle:@"Lưu thay đổi" andMessage:@"Lưu thành công!"];
 }
 
 - (IBAction)backPressed:(id)sender {
@@ -110,13 +133,19 @@
 }
 
 - (IBAction)addPressed:(id)sender {
-//    NSArray *subViewArray = [[NSBundle mainBundle] loadNibNamed:@"ThemSinhVien" owner:self options:nil];
-//    UIView *subView = [subViewArray objectAtIndex:0];
-//    [self.view addSubview:subView];
     ThemSinhVien *themSv = [[ThemSinhVien alloc] initWithNibName:@"ThemSinhVien" bundle:nil];
     themSv.thisClass = _thisClass;
+    themSv.delegate = self;
     [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
-
-
+-(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertActOk = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:alertActOk];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+-(void)sendArrMaskStudent:(NSArray *)arrMask{
+    [_arrMaskStudent addObjectsFromArray:arrMask];
+    [_tableViewStudent reloadData];
+}
 @end

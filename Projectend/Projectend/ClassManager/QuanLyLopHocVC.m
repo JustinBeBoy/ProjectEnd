@@ -10,10 +10,10 @@
 #import "ClassList.h"
 #import "Student.h"
 #import "ClassedTableViewCell.h"
+#import "Scoreboad.h"
 
 @interface QuanLyLopHocVC (){
     NSArray *arrDSLop;
-    ClassList *thatClass111;
 }
 
 @end
@@ -61,8 +61,8 @@
     ClassList *thatclass = (ClassList*)[arrDSLop objectAtIndex:indexPath.row];
     
     NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@",thatclass.iId]];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ - Số sv:%ld", thatclass.name, [arrStudent count]];
+    cell.layer.borderWidth = 1.0f;
+    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ - Số sinh viên:%ld", thatclass.name, [arrStudent count]];
     
     return cell;
 }
@@ -76,7 +76,37 @@
     
     [self.navigationController pushViewController:chiTietLopHoc animated:YES];
 }
-
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Xoá lớp" message:@"Bạn có chắc chắn muốn xoá lớp học này?" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertActOk = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+            ClassList *thisClass = [arrDSLop objectAtIndex:indexPath.row];
+            
+            NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thisClass.iId integerValue]]];
+            for (Student *thisStudent in arrStudent) {
+                thisStudent.idclass = 0;
+                [thisStudent update];
+            }
+            
+            NSArray *arrScore = [Scoreboad queryScoreFromIDClass:[thisClass.iId integerValue]];
+            for (Scoreboad *thisScore in arrScore) {
+                thisScore.deleted = @(1);
+                [thisScore update];
+            }
+            
+            thisClass.deleted = @(1);
+            [thisClass update];
+            [self loadData];
+        }];
+        UIAlertAction *alertActCancel = [UIAlertAction actionWithTitle:@"Huỷ" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:alertActOk];
+        [alert addAction:alertActCancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -86,21 +116,29 @@
 - (IBAction)addPressed:(id)sender {
     [self showAlertWithTextField:@"Thêm lớp học" andMessage:@"Mời nhập tên lớp mới:"];
 }
+
 -(void)showAlertWithTextField: (NSString*)title andMessage:(NSString*)message{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * textField) {
         [textField setPlaceholder:@"Tên lớp học"];
     }];
-    UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        NSString *string = alert.textFields[0].text;
-//        ClassList *thisClass = [[ClassList alloc] init];
-//        thisClass.name = string;
-//        [thisClass update];
-        [ClassList insertClass:string];
-        [self loadData];
-        NSLog(@"insert object: %@", string);
+    UIAlertAction *okAct = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        NSString *name = alert.textFields[0].text;
+        BOOL exist = NO;
+        for (ClassList *thisClass in arrDSLop) {
+            if (name == thisClass.name) {
+                exist = YES;
+            }
+        }
+        if (exist == NO) {
+            ClassList *thisClass = [[ClassList alloc] init];
+            thisClass.name = name;
+            [thisClass update];
+            [self loadData];
+        }
+
     }];
-    UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+    UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Huỷ" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
         //do nothing
     }];
     [alert addAction:okAct];

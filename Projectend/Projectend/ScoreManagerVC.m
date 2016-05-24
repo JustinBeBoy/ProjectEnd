@@ -61,14 +61,9 @@
     Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
     Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
     cell.lblSubject.text = thisSubject.subject;
-//    cell.lblSubject.text = @"Môn học";
-//    cell.lblScore.text = @"123";
     cell.lblScore.text = [NSString stringWithFormat:@"%ld",thisScore.score];
     
     return cell;
-}
-- (IBAction)pressedBack:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)pressedLogOut:(id)sender {

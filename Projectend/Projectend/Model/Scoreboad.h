@@ -18,5 +18,7 @@
 +(NSArray*) queryScoreFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent;
 +(NSArray*) queryListScore;
 +(NSArray*) queryScoreFromIDSubject:(NSInteger)iDSubject;
++(NSArray*) queryScoreFromIDClass:(NSInteger)iDClass;
++(NSArray*) queryScoreFromIDStudent:(NSInteger)idStudent;
 +(NSArray*) queryListScoreFromIDSubject:(NSInteger)iDSubject andIDClass:(NSInteger)iDClass;
 @end

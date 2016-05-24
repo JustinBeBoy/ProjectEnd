@@ -14,6 +14,5 @@
 @property(strong,nonatomic) NSString *name;
 
 + (NSArray*) queryListClass;
-+(void) insertClass:(NSString*)classname;
 +(ClassList*) queryClassWithIDClass:(NSInteger)iDClass;
 @end

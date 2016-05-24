@@ -105,6 +105,44 @@
     
     return arrScore;
 }
++(NSArray*) queryScoreFromIDClass:(NSInteger)iDClass{
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrScore = [self queryScoreFromIDClass:iDClass db:db];
+    [db close];
+    
+    return arrScore;
+}
++(NSArray*) queryScoreFromIDClass:(NSInteger)iDClass db:(FMDatabase*)db{
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld AND %@ = 0", k_idclass, iDClass, k_deleted];
+    NSArray *arrDic = [Scoreboad selectWhere:queryStr db:db];
+    NSMutableArray *arrScore = [NSMutableArray array];
+    for (NSDictionary *dic in arrDic) {
+        Scoreboad *score = [[Scoreboad alloc]initWithDic:dic];
+        [arrScore addObject:score];
+    }
+    
+    return arrScore;
+}
++(NSArray*) queryScoreFromIDStudent:(NSInteger)idStudent{
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrScore = [self queryScoreFromIDStudent:idStudent db:db];
+    [db close];
+    
+    return arrScore;
+}
++(NSArray*) queryScoreFromIDStudent:(NSInteger)idStudent db:(FMDatabase*)db{
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld AND %@ = 0", k_idstudent, idStudent, k_deleted];
+    NSArray *arrDic = [Scoreboad selectWhere:queryStr db:db];
+    NSMutableArray *arrScore = [NSMutableArray array];
+    for (NSDictionary *dic in arrDic) {
+        Scoreboad *score = [[Scoreboad alloc]initWithDic:dic];
+        [arrScore addObject:score];
+    }
+    
+    return arrScore;
+}
 +(NSArray*) queryListScoreFromIDSubject:(NSInteger)iDSubject andIDClass:(NSInteger)iDClass{
     FMDatabase *db = [DB db];
     [db open];

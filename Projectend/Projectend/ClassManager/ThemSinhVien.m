@@ -33,8 +33,6 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    AddStudentCell *cell = [[AddStudentCell alloc] init];
-//    cell.delegate = self;
     [self loadData];
 }
 -(void)loadData{
@@ -43,7 +41,6 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 #pragma mark - UITableView Delegate
 
@@ -91,10 +88,7 @@
 }
 
 - (IBAction)btAdd:(id)sender {
-    for (Student *thisStudent in arrStudentChecked) {
-        thisStudent.idclass = [_thisClass.iId integerValue];
-        [thisStudent update];
-    }
+    [self.delegate sendArrMaskStudent:arrStudentChecked];
     [self dismissViewControllerOverCurrentContextAnimated:YES completion:nil];
 }
 @end

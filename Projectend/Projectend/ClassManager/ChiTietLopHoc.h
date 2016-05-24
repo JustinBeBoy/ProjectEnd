@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ClassList.h"
 #import "Student.h"
+#import "ThemSinhVien.h"
+#import "Scoreboad.h"
 
-@interface ChiTietLopHoc : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ChiTietLopHoc : UIViewController <UITableViewDataSource, UITableViewDelegate, ThemSinhVienDeletge>
 
 @property (assign, nonatomic) BOOL edited;
 @property (strong, nonatomic) IBOutlet UILabel *lblLop;

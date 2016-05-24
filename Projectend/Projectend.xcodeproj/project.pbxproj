@@ -11,11 +11,8 @@
 		5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8CD1CEE9ED2000E6CE5 /* ScoreManagerVC.xib */; };
 		5C07E8D31CEEAB84000E6CE5 /* ScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C07E8D11CEEAB84000E6CE5 /* ScoreTableCell.m */; };
 		5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */; };
-
 		5C36A23B1CF2FB4500D250D5 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C36A2391CF2FB4500D250D5 /* checked.png */; };
 		5C36A23C1CF2FB4500D250D5 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C36A23A1CF2FB4500D250D5 /* unchecked.png */; };
-		5C88BA071CEAA6E700E7A291 /* AddStudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */; };
-
 		5C8A5FEB1CED580C0007D7A5 /* PointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE61CED580C0007D7A5 /* PointManager.m */; };
 		5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE71CED580C0007D7A5 /* PointManager.xib */; };
 		5C8A5FED1CED580C0007D7A5 /* PointTableDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */; };
@@ -96,9 +93,9 @@
 		75F96DCA1CED5F47004EE32A /* AddAndEditSubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */; };
 		75F96DCC1CED6FF1004EE32A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */; };
 		75F96DD01CED9935004EE32A /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DCF1CED9935004EE32A /* icon1.png */; };
+		75FCAF091CF2996D00A605F0 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAF081CF2996D00A605F0 /* login.png */; };
 		84CF07F81CF195700048AA47 /* AddNewScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF07F61CF195700048AA47 /* AddNewScore.m */; };
 		84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CF07F71CF195700048AA47 /* AddNewScore.xib */; };
-		75FCAF091CF2996D00A605F0 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAF081CF2996D00A605F0 /* login.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +124,6 @@
 		5C07E8D21CEEAB84000E6CE5 /* ScoreTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreTableCell.xib; sourceTree = "<group>"; };
 		5C36A2391CF2FB4500D250D5 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		5C36A23A1CF2FB4500D250D5 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
-		5C88BA051CEAA6E700E7A291 /* AddStudentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStudentCell.h; path = ../AddStudentCell.h; sourceTree = "<group>"; };
-		5C88BA061CEAA6E700E7A291 /* AddStudentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStudentCell.m; path = ../AddStudentCell.m; sourceTree = "<group>"; };
 		5C8A5FE51CED580C0007D7A5 /* PointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointManager.h; path = PointManager/PointManager.h; sourceTree = "<group>"; };
 		5C8A5FE61CED580C0007D7A5 /* PointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointManager.m; path = PointManager/PointManager.m; sourceTree = "<group>"; };
 		5C8A5FE71CED580C0007D7A5 /* PointManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointManager.xib; path = PointManager/PointManager.xib; sourceTree = "<group>"; };
@@ -254,10 +249,10 @@
 		75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAndEditSubjectViewController.xib; sourceTree = "<group>"; };
 		75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		75F96DCF1CED9935004EE32A /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1.png; path = ImageIcon/icon1.png; sourceTree = "<group>"; };
+		75FCAF081CF2996D00A605F0 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		84CF07F51CF195700048AA47 /* AddNewScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewScore.h; path = PointManager/AddNewScore.h; sourceTree = "<group>"; };
 		84CF07F61CF195700048AA47 /* AddNewScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewScore.m; path = PointManager/AddNewScore.m; sourceTree = "<group>"; };
 		84CF07F71CF195700048AA47 /* AddNewScore.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewScore.xib; path = PointManager/AddNewScore.xib; sourceTree = "<group>"; };
-		75FCAF081CF2996D00A605F0 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

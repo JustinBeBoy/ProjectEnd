@@ -9,12 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "ClassList.h"
 
+
+@protocol ThemSinhVienDeletge <NSObject>
+
+-(void)sendArrMaskStudent:(NSArray*)arrMask;
+
+@end
+
 @interface ThemSinhVien : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (strong, nonatomic) IBOutlet UITableView *tblAddStudent;
 @property (strong, nonatomic) NSArray *arrStudentNotAdd;
 @property (strong, nonatomic) ClassList *thisClass;
+
+@property (strong, nonatomic) id<ThemSinhVienDeletge>delegate;
 
 - (IBAction)btCancel:(id)sender;
 - (IBAction)btAdd:(id)sender;

@@ -34,9 +34,9 @@
         arr = @[
                 ksIntPrimaryInc,    //1
                 ksText,             //2
-                ksText,             //2
                 ksText,             //3
-                ksInteger
+                ksText,             //4
+                ksInteger           //5
                 ];
     });
     return arr;
@@ -52,7 +52,8 @@
 }
 
 + (NSArray*) queryListClass:(FMDatabase*)db {
-    NSArray *classDics = [ClassList selectWhere:nil db:db];
+    NSString *queryString = [NSString stringWithFormat:@"%@ = 0", k_deleted];
+    NSArray *classDics = [ClassList selectWhere:queryString db:db];
     
     NSMutableArray *listClass = [NSMutableArray array];
     
@@ -72,19 +73,9 @@
     return arrClass;
 }
 +(ClassList*)queryClassWithIDClass:(NSInteger)iDClass db:(FMDatabase*)db {
-    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld", k_id, iDClass];
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld AND %@ = 0", k_id, iDClass, k_deleted];
     ClassList *thisClass = [ClassList selectOneWhere:queryStr db:db];
     return thisClass;
-}
-+(void) insertClass:(NSString*)classname {
-    FMDatabase *db = [DB db];
-    [db open];
-    [self insertClass:classname db:db];
-    [db close];
-}
-+(void) insertClass:(NSString*)classname db:(FMDatabase*)db{
-    NSDictionary *dic = [NSDictionary dictionaryWithObject:classname forKey:k_name];
-    [self insert:dic where:nil];
 }
 
 @end

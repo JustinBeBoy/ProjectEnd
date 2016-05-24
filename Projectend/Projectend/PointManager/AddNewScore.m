@@ -77,6 +77,9 @@
     }
     
 }
+- (IBAction)pressedBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (IBAction)pressedAdd:(id)sender {
     if (arrAllClass.count > 0 && arrAllSubject.count > 0) {
@@ -124,7 +127,7 @@
 }
 -(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertActOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *alertActOK = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:alertActOK];
     [self presentViewController:alert animated:YES completion:nil];
 }

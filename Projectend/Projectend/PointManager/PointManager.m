@@ -84,7 +84,9 @@
                 NSArray *arrScoreE = [Scoreboad queryScoreFromIDSubject:[[_arrIDSubject objectAtIndex:i] integerValue]];
                 NSMutableArray *m_arrIDClass = [NSMutableArray array];
                 for (Scoreboad *thisScore in arrScoreE) {
-                    [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]]; // ghi các idClass vào mảng m_arrIDClass
+                    if (thisScore.idclass>0) {
+                        [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]]; // ghi các idClass vào mảng m_arrIDClass
+                    }
                 }
                 NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:m_arrIDClass]; // loại bỏ các phần tử trùng nhau của mảng m_arrIDClass
                 NSArray *arrIDClassWithSub = [orderedSet array];
@@ -118,7 +120,6 @@
             cell.textLabel.text = [NSString stringWithFormat:@"Điểm môn %@ lớp %@", thisSub.subject, thisClass.name];
         }
     }
-//    cell.textLabel.text = @"Diem Toan lop 12A2";//De mo
     
     return cell;
 }
@@ -130,7 +131,6 @@
         NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:[_arrIDSubject[indexPath.section] integerValue] andIDClass:[[[_arrIDClassAtEachSub objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] integerValue]];
         for (Scoreboad *thisScore in arrScore) {
             thisScore.deleted = @(1);
-            //sửa lại câu lệnh query thêm điều kiện k_delete = 0 rồi mới update
             [thisScore update];
         }
         [self loadData];
@@ -141,11 +141,6 @@
     thisPointTableDetail = [[PointTableDetail alloc] initWithNibName:@"PointTableDetail" bundle:nil];
     thisPointTableDetail.arrScore = arrScore;
     
-    Scoreboad *thisScore = arrScore[0];
-    Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
-    ClassList *thisClass = [ClassList queryClassWithIDClass:thisScore.idclass];
-    thisPointTableDetail.lblPointDetailTitle.text = [NSString stringWithFormat:@"Điểm %@ lớp %@", thisSubject.subject, thisClass.name];
-//    thisPointTableDetail.lblPointDetailTitle.text = @"Diem Toan lop 12A1";//De mo
     [self.navigationController pushViewController:thisPointTableDetail animated:YES];
 }
 @end

@@ -53,12 +53,6 @@
                                 <action selector="pressedEdit:" destination="-1" eventType="touchUpInside" id="11x-j7-jVI"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHI TIẾT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNX-cT-DSi">
-                            <rect key="frame" x="56" y="9" width="193" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zix-Vz-KYW">
                             <rect key="frame" x="249" y="1" width="49" height="36"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,14 +69,22 @@
                                 <action selector="pressedSave:" destination="-1" eventType="touchUpInside" id="NNY-U5-aZ1"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHI TIẾT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNX-cT-DSi">
+                            <rect key="frame" x="71" y="9" width="162" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Fff-Nw-qtA" secondAttribute="trailing" constant="6" id="Krq-X0-dHb"/>
+                        <constraint firstItem="ZNX-cT-DSi" firstAttribute="centerY" secondItem="q6L-7Q-AtF" secondAttribute="centerY" id="QZJ-ln-uH8"/>
                         <constraint firstItem="JWa-nZ-UXM" firstAttribute="centerY" secondItem="q6L-7Q-AtF" secondAttribute="centerY" id="TcJ-7O-sAl"/>
                         <constraint firstAttribute="height" constant="38" id="XEe-uX-SdA"/>
                         <constraint firstItem="Fff-Nw-qtA" firstAttribute="centerY" secondItem="q6L-7Q-AtF" secondAttribute="centerY" id="XIm-0R-hJJ"/>
                         <constraint firstItem="zix-Vz-KYW" firstAttribute="centerY" secondItem="q6L-7Q-AtF" secondAttribute="centerY" id="Xu1-OR-IZx"/>
+                        <constraint firstItem="ZNX-cT-DSi" firstAttribute="centerX" secondItem="q6L-7Q-AtF" secondAttribute="centerX" id="guc-nH-QwK"/>
                         <constraint firstItem="JWa-nZ-UXM" firstAttribute="leading" secondItem="q6L-7Q-AtF" secondAttribute="leading" id="gyd-wd-dVA"/>
                         <constraint firstAttribute="trailing" secondItem="zix-Vz-KYW" secondAttribute="trailing" constant="6" id="vvu-V3-4ca"/>
                     </constraints>

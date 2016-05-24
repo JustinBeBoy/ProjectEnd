@@ -28,7 +28,7 @@
                             <constraint firstAttribute="width" constant="69" id="RzD-Va-hlz"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         <connections>
                             <action selector="editingEnded:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="9Vk-3O-d5H"/>
                             <outlet property="delegate" destination="-1" id="oey-Wb-hUQ"/>
