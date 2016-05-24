@@ -145,4 +145,14 @@
     [self.navigationController pushViewController:addeditviewcontroller animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle ==UITableViewCellEditingStyleDelete){
+        Student *student = (Student*)[arrayStudent objectAtIndex:indexPath.row];
+        student.deleted = @(1);
+        [student update];
+        [self reloadData];
+        NSLog(@"dfafafasfasfafd");
+    }
+}
+
 @end

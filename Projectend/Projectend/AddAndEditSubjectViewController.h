@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *tfSubject;
 @property (strong, nonatomic) IBOutlet UITextField *tfDescription;
 @property (strong, nonatomic) IBOutlet UITextField *tfCredits;
+@property (strong, nonatomic) IBOutlet UILabel *lbWaring;
 
 @property(assign,nonatomic)BOOL isEditing;
 @property(strong,nonatomic)Subject *subjectClass;

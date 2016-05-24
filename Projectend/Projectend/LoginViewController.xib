@@ -9,6 +9,9 @@
             <connections>
                 <outlet property="btStudent" destination="GLD-AO-Qdj" id="w3u-Wj-X9u"/>
                 <outlet property="btTeacher" destination="azp-bt-s2k" id="OIv-0T-q1c"/>
+                <outlet property="olbtCheckStudent" destination="GLD-AO-Qdj" id="5iA-hv-g9Q"/>
+                <outlet property="olbtCheckTeacher" destination="azp-bt-s2k" id="bVt-eB-wtL"/>
+                <outlet property="olbtLogin" destination="JR9-LE-jFX" id="uix-O2-jCp"/>
                 <outlet property="tfPassWord" destination="dp8-c8-Rkk" id="1c2-yj-kz8"/>
                 <outlet property="tfUserName" destination="vfg-r8-3J8" id="8F4-8S-wGr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -16,15 +19,15 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b71-mL-HzT">
-                    <rect key="frame" x="48" y="45" width="224" height="24"/>
+                    <rect key="frame" x="48" y="45" width="318" height="24"/>
                     <attributedString key="attributedText">
                         <fragment content="STUDENT MANAGER">
                             <attributes>
-                                <color key="NSColor" red="0.40000000000000002" green="0.72549019607843135" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -33,23 +36,27 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR9-LE-jFX">
-                    <rect key="frame" x="30" y="299" width="260" height="33"/>
-                    <color key="backgroundColor" red="0.7803921568627451" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="45" y="329" width="324" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Mzf-eN-3me"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
-                    <state key="normal" title="Log In">
-                        <color key="titleColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Log In" backgroundImage="loginrec.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
+                        <action selector="btLoginTD:" destination="-1" eventType="touchDown" id="xDo-0p-qKu"/>
                         <action selector="btnLogIn:" destination="-1" eventType="touchUpInside" id="xus-ey-Cci"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azp-bt-s2k" customClass="DLRadioButton">
-                    <rect key="frame" x="40" y="249" width="110" height="22"/>
-                    <state key="normal" title="Teacher">
-                        <color key="titleColor" red="0.12941176470588237" green="0.59999999999999998" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <rect key="frame" x="60" y="259" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="sRJ-fI-zxm"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="techerunselect.png"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="teacherselect.png"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="cboxTeacher:" destination="-1" eventType="touchUpInside" id="iCL-RR-SKd"/>
@@ -57,64 +64,79 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="teacheradmin" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-r8-3J8">
-                    <rect key="frame" x="30" y="159" width="260" height="30"/>
+                    <rect key="frame" x="45" y="119" width="324" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="mFA-6w-Ynp"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-c8-Rkk">
-                    <rect key="frame" x="30" y="199" width="260" height="30"/>
+                    <rect key="frame" x="45" y="189" width="324" height="50"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-AO-Qdj" customClass="DLRadioButton">
-                    <rect key="frame" x="170" y="249" width="110" height="22"/>
+                    <rect key="frame" x="254" y="259" width="100" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="22" id="bnZ-0C-CXk"/>
+                        <constraint firstAttribute="height" constant="50" id="bnZ-0C-CXk"/>
                     </constraints>
                     <state key="normal" title="Student">
                         <color key="titleColor" red="0.12941176470588237" green="0.59999999999999998" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="studentuncheck.png"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="studentcheck.png"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="cboxStudent:" destination="-1" eventType="touchUpInside" id="lZp-fG-Gzk"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ominext Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uv-wA-Tx2">
-                    <rect key="frame" x="85" y="507" width="150" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.33725490196078434" green="0.68627450980392157" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="student.png" translatesAutoresizingMaskIntoConstraints="NO" id="k4q-dE-oip">
+                    <rect key="frame" x="107" y="516" width="200" height="210"/>
+                    <color key="backgroundColor" red="0.20784313725490194" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="03X-Vc-68p"/>
+                        <constraint firstAttribute="height" constant="210" id="aFe-qN-lVf"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.20784313725490194" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="dp8-c8-Rkk" secondAttribute="trailing" constant="30" id="5T9-lE-0gb"/>
+                <constraint firstAttribute="trailing" secondItem="dp8-c8-Rkk" secondAttribute="trailing" constant="45" id="5T9-lE-0gb"/>
                 <constraint firstItem="GLD-AO-Qdj" firstAttribute="width" secondItem="azp-bt-s2k" secondAttribute="width" id="5uD-8k-XB6"/>
-                <constraint firstItem="dp8-c8-Rkk" firstAttribute="top" secondItem="vfg-r8-3J8" secondAttribute="bottom" constant="10" id="73V-SO-gy5"/>
-                <constraint firstAttribute="trailing" secondItem="JR9-LE-jFX" secondAttribute="trailing" constant="30" id="Djx-09-3Ls"/>
+                <constraint firstItem="dp8-c8-Rkk" firstAttribute="top" secondItem="vfg-r8-3J8" secondAttribute="bottom" constant="20" id="73V-SO-gy5"/>
+                <constraint firstAttribute="trailing" secondItem="JR9-LE-jFX" secondAttribute="trailing" constant="45" id="Djx-09-3Ls"/>
                 <constraint firstItem="GLD-AO-Qdj" firstAttribute="height" secondItem="azp-bt-s2k" secondAttribute="height" id="Dz5-Iz-9xS"/>
                 <constraint firstItem="GLD-AO-Qdj" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="20" id="G0S-j7-Pyd"/>
                 <constraint firstAttribute="trailing" secondItem="b71-mL-HzT" secondAttribute="trailing" constant="48" id="Ko2-Di-uAw"/>
-                <constraint firstItem="azp-bt-s2k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="P6M-bG-HLo"/>
+                <constraint firstAttribute="bottom" secondItem="k4q-dE-oip" secondAttribute="bottom" constant="10" id="Nu6-ee-UwY"/>
+                <constraint firstItem="azp-bt-s2k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="P6M-bG-HLo"/>
                 <constraint firstItem="b71-mL-HzT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="PAb-yP-a13"/>
-                <constraint firstAttribute="bottom" secondItem="9uv-wA-Tx2" secondAttribute="bottom" constant="40" id="Xgl-a6-KDN"/>
-                <constraint firstAttribute="trailing" secondItem="9uv-wA-Tx2" secondAttribute="trailing" constant="85" id="Xw4-6g-6Rr"/>
-                <constraint firstAttribute="trailing" secondItem="vfg-r8-3J8" secondAttribute="trailing" constant="30" id="aMB-zT-nXg"/>
+                <constraint firstItem="k4q-dE-oip" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rzv-P9-zgu"/>
+                <constraint firstAttribute="trailing" secondItem="vfg-r8-3J8" secondAttribute="trailing" constant="45" id="aMB-zT-nXg"/>
                 <constraint firstItem="azp-bt-s2k" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="20" id="bzM-ui-0JE"/>
-                <constraint firstItem="dp8-c8-Rkk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="fVL-fZ-Rtu"/>
-                <constraint firstItem="JR9-LE-jFX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="i0n-fw-FPD"/>
-                <constraint firstItem="vfg-r8-3J8" firstAttribute="top" secondItem="b71-mL-HzT" secondAttribute="bottom" constant="90" id="kL2-Uv-cJJ"/>
+                <constraint firstItem="dp8-c8-Rkk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="fVL-fZ-Rtu"/>
+                <constraint firstItem="vfg-r8-3J8" firstAttribute="height" secondItem="dp8-c8-Rkk" secondAttribute="height" id="gs3-6g-CCP"/>
+                <constraint firstItem="JR9-LE-jFX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="i0n-fw-FPD"/>
+                <constraint firstItem="vfg-r8-3J8" firstAttribute="top" secondItem="b71-mL-HzT" secondAttribute="bottom" constant="50" id="kL2-Uv-cJJ"/>
                 <constraint firstItem="b71-mL-HzT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="48" id="nQe-6v-vaH"/>
-                <constraint firstItem="JR9-LE-jFX" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="70" id="p0e-Ao-CPD"/>
-                <constraint firstItem="vfg-r8-3J8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="sh5-Nc-49l"/>
-                <constraint firstAttribute="trailing" secondItem="GLD-AO-Qdj" secondAttribute="trailing" constant="40" id="tCe-BI-FG5"/>
-                <constraint firstItem="GLD-AO-Qdj" firstAttribute="leading" secondItem="azp-bt-s2k" secondAttribute="trailing" constant="20" id="tQr-xc-CHi"/>
-                <constraint firstItem="9uv-wA-Tx2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="85" id="xW5-5Y-68R"/>
+                <constraint firstItem="JR9-LE-jFX" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="90" id="p0e-Ao-CPD"/>
+                <constraint firstItem="vfg-r8-3J8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="sh5-Nc-49l"/>
+                <constraint firstAttribute="trailing" secondItem="GLD-AO-Qdj" secondAttribute="trailing" constant="60" id="tCe-BI-FG5"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
-            <point key="canvasLocation" x="749" y="343"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="675" y="347"/>
         </view>
     </objects>
+    <resources>
+        <image name="loginrec.png" width="433" height="90"/>
+        <image name="student.png" width="358" height="426"/>
+        <image name="studentcheck.png" width="196" height="90"/>
+        <image name="studentuncheck.png" width="196" height="90"/>
+        <image name="teacherselect.png" width="196" height="90"/>
+        <image name="techerunselect.png" width="196" height="90"/>
+    </resources>
 </document>

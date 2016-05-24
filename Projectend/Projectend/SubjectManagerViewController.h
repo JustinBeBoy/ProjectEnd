@@ -10,6 +10,7 @@
 #import "Subject.h"
 #import "AddAndEditSubjectViewController.h"
 #import "SWRevealViewController.h"
+#import "Scoreboad.h"
 
 @interface SubjectManagerViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
