@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAndEditSubjectViewController">
             <connections>
+                <outlet property="lbWaring" destination="o4J-oe-SxS" id="tJx-Ha-oA1"/>
                 <outlet property="tfCredits" destination="qSj-DY-5Jf" id="TYV-KM-Czr"/>
                 <outlet property="tfDescription" destination="Wj9-dq-l4C" id="bbc-ee-K1K"/>
                 <outlet property="tfSubject" destination="0xh-K2-fx9" id="ZgU-BJ-5bf"/>
@@ -19,32 +20,44 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description: là môn học bắt buộc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj9-dq-l4C">
-                    <rect key="frame" x="30" y="160" width="260" height="30"/>
+                    <rect key="frame" x="30" y="200" width="260" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credits: 4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qSj-DY-5Jf">
-                    <rect key="frame" x="30" y="210" width="260" height="30"/>
+                    <rect key="frame" x="30" y="250" width="260" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject: Toán...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xh-K2-fx9">
-                    <rect key="frame" x="30" y="110" width="260" height="30"/>
+                    <rect key="frame" x="30" y="150" width="260" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4J-oe-SxS">
+                    <rect key="frame" x="30" y="85" width="260" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="BFt-sw-9jD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Wj9-dq-l4C" firstAttribute="top" secondItem="0xh-K2-fx9" secondAttribute="bottom" constant="20" id="0Ze-TJ-3K0"/>
                 <constraint firstAttribute="trailing" secondItem="0xh-K2-fx9" secondAttribute="trailing" constant="30" id="6T7-CH-YsQ"/>
-                <constraint firstItem="0xh-K2-fx9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="76U-3S-pe2"/>
+                <constraint firstItem="0xh-K2-fx9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="76U-3S-pe2"/>
                 <constraint firstItem="0xh-K2-fx9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="CTE-qX-533"/>
                 <constraint firstItem="qSj-DY-5Jf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="K19-GL-dEp"/>
                 <constraint firstAttribute="trailing" secondItem="qSj-DY-5Jf" secondAttribute="trailing" constant="30" id="PX5-dd-DVv"/>
                 <constraint firstAttribute="trailing" secondItem="Wj9-dq-l4C" secondAttribute="trailing" constant="30" id="V9w-s2-h53"/>
+                <constraint firstItem="o4J-oe-SxS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="ctd-0n-xiH"/>
                 <constraint firstItem="Wj9-dq-l4C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="dbx-te-R11"/>
+                <constraint firstItem="0xh-K2-fx9" firstAttribute="top" secondItem="o4J-oe-SxS" secondAttribute="bottom" constant="25" id="fTH-Tx-lL4"/>
                 <constraint firstItem="qSj-DY-5Jf" firstAttribute="top" secondItem="Wj9-dq-l4C" secondAttribute="bottom" constant="20" id="pog-8Z-Eao"/>
+                <constraint firstAttribute="trailing" secondItem="o4J-oe-SxS" secondAttribute="trailing" constant="30" id="wWQ-NK-19S"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="533" y="298"/>

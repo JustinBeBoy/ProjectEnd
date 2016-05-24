@@ -14,4 +14,5 @@
 @property(nonatomic,strong)NSString *descriptions;
 + (NSArray*) queryListSubject;
 +(Subject*) querySubWithidSubject:(NSInteger)idSubject;
++ (NSArray *)querySubject:(NSString *)subject;
 @end

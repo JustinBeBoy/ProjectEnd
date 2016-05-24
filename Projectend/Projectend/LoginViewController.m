@@ -15,6 +15,9 @@
     NSArray *arrayTeachers;
     NSArray *arrayStudents;
 }
+@property (strong, nonatomic) IBOutlet DLRadioButton *olbtCheckTeacher;
+@property (strong, nonatomic) IBOutlet DLRadioButton *olbtCheckStudent;
+@property (strong, nonatomic) IBOutlet UIButton *olbtLogin;
 
 @end
 
@@ -26,21 +29,35 @@
     // Do any additional setup after loading the view from its nib.
     SWRevealViewController *reveal = self.revealViewController;
     reveal.panGestureRecognizer.enabled = NO;
+    [self setupUI];
     [self chekboxselected];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI{
+//    _olbtCheckTeacher.backgroundColor = [UIColor whiteColor];
+    _olbtCheckTeacher.layer.cornerRadius = 10.0;
+    [_olbtCheckTeacher.layer setMasksToBounds:YES];
+    _olbtCheckStudent.layer.cornerRadius = 10.0;
+    [_olbtCheckStudent.layer setMasksToBounds:YES];
+    _olbtLogin.layer.cornerRadius = 10.0;
+    [_olbtLogin.layer setMasksToBounds:YES];
+//    if(_olbtLogin.state == UIControlStateFocused){
+//        _olbtLogin.backgroundColor = [UIColor colorWithRed:53.0f/255.0f green:152.0f/255.0 blue:219.0/255.0 alpha:1];
+//    };
 }
 
 - (void)chekboxselected {
     if ([self.btTeacher isSelected]) {
+        _olbtCheckTeacher.backgroundColor = [UIColor whiteColor];
         flagcheckbox = YES;
+    }else{
+        _olbtCheckTeacher.backgroundColor = [UIColor colorWithRed:53.0f/255.0f green:152.0f/255.0 blue:219.0/255.0 alpha:1];
     }
     if ([self.btStudent isSelected]) {
+        _olbtCheckStudent.backgroundColor = [UIColor whiteColor];
         flagcheckbox = NO;
+    }else{
+        _olbtCheckStudent.backgroundColor = [UIColor colorWithRed:53.0f/255.0f green:152.0f/255.0 blue:219.0/255.0 alpha:1];
     }
 }
 
@@ -49,17 +66,6 @@
     self.navigationController.navigationBarHidden = YES;
     NSLog(@"%i",flagcheckbox);
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)cboxTeacher:(id)sender {
     [self chekboxselected];
@@ -107,5 +113,9 @@
     revealController.delegate = self;
     
     [self.navigationController pushViewController:revealController animated:YES];
+}
+- (IBAction)btLoginTD:(id)sender {
+    _olbtLogin.backgroundColor = [UIColor whiteColor];
+    [_olbtLogin setTitleColor:[UIColor colorWithRed:53.0f/255.0f green:152.0f/255.0 blue:219.0/255.0 alpha:1] forState:UIControlStateNormal];
 }
 @end

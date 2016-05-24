@@ -41,6 +41,12 @@
 		752127A41CE5B81A00E8F44B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7521279E1CE5B81A00E8F44B /* Info.plist */; };
 		752127C41CE5FE4100E8F44B /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127C11CE5FE4100E8F44B /* Global.m */; };
 		752127C51CE5FE4100E8F44B /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = 752127C31CE5FE4100E8F44B /* Lib.m */; };
+		756E14AA1CF406AB00D807B2 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14A91CF406AB00D807B2 /* student.png */; };
+		756E14AC1CF40CDB00D807B2 /* techerunselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14AB1CF40CDB00D807B2 /* techerunselect.png */; };
+		756E14AE1CF40E8800D807B2 /* teacherselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14AD1CF40E8800D807B2 /* teacherselect.png */; };
+		756E14B11CF4232D00D807B2 /* studentuncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14AF1CF4232D00D807B2 /* studentuncheck.png */; };
+		756E14B21CF4232D00D807B2 /* studentcheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B01CF4232D00D807B2 /* studentcheck.png */; };
+		756E14B41CF4281300D807B2 /* loginrec.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B31CF4281300D807B2 /* loginrec.png */; };
 		759757361CE7207A006013B5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757301CE7207A006013B5 /* BaseModel.m */; };
 		759757371CE7207A006013B5 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757321CE7207A006013B5 /* DB.m */; };
 		759757421CE7220B006013B5 /* Scoreboad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573D1CE7220B006013B5 /* Scoreboad.m */; };
@@ -174,6 +180,12 @@
 		752127C11CE5FE4100E8F44B /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		752127C21CE5FE4100E8F44B /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
 		752127C31CE5FE4100E8F44B /* Lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lib.m; sourceTree = "<group>"; };
+		756E14A91CF406AB00D807B2 /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
+		756E14AB1CF40CDB00D807B2 /* techerunselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techerunselect.png; sourceTree = "<group>"; };
+		756E14AD1CF40E8800D807B2 /* teacherselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacherselect.png; sourceTree = "<group>"; };
+		756E14AF1CF4232D00D807B2 /* studentuncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studentuncheck.png; sourceTree = "<group>"; };
+		756E14B01CF4232D00D807B2 /* studentcheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studentcheck.png; sourceTree = "<group>"; };
+		756E14B31CF4281300D807B2 /* loginrec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginrec.png; sourceTree = "<group>"; };
 		7597572F1CE7207A006013B5 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		759757301CE7207A006013B5 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		759757311CE7207A006013B5 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
@@ -500,6 +512,12 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				756E14B31CF4281300D807B2 /* loginrec.png */,
+				756E14AF1CF4232D00D807B2 /* studentuncheck.png */,
+				756E14B01CF4232D00D807B2 /* studentcheck.png */,
+				756E14AD1CF40E8800D807B2 /* teacherselect.png */,
+				756E14A91CF406AB00D807B2 /* student.png */,
+				756E14AB1CF40CDB00D807B2 /* techerunselect.png */,
 				75F96DCF1CED9935004EE32A /* icon1.png */,
 				5C36A2391CF2FB4500D250D5 /* checked.png */,
 				5C36A23A1CF2FB4500D250D5 /* unchecked.png */,
@@ -735,7 +753,9 @@
 				5C8A5FF01CED8FDC0007D7A5 /* AddStudentCell.xib in Resources */,
 				759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */,
 				75F96D9A1CEC3AAB004EE32A /* PickerViewController.xib in Resources */,
+				756E14B41CF4281300D807B2 /* loginrec.png in Resources */,
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
+				756E14B11CF4232D00D807B2 /* studentuncheck.png in Resources */,
 				759758121CEB18EC006013B5 /* scoreboard256b.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
@@ -747,7 +767,9 @@
 				84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */,
 				75F96DC31CED57C0004EE32A /* plus24.png in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
+				756E14B21CF4232D00D807B2 /* studentcheck.png in Resources */,
 				75FCAF091CF2996D00A605F0 /* login.png in Resources */,
+				756E14AC1CF40CDB00D807B2 /* techerunselect.png in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
@@ -755,11 +777,13 @@
 				75F96DBF1CED5391004EE32A /* ClassedTableViewCell.xib in Resources */,
 				5C8A5FEE1CED580C0007D7A5 /* PointTableDetail.xib in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
+				756E14AE1CF40E8800D807B2 /* teacherselect.png in Resources */,
 				5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */,
 				759758141CEB18EC006013B5 /* subject256b.png in Resources */,
 				752127621CE561DB00E8F44B /* LaunchScreen.storyboard in Resources */,
 				5C07E8CF1CEE9ED2000E6CE5 /* ScoreManagerVC.xib in Resources */,
 				7597580F1CEB18EC006013B5 /* scoreboard32.png in Resources */,
+				756E14AA1CF406AB00D807B2 /* student.png in Resources */,
 				759757CA1CE97BEB006013B5 /* student24.png in Resources */,
 				5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */,
 				5CF244CB1CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib in Resources */,

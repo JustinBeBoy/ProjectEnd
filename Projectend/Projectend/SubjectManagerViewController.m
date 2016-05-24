@@ -10,6 +10,7 @@
 
 @interface SubjectManagerViewController (){
     NSArray *arrSubject;
+    NSArray *arrScore;
 }
 
 @end
@@ -105,6 +106,12 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle ==UITableViewCellEditingStyleDelete){
         Subject *subject = (Subject*)[arrSubject objectAtIndex:indexPath.row];
+        arrScore = [NSArray array];
+        arrScore = [Scoreboad queryScoreFromIDSubject:[subject.iId integerValue]];
+        for (Scoreboad *score in arrScore) {
+            score.deleted = @(1);
+            [score update];
+        }
         subject.deleted = @(1);
         [subject update];
         [self loadData];

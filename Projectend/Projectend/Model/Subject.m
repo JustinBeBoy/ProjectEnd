@@ -76,5 +76,26 @@
     
     return thisSubject;
 }
++ (NSArray *)querySubject:(NSString *)subject{
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrSubject = [self querySubject:subject db:db];
+    [db close];
+    
+    return arrSubject;
+}
++ (NSArray *)querySubject:(NSString *)subject db:(FMDatabase *)db{
+    NSString *queryString = [NSString stringWithFormat:@"%@=0 AND %@=\"%@\"",k_deleted,k_subject,subject];
+    
+    NSArray *arrDic = [Subject selectWhere:queryString db:db];
+    NSMutableArray *arrSubject = [NSMutableArray array];
+    
+    for (NSDictionary *dic in arrDic) {
+        Subject *subject = [[Subject alloc]initWithDic:dic];
+        [arrSubject addObject:subject];
+    }
+    
+    return arrSubject;
+}
 
 @end
