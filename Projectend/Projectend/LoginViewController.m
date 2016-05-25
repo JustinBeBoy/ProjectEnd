@@ -15,6 +15,7 @@
     NSArray *arrayTeachers;
     NSArray *arrayStudents;
 }
+@property (strong, nonatomic) IBOutlet UILabel *lbwarring;
 @property (strong, nonatomic) IBOutlet DLRadioButton *olbtCheckTeacher;
 @property (strong, nonatomic) IBOutlet DLRadioButton *olbtCheckStudent;
 @property (strong, nonatomic) IBOutlet UIButton *olbtLogin;
@@ -85,6 +86,8 @@
             [self moveToHome];
 
         }else{
+            NSString *warring = @"Username or password incorect !";
+            _lbwarring.text = warring;
             NSLog(@"nhap lai username and password");
         }
     }
@@ -97,8 +100,11 @@
             scorevc.iDStudent = [thisStudent.iId integerValue];
             [self.navigationController pushViewController:scorevc animated:YES];
             NSLog(@"dang nhap student thanh cong");
-        }else
+        }else{
+            NSString *warring = @"Username or password incorect !";
+            _lbwarring.text = warring;
             NSLog(@"nhap lai username and password");
+        }
     }
 }
 - (void) moveToHome{

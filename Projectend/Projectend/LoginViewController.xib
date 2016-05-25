@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="btStudent" destination="GLD-AO-Qdj" id="w3u-Wj-X9u"/>
                 <outlet property="btTeacher" destination="azp-bt-s2k" id="OIv-0T-q1c"/>
+                <outlet property="lbwarring" destination="QA1-jj-1ds" id="hFP-Qt-hge"/>
                 <outlet property="olbtCheckStudent" destination="GLD-AO-Qdj" id="5iA-hv-g9Q"/>
                 <outlet property="olbtCheckTeacher" destination="azp-bt-s2k" id="bVt-eB-wtL"/>
                 <outlet property="olbtLogin" destination="JR9-LE-jFX" id="uix-O2-jCp"/>
@@ -138,6 +139,15 @@
                                         <constraint firstAttribute="bottom" secondItem="azp-bt-s2k" secondAttribute="bottom" id="m0D-0m-NmJ"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA1-jj-1ds">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="TSg-1O-RI5"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -146,14 +156,17 @@
                                 <constraint firstItem="JR9-LE-jFX" firstAttribute="centerX" secondItem="eYD-g5-Siv" secondAttribute="centerX" id="5LK-va-LOe"/>
                                 <constraint firstItem="vfg-r8-3J8" firstAttribute="leading" secondItem="eYD-g5-Siv" secondAttribute="leading" id="8Xu-Fo-qQj"/>
                                 <constraint firstItem="JR9-LE-jFX" firstAttribute="top" secondItem="AFB-5F-3wn" secondAttribute="bottom" constant="20" id="AFY-pa-gYY"/>
+                                <constraint firstItem="QA1-jj-1ds" firstAttribute="top" secondItem="eYD-g5-Siv" secondAttribute="top" id="Amh-uw-oTF"/>
                                 <constraint firstItem="dp8-c8-Rkk" firstAttribute="centerX" secondItem="eYD-g5-Siv" secondAttribute="centerX" id="NPa-aD-cxL"/>
                                 <constraint firstItem="AFB-5F-3wn" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="20" id="SG0-QW-MIH"/>
                                 <constraint firstItem="AFB-5F-3wn" firstAttribute="height" secondItem="vfg-r8-3J8" secondAttribute="height" id="VKH-Yw-PLG"/>
                                 <constraint firstAttribute="trailing" secondItem="vfg-r8-3J8" secondAttribute="trailing" id="Vfu-yl-8ZV"/>
                                 <constraint firstItem="vfg-r8-3J8" firstAttribute="centerX" secondItem="eYD-g5-Siv" secondAttribute="centerX" id="dVn-XB-6ws"/>
+                                <constraint firstAttribute="trailing" secondItem="QA1-jj-1ds" secondAttribute="trailing" id="dhh-wt-ZQC"/>
                                 <constraint firstItem="AFB-5F-3wn" firstAttribute="centerX" secondItem="eYD-g5-Siv" secondAttribute="centerX" id="eM8-kg-MJf"/>
                                 <constraint firstItem="vfg-r8-3J8" firstAttribute="top" secondItem="eYD-g5-Siv" secondAttribute="top" constant="32" id="fCY-Cp-R5V"/>
                                 <constraint firstItem="dp8-c8-Rkk" firstAttribute="width" secondItem="vfg-r8-3J8" secondAttribute="width" id="fne-9b-aki"/>
+                                <constraint firstItem="QA1-jj-1ds" firstAttribute="leading" secondItem="eYD-g5-Siv" secondAttribute="leading" id="tc5-NP-eIV"/>
                                 <constraint firstItem="JR9-LE-jFX" firstAttribute="width" secondItem="vfg-r8-3J8" secondAttribute="width" id="tk9-NV-vOo"/>
                             </constraints>
                         </view>
