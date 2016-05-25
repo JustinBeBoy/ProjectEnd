@@ -36,6 +36,8 @@
     self.navigationItem.rightBarButtonItem = rightbt;
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.title = @"Quản Lý Sinh Viên";
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:2.0f/255.0f green:136.0f/255.0f blue:209.0f/255.0f alpha:1];
     
     _lbNumber.layer.borderWidth = 1.0f;
     _lbNumber.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
@@ -61,12 +63,14 @@
                                                                              style:UIBarButtonItemStylePlain target:revealControllers action:@selector(revealToggle:)];
         [revealController.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
         self.navigationItem.leftBarButtonItem = revealButtonItem;
+        self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     }else{
         SWRevealViewController *reveal = self.revealViewController;
         reveal.panGestureRecognizer.enabled = NO;
         UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btback)];
         [backbt setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
         self.navigationItem.leftBarButtonItem = backbt;
+        self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     }
 }
 - (void)reloadData{

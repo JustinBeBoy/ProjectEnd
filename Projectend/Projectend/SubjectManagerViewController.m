@@ -30,6 +30,8 @@
 }
 
 - (void)setupUI{
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:2.0f/255.0f green:136.0f/255.0f blue:209.0f/255.0f alpha:1];
     self.navigationController.navigationBarHidden = NO;
     UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus16w.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusSubject)];
     self.navigationItem.rightBarButtonItem = rightbt;
@@ -43,6 +45,7 @@
                                                                              style:UIBarButtonItemStylePlain target:revealControllers action:@selector(revealToggle:)];
         [revealController.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor colorWithRed:146.0f/255.0f green:204.0f/255.0f blue:55.0f/255.0f alpha:1],NSFontAttributeName: [UIFont systemFontOfSize:20 ]}];
         self.navigationItem.leftBarButtonItem = revealButtonItem;
+        self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     }else{
         SWRevealViewController *reveal = self.revealViewController;
         reveal.panGestureRecognizer.enabled = NO;
