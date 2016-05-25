@@ -12,7 +12,6 @@
     UIBarButtonItem *btsave;
     UIBarButtonItem *btedit;
     NSArray *arrSubjectExit;
-    NSMutableString *warring;
 }
 
 @end
@@ -26,7 +25,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (void)setupUI{
-    warring = [[NSMutableString alloc]initWithString:@"Warring : "];
     btsave = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveStudent)];
     [btsave setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
     btedit = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editSubjet)];
@@ -62,7 +60,6 @@
     arrSubjectExit = [NSArray array];
     arrSubjectExit = [Subject querySubject:self.tfSubject.text];
     if (arrSubjectExit.count>0) {
-        [warring appendString:@"Subject is Exit, "];
         return YES;
     } else {
         return NO;
@@ -70,13 +67,17 @@
 }
 
 -(BOOL)checkAllComponent{
-    if (self.tfSubject.text.length>0&&self.tfDescription.text.length>0&&[self validateCredit:self.tfCredits.text warring:warring]&&![self checkSubjectExist]) {
+    NSMutableString *waringcheck = [[NSMutableString alloc]initWithString:@"Warring : "];
+    if (self.tfSubject.text.length>0&&self.tfDescription.text.length>0&&[self validateCredit:self.tfCredits.text warring:waringcheck]&&![self checkSubjectExist]) {
         return YES;
     }else{
         if (self.tfDescription.text.length==0||self.tfCredits.text.length==0) {
-            [warring appendString:@"in put all infomation, "];
+            [waringcheck appendString:@"in put all infomation, "];
         }
-        _lbWaring.text = warring;
+        if ([self checkSubjectExist]) {
+            [waringcheck appendString:@"Subject is Exist, "];
+        }
+        _lbWaring.text = waringcheck;
         return NO;
     }
 }

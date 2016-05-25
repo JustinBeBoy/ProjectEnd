@@ -82,6 +82,9 @@
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR9-LE-jFX">
                                     <rect key="frame" x="0.0" y="242" width="335" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="JR9-LE-jFX" secondAttribute="height" multiplier="67:10" id="X2J-Js-qyO"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
                                     <state key="normal" title="Log In" backgroundImage="loginrec.png">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,11 +144,8 @@
                             <constraints>
                                 <constraint firstItem="dp8-c8-Rkk" firstAttribute="top" secondItem="vfg-r8-3J8" secondAttribute="bottom" constant="20" id="3GY-n3-qCe"/>
                                 <constraint firstItem="JR9-LE-jFX" firstAttribute="centerX" secondItem="eYD-g5-Siv" secondAttribute="centerX" id="5LK-va-LOe"/>
-                                <constraint firstItem="JR9-LE-jFX" firstAttribute="height" secondItem="vfg-r8-3J8" secondAttribute="height" id="8KD-fx-Khx"/>
                                 <constraint firstItem="vfg-r8-3J8" firstAttribute="leading" secondItem="eYD-g5-Siv" secondAttribute="leading" id="8Xu-Fo-qQj"/>
                                 <constraint firstItem="JR9-LE-jFX" firstAttribute="top" secondItem="AFB-5F-3wn" secondAttribute="bottom" constant="20" id="AFY-pa-gYY"/>
-                                <constraint firstItem="AFB-5F-3wn" firstAttribute="leading" secondItem="eYD-g5-Siv" secondAttribute="leading" constant="39" id="JLP-G8-gth"/>
-                                <constraint firstItem="dp8-c8-Rkk" firstAttribute="height" secondItem="vfg-r8-3J8" secondAttribute="height" id="NFd-NJ-y0Z"/>
                                 <constraint firstItem="dp8-c8-Rkk" firstAttribute="centerX" secondItem="eYD-g5-Siv" secondAttribute="centerX" id="NPa-aD-cxL"/>
                                 <constraint firstItem="AFB-5F-3wn" firstAttribute="top" secondItem="dp8-c8-Rkk" secondAttribute="bottom" constant="20" id="SG0-QW-MIH"/>
                                 <constraint firstItem="AFB-5F-3wn" firstAttribute="height" secondItem="vfg-r8-3J8" secondAttribute="height" id="VKH-Yw-PLG"/>
