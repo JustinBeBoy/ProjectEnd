@@ -99,7 +99,6 @@
 }
 
 - (void) moveToHome{
-    
     NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
     [userdefault setBool:YES forKey:KEY_CHECK_LOGIN];
     [userdefault setBool:YES forKey:KEY_CHECK_TYPE];

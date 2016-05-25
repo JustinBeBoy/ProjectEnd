@@ -37,6 +37,7 @@
     self.navigationItem.rightBarButtonItem = rightbt;
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     SWRevealViewController *revealController = [self revealViewController];
+    _tableView.tableFooterView = [[UIView alloc] init];
     if (self.isSlide) {
         SWRevealViewController *revealControllers = [self revealViewController];
         [revealControllers panGestureRecognizer];
@@ -83,17 +84,35 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    static NSString *cellMainNibID = @"cellSubject";
+    _cellSubjects = [tableView dequeueReusableCellWithIdentifier:cellMainNibID];
+    if (_cellSubjects == nil) {
+        [[NSBundle mainBundle] loadNibNamed:@"SubjectCell" owner:self options:nil];
     }
     
-    Subject *subject = (Subject*)[arrSubject objectAtIndex:indexPath.row];
+    UILabel *subject = (UILabel *)[_cellSubjects viewWithTag:2];
+    CALayer *layer = [subject layer];
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.frame = CGRectMake(0.0f, 43.0f, subject.frame.size.width, 1.0f);
+    bottomBorder.backgroundColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
+    [layer addSublayer:bottomBorder];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %li tín chỉ",subject.subject,subject.credits];
+    UILabel *credit = (UILabel *)[_cellSubjects viewWithTag:3];
+    CALayer *layer1 = [credit layer];
+    CALayer *bottomBorder1 = [CALayer layer];
+    bottomBorder1.frame = CGRectMake(0.0f, 43.0f, credit.frame.size.width, 1.0f);
+    bottomBorder1.backgroundColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
+    [layer1 addSublayer:bottomBorder1];
     
-    return cell;
+    if ([arrSubject count] > 0)
+    {
+        Subject *subjects = (Subject*)[arrSubject objectAtIndex:indexPath.row];
+        subject.text = subjects.subject;
+        credit.text = [NSString stringWithFormat:@"%ld Tín chỉ",subjects.credits];
+    }
+    
+    return _cellSubjects;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

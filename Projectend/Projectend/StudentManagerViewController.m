@@ -54,6 +54,10 @@
     _lbYear.layer.borderWidth = 1.0f;
     _lbYear.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
     
+    _tableStudent.tableFooterView = [[UIView alloc] init];
+    
+    [_tfSearchNameStudent addTarget:self action:@selector(searchAndShowListStudent) forControlEvents:UIControlEventEditingChanged];
+    
     SWRevealViewController *revealController = [self revealViewController];
     if (self.isSlide) {
         SWRevealViewController *revealControllers = [self revealViewController];
@@ -78,6 +82,12 @@
     arrayClassStudent = [ClassList queryListClass];
     [self.tableStudent reloadData];
     
+}
+
+- (void)searchAndShowListStudent{
+    arrayStudent = [Student queryListStudentLike:self.tfSearchNameStudent.text];
+    arrayClassStudent = [ClassList queryListClass];
+    [self.tableStudent reloadData];
 }
 
 #pragma mark Button Action
@@ -143,8 +153,7 @@
     year.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
     
 
-    if ([arrayStudent count] > 0)
-    {
+    if ([arrayStudent count] > 0){
         ClassList *currentClass;
         Student *currentRecord = [arrayStudent objectAtIndex:indexPath.row];
         number.text = [NSString stringWithFormat:@"%li",(long)indexPath.row+1];

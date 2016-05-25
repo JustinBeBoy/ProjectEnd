@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbYear;
 @property (strong, nonatomic) IBOutlet UITableView *tableStudent;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellStudent;
+@property (strong, nonatomic) IBOutlet UITextField *tfSearchNameStudent;
 @property (assign, nonatomic) BOOL isSlide;
 
 @end

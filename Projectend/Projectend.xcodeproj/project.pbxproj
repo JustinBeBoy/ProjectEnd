@@ -58,6 +58,7 @@
 		756E14C71CF547E100D807B2 /* student256t.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C31CF547E100D807B2 /* student256t.png */; };
 		756E14C81CF547E100D807B2 /* subject256t.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C41CF547E100D807B2 /* subject256t.png */; };
 		756E14CA1CF54A2000D807B2 /* plus16w.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C91CF54A2000D807B2 /* plus16w.png */; };
+		756E14CC1CF5B81000D807B2 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756E14CB1CF5B81000D807B2 /* SubjectCell.xib */; };
 		759757361CE7207A006013B5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757301CE7207A006013B5 /* BaseModel.m */; };
 		759757371CE7207A006013B5 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757321CE7207A006013B5 /* DB.m */; };
 		759757421CE7220B006013B5 /* Scoreboad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573D1CE7220B006013B5 /* Scoreboad.m */; };
@@ -208,6 +209,7 @@
 		756E14C31CF547E100D807B2 /* student256t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student256t.png; sourceTree = "<group>"; };
 		756E14C41CF547E100D807B2 /* subject256t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subject256t.png; sourceTree = "<group>"; };
 		756E14C91CF54A2000D807B2 /* plus16w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus16w.png; sourceTree = "<group>"; };
+		756E14CB1CF5B81000D807B2 /* SubjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
 		7597572F1CE7207A006013B5 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		759757301CE7207A006013B5 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		759757311CE7207A006013B5 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 				75F96DB01CED3E49004EE32A /* SubjectManagerViewController.h */,
 				75F96DB11CED3E49004EE32A /* SubjectManagerViewController.m */,
 				75F96DB21CED3E49004EE32A /* SubjectManagerViewController.xib */,
+				756E14CB1CF5B81000D807B2 /* SubjectCell.xib */,
 				75F96DC61CED5F47004EE32A /* AddAndEditSubjectViewController.h */,
 				75F96DC71CED5F47004EE32A /* AddAndEditSubjectViewController.m */,
 				75F96DC81CED5F47004EE32A /* AddAndEditSubjectViewController.xib */,
@@ -796,6 +799,7 @@
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
 				756E14B81CF4AAC700D807B2 /* rectagmain.png in Resources */,
 				7597580C1CEB18EC006013B5 /* class256b.png in Resources */,
+				756E14CC1CF5B81000D807B2 /* SubjectCell.xib in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				75F96DC51CED57F5004EE32A /* plus16.png in Resources */,
 				756E14C51CF547E100D807B2 /* logout256t.png in Resources */,

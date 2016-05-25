@@ -14,5 +14,6 @@
 
 @interface SubjectManagerViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellSubjects;
 @property (assign, nonatomic) BOOL isSlide;
 @end

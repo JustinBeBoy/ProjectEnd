@@ -34,7 +34,7 @@
 }
 -(void) setupUI{
     [self.navigationController setNavigationBarHidden:YES];
-    
+    _tblScore.tableFooterView = [[UIView alloc]init];
     lblScore.layer.borderWidth = 1.0f;
     lblSubjectName.layer.borderWidth = 1.0f;
     
