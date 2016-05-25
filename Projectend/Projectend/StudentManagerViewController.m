@@ -32,15 +32,26 @@
 
 - (void) setupUI{
     self.navigationController.navigationBarHidden = NO;
-    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus16.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusStudent)];
+    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus16w.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusStudent)];
     self.navigationItem.rightBarButtonItem = rightbt;
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.title = @"Quản Lý Sinh Viên";
     
     _lbNumber.layer.borderWidth = 1.0f;
+    _lbNumber.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     _lbFullName.layer.borderWidth = 1.0f;
+    _lbFullName.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     _lbClass.layer.borderWidth = 1.0f;
+    _lbClass.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     _lbSex.layer.borderWidth = 1.0f;
+    _lbSex.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     _lbYear.layer.borderWidth = 1.0f;
+    _lbYear.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     SWRevealViewController *revealController = [self revealViewController];
     if (self.isSlide) {
         SWRevealViewController *revealControllers = [self revealViewController];
@@ -54,6 +65,7 @@
         SWRevealViewController *reveal = self.revealViewController;
         reveal.panGestureRecognizer.enabled = NO;
         UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btback)];
+        [backbt setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
         self.navigationItem.leftBarButtonItem = backbt;
     }
 }
@@ -93,7 +105,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 54;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,10 +124,20 @@
     UILabel *year = (UILabel *)[_cellStudent viewWithTag:5];
     
     number.layer.borderWidth = 1.0f;
+    number.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     fullname.layer.borderWidth = 1.0f;
+    fullname.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     class.layer.borderWidth = 1.0f;
+    class.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     sex.layer.borderWidth = 1.0f;
+    sex.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
     year.layer.borderWidth = 1.0f;
+    year.layer.borderColor = [UIColor colorWithRed:161.0/255.0 green:161.0/255.0 blue:161.0/255.0 alpha:1].CGColor;
+    
 
     if ([arrayStudent count] > 0)
     {

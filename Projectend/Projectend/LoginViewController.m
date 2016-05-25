@@ -35,11 +35,11 @@
 
 - (void)setupUI{
 //    _olbtCheckTeacher.backgroundColor = [UIColor whiteColor];
-    _olbtCheckTeacher.layer.cornerRadius = 10.0;
+    _olbtCheckTeacher.layer.cornerRadius = 8.0;
     [_olbtCheckTeacher.layer setMasksToBounds:YES];
-    _olbtCheckStudent.layer.cornerRadius = 10.0;
+    _olbtCheckStudent.layer.cornerRadius = 8.0;
     [_olbtCheckStudent.layer setMasksToBounds:YES];
-    _olbtLogin.layer.cornerRadius = 10.0;
+    _olbtLogin.layer.cornerRadius = 8.0;
     [_olbtLogin.layer setMasksToBounds:YES];
 //    if(_olbtLogin.state == UIControlStateFocused){
 //        _olbtLogin.backgroundColor = [UIColor colorWithRed:53.0f/255.0f green:152.0f/255.0 blue:219.0/255.0 alpha:1];

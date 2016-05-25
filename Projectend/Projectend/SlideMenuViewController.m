@@ -33,11 +33,11 @@
 #pragma mark Array Setup
 - (void) setupMenuArray{
     NSArray *arrayOfMenu = @[
-                         [ManagerList itemWithTitle:@"Quản Lý Lớp học" withImage:[UIImage imageNamed:@"class256b.png"] ],
-                         [ManagerList itemWithTitle:@"Quản Lý Sinh Viên" withImage:[UIImage imageNamed:@"student256b.png"] ],
-                         [ManagerList itemWithTitle:@"Quản Lý Môn Học" withImage:[UIImage imageNamed:@"subject256b.png"] ],
-                         [ManagerList itemWithTitle:@"Quản Lý Bảng Điểm" withImage:[UIImage imageNamed:@"scoreboard256b.png"] ],
-                         [ManagerList itemWithTitle:@"Log Out" withImage:[UIImage imageNamed:@"logout256b.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Lớp học" withImage:[UIImage imageNamed:@"class256t.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Sinh Viên" withImage:[UIImage imageNamed:@"student256t.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Môn Học" withImage:[UIImage imageNamed:@"subject256t.png"] ],
+                         [ManagerList itemWithTitle:@"Quản Lý Bảng Điểm" withImage:[UIImage imageNamed:@"Score.png"] ],
+                         [ManagerList itemWithTitle:@"Log Out" withImage:[UIImage imageNamed:@"logout256t.png"] ],
                          ];
     
     self.arrayOfMenus = [NSMutableArray arrayWithArray:arrayOfMenu];
@@ -59,7 +59,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 54;
+    return 45;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

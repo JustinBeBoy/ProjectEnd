@@ -28,10 +28,13 @@
 - (void)setupUI{
     warring = [[NSMutableString alloc]initWithString:@"Warring : "];
     btsave = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveStudent)];
+    [btsave setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
     btedit = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editSubjet)];
+    [btedit setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
     self.navigationController.navigationBarHidden = NO;
     UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btBack)];
     self.navigationItem.leftBarButtonItem = backbt;
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     if (self.isEditing) {
         [self tfAnableOrDissable:YES];
         self.navigationItem.rightBarButtonItem = btedit;

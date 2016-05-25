@@ -31,8 +31,9 @@
 
 - (void)setupUI{
     self.navigationController.navigationBarHidden = NO;
-    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus16.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusSubject)];
+    UIBarButtonItem *rightbt = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"plus16w.png"] style:UIBarButtonItemStylePlain target:self action:@selector(plusSubject)];
     self.navigationItem.rightBarButtonItem = rightbt;
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     SWRevealViewController *revealController = [self revealViewController];
     if (self.isSlide) {
         SWRevealViewController *revealControllers = [self revealViewController];
@@ -47,6 +48,7 @@
         reveal.panGestureRecognizer.enabled = NO;
         UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btback)];
         self.navigationItem.leftBarButtonItem = backbt;
+        self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     }
 
     [self loadData];
