@@ -85,9 +85,6 @@
             if ([self checkUsernameExist]) {
                 [warringcpn appendString:@"Username existed "];
             }
-//            if (![self validatePhone:self.tfPhoneNumber.text warring:warringcpn]) {
-//                [warringcpn appendString:@"Phone not Validate "];
-//            }
             _lbWarring.text = warringcpn;
             return NO;
         }
