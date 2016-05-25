@@ -51,6 +51,7 @@
                     <constraint firstAttribute="trailing" secondItem="Vad-fq-Kl4" secondAttribute="trailing" id="wr1-5Q-h0h"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="550" y="236"/>
         </tableViewCell>
     </objects>

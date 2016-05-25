@@ -44,6 +44,7 @@
                     <constraint firstItem="C3M-8N-ubK" firstAttribute="leading" secondItem="Jn6-E4-Rvf" secondAttribute="trailing" id="kgw-B2-Tub"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="lblHoTen" destination="Jn6-E4-Rvf" id="HiA-9O-Q9w"/>
                 <outlet property="tfDiem" destination="C3M-8N-ubK" id="Si3-jB-wyx"/>
