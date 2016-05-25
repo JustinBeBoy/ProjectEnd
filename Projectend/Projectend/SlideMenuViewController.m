@@ -96,6 +96,7 @@
     if (row == 0) {
         QuanLyLopHocVC *classmanager = [[QuanLyLopHocVC alloc] initWithNibName:@"QuanLyLopHocVC" bundle:nil];
         navigationController = [[UINavigationController alloc] initWithRootViewController:classmanager];
+        classmanager.isSlide = YES;
         [revealController pushFrontViewController:navigationController animated:YES];
     }
     else if (row == 1){
@@ -118,6 +119,7 @@
     }
     else if (row == 3){
         PointManager *pointM = [[PointManager alloc] initWithNibName:@"PointManager" bundle:nil];
+        pointM.isSlide = YES;
         navigationController = [[UINavigationController alloc] initWithRootViewController:pointM];
         [revealController pushFrontViewController:navigationController animated:YES];
     }

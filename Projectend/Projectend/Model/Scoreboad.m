@@ -54,7 +54,7 @@
     return arrScore;
 }
 +(NSArray*) queryScoreFromiDClass:(NSInteger)idClass andiDStudent:(NSInteger)idStudent db:(FMDatabase*)db{
-    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld AND %@ = %ld", k_idclass, idClass, k_idstudent, idStudent];
+    NSString *queryStr = [NSString stringWithFormat:@"%@ = %ld AND %@ = %ld AND %@ = 0", k_idclass, idClass, k_idstudent, idStudent, k_deleted];
     NSArray *arrDic = [Scoreboad selectWhere:queryStr db:db];
     NSMutableArray *arrScore = [NSMutableArray array];
     for (NSDictionary *dic in arrDic) {

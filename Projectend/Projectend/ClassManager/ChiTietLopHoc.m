@@ -55,7 +55,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _arrMaskStudent.count;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 30;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
@@ -65,7 +67,7 @@
     
     Student *thisStudent = (Student*)[_arrMaskStudent objectAtIndex:indexPath.row];
     cell.layer.borderWidth = 1.0f;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - Ngày sinh:%@", thisStudent.name, thisStudent.dateofbirth];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ \t - \t Ngày sinh: %@", thisStudent.name, thisStudent.dateofbirth];
     
     return cell;
 }

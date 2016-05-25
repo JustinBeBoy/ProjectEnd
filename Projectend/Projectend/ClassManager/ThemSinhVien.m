@@ -51,6 +51,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _arrStudentNotAdd.count;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 30;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     self.olbtCheckStudent.multipleSelectionEnabled = YES;
@@ -64,8 +67,9 @@
     if ([_arrStudentNotAdd count] > 0)
     {
         Student *currentStudent = [_arrStudentNotAdd objectAtIndex:indexPath.row];
-        students.text = currentStudent.name;
+        students.text = [NSString stringWithFormat:@" %@",currentStudent.name];
     }
+    _tblStudentCell.layer.borderWidth = 1.0f;
 
     
     return _tblStudentCell;

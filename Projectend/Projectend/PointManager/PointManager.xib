@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PointManager">
             <connections>
+                <outlet property="btnBack" destination="RV6-g4-Mos" id="Oat-TJ-ynr"/>
+                <outlet property="btnMenu" destination="iJR-BA-A8P" id="7yh-6K-48W"/>
                 <outlet property="tblPointWithClass" destination="mJ7-Qp-cgg" id="WoW-LU-Zrs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -57,20 +59,35 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-BA-A8P" userLabel="Menu">
+                            <rect key="frame" x="6" y="7" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="aqA-cU-cqd"/>
+                                <constraint firstAttribute="width" constant="24" id="b9J-lC-2Wc"/>
+                            </constraints>
+                            <state key="normal" image="menu24.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="pressedMenu:" destination="-1" eventType="touchUpInside" id="8je-or-kIT"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="RV6-g4-Mos" firstAttribute="leading" secondItem="aFL-dS-rBP" secondAttribute="leading" id="2Jw-dM-lVB"/>
                         <constraint firstItem="9RU-ne-30y" firstAttribute="centerX" secondItem="aFL-dS-rBP" secondAttribute="centerX" id="9a9-Cx-2mP"/>
+                        <constraint firstItem="iJR-BA-A8P" firstAttribute="leading" secondItem="aFL-dS-rBP" secondAttribute="leading" constant="6" id="FXx-tt-B9r"/>
                         <constraint firstItem="bMJ-Ib-Mup" firstAttribute="centerY" secondItem="aFL-dS-rBP" secondAttribute="centerY" id="ISZ-zZ-g0c"/>
                         <constraint firstAttribute="height" constant="38" id="PqM-u6-4ID"/>
                         <constraint firstItem="RV6-g4-Mos" firstAttribute="centerY" secondItem="aFL-dS-rBP" secondAttribute="centerY" id="d2f-E6-WxI"/>
                         <constraint firstAttribute="trailing" secondItem="bMJ-Ib-Mup" secondAttribute="trailing" constant="8" id="imc-Jg-Mv1"/>
+                        <constraint firstItem="iJR-BA-A8P" firstAttribute="centerY" secondItem="aFL-dS-rBP" secondAttribute="centerY" id="lK9-dk-y2A"/>
                         <constraint firstItem="9RU-ne-30y" firstAttribute="centerY" secondItem="aFL-dS-rBP" secondAttribute="centerY" id="lSr-7C-zDF"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJ7-Qp-cgg">
-                    <rect key="frame" x="8" y="78" width="304" height="425"/>
+                    <rect key="frame" x="0.0" y="61" width="320" height="442"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="13m-Mo-aHo"/>
@@ -81,14 +98,17 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="aFL-dS-rBP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="Lhh-fc-HwV"/>
-                <constraint firstAttribute="trailing" secondItem="mJ7-Qp-cgg" secondAttribute="trailing" constant="8" id="MRw-fI-0to"/>
+                <constraint firstAttribute="trailing" secondItem="mJ7-Qp-cgg" secondAttribute="trailing" id="MRw-fI-0to"/>
                 <constraint firstAttribute="bottom" secondItem="mJ7-Qp-cgg" secondAttribute="bottom" constant="65" id="SLv-UR-DQE"/>
                 <constraint firstItem="aFL-dS-rBP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="V4p-XH-tpM"/>
                 <constraint firstAttribute="trailing" secondItem="aFL-dS-rBP" secondAttribute="trailing" constant="8" id="pze-Nl-bq3"/>
-                <constraint firstItem="mJ7-Qp-cgg" firstAttribute="top" secondItem="aFL-dS-rBP" secondAttribute="bottom" constant="17" id="rQf-Rd-89r"/>
-                <constraint firstItem="mJ7-Qp-cgg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="vPC-lO-mrV"/>
+                <constraint firstItem="mJ7-Qp-cgg" firstAttribute="top" secondItem="aFL-dS-rBP" secondAttribute="bottom" id="rQf-Rd-89r"/>
+                <constraint firstItem="mJ7-Qp-cgg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vPC-lO-mrV"/>
             </constraints>
             <point key="canvasLocation" x="333" y="377"/>
         </view>
     </objects>
+    <resources>
+        <image name="menu24.png" width="24" height="24"/>
+    </resources>
 </document>

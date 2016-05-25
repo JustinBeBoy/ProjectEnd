@@ -98,9 +98,24 @@
             NSArray *arrIDClassWithSub = [orderedSet array];
             
             if ([arrIDClassWithSub indexOfObject:thatClass.iId] != NSNotFound) {
-                [self showAlertWithTitle:@"Lỗi" andMessage:@"Đã tồn tại bảng điểm môn học của lớp học này"];
+                [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Đã tồn tại bảng điểm môn học của lớp học này"];
             }else{
                 NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
+                if (arrStudent.count>0) {
+                    for (Student *thisStudent in arrStudent) {
+                        Scoreboad *thisScore = [Scoreboad new];
+                        thisScore.idsubject = [thatSub.iId integerValue];
+                        thisScore.idclass = [thatClass.iId integerValue];
+                        thisScore.idstudent = [thisStudent.iId integerValue];
+                        [thisScore update];
+                    }
+                }else{
+                    [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Lớp học này không có sinh viên.\n Sẽ không thêm bảng điểm của lớp học này"];
+                }
+            }
+        } else{
+            NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
+            if (arrStudent.count>0) {
                 for (Student *thisStudent in arrStudent) {
                     Scoreboad *thisScore = [Scoreboad new];
                     thisScore.idsubject = [thatSub.iId integerValue];
@@ -108,16 +123,8 @@
                     thisScore.idstudent = [thisStudent.iId integerValue];
                     [thisScore update];
                 }
-            }
-        } else{
-            NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
-            for (Student *thisStudent in arrStudent) {
-                Scoreboad *thisScore = [Scoreboad new];
-                thisScore.idsubject = [thatSub.iId integerValue];
-                thisScore.idclass = [thatClass.iId integerValue];
-                thisScore.idstudent = [thisStudent.iId integerValue];
-                [thisScore update];
-                
+            }else{
+                [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Lớp học này không có sinh viên.\n Sẽ không thêm bảng điểm của lớp học này"];
             }
         }
     }
@@ -127,9 +134,12 @@
 }
 -(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertActOK = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *alertActOK = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
     [alert addAction:alertActOK];
     [self presentViewController:alert animated:YES completion:nil];
+
 }
 
 @end

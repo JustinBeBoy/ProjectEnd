@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,19 +15,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-4A-tDk">
-                        <rect key="frame" x="8" y="11" width="216" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-4A-tDk">
+                        <rect key="frame" x="0.0" y="8" width="248" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-JY-2PF">
-                        <rect key="frame" x="232" y="11" width="80" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-JY-2PF">
+                        <rect key="frame" x="248" y="8" width="72" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="72" id="Tgj-4H-0mK"/>
+                            <constraint firstAttribute="height" constant="27" id="hv4-ah-0e3"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="5Gv-JY-2PF" firstAttribute="height" secondItem="dbq-4A-tDk" secondAttribute="height" id="8XV-aK-Kko"/>
+                    <constraint firstItem="5Gv-JY-2PF" firstAttribute="leading" secondItem="dbq-4A-tDk" secondAttribute="trailing" id="Hha-5Y-sK5"/>
+                    <constraint firstItem="5Gv-JY-2PF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="QN5-sV-u1G"/>
+                    <constraint firstItem="5Gv-JY-2PF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aXY-ES-f2y"/>
+                    <constraint firstItem="dbq-4A-tDk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="cPp-jI-uQj"/>
+                    <constraint firstItem="dbq-4A-tDk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="juw-Ez-eHz"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="lblScore" destination="5Gv-JY-2PF" id="PR1-U0-NGv"/>

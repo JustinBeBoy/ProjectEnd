@@ -12,9 +12,15 @@
 #import "ClassList.h"
 #import "PointTableDetail.h"
 #import "AddNewScore.h"
+#import "SWRevealViewController.h"
 
 @interface PointManager (){
     PointTableDetail *thisPointTableDetail;
+    
+    IBOutlet UIButton *btnBack;
+    IBOutlet UIButton *btnMenu;
+    
+    NSIndexPath *indexPathToDel;
 }
 
 @end
@@ -30,6 +36,13 @@
     [self loadData];
 }
 -(void)setupUI{
+    if (_isSlide == NO) {
+    [btnBack setHidden:NO];
+    [btnMenu setHidden:YES];
+}else{
+    [btnBack setHidden:YES];
+    [btnMenu setHidden:NO];
+}
     [self.navigationController setNavigationBarHidden:YES];
 }
 -(void)loadData{
@@ -50,6 +63,10 @@
 }
 - (IBAction)pressedBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)pressedMenu:(id)sender {
+    SWRevealViewController *revealController = [self revealViewController];
+    [revealController revealToggle:sender];
 }
 - (IBAction)pressedPlus:(id)sender {
     AddNewScore *thisAddNewScore = [[AddNewScore alloc] initWithNibName:@"AddNewScore" bundle:nil];
@@ -121,6 +138,8 @@
         }
     }
     
+    cell.layer.borderWidth = 1.0f;
+    
     return cell;
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -128,12 +147,8 @@
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:[_arrIDSubject[indexPath.section] integerValue] andIDClass:[[[_arrIDClassAtEachSub objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] integerValue]];
-        for (Scoreboad *thisScore in arrScore) {
-            thisScore.deleted = @(1);
-            [thisScore update];
-        }
-        [self loadData];
+        indexPathToDel = indexPath;
+        [self showAlertWithTitle:@"Xoá điểm" andMessage:@"Bạn chắc chắn muốn xoá điểm lớp học này?"];
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -142,5 +157,20 @@
     thisPointTableDetail.arrScore = arrScore;
     
     [self.navigationController pushViewController:thisPointTableDetail animated:YES];
+}
+-(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertActOk = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        NSArray *arrScore = [Scoreboad queryListScoreFromIDSubject:[_arrIDSubject[indexPathToDel.section] integerValue] andIDClass:[[[_arrIDClassAtEachSub objectAtIndex:indexPathToDel.section] objectAtIndex:indexPathToDel.row] integerValue]];
+        for (Scoreboad *thisScore in arrScore) {
+            thisScore.deleted = @(1);
+            [thisScore update];
+        }
+        [self loadData];
+    }];
+    UIAlertAction *alertActCancel = [UIAlertAction actionWithTitle:@"Huỷ" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:alertActOk];
+    [alert addAction:alertActCancel];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 @end

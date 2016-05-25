@@ -78,7 +78,7 @@
     Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
     Student *thisStudent = [Student queryStudentWithidStudent:thisScore.idstudent];
     cell.lblHoTen.layer.borderWidth = 1.0f;
-    cell.lblHoTen.text = thisStudent.name;
+    cell.lblHoTen.text = [NSString stringWithFormat:@"  %@",thisStudent.name];
     cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
     cell.indexPathCell = indexPath;
     cell.delegate = self;

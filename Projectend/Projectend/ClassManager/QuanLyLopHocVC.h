@@ -10,6 +10,9 @@
 #import "ChiTietLopHoc.h"
 
 @interface QuanLyLopHocVC : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (assign, nonatomic) BOOL isSlide;
 
 @end

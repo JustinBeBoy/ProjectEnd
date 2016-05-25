@@ -19,8 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setupUI];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self setupUI];
 }
 
 - (void)setupUI{
@@ -59,6 +63,7 @@
 #pragma mark Button Manager
 - (IBAction)classManager:(id)sender {
     QuanLyLopHocVC *classmanager = [[QuanLyLopHocVC alloc]initWithNibName:@"QuanLyLopHocVC" bundle:nil];
+    classmanager.isSlide = NO;
     [self.navigationController pushViewController:classmanager animated:YES];
 }
 
@@ -76,6 +81,7 @@
 
 - (IBAction)scoreManager:(id)sender {
     PointManager *pointmvc = [[PointManager alloc]initWithNibName:@"PointManager" bundle:nil];
+    pointmvc.isSlide = NO;
     [self.navigationController pushViewController:pointmvc animated:YES];
 }
 @end

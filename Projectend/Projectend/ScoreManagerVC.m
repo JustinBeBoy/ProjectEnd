@@ -11,6 +11,10 @@
 @interface ScoreManagerVC (){
     Student *thisStudent;
     ClassList *thisClass;
+    
+    IBOutlet UILabel *lblSubjectName;
+    
+    IBOutlet UILabel *lblScore;
 }
 
 @end
@@ -28,6 +32,10 @@
 }
 -(void) setupUI{
     [self.navigationController setNavigationBarHidden:YES];
+    
+    lblScore.layer.borderWidth = 1.0f;
+    lblSubjectName.layer.borderWidth = 1.0f;
+    
     thisStudent = [Student queryStudentWithidStudent:_iDStudent];
     _lblHoTen.text = thisStudent.name;
     thisClass = [ClassList queryClassWithIDClass:thisStudent.idclass];
@@ -52,6 +60,9 @@
     return _arrScore.count;
 //    return 4;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 27;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ScoreTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreTableCell"];
     
@@ -60,7 +71,10 @@
     }
     Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
     Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
-    cell.lblSubject.text = thisSubject.subject;
+    cell.layer.borderWidth =1.0f;
+    cell.lblSubject.text = [NSString stringWithFormat:@"  %@", thisSubject.subject];
+    cell.lblSubject.layer.borderWidth = 1.0f;
+    cell.lblScore.layer.borderWidth = 1.0f;
     cell.lblScore.text = [NSString stringWithFormat:@"%ld",thisScore.score];
     
     return cell;

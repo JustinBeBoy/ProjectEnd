@@ -11,9 +11,13 @@
 #import "Student.h"
 #import "ClassedTableViewCell.h"
 #import "Scoreboad.h"
+#import "SWRevealViewController.h"
 
 @interface QuanLyLopHocVC (){
     NSArray *arrDSLop;
+    
+    IBOutlet UIButton *btnBack;
+    IBOutlet UIButton *btnMenu;
 }
 
 @end
@@ -32,6 +36,13 @@
 }
 
 - (void) setupUI{
+    if (_isSlide == NO) {
+        [btnBack setHidden:NO];
+        [btnMenu setHidden:YES];
+    }else{
+        [btnBack setHidden:YES];
+        [btnMenu setHidden:NO];
+    }
     [self.navigationController setNavigationBarHidden:YES];
 }
 
@@ -51,6 +62,10 @@
     return arrDSLop.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassedTableViewCell"];
     
@@ -62,7 +77,7 @@
     
     NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@",thatclass.iId]];
     cell.layer.borderWidth = 1.0f;
-    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ - Số sinh viên:%ld", thatclass.name, [arrStudent count]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ \t - \t Số sinh viên: %ld", thatclass.name, [arrStudent count]];
     
     return cell;
 }
@@ -112,6 +127,10 @@
 }
 - (IBAction)backPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)menuPressed:(id)sender {
+    SWRevealViewController *revealController = [self revealViewController];
+    [revealController revealToggle:sender];
 }
 - (IBAction)addPressed:(id)sender {
     [self showAlertWithTextField:@"Thêm lớp học" andMessage:@"Mời nhập tên lớp mới:"];
