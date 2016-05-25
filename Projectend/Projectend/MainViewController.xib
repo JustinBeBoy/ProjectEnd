@@ -3,7 +3,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="TUV Coco Gothic - Regular.ttf">
+            <string>TUVCocoGothic</string>
+            <string>TUVCocoGothic</string>
+            <string>TUVCocoGothic</string>
+            <string>TUVCocoGothic</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
@@ -12,88 +21,98 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-HT-Rgw">
-                    <rect key="frame" x="40" y="150" width="240" height="65"/>
-                    <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mainbackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="fHU-sP-EL6">
+                    <rect key="frame" x="30" y="81" width="86" height="574"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-2Q-JKo">
+                    <rect key="frame" x="126" y="110" width="258" height="516"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5C-Ai-c1R">
+                            <rect key="frame" x="10" y="139" width="238" height="109"/>
+                            <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="TUVCocoGothic" family="TUV Coco Gothic" pointSize="16"/>
+                            <state key="normal" title="Quản Lý Sinh Viên" backgroundImage="rectagmain.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="studentManager:" destination="-1" eventType="touchUpInside" id="7Uv-bq-kfu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-Lo-zqw">
+                            <rect key="frame" x="10" y="268" width="238" height="109"/>
+                            <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="TUVCocoGothic" family="TUV Coco Gothic" pointSize="16"/>
+                            <state key="normal" title="Quản Lý Môn Học" backgroundImage="rectagmain.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="subjectManager:" destination="-1" eventType="touchUpInside" id="kZp-jo-eJL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-i3-c7z">
+                            <rect key="frame" x="10" y="397" width="238" height="109"/>
+                            <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="TUVCocoGothic" family="TUV Coco Gothic" pointSize="16"/>
+                            <state key="normal" title="Quản Lý Điểm" backgroundImage="rectagmain.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="scoreManager:" destination="-1" eventType="touchUpInside" id="As1-7r-242"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-HT-Rgw">
+                            <rect key="frame" x="10" y="10" width="238" height="109"/>
+                            <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="TUVCocoGothic" family="TUV Coco Gothic" pointSize="16"/>
+                            <state key="normal" title="Quản Lý Lớp Học" backgroundImage="rectagmain.png">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="classManager:" destination="-1" eventType="touchUpInside" id="NuZ-YQ-Q7K"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="65" id="pZu-NX-LXX"/>
+                        <constraint firstItem="Gzy-i3-c7z" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="0RH-0r-qRu"/>
+                        <constraint firstItem="E5C-Ai-c1R" firstAttribute="width" secondItem="YYQ-HT-Rgw" secondAttribute="width" id="5SP-Ju-eeh"/>
+                        <constraint firstItem="E5C-Ai-c1R" firstAttribute="top" secondItem="YYQ-HT-Rgw" secondAttribute="bottom" constant="20" id="88I-EY-tYh"/>
+                        <constraint firstItem="E5C-Ai-c1R" firstAttribute="centerX" secondItem="YYQ-HT-Rgw" secondAttribute="centerX" id="K7C-kO-F9z"/>
+                        <constraint firstItem="Lwj-Lo-zqw" firstAttribute="centerX" secondItem="YYQ-HT-Rgw" secondAttribute="centerX" id="LYR-Tz-GDL"/>
+                        <constraint firstItem="Lwj-Lo-zqw" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="OdZ-Ba-50s"/>
+                        <constraint firstItem="Gzy-i3-c7z" firstAttribute="top" secondItem="Lwj-Lo-zqw" secondAttribute="bottom" constant="20" id="Xh7-Z9-5nm"/>
+                        <constraint firstItem="E5C-Ai-c1R" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="ZEP-Zk-ghV"/>
+                        <constraint firstItem="YYQ-HT-Rgw" firstAttribute="leading" secondItem="cfQ-2Q-JKo" secondAttribute="leading" constant="10" id="a3e-37-86O"/>
+                        <constraint firstItem="Gzy-i3-c7z" firstAttribute="width" secondItem="YYQ-HT-Rgw" secondAttribute="width" id="aiw-ba-IPv"/>
+                        <constraint firstAttribute="trailing" secondItem="YYQ-HT-Rgw" secondAttribute="trailing" constant="10" id="fpk-RV-xpw"/>
+                        <constraint firstItem="Lwj-Lo-zqw" firstAttribute="top" secondItem="E5C-Ai-c1R" secondAttribute="bottom" constant="20" id="kTO-hg-nXM"/>
+                        <constraint firstItem="Lwj-Lo-zqw" firstAttribute="width" secondItem="YYQ-HT-Rgw" secondAttribute="width" id="nFW-bv-cBk"/>
+                        <constraint firstAttribute="bottom" secondItem="Gzy-i3-c7z" secondAttribute="bottom" constant="10" id="pbX-E6-6Cp"/>
+                        <constraint firstItem="Gzy-i3-c7z" firstAttribute="centerX" secondItem="YYQ-HT-Rgw" secondAttribute="centerX" id="sZW-WJ-1Wp"/>
+                        <constraint firstItem="YYQ-HT-Rgw" firstAttribute="top" secondItem="cfQ-2Q-JKo" secondAttribute="top" constant="10" id="vyN-yt-pTe"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                    <state key="normal" title="Quản Lý Lớp Học">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="classManager:" destination="-1" eventType="touchUpInside" id="NuZ-YQ-Q7K"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5C-Ai-c1R">
-                    <rect key="frame" x="40" y="225" width="240" height="65"/>
-                    <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                    <state key="normal" title="Quản Lý Sinh Viên">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="studentManager:" destination="-1" eventType="touchUpInside" id="7Uv-bq-kfu"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-Lo-zqw">
-                    <rect key="frame" x="40" y="300" width="240" height="65"/>
-                    <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                    <state key="normal" title="Quản Lý Môn Học">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="subjectManager:" destination="-1" eventType="touchUpInside" id="kZp-jo-eJL"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-i3-c7z">
-                    <rect key="frame" x="40" y="375" width="240" height="65"/>
-                    <color key="backgroundColor" red="0.44313725490196076" green="0.80392156862745101" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                    <state key="normal" title="Quản Lý Điểm">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="scoreManager:" destination="-1" eventType="touchUpInside" id="As1-7r-242"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ominext Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-ZB-Wwt">
-                    <rect key="frame" x="85" y="507" width="150" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" red="0.33725490200000002" green="0.68627450980000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="TRl-ZB-Wwt" secondAttribute="bottom" constant="40" id="68v-Zb-7Nz"/>
-                <constraint firstItem="Lwj-Lo-zqw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="74c-7w-Zlw"/>
-                <constraint firstAttribute="trailing" secondItem="E5C-Ai-c1R" secondAttribute="trailing" constant="40" id="Dem-ce-iGC"/>
-                <constraint firstItem="E5C-Ai-c1R" firstAttribute="width" secondItem="YYQ-HT-Rgw" secondAttribute="width" id="HuE-41-92N"/>
-                <constraint firstItem="Lwj-Lo-zqw" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="Mj7-K2-c2h"/>
-                <constraint firstItem="Gzy-i3-c7z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="MlZ-HM-lbS"/>
-                <constraint firstAttribute="trailing" secondItem="Lwj-Lo-zqw" secondAttribute="trailing" constant="40" id="ODa-Cm-mQ1"/>
-                <constraint firstItem="Gzy-i3-c7z" firstAttribute="top" secondItem="Lwj-Lo-zqw" secondAttribute="bottom" constant="10" id="PBo-v1-CiV"/>
-                <constraint firstItem="TRl-ZB-Wwt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="85" id="UCc-ZX-SGR"/>
-                <constraint firstItem="Lwj-Lo-zqw" firstAttribute="width" secondItem="YYQ-HT-Rgw" secondAttribute="width" id="Umz-Qy-GUO"/>
-                <constraint firstItem="E5C-Ai-c1R" firstAttribute="top" secondItem="YYQ-HT-Rgw" secondAttribute="bottom" constant="10" id="YKx-hm-fbh"/>
-                <constraint firstItem="Gzy-i3-c7z" firstAttribute="width" secondItem="YYQ-HT-Rgw" secondAttribute="width" id="Zdn-b6-G1J"/>
-                <constraint firstItem="Lwj-Lo-zqw" firstAttribute="top" secondItem="E5C-Ai-c1R" secondAttribute="bottom" constant="10" id="dgq-RJ-llq"/>
-                <constraint firstItem="E5C-Ai-c1R" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="fvG-cs-F57"/>
-                <constraint firstAttribute="trailing" secondItem="YYQ-HT-Rgw" secondAttribute="trailing" constant="40" id="iL1-3N-0V7"/>
-                <constraint firstItem="YYQ-HT-Rgw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="nAb-Xx-oGP"/>
-                <constraint firstAttribute="trailing" secondItem="TRl-ZB-Wwt" secondAttribute="trailing" constant="85" id="nru-Nt-gZs"/>
-                <constraint firstAttribute="trailing" secondItem="Gzy-i3-c7z" secondAttribute="trailing" constant="40" id="tAP-ac-V3R"/>
-                <constraint firstItem="YYQ-HT-Rgw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="uwo-Fy-NIm"/>
-                <constraint firstItem="Gzy-i3-c7z" firstAttribute="height" secondItem="YYQ-HT-Rgw" secondAttribute="height" id="vAC-Or-30Q"/>
-                <constraint firstItem="E5C-Ai-c1R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="vD5-hF-xGc"/>
+                <constraint firstItem="fHU-sP-EL6" firstAttribute="height" secondItem="cfQ-2Q-JKo" secondAttribute="height" multiplier="10:9" id="0bb-Yi-MDQ"/>
+                <constraint firstItem="cfQ-2Q-JKo" firstAttribute="width" secondItem="fHU-sP-EL6" secondAttribute="width" multiplier="3:1" id="59m-fb-Pnk"/>
+                <constraint firstItem="fHU-sP-EL6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FFj-Qs-6rz"/>
+                <constraint firstAttribute="trailing" secondItem="cfQ-2Q-JKo" secondAttribute="trailing" constant="30" id="G6o-bf-u1e"/>
+                <constraint firstItem="cfQ-2Q-JKo" firstAttribute="leading" secondItem="fHU-sP-EL6" secondAttribute="trailing" constant="10" id="Pm7-zB-2zJ"/>
+                <constraint firstItem="cfQ-2Q-JKo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QgB-b4-CWf"/>
+                <constraint firstItem="fHU-sP-EL6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="byn-gr-2gH"/>
+                <constraint firstItem="cfQ-2Q-JKo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="x8i-yL-0z6"/>
             </constraints>
-            <point key="canvasLocation" x="383" y="317"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="218" y="310"/>
         </view>
     </objects>
+    <resources>
+        <image name="Mainbackground.png" width="149" height="858"/>
+        <image name="rectagmain.png" width="417" height="143"/>
+    </resources>
 </document>

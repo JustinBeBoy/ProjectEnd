@@ -30,10 +30,17 @@
 
 - (void)setupUI{
     btsave = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveStudent)];
+    [btsave setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
     btedit = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editStudent)];
+    [btedit setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
     self.navigationController.navigationBarHidden = NO;
     UIBarButtonItem *backbt = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btBack)];
     self.navigationItem.leftBarButtonItem = backbt;
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+    _olSex.layer.cornerRadius = 8.0;
+    [_olSex.layer setMasksToBounds:YES];
+    _olDateOfBirth.layer.cornerRadius = 8.0;
+    [_olDateOfBirth.layer setMasksToBounds:YES];
     if (self.isEditing) {
         [self tfAnableOrDissable:YES];
         self.navigationItem.rightBarButtonItem = btedit;

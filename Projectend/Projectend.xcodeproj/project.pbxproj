@@ -47,6 +47,17 @@
 		756E14B11CF4232D00D807B2 /* studentuncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14AF1CF4232D00D807B2 /* studentuncheck.png */; };
 		756E14B21CF4232D00D807B2 /* studentcheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B01CF4232D00D807B2 /* studentcheck.png */; };
 		756E14B41CF4281300D807B2 /* loginrec.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B31CF4281300D807B2 /* loginrec.png */; };
+		756E14B61CF4AAC000D807B2 /* Mainbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B51CF4AAC000D807B2 /* Mainbackground.png */; };
+		756E14B81CF4AAC700D807B2 /* rectagmain.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B71CF4AAC700D807B2 /* rectagmain.png */; };
+		756E14BB1CF4B6AD00D807B2 /* TUV Coco Gothic - Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 756E14B91CF4B6AD00D807B2 /* TUV Coco Gothic - Light.ttf */; };
+		756E14BC1CF4B6AD00D807B2 /* TUV Coco Gothic - Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 756E14BA1CF4B6AD00D807B2 /* TUV Coco Gothic - Regular.ttf */; };
+		756E14BE1CF4D71800D807B2 /* menuwhile24.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14BD1CF4D71800D807B2 /* menuwhile24.png */; };
+		756E14C01CF545FA00D807B2 /* Score.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14BF1CF545FA00D807B2 /* Score.png */; };
+		756E14C51CF547E100D807B2 /* logout256t.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C11CF547E100D807B2 /* logout256t.png */; };
+		756E14C61CF547E100D807B2 /* class256t.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C21CF547E100D807B2 /* class256t.png */; };
+		756E14C71CF547E100D807B2 /* student256t.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C31CF547E100D807B2 /* student256t.png */; };
+		756E14C81CF547E100D807B2 /* subject256t.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C41CF547E100D807B2 /* subject256t.png */; };
+		756E14CA1CF54A2000D807B2 /* plus16w.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E14C91CF54A2000D807B2 /* plus16w.png */; };
 		759757361CE7207A006013B5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757301CE7207A006013B5 /* BaseModel.m */; };
 		759757371CE7207A006013B5 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 759757321CE7207A006013B5 /* DB.m */; };
 		759757421CE7220B006013B5 /* Scoreboad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597573D1CE7220B006013B5 /* Scoreboad.m */; };
@@ -186,6 +197,17 @@
 		756E14AF1CF4232D00D807B2 /* studentuncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studentuncheck.png; sourceTree = "<group>"; };
 		756E14B01CF4232D00D807B2 /* studentcheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studentcheck.png; sourceTree = "<group>"; };
 		756E14B31CF4281300D807B2 /* loginrec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginrec.png; sourceTree = "<group>"; };
+		756E14B51CF4AAC000D807B2 /* Mainbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mainbackground.png; sourceTree = "<group>"; };
+		756E14B71CF4AAC700D807B2 /* rectagmain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectagmain.png; sourceTree = "<group>"; };
+		756E14B91CF4B6AD00D807B2 /* TUV Coco Gothic - Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TUV Coco Gothic - Light.ttf"; sourceTree = "<group>"; };
+		756E14BA1CF4B6AD00D807B2 /* TUV Coco Gothic - Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TUV Coco Gothic - Regular.ttf"; sourceTree = "<group>"; };
+		756E14BD1CF4D71800D807B2 /* menuwhile24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuwhile24.png; sourceTree = "<group>"; };
+		756E14BF1CF545FA00D807B2 /* Score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Score.png; sourceTree = "<group>"; };
+		756E14C11CF547E100D807B2 /* logout256t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout256t.png; sourceTree = "<group>"; };
+		756E14C21CF547E100D807B2 /* class256t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = class256t.png; sourceTree = "<group>"; };
+		756E14C31CF547E100D807B2 /* student256t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student256t.png; sourceTree = "<group>"; };
+		756E14C41CF547E100D807B2 /* subject256t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subject256t.png; sourceTree = "<group>"; };
+		756E14C91CF54A2000D807B2 /* plus16w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus16w.png; sourceTree = "<group>"; };
 		7597572F1CE7207A006013B5 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		759757301CE7207A006013B5 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		759757311CE7207A006013B5 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
@@ -375,6 +397,8 @@
 		752127521CE561DB00E8F44B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				756E14B91CF4B6AD00D807B2 /* TUV Coco Gothic - Light.ttf */,
+				756E14BA1CF4B6AD00D807B2 /* TUV Coco Gothic - Regular.ttf */,
 				759757AE1CE88812006013B5 /* ImageIcon */,
 				752127631CE561DB00E8F44B /* Info.plist */,
 				752127531CE561DB00E8F44B /* main.m */,
@@ -512,6 +536,15 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				756E14C91CF54A2000D807B2 /* plus16w.png */,
+				756E14C11CF547E100D807B2 /* logout256t.png */,
+				756E14C21CF547E100D807B2 /* class256t.png */,
+				756E14C31CF547E100D807B2 /* student256t.png */,
+				756E14C41CF547E100D807B2 /* subject256t.png */,
+				756E14BF1CF545FA00D807B2 /* Score.png */,
+				756E14BD1CF4D71800D807B2 /* menuwhile24.png */,
+				756E14B71CF4AAC700D807B2 /* rectagmain.png */,
+				756E14B51CF4AAC000D807B2 /* Mainbackground.png */,
 				756E14B31CF4281300D807B2 /* loginrec.png */,
 				756E14AF1CF4232D00D807B2 /* studentuncheck.png */,
 				756E14B01CF4232D00D807B2 /* studentcheck.png */,
@@ -751,17 +784,21 @@
 				5C36A23B1CF2FB4500D250D5 /* checked.png in Resources */,
 				7597580D1CEB18EC006013B5 /* logout256b.png in Resources */,
 				5C8A5FF01CED8FDC0007D7A5 /* AddStudentCell.xib in Resources */,
+				756E14BB1CF4B6AD00D807B2 /* TUV Coco Gothic - Light.ttf in Resources */,
 				759757FF1CEB06B8006013B5 /* AddAndEditViewController.xib in Resources */,
 				75F96D9A1CEC3AAB004EE32A /* PickerViewController.xib in Resources */,
 				756E14B41CF4281300D807B2 /* loginrec.png in Resources */,
 				759757C71CE97BEB006013B5 /* class24.png in Resources */,
+				756E14C81CF547E100D807B2 /* subject256t.png in Resources */,
 				756E14B11CF4232D00D807B2 /* studentuncheck.png in Resources */,
 				759758121CEB18EC006013B5 /* scoreboard256b.png in Resources */,
 				752127A41CE5B81A00E8F44B /* Info.plist in Resources */,
 				759757BC1CE95394006013B5 /* SlideMenuViewController.xib in Resources */,
+				756E14B81CF4AAC700D807B2 /* rectagmain.png in Resources */,
 				7597580C1CEB18EC006013B5 /* class256b.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				75F96DC51CED57F5004EE32A /* plus16.png in Resources */,
+				756E14C51CF547E100D807B2 /* logout256t.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				75F96DC11CED5391004EE32A /* PointTableDetailCell.xib in Resources */,
 				84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */,
@@ -769,6 +806,7 @@
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				756E14B21CF4232D00D807B2 /* studentcheck.png in Resources */,
 				75FCAF091CF2996D00A605F0 /* login.png in Resources */,
+				756E14C01CF545FA00D807B2 /* Score.png in Resources */,
 				756E14AC1CF40CDB00D807B2 /* techerunselect.png in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
@@ -777,6 +815,8 @@
 				75F96DBF1CED5391004EE32A /* ClassedTableViewCell.xib in Resources */,
 				5C8A5FEE1CED580C0007D7A5 /* PointTableDetail.xib in Resources */,
 				759757C81CE97BEB006013B5 /* logout24.png in Resources */,
+				756E14BE1CF4D71800D807B2 /* menuwhile24.png in Resources */,
+				756E14CA1CF54A2000D807B2 /* plus16w.png in Resources */,
 				756E14AE1CF40E8800D807B2 /* teacherselect.png in Resources */,
 				5C8A5FEC1CED580C0007D7A5 /* PointManager.xib in Resources */,
 				759758141CEB18EC006013B5 /* subject256b.png in Resources */,
@@ -785,7 +825,9 @@
 				7597580F1CEB18EC006013B5 /* scoreboard32.png in Resources */,
 				756E14AA1CF406AB00D807B2 /* student.png in Resources */,
 				759757CA1CE97BEB006013B5 /* student24.png in Resources */,
+				756E14C71CF547E100D807B2 /* student256t.png in Resources */,
 				5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */,
+				756E14BC1CF4B6AD00D807B2 /* TUV Coco Gothic - Regular.ttf in Resources */,
 				5CF244CB1CE9CFA8009EB0E2 /* QuanLyLopHocVC.xib in Resources */,
 				75F96DB41CED3E49004EE32A /* SubjectManagerViewController.xib in Resources */,
 				5C36A23C1CF2FB4500D250D5 /* unchecked.png in Resources */,
@@ -794,11 +836,13 @@
 				759758111CEB18EC006013B5 /* scoreboard256.png in Resources */,
 				75F96DD01CED9935004EE32A /* icon1.png in Resources */,
 				5C07E8D41CEEAB84000E6CE5 /* ScoreTableCell.xib in Resources */,
+				756E14B61CF4AAC000D807B2 /* Mainbackground.png in Resources */,
 				759758131CEB18EC006013B5 /* student256b.png in Resources */,
 				752127901CE5B31600E8F44B /* LoginViewController.xib in Resources */,
 				75F96DCA1CED5F47004EE32A /* AddAndEditSubjectViewController.xib in Resources */,
 				7521275F1CE561DB00E8F44B /* Assets.xcassets in Resources */,
 				759758101CEB18EC006013B5 /* scoreboard128.png in Resources */,
+				756E14C61CF547E100D807B2 /* class256t.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
