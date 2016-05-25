@@ -8,6 +8,8 @@
 
 #import "SlideMenuViewController.h"
 
+#define KEY_CHECK_LOGIN  @"Loginded"
+
 @interface SlideMenuViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tbvMenu;
 @property (nonatomic, weak) IBOutlet UITableViewCell *cellMenu;
@@ -113,6 +115,8 @@
         [revealController pushFrontViewController:navigationController animated:YES];
     }
     else if (row == 4){
+        NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+        [userdefault setBool:NO forKey:KEY_CHECK_LOGIN];
         LoginViewController *loginvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
         navigationController = [[UINavigationController alloc] initWithRootViewController:loginvc];
         [revealController pushFrontViewController:navigationController animated:YES];

@@ -8,6 +8,8 @@
 
 #import "ScoreManagerVC.h"
 
+#define KEY_CHECK_LOGIN  @"Loginded"
+
 @interface ScoreManagerVC (){
     Student *thisStudent;
     ClassList *thisClass;
@@ -81,6 +83,8 @@
 }
 
 - (IBAction)pressedLogOut:(id)sender {
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    [userdefault setBool:NO forKey:KEY_CHECK_LOGIN];
     LoginViewController *loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
     [self.navigationController pushViewController:loginViewController animated:YES];
 }
