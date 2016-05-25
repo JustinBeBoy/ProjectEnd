@@ -41,6 +41,7 @@
                     <constraint firstItem="dbq-4A-tDk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="juw-Ez-eHz"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="lblScore" destination="5Gv-JY-2PF" id="PR1-U0-NGv"/>
                 <outlet property="lblSubject" destination="dbq-4A-tDk" id="y7Z-2B-W9l"/>

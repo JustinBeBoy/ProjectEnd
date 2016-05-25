@@ -48,7 +48,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="37" id="BVo-nT-6IQ"/>
                         <constraint firstItem="cFO-Z2-K9h" firstAttribute="leading" secondItem="FaX-sP-amO" secondAttribute="leading" constant="8" id="E7H-SX-H9z"/>
@@ -60,32 +60,36 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-N4-N3V">
-                    <rect key="frame" x="8" y="58" width="49" height="33"/>
-                    <color key="backgroundColor" red="0.63449615110000002" green="1" blue="0.84777935429999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="8" y="58" width="49" height="30"/>
+                    <color key="backgroundColor" red="0.0078431372549019607" green="0.53333333333333333" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="49" id="Nl7-ke-TtI"/>
-                        <constraint firstAttribute="height" constant="33" id="xzE-hM-N7a"/>
+                        <constraint firstAttribute="height" constant="30" id="xzE-hM-N7a"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Back"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="pressedBack:" destination="-1" eventType="touchUpInside" id="Eq5-Kc-UsT"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-px-rdA">
                     <rect key="frame" x="257" y="58" width="55" height="30"/>
-                    <color key="backgroundColor" red="0.63449615110000002" green="1" blue="0.84777935429999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.0078431372549019607" green="0.53333333333333333" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="BQV-Kd-gqF"/>
                         <constraint firstAttribute="height" constant="30" id="Xu1-D1-zuL"/>
                     </constraints>
-                    <state key="normal" title="Add"/>
+                    <state key="normal" title="Add">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="pressedAdd:" destination="-1" eventType="touchUpInside" id="gzm-38-Che"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="JdJ-Ym-DU2" firstAttribute="top" secondItem="FaX-sP-amO" secondAttribute="bottom" id="04s-Ke-3mq"/>
                 <constraint firstItem="JdJ-Ym-DU2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BG0-DF-OlC"/>

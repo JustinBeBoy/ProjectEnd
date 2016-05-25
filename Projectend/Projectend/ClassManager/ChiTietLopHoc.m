@@ -40,7 +40,7 @@
     _arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", _thisClass.iId]];
     _arrMaskStudent = [NSMutableArray array];
     [_arrMaskStudent addObjectsFromArray:_arrStudent];
-    _lblLop.text = [NSString stringWithFormat:@"Lớp %@", _thisClass.name];
+    _lblLop.text = [NSString stringWithFormat:@"Lớp: %@", _thisClass.name];
     _lblSoSv.text = [NSString stringWithFormat:@"Số sinh viên: %ld", [_arrMaskStudent count]];
     
     [_tableViewStudent reloadData];
