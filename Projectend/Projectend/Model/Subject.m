@@ -62,6 +62,36 @@
     
     return listSubject;
 }
+
++ (NSArray*) queryListSubjectWhereClassId:(NSInteger)clasId {
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrSubject = nil;
+    if (clasId != -1) {
+        arrSubject = [self queryListSubjectWhereClassId:clasId DB:db];
+    } else {
+        arrSubject = [self queryListSubject:db];
+    }
+    [db close];
+    
+    return arrSubject;
+}
+
++ (NSArray*) queryListSubjectWhereClassId:(NSInteger)clasId DB:(FMDatabase*)db {
+    
+    NSString *queryString = [NSString stringWithFormat:@"tb_scoreboads.%@ = 0 AND tb_scoreboads.idclass <> %ld GROUP BY tb_subjects.subject", k_deleted, clasId];
+    NSArray *subjectDics = [Subject select:@[@"tb_subjects.id",@"tb_subjects.subject"] from:@"tb_subjects left Join tb_scoreboads ON tb_subjects.id = tb_scoreboads.idsubject" where:queryString db:db];
+    
+    NSMutableArray *listSubject = [NSMutableArray array];
+    
+    for (NSDictionary *dic in subjectDics) {
+        Subject *subject = [[Subject alloc]initWithDic:dic];
+        [listSubject addObject:subject];
+    }
+    
+    return listSubject;
+}
+
 +(Subject*) querySubWithidSubject:(NSInteger)idSubject{
     FMDatabase *db = [DB db];
     [db open];
@@ -70,12 +100,14 @@
     
     return thisSubject;
 }
+
 +(Subject*) querySubWithidSubject:(NSInteger)idSubject db:(FMDatabase*)db {
     NSString *queryString = [NSString stringWithFormat:@"%@ = %ld AND %@ = 0",k_id, idSubject, k_deleted];
     Subject *thisSubject = [Subject selectOneWhere:queryString db:db];
     
     return thisSubject;
 }
+
 + (NSArray *)querySubject:(NSString *)subject{
     FMDatabase *db = [DB db];
     [db open];
@@ -84,6 +116,7 @@
     
     return arrSubject;
 }
+
 + (NSArray *)querySubject:(NSString *)subject db:(FMDatabase *)db{
     NSString *queryString = [NSString stringWithFormat:@"%@=0 AND %@=\"%@\"",k_deleted,k_subject,subject];
     

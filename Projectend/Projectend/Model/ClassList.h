@@ -14,5 +14,6 @@
 @property(strong,nonatomic) NSString *name;
 
 + (NSArray*) queryListClass;
-+(ClassList*) queryClassWithIDClass:(NSInteger)iDClass;
++ (NSArray*) queryListClassWhereSubjectId:(NSInteger)subId;
++ (ClassList*) queryClassWithIDClass:(NSInteger)iDClass;
 @end

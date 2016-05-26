@@ -7,6 +7,7 @@
 //
 
 #import "ChiTietLopHoc.h"
+#import "SWRevealViewController.h"
 #import "UIViewController+PresentViewControllerOverCurrentContext.h"
 
 @interface ChiTietLopHoc (){
@@ -25,9 +26,14 @@
     [self setupUI];
 }
 -(void)setupUI{
+    SWRevealViewController *reveal = self.revealViewController;
+    reveal.panGestureRecognizer.enabled = NO;
+    
     [self.navigationController setNavigationBarHidden:YES];
     [_btnSave setHidden:YES];
     [btnPlus setHidden:YES];
+    
+    _tableViewStudent.tableFooterView = [[UIView alloc] init];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -141,10 +147,11 @@
     [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
 -(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertActOk = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleCancel handler:nil];
-    [alert addAction:alertActOk];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
     [self presentViewController:alert animated:YES completion:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 -(void)sendArrMaskStudent:(NSArray *)arrMask{
     [_arrMaskStudent addObjectsFromArray:arrMask];

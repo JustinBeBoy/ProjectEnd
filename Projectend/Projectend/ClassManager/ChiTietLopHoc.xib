@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -93,7 +93,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1f-jJ-LOe">
-                    <rect key="frame" x="0.0" y="68" width="320" height="85"/>
+                    <rect key="frame" x="0.0" y="60" width="320" height="85"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách sinh viên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frx-qX-BPU">
                             <rect key="frame" x="20" y="56" width="201" height="23"/>
@@ -153,7 +153,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cKE-9l-83f">
-                    <rect key="frame" x="0.0" y="153" width="320" height="388"/>
+                    <rect key="frame" x="0.0" y="145" width="320" height="396"/>
                     <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="zmM-d3-UTr"/>
@@ -168,7 +168,7 @@
                 <constraint firstItem="cKE-9l-83f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MP3-da-ixX"/>
                 <constraint firstItem="2dD-cb-ntG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pcd-dV-fmy"/>
                 <constraint firstItem="cKE-9l-83f" firstAttribute="top" secondItem="Y1f-jJ-LOe" secondAttribute="bottom" id="RtN-31-DYB"/>
-                <constraint firstItem="Y1f-jJ-LOe" firstAttribute="top" secondItem="2dD-cb-ntG" secondAttribute="bottom" constant="8" id="TEh-Hr-QOB"/>
+                <constraint firstItem="Y1f-jJ-LOe" firstAttribute="top" secondItem="2dD-cb-ntG" secondAttribute="bottom" id="TEh-Hr-QOB"/>
                 <constraint firstAttribute="bottom" secondItem="cKE-9l-83f" secondAttribute="bottom" constant="27" id="erT-Fe-srZ"/>
                 <constraint firstAttribute="trailing" secondItem="Y1f-jJ-LOe" secondAttribute="trailing" id="ixS-LI-xNB"/>
                 <constraint firstItem="Y1f-jJ-LOe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kt8-c2-VBt"/>

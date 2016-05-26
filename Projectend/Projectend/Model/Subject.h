@@ -13,6 +13,7 @@
 @property(nonatomic,assign)NSInteger credits;
 @property(nonatomic,strong)NSString *descriptions;
 + (NSArray*) queryListSubject;
++ (NSArray*) queryListSubjectWhereClassId:(NSInteger)clasId;
 +(Subject*) querySubWithidSubject:(NSInteger)idSubject;
 + (NSArray *)querySubject:(NSString *)subject;
 @end

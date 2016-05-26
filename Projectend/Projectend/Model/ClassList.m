@@ -64,6 +64,36 @@
     
     return listClass;
 }
+
++ (NSArray*) queryListClassWhereSubjectId:(NSInteger)subId {
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrClass = nil;
+    if (subId != -1) {
+        arrClass = [self queryListClassWhereSubjectId:subId DB:db];
+    } else {
+        arrClass = [self queryListClass:db];
+    }
+    [db close];
+    
+    return arrClass;
+}
+
++ (NSArray*) queryListClassWhereSubjectId:(NSInteger)subId DB:(FMDatabase*)db {
+    NSString *queryString = [NSString stringWithFormat:@"tb_scoreboads.%@ = 0 AND tb_scoreboads.idsubject <> %ld GROUP BY tb_class_lists.name", k_deleted, subId];
+    NSArray *classDics = [ClassList select:@[@"tb_class_lists.id",@"tb_class_lists.name"] from:@"tb_class_lists Inner Join tb_scoreboads ON tb_class_lists.id = tb_scoreboads.idclass" where:queryString db:db];
+    
+    NSMutableArray *listClass = [NSMutableArray array];
+    
+    for (NSDictionary *dic in classDics) {
+        ClassList *class = [[ClassList alloc]initWithDic:dic];
+        [listClass addObject:class];
+    }
+    
+    return listClass;
+}
+
+
 +(ClassList*) queryClassWithIDClass:(NSInteger)iDClass{
     FMDatabase *db = [DB db];
     [db open];

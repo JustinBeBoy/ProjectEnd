@@ -111,6 +111,9 @@
 		75F96DCC1CED6FF1004EE32A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */; };
 		75F96DD01CED9935004EE32A /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F96DCF1CED9935004EE32A /* icon1.png */; };
 		75FCAF091CF2996D00A605F0 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAF081CF2996D00A605F0 /* login.png */; };
+		84801FA41CF603F700F700FB /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 84801FA31CF603F700F700FB /* NIDropDown.m */; };
+		84801FA81CF6047E00F700FB /* AddNewScoreTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 84801FA61CF6047E00F700FB /* AddNewScoreTable.m */; };
+		84801FA91CF6047E00F700FB /* AddNewScoreTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84801FA71CF6047E00F700FB /* AddNewScoreTable.xib */; };
 		84CF07F81CF195700048AA47 /* AddNewScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF07F61CF195700048AA47 /* AddNewScore.m */; };
 		84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CF07F71CF195700048AA47 /* AddNewScore.xib */; };
 /* End PBXBuildFile section */
@@ -284,6 +287,11 @@
 		75F96DCB1CED6FF1004EE32A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		75F96DCF1CED9935004EE32A /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1.png; path = ImageIcon/icon1.png; sourceTree = "<group>"; };
 		75FCAF081CF2996D00A605F0 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		84801FA21CF603F700F700FB /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NIDropDown.h; path = Projectend/NIDropDown/NIDropDown.h; sourceTree = "<group>"; };
+		84801FA31CF603F700F700FB /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NIDropDown.m; path = Projectend/NIDropDown/NIDropDown.m; sourceTree = "<group>"; };
+		84801FA51CF6047E00F700FB /* AddNewScoreTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewScoreTable.h; path = PointManager/AddNewScoreTable.h; sourceTree = "<group>"; };
+		84801FA61CF6047E00F700FB /* AddNewScoreTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewScoreTable.m; path = PointManager/AddNewScoreTable.m; sourceTree = "<group>"; };
+		84801FA71CF6047E00F700FB /* AddNewScoreTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewScoreTable.xib; path = PointManager/AddNewScoreTable.xib; sourceTree = "<group>"; };
 		84CF07F51CF195700048AA47 /* AddNewScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewScore.h; path = PointManager/AddNewScore.h; sourceTree = "<group>"; };
 		84CF07F61CF195700048AA47 /* AddNewScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewScore.m; path = PointManager/AddNewScore.m; sourceTree = "<group>"; };
 		84CF07F71CF195700048AA47 /* AddNewScore.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewScore.xib; path = PointManager/AddNewScore.xib; sourceTree = "<group>"; };
@@ -332,12 +340,15 @@
 				5C8A5FE51CED580C0007D7A5 /* PointManager.h */,
 				5C8A5FE61CED580C0007D7A5 /* PointManager.m */,
 				5C8A5FE71CED580C0007D7A5 /* PointManager.xib */,
-				84CF07F51CF195700048AA47 /* AddNewScore.h */,
-				84CF07F61CF195700048AA47 /* AddNewScore.m */,
-				84CF07F71CF195700048AA47 /* AddNewScore.xib */,
 				5C8A5FE81CED580C0007D7A5 /* PointTableDetail.h */,
 				5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */,
 				5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */,
+				84801FA51CF6047E00F700FB /* AddNewScoreTable.h */,
+				84801FA61CF6047E00F700FB /* AddNewScoreTable.m */,
+				84801FA71CF6047E00F700FB /* AddNewScoreTable.xib */,
+				84CF07F51CF195700048AA47 /* AddNewScore.h */,
+				84CF07F61CF195700048AA47 /* AddNewScore.m */,
+				84CF07F71CF195700048AA47 /* AddNewScore.xib */,
 			);
 			name = PointManager;
 			sourceTree = "<group>";
@@ -365,8 +376,9 @@
 				75F96DAE1CEC898B004EE32A /* libsqlite3.0.tbd */,
 				752127511CE561DB00E8F44B /* Projectend */,
 				759758181CEB197D006013B5 /* Picker */,
-				759757B71CE95229006013B5 /* SlideOutMenuFiles */,
 				759757921CE867CE006013B5 /* DLRadioButton */,
+				759757B71CE95229006013B5 /* SlideOutMenuFiles */,
+				84801FA11CF603B500F700FB /* NIDropDown */,
 				7521276B1CE561DB00E8F44B /* ProjectendTests */,
 				752127761CE561DB00E8F44B /* ProjectendUITests */,
 				752127501CE561DB00E8F44B /* Products */,
@@ -438,9 +450,9 @@
 			isa = PBXGroup;
 			children = (
 				752127A51CE5B85D00E8F44B /* ViewControllers */,
-				5C07E8CA1CEE9E6D000E6CE5 /* StudentsScoreTable */,
 				5CF244CE1CE9CFB0009EB0E2 /* ClassManager */,
 				5C8A5FE41CED57F10007D7A5 /* PointManager */,
+				5C07E8CA1CEE9E6D000E6CE5 /* StudentsScoreTable */,
 				75F96DB71CED5391004EE32A /* TableViewCell */,
 				752127911CE5B81A00E8F44B /* Third Party */,
 				752127C61CE5FE4C00E8F44B /* Helper */,
@@ -677,6 +689,15 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		84801FA11CF603B500F700FB /* NIDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				84801FA21CF603F700F700FB /* NIDropDown.h */,
+				84801FA31CF603F700F700FB /* NIDropDown.m */,
+			);
+			name = NIDropDown;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -808,6 +829,7 @@
 				75FCAF091CF2996D00A605F0 /* login.png in Resources */,
 				756E14C01CF545FA00D807B2 /* Score.png in Resources */,
 				756E14AC1CF40CDB00D807B2 /* techerunselect.png in Resources */,
+				84801FA91CF6047E00F700FB /* AddNewScoreTable.xib in Resources */,
 				5CF244CD1CE9CFA8009EB0E2 /* ThemSinhVien.xib in Resources */,
 				759757EE1CEAB2BD006013B5 /* StudentManagerViewController.xib in Resources */,
 				759757C91CE97BEB006013B5 /* scoreboard24.png in Resources */,
@@ -870,6 +892,7 @@
 				752127571CE561DB00E8F44B /* AppDelegate.m in Sources */,
 				75F96D9D1CEC3AAB004EE32A /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
 				5C8A5FED1CED580C0007D7A5 /* PointTableDetail.m in Sources */,
+				84801FA41CF603F700F700FB /* NIDropDown.m in Sources */,
 				759757B61CE95224006013B5 /* SWRevealViewController.m in Sources */,
 				752127A11CE5B81A00E8F44B /* FMDatabasePool.m in Sources */,
 				5CF244CC1CE9CFA8009EB0E2 /* ThemSinhVien.m in Sources */,
@@ -894,6 +917,7 @@
 				759757BB1CE95394006013B5 /* SlideMenuViewController.m in Sources */,
 				75F96DC01CED5391004EE32A /* PointTableDetailCell.m in Sources */,
 				7521279F1CE5B81A00E8F44B /* FMDatabase.m in Sources */,
+				84801FA81CF6047E00F700FB /* AddNewScoreTable.m in Sources */,
 				7597579E1CE87DE9006013B5 /* MainViewController.m in Sources */,
 				75F96D991CEC3AAB004EE32A /* PickerViewController.m in Sources */,
 				759757ED1CEAB2BD006013B5 /* StudentManagerViewController.m in Sources */,

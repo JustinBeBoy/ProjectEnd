@@ -11,6 +11,7 @@
 #import "ClassList.h"
 #import "Scoreboad.h"
 #import "Student.h"
+#import "SWRevealViewController.h"
 
 @interface AddNewScore (){
     IBOutlet UIPickerView *pickAddNewScore;
@@ -38,6 +39,9 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)setupUI{
+    SWRevealViewController *reveal = self.revealViewController;
+    reveal.panGestureRecognizer.enabled = NO;
+    
     isFirst = YES;
     arrAllClass = [ClassList queryListClass];
     arrAllSubject = [Subject queryListSubject];
@@ -98,38 +102,31 @@
             NSArray *arrIDClassWithSub = [orderedSet array];
             
             if ([arrIDClassWithSub indexOfObject:thatClass.iId] != NSNotFound) {
-                [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Đã tồn tại bảng điểm môn học của lớp học này"];
+                [self showAlertWithTitle:nil andMessage:@"Đã tồn tại bảng điểm môn học của lớp học này"];
             }else{
-                NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
-                if (arrStudent.count>0) {
-                    for (Student *thisStudent in arrStudent) {
-                        Scoreboad *thisScore = [Scoreboad new];
-                        thisScore.idsubject = [thatSub.iId integerValue];
-                        thisScore.idclass = [thatClass.iId integerValue];
-                        thisScore.idstudent = [thisStudent.iId integerValue];
-                        [thisScore update];
-                    }
-                }else{
-                    [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Lớp học này không có sinh viên.\n Sẽ không thêm bảng điểm của lớp học này"];
-                }
+                [self addScoreTable];
             }
         } else{
-            NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
-            if (arrStudent.count>0) {
-                for (Student *thisStudent in arrStudent) {
-                    Scoreboad *thisScore = [Scoreboad new];
-                    thisScore.idsubject = [thatSub.iId integerValue];
-                    thisScore.idclass = [thatClass.iId integerValue];
-                    thisScore.idstudent = [thisStudent.iId integerValue];
-                    [thisScore update];
-                }
-            }else{
-                [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Lớp học này không có sinh viên.\n Sẽ không thêm bảng điểm của lớp học này"];
-            }
+            [self addScoreTable];
         }
     }
     
     [self.navigationController popViewControllerAnimated:YES];
+    
+}
+-(void)addScoreTable{
+    NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", [thatClass.iId integerValue]]];
+    if (arrStudent.count>0) {
+        for (Student *thisStudent in arrStudent) {
+            Scoreboad *thisScore = [Scoreboad new];
+            thisScore.idsubject = [thatSub.iId integerValue];
+            thisScore.idclass = [thatClass.iId integerValue];
+            thisScore.idstudent = [thisStudent.iId integerValue];
+            [thisScore update];
+        }
+    }else{
+        [self showAlertWithTitle:@"Thêm điểm" andMessage:@"Lớp học này không có sinh viên.\n Sẽ không thêm bảng điểm của lớp học này"];
+    }
     
 }
 -(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
@@ -137,9 +134,15 @@
     UIAlertAction *alertActOK = [UIAlertAction actionWithTitle:@"Đồng ý" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         [self.navigationController popViewControllerAnimated:YES];
     }];
-    [alert addAction:alertActOK];
-    [self presentViewController:alert animated:YES completion:nil];
-
+    if (title==nil) {
+        [self presentViewController:alert animated:YES completion:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        });
+    }else{
+        [alert addAction:alertActOK];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 @end

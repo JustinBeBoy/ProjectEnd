@@ -18,6 +18,7 @@
     
     IBOutlet UIButton *btnBack;
     IBOutlet UIButton *btnMenu;
+    
 }
 
 @end
@@ -39,9 +40,13 @@
     if (_isSlide == NO) {
         [btnBack setHidden:NO];
         [btnMenu setHidden:YES];
+        SWRevealViewController *reveal = self.revealViewController;
+        reveal.panGestureRecognizer.enabled = NO;
     }else{
         [btnBack setHidden:YES];
         [btnMenu setHidden:NO];
+        SWRevealViewController *reveal = self.revealViewController;
+        reveal.panGestureRecognizer.enabled = YES;
     }
     [self.navigationController setNavigationBarHidden:YES];
 }
@@ -133,11 +138,7 @@
     [revealController revealToggle:sender];
 }
 - (IBAction)addPressed:(id)sender {
-    [self showAlertWithTextField:@"Thêm lớp học" andMessage:@"Mời nhập tên lớp mới:"];
-}
-
--(void)showAlertWithTextField: (NSString*)title andMessage:(NSString*)message{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thêm lớp học" message:@"Mời nhập tên lớp mới" preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * textField) {
         [textField setPlaceholder:@"Tên lớp học"];
     }];
@@ -147,6 +148,11 @@
         for (ClassList *thisClass in arrDSLop) {
             if (name == thisClass.name) {
                 exist = YES;
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Lỗi" message:@"Lớp học đã tồn tại" preferredStyle:UIAlertControllerStyleAlert];
+                [self presentViewController:alert animated:YES completion:nil];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                    [alert dismissViewControllerAnimated:YES completion:nil];
+                });
             }
         }
         if (exist == NO) {
@@ -157,9 +163,7 @@
         }
 
     }];
-    UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Huỷ" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
-        //do nothing
-    }];
+    UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:@"Huỷ" style:UIAlertActionStyleCancel handler:nil];
     [alert addAction:okAct];
     [alert addAction:cancelAct];
     [self presentViewController:alert animated:YES completion:nil];

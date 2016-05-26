@@ -11,6 +11,9 @@
 #import "Scoreboad.h"
 #import "Subject.h"
 #import "ClassList.h"
+#import "SWRevealViewController.h"
+#import "AddNewScoreTable.h"
+#import "UIViewController+PresentViewControllerOverCurrentContext.h"
 
 @interface PointTableDetail () <PointTableDetailCellProtocol>
 {
@@ -35,28 +38,40 @@
     [super viewDidLoad];
     [self setupUI];
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self loadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 -(void)setupUI{
-    Scoreboad *thisScore = [_arrScore objectAtIndex:0];
-    Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
-    ClassList *thisClass = [ClassList queryClassWithIDClass:thisScore.idclass];
-    _lblPointDetailTitle.text = [NSString stringWithFormat:@"Điểm %@ lớp %@", thisSubject.subject, thisClass.name];
+    if ([_typePush  isEqualToString: @"add"]) {
+        AddNewScoreTable *new = [[AddNewScoreTable alloc] initWithNibName:@"AddNewScoreTable" bundle:nil];
+        new.delegate = self;
+        [self presentViewControllerOverCurrentContext:new animated:YES completion:nil];
+    }
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];
+    SWRevealViewController *reveal = self.revealViewController;
+    reveal.panGestureRecognizer.enabled = NO;
     
     lblName.layer.borderWidth = 1.0f;
     lblPoint.layer.borderWidth = 1.0f;
     
     [_tblPointDetail registerNib:[UINib nibWithNibName:@"PointTableDetailCell" bundle:nil] forCellReuseIdentifier:@"PointTableDetailCell"];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    _tblPointDetail.tableFooterView = [[UIView alloc] init];
+    
     alowEdit = NO;
     error = NO;
 }
 -(void)loadData{
+    Scoreboad *thisScore = [_arrScore objectAtIndex:0];
+    Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
+    ClassList *thisClass = [ClassList queryClassWithIDClass:thisScore.idclass];
+    _lblPointDetailTitle.text = [NSString stringWithFormat:@"Điểm %@ lớp %@", thisSubject.subject, thisClass.name];
+    
     [_tblPointDetail reloadData];
 }
 
@@ -78,7 +93,13 @@
     Scoreboad *thisScore = [_arrScore objectAtIndex:indexPath.row];
     Student *thisStudent = [Student queryStudentWithidStudent:thisScore.idstudent];
     cell.lblHoTen.layer.borderWidth = 1.0f;
+    cell.tfDiem.layer.borderWidth = 1.0f;
     cell.lblHoTen.text = [NSString stringWithFormat:@"  %@",thisStudent.name];
+    if ([_typePush isEqualToString:@"addmore"]) {
+        cell.tfDiem.text = @"";
+    } else {
+        cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
+        }
     cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
     cell.indexPathCell = indexPath;
     cell.delegate = self;
@@ -115,9 +136,7 @@
     }
     error = NO;
 }
--(void)dismissKeyboard{
-    [thatTextField resignFirstResponder];
-}
+
 -(void)sentTextField:(UITextField *)textField andIndexPath:(NSIndexPath *)indexPath{
     if ([textField.text integerValue]>10) {
         error = YES;
@@ -137,4 +156,8 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+-(void)sendTypePush:(NSString*)type{
+    _typePush = type;
+    [self loadData];
+}
 @end
