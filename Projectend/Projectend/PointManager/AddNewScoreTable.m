@@ -18,14 +18,13 @@
     NSArray *arrSubject;
     NSArray *arrClass;
     
-    NSArray *arrIDSubject;
-    NSArray *arrIDClass;
-    
-    Subject *subObj;
-    ClassList *classObj;
+    NSMutableArray *arrIDClass;
+    NSMutableArray *arrIDSubject;
     
     NSInteger subjectId;
     NSInteger classId;
+    
+    IBOutlet UILabel *lblError;
 }
 
 @end
@@ -36,8 +35,6 @@
     [super viewDidLoad];
     subjectId = -1;
     classId = -1;
-    subObj = nil;
-    classObj = nil;
     
     [self setupUI];
 }
@@ -55,31 +52,24 @@
     _btnClassSelect.layer.cornerRadius = 5;
 }
 -(void)loadData{
-    NSArray *arrAllScore = [Scoreboad queryListScore];
-    NSMutableArray *m_arrIDSubject = [NSMutableArray array];
-    NSMutableArray *m_arrIDClass = [NSMutableArray array];
-    for (Scoreboad *thisScore in arrAllScore) {
-        [m_arrIDSubject addObject:[NSNumber numberWithInteger:thisScore.idsubject]];
-        [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]];
+    arrIDClass = [NSMutableArray array];
+    arrIDSubject = [NSMutableArray array];
+    arrClass =[ClassList queryListClass];
+    arrSubject = [Subject queryListSubject];
+    for (ClassList *thisClass in arrClass) {
+        [arrIDClass addObject:thisClass.iId];
     }
-    
-    NSOrderedSet *orderedSetSub = [NSOrderedSet orderedSetWithArray:m_arrIDSubject];
-    NSOrderedSet *orderSetClass = [NSOrderedSet orderedSetWithArray:m_arrIDClass];
-    arrIDSubject = [orderedSetSub array];
-    arrIDClass = [orderSetClass array];
-    
-    arrSubject = [Subject queryListSubjectWhereClassId:classId];
-    arrClass = [ClassList queryListClassWhereSubjectId:subjectId];
-//    arrSubject = [self getArrSubjectFromIDSubject:arrIDSubject];
-//    arrClass = [self getArrClassFromIDClass:arrIDClass];
+    for (Subject *thisSub in arrSubject) {
+        [arrIDSubject addObject:thisSub.iId];
+    }
 }
 -(NSArray*)getArrSubjectFromIDSubject:(NSArray*)arrIdSub{
-    NSMutableArray *arr = [NSMutableArray array];
+    NSMutableArray *arrSub = [NSMutableArray array];
     for (NSNumber *thisIDSubject in arrIdSub) {
         Subject *thisSubject = [Subject querySubWithidSubject:[thisIDSubject integerValue]];
-        [arr addObject:thisSubject];
+        [arrSub addObject:thisSubject];
     }
-    return arr;
+    return arrSub;
 }
 -(NSArray*)getArrClassFromIDClass:(NSArray*)arrIdClass{
     NSMutableArray *arr = [NSMutableArray array];
@@ -96,6 +86,7 @@
     [super didReceiveMemoryWarning];
 }
 - (IBAction)pressedSubject:(id)sender {
+    lblError.text=nil;
     NSMutableArray *arrSubjectName = [NSMutableArray array];
     for (Subject *thisSubject in arrSubject) {
         [arrSubjectName addObject:thisSubject.subject];
@@ -113,6 +104,7 @@
     }
 }
 - (IBAction)pressedClass:(id)sender {
+    lblError.text = nil;
     NSMutableArray *arrClassName = [NSMutableArray array];
     for (ClassList *thisClass in arrClass) {
         [arrClassName addObject:thisClass.name];
@@ -135,38 +127,76 @@
     if (sender.tag == 10) {
         NSLog(@"---------------->ma mon %ld", [((Subject*)arrSubject[index]).iId integerValue]);
         subjectId = [((Subject*)arrSubject[index]).iId integerValue];
-        subObj = (Subject*)arrSubject[index];
-        arrClass = [ClassList queryListClassWhereSubjectId:subjectId];
+        NSArray *arrScore = [Scoreboad queryScoreFromIDSubject:subjectId];
+        NSMutableArray *m_arrIDClass = [NSMutableArray array];
+        for (Scoreboad *thisScore in arrScore) {
+            [m_arrIDClass addObject:[NSNumber numberWithInteger:thisScore.idclass]];
+        }
+        NSOrderedSet *orderSet = [NSOrderedSet orderedSetWithArray:m_arrIDClass];
+        NSArray *arrIDClassExist = [orderSet array];
+        NSMutableArray *arrIDClassNotExist = [NSMutableArray array];
+        for (NSNumber *thisID in arrIDClass) {
+            if ([arrIDClassExist indexOfObject:thisID]==NSNotFound) {
+                [arrIDClassNotExist addObject:thisID];
+            }
+        }
+        arrClass = [self getArrClassFromIDClass:arrIDClassNotExist];
+        
     } else if(sender.tag == 20){
         NSLog(@"---------------->ma lop %ld", [((ClassList*)arrClass[index]).iId integerValue]);
         classId = [((ClassList*)arrClass[index]).iId integerValue];
-        classObj = (ClassList*)arrClass[index];
-        arrSubject = [Subject queryListSubjectWhereClassId:classId];
+        NSArray *arrScore = [Scoreboad queryScoreFromIDClass:classId];
+        NSMutableArray *m_arrIDSub = [NSMutableArray array];
+        for (Scoreboad *thisScore in arrScore) {
+            [m_arrIDSub addObject:[NSNumber numberWithInteger:thisScore.idsubject]];
+        }
+        NSOrderedSet *orderSet = [NSOrderedSet orderedSetWithArray:m_arrIDSub];
+        NSArray *arrIDSubExist = [orderSet array];
+        NSMutableArray *arrIDSubNotExist = [NSMutableArray array];
+        for (NSNumber *thisID in arrIDSubject) {
+            if ([arrIDSubExist indexOfObject:thisID]==NSNotFound) {
+                [arrIDSubNotExist addObject:thisID];
+            }
+        }
+        arrSubject = [self getArrSubjectFromIDSubject:arrIDSubNotExist];
     }
 }
 
 - (void) niDropDownDelegateMethod: (NIDropDown *) sender {
     [self rel];
-    NSLog(@"%@", _btnSubjecSelect.titleLabel.text);
-    NSLog(@"%@", _btnClassSelect.titleLabel.text);
 }
 - (IBAction)pressedBack:(id)sender {
     [self dismissViewControllerOverCurrentContextAnimated:YES completion:nil];
 }
 - (IBAction)pressedAdd:(id)sender {
-    NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", classId]];
-    if (arrStudent.count>0) {
-        for (Student *thisStudent in arrStudent) {
-            Scoreboad *thisScore = [Scoreboad new];
-            thisScore.idsubject = subjectId;
-            thisScore.idclass = classId;
-            thisScore.idstudent = [thisStudent.iId integerValue];
-            [thisScore update];
-            [self.delegate sendTypePush:@"addmore"];
+    if (subjectId != -1 && classId != -1) {
+        NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%ld", classId]];
+        NSMutableArray *arr = [NSMutableArray array];
+        if (arrStudent.count>0) {
+            for (Student *thisStudent in arrStudent) {
+                Scoreboad *thisScore = [Scoreboad new];
+                thisScore.idsubject = subjectId;
+                thisScore.idclass = classId;
+                thisScore.idstudent = [thisStudent.iId integerValue];
+                [thisScore update];
+                [arr addObject:thisScore];
+                [self.delegate sendTypePush:@"addmore" andArrScore:arr];
+            }
+            
+            [self dismissViewControllerOverCurrentContextAnimated:YES completion:nil];
+        }else{
+            lblError.text = @"Lớp này chưa có sinh viên";
         }
-    }else{
     }
-    [self dismissViewControllerOverCurrentContextAnimated:YES completion:nil];
+    
+}
+-(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message andTime:(float)time{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alert presentViewController:alert animated:YES completion:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 @end

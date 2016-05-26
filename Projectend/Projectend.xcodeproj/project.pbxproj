@@ -18,6 +18,7 @@
 		5C8A5FED1CED580C0007D7A5 /* PointTableDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */; };
 		5C8A5FEE1CED580C0007D7A5 /* PointTableDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */; };
 		5C8A5FF01CED8FDC0007D7A5 /* AddStudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8A5FEF1CED8FDC0007D7A5 /* AddStudentCell.xib */; };
+		5CA5F2721CF6B1300034F1CB /* btn_droppdown_pressed9.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA5F2711CF6B1300034F1CB /* btn_droppdown_pressed9.png */; };
 		5CF244C81CE9CFA8009EB0E2 /* ChiTietLopHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */; };
 		5CF244C91CE9CFA8009EB0E2 /* ChiTietLopHoc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */; };
 		5CF244CA1CE9CFA8009EB0E2 /* QuanLyLopHocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF244C31CE9CFA8009EB0E2 /* QuanLyLopHocVC.m */; };
@@ -115,8 +116,6 @@
 		84801FA41CF603F700F700FB /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 84801FA31CF603F700F700FB /* NIDropDown.m */; };
 		84801FA81CF6047E00F700FB /* AddNewScoreTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 84801FA61CF6047E00F700FB /* AddNewScoreTable.m */; };
 		84801FA91CF6047E00F700FB /* AddNewScoreTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84801FA71CF6047E00F700FB /* AddNewScoreTable.xib */; };
-		84CF07F81CF195700048AA47 /* AddNewScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF07F61CF195700048AA47 /* AddNewScore.m */; };
-		84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CF07F71CF195700048AA47 /* AddNewScore.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +151,7 @@
 		5C8A5FE91CED580C0007D7A5 /* PointTableDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointTableDetail.m; path = PointManager/PointTableDetail.m; sourceTree = "<group>"; };
 		5C8A5FEA1CED580C0007D7A5 /* PointTableDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointTableDetail.xib; path = PointManager/PointTableDetail.xib; sourceTree = "<group>"; };
 		5C8A5FEF1CED8FDC0007D7A5 /* AddStudentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddStudentCell.xib; sourceTree = "<group>"; };
+		5CA5F2711CF6B1300034F1CB /* btn_droppdown_pressed9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_droppdown_pressed9.png; sourceTree = "<group>"; };
 		5CF244BF1CE9CFA8009EB0E2 /* ChiTietLopHoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChiTietLopHoc.h; path = ClassManager/ChiTietLopHoc.h; sourceTree = "<group>"; };
 		5CF244C01CE9CFA8009EB0E2 /* ChiTietLopHoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChiTietLopHoc.m; path = ClassManager/ChiTietLopHoc.m; sourceTree = "<group>"; };
 		5CF244C11CE9CFA8009EB0E2 /* ChiTietLopHoc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChiTietLopHoc.xib; path = ClassManager/ChiTietLopHoc.xib; sourceTree = "<group>"; };
@@ -294,9 +294,6 @@
 		84801FA51CF6047E00F700FB /* AddNewScoreTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewScoreTable.h; path = PointManager/AddNewScoreTable.h; sourceTree = "<group>"; };
 		84801FA61CF6047E00F700FB /* AddNewScoreTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewScoreTable.m; path = PointManager/AddNewScoreTable.m; sourceTree = "<group>"; };
 		84801FA71CF6047E00F700FB /* AddNewScoreTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewScoreTable.xib; path = PointManager/AddNewScoreTable.xib; sourceTree = "<group>"; };
-		84CF07F51CF195700048AA47 /* AddNewScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewScore.h; path = PointManager/AddNewScore.h; sourceTree = "<group>"; };
-		84CF07F61CF195700048AA47 /* AddNewScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewScore.m; path = PointManager/AddNewScore.m; sourceTree = "<group>"; };
-		84CF07F71CF195700048AA47 /* AddNewScore.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewScore.xib; path = PointManager/AddNewScore.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,9 +345,6 @@
 				84801FA51CF6047E00F700FB /* AddNewScoreTable.h */,
 				84801FA61CF6047E00F700FB /* AddNewScoreTable.m */,
 				84801FA71CF6047E00F700FB /* AddNewScoreTable.xib */,
-				84CF07F51CF195700048AA47 /* AddNewScore.h */,
-				84CF07F61CF195700048AA47 /* AddNewScore.m */,
-				84CF07F71CF195700048AA47 /* AddNewScore.xib */,
 			);
 			name = PointManager;
 			sourceTree = "<group>";
@@ -550,6 +544,7 @@
 		759757AE1CE88812006013B5 /* ImageIcon */ = {
 			isa = PBXGroup;
 			children = (
+				5CA5F2711CF6B1300034F1CB /* btn_droppdown_pressed9.png */,
 				756E14C91CF54A2000D807B2 /* plus16w.png */,
 				756E14C11CF547E100D807B2 /* logout256t.png */,
 				756E14C21CF547E100D807B2 /* class256t.png */,
@@ -826,7 +821,7 @@
 				756E14C51CF547E100D807B2 /* logout256t.png in Resources */,
 				759757F01CEAB725006013B5 /* StudentViewCell.xib in Resources */,
 				75F96DC11CED5391004EE32A /* PointTableDetailCell.xib in Resources */,
-				84CF07F91CF195700048AA47 /* AddNewScore.xib in Resources */,
+				5CA5F2721CF6B1300034F1CB /* btn_droppdown_pressed9.png in Resources */,
 				75F96DC31CED57C0004EE32A /* plus24.png in Resources */,
 				759757BE1CE966D0006013B5 /* MenuCell.xib in Resources */,
 				756E14B21CF4232D00D807B2 /* studentcheck.png in Resources */,
@@ -929,7 +924,6 @@
 				752127A31CE5B81A00E8F44B /* FMResultSet.m in Sources */,
 				75F96DB31CED3E49004EE32A /* SubjectManagerViewController.m in Sources */,
 				759757951CE867CE006013B5 /* DLRadioButton.m in Sources */,
-				84CF07F81CF195700048AA47 /* AddNewScore.m in Sources */,
 				75F96D9C1CEC3AAB004EE32A /* UILabel+UIDatePickerLabels.m in Sources */,
 				752127C41CE5FE4100E8F44B /* Global.m in Sources */,
 				759757FE1CEB06B8006013B5 /* AddAndEditViewController.m in Sources */,

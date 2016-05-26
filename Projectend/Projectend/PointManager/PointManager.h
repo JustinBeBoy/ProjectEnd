@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tblPointWithClass;
 
-@property (strong, nonatomic) NSArray *arrIDSubject;
+@property (strong, nonatomic) NSMutableArray *arrIDSubject;
 @property (strong, nonatomic) NSMutableArray *arrIDClassAtEachSub;
 
 @property (assign, nonatomic) BOOL isSlide;

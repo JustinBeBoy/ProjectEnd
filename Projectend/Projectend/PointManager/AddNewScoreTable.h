@@ -11,13 +11,14 @@
 
 @protocol PointTableDetailDelegate <NSObject>
 
--(void)sendTypePush:(NSString*)type;
+-(void)sendTypePush:(NSString*)type andArrScore:(NSArray*)arr;
 
 @end
 
 @interface AddNewScoreTable : UIViewController <NIDropDownDelegate>{
     NIDropDown *dropDown;
 }
+
 @property (strong, nonatomic) IBOutlet UIButton *btnSubjecSelect;
 @property (strong, nonatomic) IBOutlet UIButton *btnClassSelect;
 @property (strong, nonatomic) id<PointTableDetailDelegate>delegate;

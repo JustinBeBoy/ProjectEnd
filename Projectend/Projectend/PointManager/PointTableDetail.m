@@ -67,6 +67,12 @@
     error = NO;
 }
 -(void)loadData{
+    if ([_typePush isEqualToString:@"addmore"]) {
+        alowEdit = YES;
+        [btnEdit setHidden:YES];
+        [btnSave setHidden:NO];
+    }
+    
     Scoreboad *thisScore = [_arrScore objectAtIndex:0];
     Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
     ClassList *thisClass = [ClassList queryClassWithIDClass:thisScore.idclass];
@@ -100,7 +106,6 @@
     } else {
         cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
         }
-    cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
     cell.indexPathCell = indexPath;
     cell.delegate = self;
     if (alowEdit==YES) {
@@ -108,6 +113,7 @@
     } else{
         cell.tfDiem.enabled = NO;
     }
+    _typePush = nil;
     return cell;
 }
 
@@ -138,9 +144,9 @@
 }
 
 -(void)sentTextField:(UITextField *)textField andIndexPath:(NSIndexPath *)indexPath{
-    if ([textField.text integerValue]>10) {
+    if ([textField.text integerValue]>10 || textField.text.length<1) {
         error = YES;
-        [self showAlertWithTitle:@"Lỗi!" andMessage:@"Điểm nhập vào phải nhỏ hơn 10 \n Mời bạn nhập lại"];
+        [self showAlertWithTitle:@"Lỗi!" andMessage:@"Mời bạn nhập lại điểm"];
     }else{
         error = NO;
         thatTextField = textField;
@@ -156,8 +162,9 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
--(void)sendTypePush:(NSString*)type{
+-(void)sendTypePush:(NSString*)type andArrScore:(NSArray *)arr{
     _typePush = type;
+    _arrScore = arr;
     [self loadData];
 }
 @end

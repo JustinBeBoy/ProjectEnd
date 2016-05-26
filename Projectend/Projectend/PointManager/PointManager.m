@@ -11,7 +11,6 @@
 #import "Scoreboad.h"
 #import "ClassList.h"
 #import "PointTableDetail.h"
-#import "AddNewScore.h"
 #import "SWRevealViewController.h"
 #import "AddNewScoreTable.h"
 
@@ -53,6 +52,7 @@
 }
 -(void)loadData{
     _arrIDClassAtEachSub = [NSMutableArray array];
+    _arrIDSubject = [NSMutableArray array];
     NSArray *arrScore = [Scoreboad queryListScore];
     
     NSMutableArray *m_arrIDSubject = [NSMutableArray array];
@@ -60,7 +60,8 @@
         [m_arrIDSubject addObject:[NSNumber numberWithInteger:thisScore.idsubject]];
     }
     NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:m_arrIDSubject];
-    _arrIDSubject = [orderedSet array];
+    NSArray *arr = [orderedSet array];
+    [_arrIDSubject addObjectsFromArray:arr];
     
     for (int i = 0; i < _arrIDSubject.count; i++) {
         NSArray *arrScoreEachSub = [Scoreboad queryScoreFromIDSubject:[[_arrIDSubject objectAtIndex:i] integerValue]];
@@ -72,7 +73,12 @@
         }
         NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:m_arrIDClass];
         NSArray *arrIDClassWithSub = [orderedSet array];
-        [_arrIDClassAtEachSub addObject:arrIDClassWithSub];
+        if (arrIDClassWithSub.count == 0) {
+            [_arrIDSubject removeObjectAtIndex:i];
+            i--;
+        }else{
+            [_arrIDClassAtEachSub addObject:arrIDClassWithSub];
+        }
     }
     
     [_tblPointWithClass reloadData];
