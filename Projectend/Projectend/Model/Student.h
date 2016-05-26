@@ -27,5 +27,6 @@
 + (NSArray *)queryStudentUsername:(NSString *)username;
 + (NSArray*) queryStudentUsername:(NSString*)username  andPassword:(NSString *)password;
 +(Student*) queryStudentWithidStudent:(NSInteger)idStudent;
++ (NSArray *)queryListStudentLike:(NSString *)pattem;
 
 @end

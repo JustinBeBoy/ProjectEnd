@@ -37,6 +37,7 @@
 }
 
 - (void) setupUI{
+    _tableView.tableFooterView = [[UIView alloc]init];
     if (_isSlide == NO) {
         [btnBack setHidden:NO];
         [btnMenu setHidden:YES];

@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet DLRadioButton *btStudent;
 @property (strong, nonatomic) IBOutlet DLRadioButton *btTeacher;
 - (IBAction)btLoginTD:(id)sender;
+- (void) moveToHome;
 
 
 @end

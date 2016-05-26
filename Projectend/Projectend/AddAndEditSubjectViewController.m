@@ -7,6 +7,7 @@
 //
 
 #import "AddAndEditSubjectViewController.h"
+#import "SWRevealViewController.h"
 
 @interface AddAndEditSubjectViewController (){
     UIBarButtonItem *btsave;
@@ -25,6 +26,8 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (void)setupUI{
+    SWRevealViewController *reveal = self.revealViewController;
+    reveal.panGestureRecognizer.enabled = NO;
     btsave = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveStudent)];
     [btsave setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName: [UIFont systemFontOfSize:15 ]} forState:UIControlStateNormal];
     btedit = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editSubjet)];

@@ -9,7 +9,14 @@
 #import "AppDelegate.h"
 #import "Student.h"
 #import "Teacher.h"
+#import "LoginViewController.h"
+#import "ScoreManagerVC.h"
+#import "SlideMenuViewController.h"
+
 #define KEY_CHECK_ACOUNT @"DefaultAcount"
+#define KEY_CHECK_LOGIN  @"Loginded"
+#define KEY_CHECK_TYPE   @"Checkstudentortecher"
+#define ID_STUDENT       @"idStudent"
 
 @interface AppDelegate ()
 
@@ -23,13 +30,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [DB checkExistedDB];
     [self CheckUserDefault];
-    LoginViewController *rootVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
-    [navigationController setNavigationBarHidden:YES];
-    
-    self.window.rootViewController = navigationController;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [self checkUserlogin];
 
     return YES;
 }
@@ -72,6 +73,45 @@
         [student update];
         [userDefaults setBool:YES forKey:KEY_CHECK_ACOUNT];
     }
+}
+
+- (void)checkUserlogin{
+    NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
+    if ([userdefaults boolForKey:KEY_CHECK_LOGIN]) {
+        if ([userdefaults boolForKey:KEY_CHECK_TYPE]) {
+            [self moveToHome];
+        }else if(![userdefaults boolForKey:KEY_CHECK_TYPE]){
+            ScoreManagerVC *scorevc = [[ScoreManagerVC alloc]initWithNibName:@"ScoreManagerVC" bundle:nil];
+            scorevc.iDStudent = [userdefaults integerForKey:ID_STUDENT];
+            UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:scorevc];
+            self.window.rootViewController = navigationController;
+            self.window.backgroundColor = [UIColor whiteColor];
+            [self.window makeKeyAndVisible];
+        }
+    }else{
+        LoginViewController *rootVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+        UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
+        [navigationController setNavigationBarHidden:YES];
+        self.window.rootViewController = navigationController;
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+    }
+}
+
+- (void) moveToHome{
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    [userdefault setBool:YES forKey:KEY_CHECK_LOGIN];
+    [userdefault setBool:YES forKey:KEY_CHECK_TYPE];
+    //    MainViewController *mainViewController;
+    MainViewController *frontViewController  = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    SlideMenuViewController *rearViewController = [[SlideMenuViewController alloc] initWithNibName:@"SlideMenuViewController" bundle:nil];
+    
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+    self.window.rootViewController = revealController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 }
 
 @end

@@ -158,4 +158,24 @@
     return arrUsename;
 }
 
++ (NSArray *)queryListStudentLike:(NSString *)pattem{
+    FMDatabase *db = [DB db];
+    [db open];
+    NSArray *arrUsername = [self queryListStudentLike:pattem db:db];
+    [db close];
+    
+    return arrUsername;
+}
++ (NSArray *)queryListStudentLike:(NSString *)pattem db:(FMDatabase *)db{
+    NSString *queryString = [NSString stringWithFormat:@"%@ LIKE \"%%%@%%\"",k_name,pattem];
+    NSArray *arrDic = [Student selectWhere:queryString db:db];
+    NSMutableArray *arrStudent = [NSMutableArray array];
+    
+    for (NSDictionary *dic in arrDic) {
+        Student *name = [[Student alloc]initWithDic:dic];
+        [arrStudent addObject:name];
+    }
+    return arrStudent;
+}
+
 @end

@@ -10,6 +10,10 @@
 #import "SlideMenuViewController.h"
 #import "ScoreManagerVC.h"
 
+#define KEY_CHECK_LOGIN  @"Loginded"
+#define KEY_CHECK_TYPE   @"Checkstudentortecher"
+#define ID_STUDENT       @"idStudent"
+
 @interface LoginViewController (){
     BOOL flagcheckbox;
     NSArray *arrayTeachers;
@@ -95,9 +99,13 @@
         arrayStudents = [NSArray array];
         arrayStudents = [Student queryStudentUsername:self.tfUserName.text andPassword:self.tfPassWord.text];
         if(arrayStudents.count>0){
+            NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+            [userdefault setBool:YES forKey:KEY_CHECK_LOGIN];
+            [userdefault setBool:NO forKey:KEY_CHECK_TYPE];
             ScoreManagerVC *scorevc = [[ScoreManagerVC alloc]initWithNibName:@"ScoreManagerVC" bundle:nil];
             Student *thisStudent = [arrayStudents objectAtIndex:0];
             scorevc.iDStudent = [thisStudent.iId integerValue];
+            [userdefault setInteger:[thisStudent.iId integerValue] forKey:ID_STUDENT];
             [self.navigationController pushViewController:scorevc animated:YES];
             NSLog(@"dang nhap student thanh cong");
         }else{
@@ -108,6 +116,10 @@
     }
 }
 - (void) moveToHome{
+    
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    [userdefault setBool:YES forKey:KEY_CHECK_LOGIN];
+    [userdefault setBool:YES forKey:KEY_CHECK_TYPE];
 //    MainViewController *mainViewController;
     MainViewController *frontViewController  = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     SlideMenuViewController *rearViewController = [[SlideMenuViewController alloc] initWithNibName:@"SlideMenuViewController" bundle:nil];
