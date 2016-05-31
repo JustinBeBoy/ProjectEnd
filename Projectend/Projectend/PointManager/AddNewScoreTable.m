@@ -178,6 +178,7 @@
                 thisScore.idsubject = subjectId;
                 thisScore.idclass = classId;
                 thisScore.idstudent = [thisStudent.iId integerValue];
+                thisScore.mask = @"notScore";
                 [thisScore update];
                 [arr addObject:thisScore];
                 [self.delegate sendTypePush:@"addmore" andArrScore:arr];

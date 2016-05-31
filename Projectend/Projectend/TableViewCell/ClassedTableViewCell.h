@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ClassedTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
+@property (strong, nonatomic) IBOutlet UILabel *lblDetail;
 
 @end

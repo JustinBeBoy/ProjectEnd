@@ -15,6 +15,7 @@
 @interface ChiTietLopHoc : UIViewController <UITableViewDataSource, UITableViewDelegate, ThemSinhVienDeletge>
 
 @property (assign, nonatomic) BOOL edited;
+
 @property (strong, nonatomic) IBOutlet UILabel *lblLop;
 @property (strong, nonatomic) IBOutlet UILabel *lblSoSv;
 @property (strong, nonatomic) IBOutlet UIButton *btnExit;

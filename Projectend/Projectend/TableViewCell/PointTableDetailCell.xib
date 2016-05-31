@@ -17,12 +17,14 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ và Tên" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn6-E4-Rvf">
                         <rect key="frame" x="8" y="8" width="167" height="28"/>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3M-8N-ubK">
                         <rect key="frame" x="175" y="7" width="69" height="28"/>
+                        <color key="backgroundColor" red="0.9908172448" green="0.9908172448" blue="0.9908172448" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="28" id="E0T-bL-EvB"/>
                             <constraint firstAttribute="width" constant="69" id="RzD-Va-hlz"/>

@@ -9,11 +9,13 @@
 #import "ChiTietLopHoc.h"
 #import "SWRevealViewController.h"
 #import "UIViewController+PresentViewControllerOverCurrentContext.h"
+#import "ClassedTableViewCell.h"
 
 @interface ChiTietLopHoc (){
     IBOutlet UIButton *btnPlus;
-    
     IBOutlet UIView *vTitle;
+    
+    BOOL ischange;
 }
 
 @end
@@ -26,8 +28,12 @@
     [self setupUI];
 }
 -(void)setupUI{
+    [_tableViewStudent registerNib:[UINib nibWithNibName:@"ClassedTableViewCell" bundle:nil] forCellReuseIdentifier:@"ClassedTableViewCell"];
+    
     SWRevealViewController *reveal = self.revealViewController;
     reveal.panGestureRecognizer.enabled = NO;
+    
+    ischange = NO;
     
     [self.navigationController setNavigationBarHidden:YES];
     [_btnSave setHidden:YES];
@@ -62,18 +68,20 @@
     return _arrMaskStudent.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 30;
+    return 45;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+     ClassedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassedTableViewCell"];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[ClassedTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ClassedTableViewCell"];
     }
     
     Student *thisStudent = (Student*)[_arrMaskStudent objectAtIndex:indexPath.row];
     cell.layer.borderWidth = 1.0f;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ \t - \t Ngày sinh: %@", thisStudent.name, thisStudent.dateofbirth];
+    cell.lblName.text = [NSString stringWithFormat:@"  %@", thisStudent.name];
+    cell.lblDetail.text = [NSString stringWithFormat:@"Ngày sinh: %@", thisStudent.dateofbirth];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@ \t - \t Ngày sinh: %@", thisStudent.name, thisStudent.dateofbirth];
     
     return cell;
 }
@@ -88,7 +96,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         Student *thisStudent = [_arrMaskStudent objectAtIndex:indexPath.row];
         [_arrMaskStudent removeObject:thisStudent];
-        _lblSoSv.text = [NSString stringWithFormat:@"Số sinh viên: %ld", [_arrMaskStudent count]];
+        ischange = YES;
+        [_btnSave setHidden:NO];
+        [_btnExit setHidden:YES];
         [_tableViewStudent reloadData];
     }
 }
@@ -102,12 +112,43 @@
 - (IBAction)editPressed:(id)sender {
     _edited = YES;
     [btnPlus setHidden:NO];
-    [_btnExit setHidden:YES];
-    [_btnSave setHidden:NO];
+//    [_btnExit setHidden:YES];
+//    [_btnSave setHidden:NO];
 }
 
 - (IBAction)savePressed:(id)sender {
+    [self saveData];
+    [_btnSave setHidden:YES];
+    [_btnExit setHidden:NO];
+    [btnPlus setHidden:YES];
+    [self showAlertWithTitle:nil andMessage:@"Lưu thành công!"];
+}
+
+- (IBAction)backPressed:(id)sender {
+    if (_edited == YES && ischange == YES) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Lưu dữ liệu" message:@"Bạn chưa lưu dữ liệu \n Bạn có muốn lưu không?" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *actOk = [UIAlertAction actionWithTitle:@"Lưu" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self saveData];
+            [self.navigationController popViewControllerAnimated:YES];
+//            [self showAlertWithTitle:nil andMessage:@"Lưu thành công!"];
+
+        }];
+        UIAlertAction *actCancel = [UIAlertAction actionWithTitle:@"Không" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alert addAction:actCancel];
+        [alert addAction:actOk];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+-(void)saveData{
     _edited = NO;
+    if (ischange == NO) {
+        return;
+    }
     for (Student *thisStudent in _arrStudent) {
         if ([_arrMaskStudent indexOfObject:thisStudent] == NSNotFound) {
             NSArray *arrScore = [Scoreboad queryScoreFromIDStudent:[thisStudent.iId integerValue]];
@@ -130,14 +171,7 @@
             [thisStudent update];
         }
     }
-    [_btnExit setHidden:NO];
-    [_btnSave setHidden:YES];
-    [btnPlus setHidden:YES];
-    [self showAlertWithTitle:@"Lưu thay đổi" andMessage:@"Lưu thành công!"];
-}
-
-- (IBAction)backPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self loadData];
 }
 
 - (IBAction)addPressed:(id)sender {
@@ -146,14 +180,22 @@
     themSv.delegate = self;
     [self presentViewControllerOverCurrentContext:themSv animated:YES completion:nil];
 }
+
 -(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [self presentViewController:alert animated:YES completion:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [alert dismissViewControllerAnimated:YES completion:nil];
     });
 }
+
 -(void)sendArrMaskStudent:(NSArray *)arrMask{
+    if (arrMask.count<1) {
+        return;
+    }
+    ischange = YES;
+    [_btnExit setHidden:YES];
+    [_btnSave setHidden:NO];
     [_arrMaskStudent addObjectsFromArray:arrMask];
     [_tableViewStudent reloadData];
 }

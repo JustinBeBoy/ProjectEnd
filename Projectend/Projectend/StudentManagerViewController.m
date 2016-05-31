@@ -7,6 +7,7 @@
 //
 
 #import "StudentManagerViewController.h"
+#import "Scoreboad.h"
 
 @interface StudentManagerViewController ()<UITableViewDelegate>
 {
@@ -187,6 +188,12 @@
         [student update];
         [self reloadData];
         NSLog(@"dfafafasfasfafd");
+        
+        NSArray *arrScore = [Scoreboad queryScoreFromIDStudent:[student.iId integerValue]];
+        for (Scoreboad *thisScore in arrScore) {
+            thisScore.deleted = @(1);
+            [thisScore update];
+        }
     }
 }
 

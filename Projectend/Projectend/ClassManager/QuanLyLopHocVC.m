@@ -37,6 +37,7 @@
 }
 
 - (void) setupUI{
+    [_tableView registerNib:[UINib nibWithNibName:@"ClassedTableViewCell" bundle:nil] forCellReuseIdentifier:@"ClassedTableViewCell"];
     _tableView.tableFooterView = [[UIView alloc]init];
     if (_isSlide == NO) {
         [btnBack setHidden:NO];
@@ -73,17 +74,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassedTableViewCell"];
+    ClassedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassedTableViewCell"];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ClassedTableViewCell"];
+    if (cell == nil) {
+        cell = [[ClassedTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ClassedTableViewCell"];
     }
     
     ClassList *thatclass = (ClassList*)[arrDSLop objectAtIndex:indexPath.row];
     
     NSArray *arrStudent = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@",thatclass.iId]];
     cell.layer.borderWidth = 1.0f;
-    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ \t - \t Số sinh viên: %ld", thatclass.name, [arrStudent count]];
+    cell.lblName.text = [NSString stringWithFormat:@"  Lớp %@", thatclass.name];
+    cell.lblDetail.text = [NSString stringWithFormat:@"Số sinh viên: %ld",arrStudent.count];
+//    cell.textLabel.text = [NSString stringWithFormat:@"Lớp %@ \t - \t Số sinh viên: %ld", thatclass.name, [arrStudent count]];
     
     return cell;
 }
@@ -114,7 +117,7 @@
             
             NSArray *arrScore = [Scoreboad queryScoreFromIDClass:[thisClass.iId integerValue]];
             for (Scoreboad *thisScore in arrScore) {
-                thisScore.deleted = @(1);
+                thisScore.idclass = 0;
                 [thisScore update];
             }
             

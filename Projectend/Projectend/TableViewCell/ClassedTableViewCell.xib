@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,8 +14,36 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-lB-dz8">
+                        <rect key="frame" x="0.0" y="8" width="160" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P24-ZT-A16">
+                        <rect key="frame" x="160" y="8" width="160" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="P24-ZT-A16" firstAttribute="leading" secondItem="hTa-lB-dz8" secondAttribute="trailing" id="4dw-6l-NcG"/>
+                    <constraint firstItem="hTa-lB-dz8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5iT-sd-Qg8"/>
+                    <constraint firstItem="P24-ZT-A16" firstAttribute="width" secondItem="hTa-lB-dz8" secondAttribute="width" id="9qw-lJ-RRK"/>
+                    <constraint firstItem="hTa-lB-dz8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="IWq-yf-d1z"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="P24-ZT-A16" secondAttribute="bottom" id="Iuq-pR-oux"/>
+                    <constraint firstItem="P24-ZT-A16" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QoO-2f-Fcy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="P24-ZT-A16" secondAttribute="trailing" constant="-8" id="f3M-sh-oqE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hTa-lB-dz8" secondAttribute="bottom" id="tzt-AW-bEu"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="lblDetail" destination="P24-ZT-A16" id="z0S-Xw-lBl"/>
+                <outlet property="lblName" destination="hTa-lB-dz8" id="uH9-vA-tLT"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

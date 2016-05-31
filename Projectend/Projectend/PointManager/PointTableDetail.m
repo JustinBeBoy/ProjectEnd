@@ -76,6 +76,40 @@
     Scoreboad *thisScore = [_arrScore objectAtIndex:0];
     Subject *thisSubject = [Subject querySubWithidSubject:thisScore.idsubject];
     ClassList *thisClass = [ClassList queryClassWithIDClass:thisScore.idclass];
+    NSMutableArray *arrIDStudent = [NSMutableArray array];
+    for (Scoreboad *thisScoreN in _arrScore) {
+        [arrIDStudent addObject:[NSNumber numberWithInteger:thisScoreN.idstudent]];
+    }
+    
+    NSMutableArray *arrScoreAdd = [NSMutableArray arrayWithArray:_arrScore];
+    NSArray *arrStu = [Student queryStudentWithIDClass:[NSString stringWithFormat:@"%@", thisClass.iId]];
+    
+    if (arrStu.count > _arrScore.count && ![_typePush  isEqualToString: @"addmore"]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thêm sinh viên" message:@"Lớp này có các sinh viên mới chưa có điểm \n Bạn có nhập thêm điểm của những sinh viên này?" preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *actOK = [UIAlertAction actionWithTitle:@"Thêm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+            for (Student *thisStudent in arrStu) {
+                if ([arrIDStudent indexOfObject:thisStudent.iId]==NSNotFound) {
+                    Scoreboad *thisScoreAdd = [[Scoreboad alloc] init];
+                    thisScoreAdd.idsubject = [thisSubject.iId integerValue];
+                    thisScoreAdd.idclass = [thisClass.iId integerValue];
+                    thisScoreAdd.idstudent = [thisStudent.iId integerValue];
+                    thisScoreAdd.mask = @"notScore";
+                    [thisScoreAdd update];
+                    [arrScoreAdd addObject:thisScoreAdd];
+                }
+            }
+            alowEdit = YES;
+            [btnEdit setHidden:YES];
+            [btnSave setHidden:NO];
+            _arrScore = arrScoreAdd;
+            [_tblPointDetail reloadData];
+        }];
+        UIAlertAction *actCancel = [UIAlertAction actionWithTitle:@"Huỷ" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:actOK];
+        [alert addAction:actCancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
     _lblPointDetailTitle.text = [NSString stringWithFormat:@"Điểm %@ lớp %@", thisSubject.subject, thisClass.name];
     
     [_tblPointDetail reloadData];
@@ -101,11 +135,11 @@
     cell.lblHoTen.layer.borderWidth = 1.0f;
     cell.tfDiem.layer.borderWidth = 1.0f;
     cell.lblHoTen.text = [NSString stringWithFormat:@"  %@",thisStudent.name];
-    if ([_typePush isEqualToString:@"addmore"]) {
+    if ([_typePush isEqualToString:@"addmore"] || [thisScore.mask isEqualToString:@"notScore"]) {
         cell.tfDiem.text = @"";
     } else {
         cell.tfDiem.text = [NSString stringWithFormat:@"%ld",thisScore.score];
-        }
+    }
     cell.indexPathCell = indexPath;
     cell.delegate = self;
     if (alowEdit==YES) {
@@ -113,32 +147,77 @@
     } else{
         cell.tfDiem.enabled = NO;
     }
-    _typePush = nil;
     return cell;
 }
 
 - (IBAction)pressedBack:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (alowEdit == YES ) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Lưu điểm" message:@"Bạn chưa lưu điểm \n Bạn có muốn lưu không?" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *actOk = [UIAlertAction actionWithTitle:@"Lưu" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+            [self saveData];
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        UIAlertAction *actCancel = [UIAlertAction actionWithTitle:@"Không" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+            if ([_typePush isEqualToString:@"addmore"]) {
+                [self clearData];
+            }
+            [self loadData];
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alert addAction:actOk];
+        [alert addAction:actCancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 - (IBAction)pressedEdit:(id)sender {
     alowEdit = YES;
     [btnEdit setHidden:YES];
     [btnSave setHidden:NO];
+    
     [_tblPointDetail reloadData];
 }
 - (IBAction)pressedSave:(id)sender {
+    _typePush = nil;
+    [self saveData];
+}
+
+-(void)clearData{
+    for (Scoreboad *thisScore in _arrScore) {
+        thisScore.deleted = @(1);
+        [thisScore update];
+    }
+}
+
+-(void)saveData{
     if (error==NO) {
         alowEdit = NO;
         [btnSave setHidden:YES];
         [btnEdit setHidden:NO];
+        BOOL err = NO;
         for (Scoreboad *thisScore in _arrScore) {
-            if (thisScore.mask.length>0) {
+            if (thisScore.mask.length>0 && ![thisScore.mask isEqualToString:@"notScore"]) {
                 thisScore.score = [thisScore.mask integerValue];
                 thisScore.mask = nil;
                 [thisScore update];
+            }else if ([thisScore.mask isEqualToString:@"notScore"]){
+                err = YES;
             }
         }
-        [_tblPointDetail reloadData];
+        if (err == YES) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"nhập đủ điểm các sinh viên" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            });
+            alowEdit = YES;
+            [btnSave setHidden:NO];
+            [btnEdit setHidden:YES];
+            return;
+        }
+        [self loadData];
     }
     error = NO;
 }
